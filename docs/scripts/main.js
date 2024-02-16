@@ -1,0 +1,1 @@
+//This is the main javascript script for all the sites - so it will control simple code like search results or key clicks. (The games will have their own scripts)

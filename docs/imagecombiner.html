@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image combiner - Banana News</title>
+  <style>
+    /* Style the select elements */
+    select {
+      width: 200px;
+      height: 40px;
+      font-size: 20px;
+    }
+
+    /* Style the button */
+    button {
+      width: 200px;
+      height: 40px;
+      font-size: 20px;
+      background-color: green;
+      color: white;
+    }
+
+    /* Style the image container */
+    .image-container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+    }
+
+    /* Style the face image */
+    .face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.5; /* Adjust the opacity as you like */
+    }
+
+    /* Style the fruit image */
+    .fruit {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Create two select elements for the face and the fruit options -->
+  <select id="face-select">
+    <option value="./images/joebiden.png">Joe Biden</option>
+    <option value="./images/elon.png">Elon Musk</option>
+    <option value="./images/billgates.png">Bill Gates</option>
+    <option value="./images/einstein.png">Albert Einstein</option>
+    <option value="./images/trump.png">Donald Trump</option>
+  </select>
+
+  <select id="fruit-select">
+    <option value="./images/egg.jpg">Egg</option>
+    <option value="./images/apple.jpg">Apple</option>
+    <option value="./images/potato.jpg">Potato</option>
+    <option value="./images/banana.jpg">Banana</option>
+    <option value="./images/eggplant.jpg">Eggplant</option>
+  </select>
+
+  <!-- Create a button to trigger the combine function -->
+  <button id="combine-button">COMBINE</button>
+
+  <!-- Create a div element to hold the images -->
+  <div class="image-container">
+    <!-- Create two img elements for the face and the fruit images -->
+    <img id="face-image" class="face" src="" alt="Face image" />
+    <img id="fruit-image" class="fruit" src="" alt="Fruit image" />
+  </div>
+
+  <script>
+    // Get the elements by their ids
+    const faceSelect = document.getElementById("face-select");
+    const fruitSelect = document.getElementById("fruit-select");
+    const combineButton = document.getElementById("combine-button");
+    const faceImage = document.getElementById("face-image");
+    const fruitImage = document.getElementById("fruit-image");
+    //urls:
+    /*
+    const billgates = 'https://github.com/banana-news/reports/blob/main/docs/images/billgates.png';
+    const elonmusk = 'https://github.com/banana-news/reports/blob/main/docs/images/elon.png';
+    const alberteinstein = 'https://github.com/banana-news/reports/blob/main/docs/images/einstein.png';
+    const joebiden = 'https://github.com/banana-news/reports/blob/main/docs/images/joebiden.png';
+    const donaldtrump = 'https://github.com/banana-news/reports/blob/main/docs/images/trump.png';*/
+    
+    
+    
+
+    // Add an event listener to the button
+    combineButton.addEventListener("click", function () {
+      // Get the values of the selected options
+      const faceValue = faceSelect.value;
+      const fruitValue = fruitSelect.value;
+
+      // Change the source of the images to the corresponding values
+      faceImage.src = faceValue;
+      fruitImage.src = fruitValue;
+    });
+  </script>
+</body>
+
+</html>

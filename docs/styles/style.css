@@ -44,3 +44,29 @@ h3{
 body {
   background-color: #FFE135;
 }
+.navbar a{
+  background-color:blue;
+  color:white;
+  font-size:25px;
+  font-family:'Open Sans', sans-serif;
+  padding:20px;
+  transition:0.25s ease-in-out;
+  }
+  .navbar a:hover{
+  background-color:grey;
+  cursor:pointer;
+  }
+  input{
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    border-bottom:3px solid black;
+    transition:0.25s ease-in-out;
+  }
+  input:hover{
+    border:3px solid black;
+  }
+  input:focus{
+    border:3px solid black;
+    outline:none;
+  }

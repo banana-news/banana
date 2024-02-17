@@ -1,1 +1,28 @@
 /*This is the code for the styling of the webpage - put all your styling that applies to everything under this comment. (if you have styling specific to one page, create a <style></style> tag in the <head></head> and add it to your <style></style> tag.*/
+button {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 7px;
+    font-size: 20px;
+    padding: 15px;
+  }
+  button:hover{
+    background-color: grey;
+    cursor:pointer;
+  }
+  h1{
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 100px;
+  }
+  h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    text-align: center;
+  }
+  p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+

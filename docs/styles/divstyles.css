@@ -1,0 +1,18 @@
+div{
+    border-radius: 20px;
+    padding: 25px;
+    background-color: white;
+    border: 1.5px solid grey;
+    color:black;
+    transition: 0.25s ease-in-out;
+}
+div:hover{
+    background-color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+.options{
+    padding: 25px;
+}
+.options:hover{
+    background-color: #ffffff;
+}

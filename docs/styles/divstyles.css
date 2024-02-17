@@ -2,7 +2,7 @@
 .options div{
     border-radius: 20px;
     padding: 25px;
-    background-color: white;
+    background-color: #FFE135;
     border: 1.5px solid grey;
     color:black;
     transition: 0.5s ease-in-out;

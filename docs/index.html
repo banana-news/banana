@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            div{
+                border-radius: 20px;
+                padding: 25px;
+                background-color: white;
+                border: 1.5px solid grey;
+                color:black;
+                transition: 0.25s ease-in-out;
+            }
+            div:hover{
+                background-color: rgb(150, 150, 150);
+                cursor: pointer;
+            }
+            .options{
+                padding: 25px;
+            }
+        </style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -11,6 +28,14 @@
     </head>
     <body>
         <h1>BANANA NEWS</h1>
+        <h2>Hello and welcome to Banana News. We will have the latest news reports and fun games available to you at any time!</h2>
+        <div class="options">
+            <div id="games"><h2>Games</h2><br><p>We offer multiple games such as Image Combiner, QuadSelector and city guesser games.</p></div>
+            <div id="tech"><h2>Tech Reviews</h2><br><p>We offer tech reviews, reviewing all the latest tech and helping you decide just which device suits you.</p></div>
+            <div id="geography"><h2>Geography</h2><br><p>Geography lovers have come to the right place! We not only have articles about geography but we also have geography quizzes!</p></div>
+            <div id="politics"><h2>Politics</h2><br><p>Our site also features updated political news articles and reports to inform you of what's going on in the political world.</p></div>
+            <div id="news"><h2>News</h2><br><p>We feature news related to politics, geography, tech and more.</p></div>
+        </div>
         <!--Welcome to the Banana News official homepage! Replace this comment with your code to go in the body tag.-->
         <!--Also, note to collaboraters, make sure you add your files and folders into the the <docs> folder.-->
             <!---->
@@ -20,6 +45,28 @@
             <!--Pls don't remove this line of code:-->
             <script src="scripts/main.js"></script>
             <!---->
-            <h1>Hello and welcome to Banana News. We will have the latest news reports and fun games avaliable to you at any time!</h1>
+            <script>
+                //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
+                const gamesdiv = document.getElementById('games');
+                const techdiv = document.getElementById('tech');
+                const geographydiv = document.getElementById('geography');
+                const politicsdiv = document.getElementById('politics');
+                const newsdiv = document.getElementById('news');
+                newsdiv.addEventListener("click", function(){
+                    window.location.href = 'news.html';
+                });
+                techdiv.addEventListener("click", function(){
+                    window.location.href = 'techreviews.html';
+                });
+                gamesdiv.addEventListener("click", function(){
+                    window.location.href='games.html';
+                });
+                geographydiv.addEventListener("click", function(){
+                    window.location.href='geography.html';
+                });
+                politicsdiv.addEventListener("click", function(){
+                    window.location.href='politics.html';
+                });
+            </script>
     </body>
 </html>

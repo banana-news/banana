@@ -1,9 +1,12 @@
-/*This is the code for the styling of the webpage - put all your styling that applies to everything under this comment. (if you have styling specific to one page, create a <style></style> tag in the <head></head> and add it to your <style></style> tag.*/
+/*This is the code for the styling of the webpage -  Albert don't change my dark gray RGB colour. 
+Also Albert do not change my background colour- I specifically looked up 'banana yellow'. 
+Put all your styling that applies to everything under this comment. (if you have styling specific to one page, 
+create a <style></style> tag in the <head></head> and add it to your <style></style> tag.*/
 button {
     width: 200px;
     height: 42px;
     font-size: 20px;
-    color: rgb(60, 59, 59);
+    color: #3C3B3B;
     border-radius: 7px;
     font-size: 20px;
     padding: 15px;
@@ -12,7 +15,7 @@ button {
     border:none;
   }
   button:hover{
-    background-color: rgb(155, 145, 145);
+    background-color: #969696;
     cursor:pointer;
   }
   h1{

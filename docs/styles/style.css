@@ -55,7 +55,7 @@ body {
   font-size:30px;
   font-family:'Open Sans', sans-serif;
   padding:30px;
-  transition:0.5s ease-in-out;
+   transition:0.5s ease-in-out;
   }
   .navbar a:hover{
   background-color:grey;

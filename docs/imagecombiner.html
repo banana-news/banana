@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Image combiner - Banana News</title>
   <style>
-    /* Style the select elements */
     select {
       width: 200px;
       font-size: 20px;
@@ -16,7 +15,6 @@
       background-color: white;
     }
 
-    /* Style the button */
     button {
       width: 200px;
       /*height: 40px;*/
@@ -32,25 +30,21 @@
       background-color: grey;
       cursor:pointer;
     }
-
-    /* Style the image container */
     .image-container {
       width: 400px;
       height: 400px;
       position: relative;
     }
 
-    /* Style the face image */
     .face {
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      opacity: 1; /* Adjust the opacity as you like */
+      opacity: 1; 
     }
 
-    /* Style the fruit image */
     .fruit {
       width: 100%;
       height: 100%;
@@ -63,7 +57,7 @@
 </head>
 
 <body>
-  <!-- Create two select elements for the face and the fruit options -->
+
   <h2>Image combiner</h2>
   <p style="text-align: center;">Combines images of people with images of food.</p>
   <select id="face-select">
@@ -82,18 +76,14 @@
     <option value="./images/eggplant.jpg">Eggplant</option>
   </select>
 
-  <!-- Create a button to trigger the combine function -->
   <button id="combine-button">COMBINE</button>
 
-  <!-- Create a div element to hold the images -->
   <div class="image-container">
-    <!-- Create two img elements for the face and the fruit images -->
     <img id="face-image" class="face" src="" />
     <img id="fruit-image" class="fruit" src="" />
   </div>
 
   <script>
-    // Get the elements by their ids
     const faceSelect = document.getElementById("face-select");
     const fruitSelect = document.getElementById("fruit-select");
     const combineButton = document.getElementById("combine-button");
@@ -107,16 +97,9 @@
     const joebiden = 'https://github.com/banana-news/reports/blob/main/docs/images/joebiden.png';
     const donaldtrump = 'https://github.com/banana-news/reports/blob/main/docs/images/trump.png';*/
     
-    
-    
-
-    // Add an event listener to the button
     combineButton.addEventListener("click", function () {
-      // Get the values of the selected options
       const faceValue = faceSelect.value;
       const fruitValue = fruitSelect.value;
-
-      // Change the source of the images to the corresponding values
       faceImage.src = faceValue;
       fruitImage.src = fruitValue;
     });

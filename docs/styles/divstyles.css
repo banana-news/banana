@@ -1,4 +1,5 @@
-div{
+/*Div styling - PLEASE do not change this*/
+.options div{
     border-radius: 20px;
     padding: 25px;
     background-color: white;
@@ -6,7 +7,7 @@ div{
     color:black;
     transition: 0.25s ease-in-out;
 }
-div:hover{
+.options div:hover{
     background-color: rgb(150, 150, 150);
     cursor: pointer;
 }

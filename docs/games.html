@@ -32,18 +32,26 @@
                 <h2>QuadSelector</h2>
                 <p>A timed game where you have to select quadrilaterals (shapes with four sides) while the levels get harder and harder.</p>
             </div>
-            <div id="cityguesser"></div>
+            <div id="sharethispage">
+                <h2>Share this site</h2>
+                <p>A page where you can share with many options</p>
+            </div>
         </div>
         <script>
              //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
             const imagecombinerdiv = document.getElementById('imagecombiner');
             const quadselectordiv = document.getElementById('quadselector');
+            const sharesitediv = document.getElementById('sharethispage');
             imagecombinerdiv.addEventListener("click", function(){
                 window.location.href='imagecombiner.html';
             });
             quadselectordiv.addEventListener("click", function(){
                 window.location.href='https://albertkemp.github.io/quadselector/'
             });
+            sharesitediv.addEventListener("click", function(){
+                window.location.href="share_this_page.html";
+            });
+
         </script>
         <!--Don't remove the line of code below-->
         <script src="scripts/topnav.js"></script>

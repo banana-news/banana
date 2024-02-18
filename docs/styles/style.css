@@ -14,6 +14,7 @@ button {
     font-family: 'Open Sans', sans-serif;
     border:none;
     color:#ffffff;
+    width: auto;
   }
   button:hover{
     background-color: #969696;

@@ -1,9 +1,9 @@
 /*Div styling - PLEASE do not change this*/
 .options div{
-    border-radius: 20px;
-    padding: 25px;
+    border-radius: 10%;
+    padding: 12%;
     background-color: #FFE135;
-    border: 1.5px solid grey;
+    border: 0.325% solid grey;
     color:black;
     transition: 0.5s ease-in-out;
 }
@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 .options{
-    padding: 25px;
+    padding: 12%;
 }
 .options:hover{
     background-color: #ffffff;

@@ -6,6 +6,9 @@
     border: 2.5px solid grey;
     color:black;
     transition: 0.5s ease-in-out;
+    width: 40%;
+    height: auto;
+    float: left;
 }
 .options div:hover{
     background-color: rgb(150, 150, 150);

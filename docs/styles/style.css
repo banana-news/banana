@@ -134,3 +134,12 @@ body {
 .options img {
   margin: auto;
 }
+
+
+/*PLEASE don't change table styling (below) it will mess it up*/
+tr:nth-child(even){
+  background-color: #919191;
+ }
+ td{padding:20px;}
+ th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:20px;}
+ /*I know what you're thinking. Just don't.*/

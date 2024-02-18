@@ -131,3 +131,6 @@ body {
     text-align: left;
   }
 } 
+.options img {
+  margin: auto;
+}

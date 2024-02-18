@@ -3,7 +3,7 @@ Also Albert do not change my background colour- I specifically looked up 'banana
 Put all your styling that applies to everything under this comment. (if you have styling specific to one page, 
 create a <style></style> tag in the <head></head> and add it to your <style></style> tag.*/
 button {
-    width: 100px;
+    /*width: 100px;*/
     /*height: 42px; <-- pls Do not uncomment this*/
     font-size: 20px;
     /*background-color: #3C3B3B;*/

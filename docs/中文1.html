@@ -33,37 +33,58 @@
             <div id="politics"><h2>Politics</h2><br><p>Our site also features updated political news articles and reports to inform you of what's going on in the political world.</p></div>
             <div id="news"><h2>News</h2><br><p>We feature news related to politics, geography, tech and more.</p></div>
         </div>
-        <!--Welcome to the Banana News official homepage! Replace this comment with your code to go in the body tag.-->
-        <!--Also, note to collaboraters, make sure you add your files and folders into the the <docs> folder.-->
-            <!---->
-            <!---->
-            <!---->
-            <!---->
-            <!--Pls don't remove this line of code:-->
-            <script src="scripts/main.js"></script>
-            <!---->
-            <script>
-                //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
-                const gamesdiv = document.getElementById('games');
-                const techdiv = document.getElementById('tech');
-                const geographydiv = document.getElementById('geography');
-                const politicsdiv = document.getElementById('politics');
-                const newsdiv = document.getElementById('news');
-                newsdiv.addEventListener("click", function(){
-                    window.location.href = 'news.html';
-                });
-                techdiv.addEventListener("click", function(){
-                    window.location.href = 'tech.html';
-                });
-                gamesdiv.addEventListener("click", function(){
-                    window.location.href='games.html';
-                });
-                geographydiv.addEventListener("click", function(){
-                    window.location.href='geography.html';
-                });
-                politicsdiv.addEventListener("click", function(){
-                    window.location.href='politics.html';
-                });
-            </script>
-    </body>
+        <div id="tech">
+            <h2>Tech Reviews</h2><br>
+            <p>We offer tech reviews, reviewing all the latest tech and helping you decide just which device suits you.
+            </p>
+        </div>
+        <div id="geography">
+            <h2>Geography</h2><br>
+            <p>Geography lovers have come to the right place! We not only have articles about geography but we also have
+                geography quizzes!</p>
+        </div>
+        <div id="politics">
+            <h2>Politics</h2><br>
+            <p>Our site also features updated political news articles and reports to inform you of what's going on in
+                the political world.</p>
+        </div>
+        <div id="news">
+            <h2>News</h2><br>
+            <p>We feature news related to politics, geography, tech and more.</p>
+        </div>
+    </div>
+    <!--Welcome to the Banana News official homepage! Replace this comment with your code to go in the body tag.-->
+    <!--Also, note to collaboraters, make sure you add your files and folders into the the <docs> folder.-->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!--Pls don't remove this line of code:-->
+    <script src="scripts/main.js"></script>
+    <!---->
+    <script>
+        //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
+        const gamesdiv = document.getElementById('games');
+        const techdiv = document.getElementById('tech');
+        const geographydiv = document.getElementById('geography');
+        const politicsdiv = document.getElementById('politics');
+        const newsdiv = document.getElementById('news');
+        newsdiv.addEventListener("click", function () {
+            window.location.href = 'news.html';
+        });
+        techdiv.addEventListener("click", function () {
+            window.location.href = 'tech.html';
+        });
+        gamesdiv.addEventListener("click", function () {
+            window.location.href = 'games.html';
+        });
+        geographydiv.addEventListener("click", function () {
+            window.location.href = 'geography.html';
+        });
+        politicsdiv.addEventListener("click", function () {
+            window.location.href = 'politics.html';
+        });
+    </script>
+</body>
+
 </html>

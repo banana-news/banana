@@ -16,7 +16,5 @@
 }
 .options{
     padding: 20px;
-}
-.options:hover{
-    background-color: #ffffff;
+    display: none;
 }

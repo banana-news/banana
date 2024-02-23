@@ -51,3 +51,63 @@ footer {
     position: absolute;
     top: 0;
 }
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(58, 168, 205);
+    text-decoration: underline;
+}
+p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 24px;
+}
+input{
+padding: 20px;
+border-radius: 20px;
+height: 30px; 
+width: 350px;
+cursor: text;
+background-color: rgb(255, 255, 255);
+border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
+}
+
+.searchbutton {
+    height: 62px;
+    border-radius: 20px;
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+    width: 200px;
+    font-size: 30px;
+    height: 70px;
+  }
+  .searchbutton:hover {
+    background-color: grey;
+    color: black;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  #searchResults {
+    background-color: rgb(208, 208, 208);
+    padding: 20px;
+    height: 200px;
+}
+#results {
+    color: white;
+} 
+h2 {
+    background-color: white;
+}
+p {
+    background-color: white;
+}
+a {
+    font-size: 24px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+}
+#header {
+    position: absolute;
+    top: 0;
+}

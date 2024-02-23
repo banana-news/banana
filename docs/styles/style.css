@@ -173,3 +173,20 @@ tr:nth-child(even){
  td{padding:20px;}
  th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:20px;}
  /*I know what you're thinking. Just don't.*/
+
+ .searchbutton {
+  height: 62px;
+  border-radius: 20px;
+  background-color: green;
+  border: 1px solid black;
+  color: white;
+  width: 200px;
+  font-size: 30px;
+  height: 70px;
+}
+.searchbutton:hover {
+  background-color: grey;
+  color: black;
+  cursor: pointer;
+  font-size: 24px;
+}

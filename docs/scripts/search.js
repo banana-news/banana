@@ -67,13 +67,19 @@ if (searchQuery=='Home' || searchQuery=='home' || searchQuery.includes('home') |
     searchResultsDiv.appendChild(paragraph);
 } else if (searchQuery.includes('Politics') || searchQuery.includes('politics')) {
     var link = document.createElement('a');
-    link.textContent = 'Games';
-    link.href='index.html';
+    link.textContent = 'Politics';
+    link.href='politics.html';
     var paragraph = document.createElement('p');
-    paragraph.innerHTML = 'Banana News offers a variety of games, such as Image Combiner, Share this page and QuadSelector';
+    paragraph.innerHTML = "The Banana News politics page includes politics news to update you on what's going on in the political world.";
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else {
+} else if (searchQuery.includes('games') || searchQuery.includes('Games') || searchQuery.includes('game') || searchQuery.includes('Game') || searchQuery.includes('Fun') || searchQuery.includes('fun')){
+    var link = document.createElement('a');
+    link.textContent = 'Fun';
+    link.href='games.html';
+    var paragraph = document.createElement('p');
+    paragraph.innerHTML = "The Banana News fun page includes fun and games including Image Combiner, QuadSelector and Share this page.";
+}else {
     var results = document.getElementById("results");
     searchResults.innerHTML = "No results found.";
 }

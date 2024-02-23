@@ -45,7 +45,7 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
 } else if (searchQuery.toLowerCase().includes('news')) {
     var link = document.createElement('a');
     link.textContent = 'News';
-    link.href='index.html';
+    link.href='news.html';
     var paragraph = document.createElement('p');
     paragraph.innerHTML = 'The Banana News news page, including news about tech and politics.';
     searchResultsDiv.appendChild(link);
@@ -53,7 +53,7 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
 } else if (searchQuery.toLowerCase().includes('tech') || searchQuery.toLowerCase.includes('review')) {
     var link = document.createElement('a');
     link.textContent = 'Tech Reviews';
-    link.href='index.html';
+    link.href='tech.html';
     var paragraph = document.createElement('p');
     paragraph.innerHTML = 'The Banana News tech page which includes tech reviews and news.';
     searchResultsDiv.appendChild(link);

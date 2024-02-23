@@ -34,28 +34,11 @@ input:focus{outline:none;}
 #results {
     color: white;
 } 
-/*h2 {
-    background-color: white;
-}
-p {
-    background-color: white;
-}
-a {
-    font-size: 24px;
-}
-footer {
-    position: absolute;
-    bottom: 0;
-}*/
-#header {
-    position: absolute;
-    top: 0;
-}
 input{
 padding: 20px;
 border-radius: 20px;
-height: 30px; 
-width: 350px;
+height: auto; 
+width: auto;
 cursor: text;
 background-color: rgb(255, 255, 255);
 border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
@@ -85,12 +68,6 @@ border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
 #results {
     color: white;
 } 
-h2 {
-    background-color: white;
-}
-p {
-    background-color: white;
-}
 a {
     font-size: 24px;
 }
@@ -98,7 +75,3 @@ footer {
     position: absolute;
     bottom: 0;
 }
-/*#header {
-    position: absolute;
-    top: 0;
-}*/

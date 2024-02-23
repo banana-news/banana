@@ -1,4 +1,23 @@
 /*Please ask Albert before changing or deleting this CSS.*/
+/*
+
+  []
+  []]]
+  []]]]
+  []]]]]]
+   []]]]]]]
+     []]]]]]]]]
+       ]]]]]]]
+|
+|__    ___      ___    ___       ___    ___          ___     ____              ___
+|  \  /   |  | /   \  /   |   | /   \  /   |      | /   \   /____\  |  |   |  (___
+|__/  \__/ \ |/    |  \__/ \  |/    |  \__/ \     |/    |   \____   \__/\__/   ___)
+
+If you're the sort of person who looks at the source code of webpages, try our challenge::after
+
+https://banana-news.github.io/reports/share_this_page.html
+
+*/
 select {
     width: 200px;
     font-size: 20px;

@@ -1,4 +1,23 @@
 /*Div styling - PLEASE do not change this*/
+/*
+
+  []
+  []]]
+  []]]]
+  []]]]]]
+   []]]]]]]
+     []]]]]]]]]
+       ]]]]]]]
+|
+|__    ___      ___    ___       ___    ___          ___     ____              ___
+|  \  /   |  | /   \  /   |   | /   \  /   |      | /   \   /____\  |  |   |  (___
+|__/  \__/ \ |/    |  \__/ \  |/    |  \__/ \     |/    |   \____   \__/\__/   ___)
+
+If you're the sort of person who looks at the source code of webpages, try our challenge::after
+
+https://banana-news.github.io/reports/share_this_page.html
+
+*/
 .options div{
     border-radius: 10px;
     padding: 50px;

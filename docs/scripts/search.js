@@ -25,7 +25,7 @@ function search() {
     if (searchbar === "") {
         alert("Please enter a search term");
     } else {
-        window.location.href = "search-results.html?q=" + encodeURIComponent(searchbar);
+        window.location.href = "searchresults.html?q=" + encodeURIComponent(searchbar);
     }
 }
 

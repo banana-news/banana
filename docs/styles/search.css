@@ -51,15 +51,6 @@ footer {
     position: absolute;
     top: 0;
 }
-h2 {
-    font-family: 'Open Sans', sans-serif;
-    color: rgb(58, 168, 205);
-    text-decoration: underline;
-}
-p {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 24px;
-}
 input{
 padding: 20px;
 border-radius: 20px;

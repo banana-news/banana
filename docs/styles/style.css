@@ -66,9 +66,6 @@ body {
 }
 
 
-.navbar{
-position:fixed
-}
 
 
 
@@ -92,6 +89,9 @@ position:fixed
 .topnav {
   background-color: #333;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /* Style the links inside the navigation bar */

@@ -22,12 +22,8 @@ https://banana-news.github.io/reports/share_this_page.html
 
 */
 button {
-    /*width: 100px;*/
-    /*height: 42px; <-- pls Do not uncomment this*/
     font-size: 20px;
-    /*background-color: #3C3B3B;*/
     border-radius: 5px;
-    /*font-size: 5%;*/
     padding: 15px;
     transition: 0.5s ease-in-out;
     font-family: 'Open Sans', sans-serif;

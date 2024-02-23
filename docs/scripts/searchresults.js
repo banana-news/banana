@@ -34,7 +34,7 @@ document.body.appendChild(header);
 
 var searchResultsDiv = document.getElementById("searchResults");
 
-if (searchQuery=='Home' || searchQuery=='home' || searchQuery.includes('home') || searchQuery.includes('home')) {
+if (searchQuery.toLowerCase().includes('home')) {
     var link = document.createElement('a');
     link.textContent = 'Home';
     link.href='index.html';
@@ -42,7 +42,7 @@ if (searchQuery=='Home' || searchQuery=='home' || searchQuery.includes('home') |
     paragraph.innerHTML = 'The Banana News homepage, including an introduction to Banana News and links to our different pages.';
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery=='News' || searchQuery=='news' || searchQuery.includes('news') || searchQuery.includes('News')) {
+} else if (searchQuery.toLowerCase().includes('news')) {
     var link = document.createElement('a');
     link.textContent = 'News';
     link.href='index.html';
@@ -50,7 +50,7 @@ if (searchQuery=='Home' || searchQuery=='home' || searchQuery.includes('home') |
     paragraph.innerHTML = 'The Banana News news page, including news about tech and politics.';
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery.includes('tech') || searchQuery.includes('Tech') || searchQuery.includes('reviews') || searchQuery.includes('Reviews')) {
+} else if (searchQuery.toLowerCase().includes('tech') || searchQuery.toLowerCase.includes('review')) {
     var link = document.createElement('a');
     link.textContent = 'Tech Reviews';
     link.href='index.html';
@@ -58,7 +58,7 @@ if (searchQuery=='Home' || searchQuery=='home' || searchQuery.includes('home') |
     paragraph.innerHTML = 'The Banana News tech page which includes tech reviews and news.';
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery.includes('Politics') || searchQuery.includes('politics')) {
+} else if (searchQuery.toLowerCase().includes('politic')) {
     var link = document.createElement('a');
     link.textContent = 'Politics';
     link.href='politics.html';
@@ -66,12 +66,14 @@ if (searchQuery=='Home' || searchQuery=='home' || searchQuery.includes('home') |
     paragraph.innerHTML = "The Banana News politics page includes politics news to update you on what's going on in the political world.";
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery.includes('games') || searchQuery.includes('Games') || searchQuery.includes('game') || searchQuery.includes('Game') || searchQuery.includes('Fun') || searchQuery.includes('fun')){
+} else if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun')){
     var link = document.createElement('a');
     link.textContent = 'Fun';
     link.href='games.html';
     var paragraph = document.createElement('p');
     paragraph.innerHTML = "The Banana News fun page includes fun and games including Image Combiner, QuadSelector and Share this page.";
+    searchResultsDiv.appendChild(link);
+    searchResultsDiv.appendChild(paragraph);
 }else {
     var results = document.getElementById("results");
     searchResults.innerHTML = "No results found.";

@@ -23,7 +23,6 @@ border-radius: 20px;
 height: 30px; 
 width: 350px;
 cursor: text;
-background-color: rgb(255, 255, 255);
 border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
 }
 input:focus{outline:none;}
@@ -99,7 +98,7 @@ footer {
     position: absolute;
     bottom: 0;
 }
-#header {
+/*#header {
     position: absolute;
     top: 0;
-}
+}*/

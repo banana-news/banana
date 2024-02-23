@@ -25,25 +25,20 @@ function search() {
     if (searchbar === "") {
         alert("Please enter a search term");
     } else {
-        // Redirect user to search results page
         window.location.href = "search-results.html?q=" + encodeURIComponent(searchbar);
     }
 }
 
-// Retrieve search query from URL parameter
 var queryString = window.location.search;
 var searchParams = new URLSearchParams(queryString);
 var searchQuery = searchParams.get("q");
 
-// Display search query in page title
 document.title = searchQuery + " - Search Results";
 
-// Display search query in header
 var header = document.getElementById("header");
 header.textContent = "Search Results for \"" + searchQuery + "\"";
 document.body.appendChild(header);
 
-// Display search results with links
 var searchResultsDiv = document.getElementById("searchResults");
 
 if (searchQuery=='Home' || searchQuery=='home' || searchQuery.includes('home') || searchQuery.includes('home')) {

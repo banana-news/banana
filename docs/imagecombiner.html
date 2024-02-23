@@ -141,27 +141,7 @@
     <img id="fruit-image" class="fruit" src="" />
   </div>
 
-  <script>
-    const faceSelect = document.getElementById("face-select");
-    const fruitSelect = document.getElementById("fruit-select");
-    const combineButton = document.getElementById("combine-button");
-    const faceImage = document.getElementById("face-image");
-    const fruitImage = document.getElementById("fruit-image");
-    //urls:
-    /*
-    const billgates = 'https://github.com/banana-news/reports/blob/main/docs/images/billgates.png';
-    const elonmusk = 'https://github.com/banana-news/reports/blob/main/docs/images/elon.png';
-    const alberteinstein = 'https://github.com/banana-news/reports/blob/main/docs/images/einstein.png';
-    const joebiden = 'https://github.com/banana-news/reports/blob/main/docs/images/joebiden.png';
-    const donaldtrump = 'https://github.com/banana-news/reports/blob/main/docs/images/trump.png';*/
-    
-    combineButton.addEventListener("click", function () {
-      const faceValue = faceSelect.value;
-      const fruitValue = fruitSelect.value;
-      faceImage.src = faceValue;
-      fruitImage.src = fruitValue;
-    });
-  </script>
+  <script src="scripts/imagecombiner.js"></script>
   <!--Don't remove the line of code below-->
   <script src="scripts/topnav.js"></script>
   <!---->

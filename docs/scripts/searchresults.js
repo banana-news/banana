@@ -34,7 +34,7 @@ document.body.appendChild(header);
 
 var searchResultsDiv = document.getElementById("searchResults");
 
-if (searchQuery.toLowerCase().includes('home')) {
+if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().includes('index') || searchQuery.toLowerCase().includes('main')) {
     var link = document.createElement('a');
     link.textContent = 'Home';
     link.href='index.html';

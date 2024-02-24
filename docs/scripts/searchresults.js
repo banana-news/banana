@@ -33,7 +33,7 @@ header.textContent = "Search Results for \"" + searchQuery + "\"";
 
 var searchResultsDiv = document.getElementById("searchResults");
 
-if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().includes('index') || searchQuery.toLowerCase().includes('main')) {
+if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().includes('index') || searchQuery.toLowerCase().includes('main') || searchQuery.toLowerCase().includes('banana')) {
     var link = document.createElement('a');
     link.textContent = 'Home';
     link.href='index.html';

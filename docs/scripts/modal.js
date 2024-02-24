@@ -1,3 +1,4 @@
+//Max and Sinan, Please ask Albert before editing or deleting this code
 //Max and Sinan, PLEASE don't edit or delete this code:
 /*
 []
@@ -20,6 +21,18 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/reports/share_this_page.html
 
 */
+/*
+  _____________________________________________________________________________________________________________________
+ |                                                                    _____                                            |
+ |                                                                  /                                        |  |  |   |
+ |    \        /    ____   |    __    ___    __   __    ____        |         o      __      __       __     |  |  |   |
+ |     \  /\  /    /____\  |   /     /   \  /  \ /  \  /____\        \__      |   | /  \    /  \   | /  \    |  |  |   |
+ |      \/  \/     \____   |   \__   \___/  |   |   |  \____   /        \     |   |/    |   \__/\  |/    |   o  o  o   |
+ |                                                            /          |                                             |
+ |                                                                 ______/                                             |
+ |_____________________________________________________________________________________________________________________|
+
+ */
 var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("myBtn");

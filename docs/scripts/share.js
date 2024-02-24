@@ -1,4 +1,4 @@
-//Max and Sinan, please ask me before editing or deleting this:
+//Max and Sinan, please ask me (albert) before editing or deleting this:
 /*
 []
  []
@@ -20,6 +20,18 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/reports/share_this_page.html
 
 */
+/*
+  _____________________________________________________________________________________________________________________
+ |                                                                    _____                                            |
+ |                                                                  /                                        |  |  |   |
+ |    \        /    ____   |    __    ___    __   __    ____        |         o      __      __       __     |  |  |   |
+ |     \  /\  /    /____\  |   /     /   \  /  \ /  \  /____\        \__      |   | /  \    /  \   | /  \    |  |  |   |
+ |      \/  \/     \____   |   \__   \___/  |   |   |  \____   /        \     |   |/    |   \__/\  |/    |   o  o  o   |
+ |                                                            /          |                                             |
+ |                                                                 ______/                                             |
+ |_____________________________________________________________________________________________________________________|
+
+ */
 function htmlShare() {
     navigator.clipboard.writeText('<a href="https://banana-news.github.io/reports">https://banana-news.github.io/reports</a>');
     alert('HTML code copied.');

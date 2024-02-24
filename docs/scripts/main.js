@@ -1,3 +1,4 @@
+//Max and Sinan, Please ask Albert before editing or deleting this code
 //This is the main javascript script for all the sites - so it will control simple code like search results or key clicks. (The games will have their own scripts)
 /*
 []
@@ -20,3 +21,15 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/reports/share_this_page.html
 
 */
+/*
+  _____________________________________________________________________________________________________________________
+ |                                                                    _____                                            |
+ |                                                                  /                                        |  |  |   |
+ |    \        /    ____   |    __    ___    __   __    ____        |         o      __      __       __     |  |  |   |
+ |     \  /\  /    /____\  |   /     /   \  /  \ /  \  /____\        \__      |   | /  \    /  \   | /  \    |  |  |   |
+ |      \/  \/     \____   |   \__   \___/  |   |   |  \____   /        \     |   |/    |   \__/\  |/    |   o  o  o   |
+ |                                                            /          |                                             |
+ |                                                                 ______/                                             |
+ |_____________________________________________________________________________________________________________________|
+
+ */

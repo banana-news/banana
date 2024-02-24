@@ -41,7 +41,7 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
     paragraph.innerHTML = 'The Banana News homepage, including an introduction to Banana News and links to our different pages.';
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery.toLowerCase().includes('news')) {
+} else if (searchQuery.toLowerCase().includes('news') || searchQuery.toLowerCase().includes('tomato') || searchQuery.toLowerCase().includes('kirin')) {
     var link = document.createElement('a');
     link.textContent = 'News';
     link.href='news.html';
@@ -49,7 +49,7 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
     paragraph.innerHTML = 'The Banana News news page, including news about tech and politics.';
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery.toLowerCase().includes('tech') || searchQuery.toLowerCase().includes('review')) {
+} else if (searchQuery.toLowerCase().includes('tech') || searchQuery.toLowerCase().includes('review') || searchQuery.toLowerCase().includes('phone') || searchQuery.toLowerCase().includes('tablet') || searchQuery.toLowerCase().includes('mobile') || searchQuery.toLowerCase().includes('ipad') || searchQuery.toLowerCase().includes('mac') || searchQuery.toLowerCase().includes('laptop') || searchQuery.toLowerCase().includes('apple') || searchQuery.toLowerCase().includes('huawei')|| searchQuery.toLowerCase().includes('lenovo') || searchQuery.toLowerCase().includes('dell') || searchQuery.toLowerCase().includes('hp') || searchQuery.toLowerCase().includes('oppo') || searchQuery.toLowerCase().includes('vivo') || searchQuery.toLowerCase().includes('iqoo') || searchQuery.toLowerCase().includes('oneplus') || searchQuery.toLowerCase().includes('1+') || searchQuery.toLowerCase().includes('realme') || searchQuery.toLowerCase().includes('samsung') || searchQuery.toLowerCase().includes('android') || searchQuery.toLowerCase().includes('pc') || searchQuery.toLowerCase().includes('device')) {
     var link = document.createElement('a');
     link.textContent = 'Tech Reviews';
     link.href='tech.html';
@@ -57,7 +57,7 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
     paragraph.innerHTML = 'The Banana News tech page which includes tech reviews and news.';
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery.toLowerCase().includes('politic')) {
+} else if (searchQuery.toLowerCase().includes('politic') || searchQuery.toLowerCase().includes('china') || searchQuery.toLowerCase().includes('ukraine') || searchQuery.toLowerCase().includes('israel') || searchQuery.toLowerCase().includes('taiwan') || searchQuery.toLowerCase().includes('ccp') || searchQuery.toLowerCase().includes('dpp') || searchQuery.toLowerCase().includes('communism') || searchQuery.toLowerCase().includes('democracy')) {
     var link = document.createElement('a');
     link.textContent = 'Politics';
     link.href='politics.html';
@@ -73,7 +73,33 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
     paragraph.innerHTML = "The Banana News fun page includes fun and games including Image Combiner, QuadSelector and Share this page.";
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-}else {
+} else if (searchQuery.toLowerCase().includes('image') || searchQuery.toLowerCase().includes('combiner')) {
+    var link = document.createElement('a');
+    link.textContent = 'Image Combiner';
+    link.href='imagecombiner.html';
+    var paragraph = document.createElement('p');
+    paragraph.innerHTML = "An image combining game which lets you combine images of famous people with images of food";
+    searchResultsDiv.appendChild(link);
+    searchResultsDiv.appendChild(paragraph);
+} else if (searchQuery.toLowerCase().includes('share')) {
+    var link = document.createElement('a');
+    link.textContent = 'Share this page';
+    link.href='share_this_page.html';
+    var paragraph = document.createElement('p');
+    paragraph.innerHTML = "A page where you share the page with many different methods of sharing";
+    searchResultsDiv.appendChild(link);
+    searchResultsDiv.appendChild(paragraph);
+} else if (searchQuery.toLowerCase().includes('quad') || searchQuery.toLowerCase().includes('selector')) {
+    var link = document.createElement('a');
+    link.textContent = 'QuadSelector';
+    link.href='https://albertkemp.github.io/quadselector';
+    var paragraph = document.createElement('p');
+    paragraph.innerHTML = "A timed game where you have to select as many quadrilaterals as possible.";
+    searchResultsDiv.appendChild(link);
+    searchResultsDiv.appendChild(paragraph);
+}
+
+else {
     var noresults = document.createElement('p');
     noresults.innerHTML = 'No results found.';
     searchResultsDiv.appendChild(noresults);

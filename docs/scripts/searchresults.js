@@ -14,7 +14,6 @@
 |___     ____      ___     ____      ___     ____            ___     ___               __
 |   \   /   |   | /   \   /   |   | /   \   /   |         | /   \   /___\   |  |   |  (__ 
 |___/   \__/ \  |/    |   \__/ \  |/    |   \__/ \        |/    |   \____   \__/\__/   __)
-
 If you're the sort of person who looks at the source code of webpages, try our challenge:
 
 https://banana-news.github.io/reports/share_this_page.html
@@ -50,7 +49,7 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
     paragraph.innerHTML = 'The Banana News news page, including news about tech and politics.';
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
-} else if (searchQuery.toLowerCase().includes('tech') || searchQuery.toLowerCase.includes('review')) {
+} else if (searchQuery.toLowerCase().includes('tech') || searchQuery.toLowerCase().includes('review')) {
     var link = document.createElement('a');
     link.textContent = 'Tech Reviews';
     link.href='tech.html';

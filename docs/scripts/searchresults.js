@@ -29,7 +29,7 @@ document.title = searchQuery + " - Search Results";
 
 var header = document.getElementById("header");
 header.textContent = "Search Results for \"" + searchQuery + "\"";
-document.body.appendChild(header);
+//document.body.appendChild(header);
 
 var searchResultsDiv = document.getElementById("searchResults");
 

@@ -76,5 +76,6 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
     searchResultsDiv.appendChild(paragraph);
 }else {
     var results = document.getElementById("results");
-    searchResults.innerHTML = "No results found.";
+    header.textContent = '';
+    results.innerHTML = 'No results found for "' + searchQuery + '".';
 }

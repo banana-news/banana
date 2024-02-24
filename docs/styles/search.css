@@ -61,9 +61,9 @@ border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
     font-size: 24px;
   }
   #searchResults {
-    background-color: rgb(208, 208, 208);
+    background-color: #ffffff;
     padding: 20px;
-    height: 200px;
+    height: auto;
 }
 #results {
     color: white;

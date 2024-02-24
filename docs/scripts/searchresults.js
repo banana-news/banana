@@ -74,7 +74,8 @@ if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().incl
     searchResultsDiv.appendChild(link);
     searchResultsDiv.appendChild(paragraph);
 }else {
-    var results = document.getElementById("results");
-    header.textContent = '';
-    results.innerHTML = 'No results found for "' + searchQuery + '".';
+    var noresults = document.createElement('p');
+    noresults.innerHTML = 'No results found.';
+    searchResultsDiv.appendChild(noresults);
+    header.textContent='';
 }

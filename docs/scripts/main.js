@@ -43,3 +43,34 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
+
+  //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
+  const gamesdiv = document.getElementById('games');
+  const techdiv = document.getElementById('tech');
+  const politicsdiv = document.getElementById('politics');
+  const newsdiv = document.getElementById('news');
+  newsdiv.addEventListener("click", function(){
+      window.location.href = 'news.html';
+  });
+  techdiv.addEventListener("click", function(){
+      window.location.href = 'tech.html';
+  });
+  gamesdiv.addEventListener("click", function(){
+      window.location.href='games.html';
+  });
+  politicsdiv.addEventListener("click", function(){
+      window.location.href= 'politics.html';
+  });
+
+  const imagecombinerdiv = document.getElementById('imagecombiner');
+  const quadselectordiv = document.getElementById('quadselector');
+  const sharesitediv = document.getElementById('sharethispage');
+  imagecombinerdiv.addEventListener("click", function(){
+      window.location.href='imagecombiner.html';
+  });
+  quadselectordiv.addEventListener("click", function(){
+      window.location.href='https://albertkemp.github.io/quadselector/'
+  });
+  sharesitediv.addEventListener("click", function(){
+      window.location.href="share_this_page.html";
+  });

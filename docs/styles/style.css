@@ -102,16 +102,14 @@ body {
     outline:none;
   } 
   */
-   /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
 }
-
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   display: block;
@@ -123,24 +121,18 @@ body {
   font-family:'Open Sans', sans-serif;
   transition: 0.5s ease-in-out;
 }
-
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 } 
- /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
  @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -149,7 +141,6 @@ body {
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {

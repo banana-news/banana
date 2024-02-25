@@ -81,21 +81,21 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
         description: 'The Banana News fun page includes fun and games including Image Combiner, QuadSelector and Share this page.'
     });
 } 
-if (searchQuery.toLowerCase().includes('image') || searchQuery.toLowerCase().includes('combiner') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('image') || searchQuery.toLowerCase().includes('combiner') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: 'Image Combiner',
         link: 'imagecombiner.html',
         description: 'An image combining game which lets you combine images of famous people with images of food.'
     });
 } 
-if (searchQuery.toLowerCase().includes('share') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun')||searchQuery.toLowerCase().includes('share') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: 'Share this page',
         link: 'share_this_page.html',
         description: 'A page where you share the page with many different methods of sharing.'
     });
 } 
-if (searchQuery.toLowerCase().includes('quad') || searchQuery.toLowerCase().includes('selector') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('quad') || searchQuery.toLowerCase().includes('selector') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: 'QuadSelector',
         link: 'https://albertkemp.github.io/quadselector/',

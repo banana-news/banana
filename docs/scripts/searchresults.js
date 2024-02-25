@@ -64,7 +64,7 @@ if (searchQuery.toLowerCase().includes('tech') || searchQuery.toLowerCase().incl
     results.push({
         text: 'Tech Reviews',
         link: 'tech.html',
-        description: 'The Banana News tech page which includes news, reviews and reccomendations about tech.'
+        description: 'The Banana News tech page which includes news, reviews and recommendations about tech.'
     });
 } 
 if (searchQuery.toLowerCase().includes('politic') || searchQuery.toLowerCase().includes('china') || searchQuery.toLowerCase().includes('ukraine') || searchQuery.toLowerCase().includes('israel') || searchQuery.toLowerCase().includes('taiwan') || searchQuery.toLowerCase().includes('ccp') || searchQuery.toLowerCase().includes('dpp') || searchQuery.toLowerCase().includes('communism') || searchQuery.toLowerCase().includes('democracy') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('russia') || searchQuery.toLowerCase().includes('gaza') || searchQuery.toLowerCase().includes('palestine') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {

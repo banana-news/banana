@@ -1,5 +1,4 @@
 //Max and Sinan, Please ask Albert before editing or deleting this code
-//This is the main javascript script for all the sites - so it will control simple code like search results or key clicks. (The games will have their own scripts)
 /*
 []
  []
@@ -29,7 +28,6 @@
 If you're the sort of person who looks at the source code of webpages, try our challenge:
 
 https://banana-news.github.io/reports/share_this_page.html
-
 */
 /*
   _____________________________________________________________________________________________________________________
@@ -43,23 +41,15 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
-
-  //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
-  const gamesdiv = document.getElementById('games');
-  const techdiv = document.getElementById('tech');
-  const politicsdiv = document.getElementById('politics');
-  const newsdiv = document.getElementById('news');
-  newsdiv.addEventListener("click", function(){
-      window.location.href = 'news.html';
+const imagecombinerdiv = document.getElementById('imagecombiner');
+  const quadselectordiv = document.getElementById('quadselector');
+  const sharesitediv = document.getElementById('sharethispage');
+  imagecombinerdiv.addEventListener("click", function(){
+      window.location.href='imagecombiner.html';
   });
-  techdiv.addEventListener("click", function(){
-      window.location.href = 'tech.html';
+  quadselectordiv.addEventListener("click", function(){
+      window.location.href='https://albertkemp.github.io/quadselector/'
   });
-  gamesdiv.addEventListener("click", function(){
-      window.location.href='games.html';
+  sharesitediv.addEventListener("click", function(){
+      window.location.href="share_this_page.html";
   });
-  politicsdiv.addEventListener("click", function(){
-      window.location.href= 'politics.html';
-  });
-
-  

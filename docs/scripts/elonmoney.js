@@ -85,6 +85,6 @@ https://banana-news.github.io/reports/share_this_page.html
  }
  
  function showReceipt() {
-   receiptDiv.innerHTML = '<p><b>Your Receipt:</b><br>Items: ' + receiptItems + '<br><br>Total: ' + receiptPrice + '</p>';
+   receiptDiv.innerHTML = '<p><b>Your Receipt:</b><br>Items: ' + receiptItems + '<br><br>Total: $' + receiptPrice + '</p>';
  }
  

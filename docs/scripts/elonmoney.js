@@ -68,17 +68,21 @@ https://banana-news.github.io/reports/share_this_page.html
  //etc
  
  function buyItem(item) {
-     money= money-item;
-     receiptPrice = receiptPrice+item;
-     receiptItems++;
-     moneyDisplay.innerHTML = '$'+money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
- }
- function sellItem(item) {
-     money = money+item;
-     receiptPrice=receiptPrice-item;
-     receiptItems--;
-     moneyDisplay.innerHTML = '$'+money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
- }
+  money = money - item;
+  receiptPrice = receiptPrice + item;
+  receiptItems++;
+  let moneyString = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  moneyDisplay.innerHTML = '$' + parseInt(moneyString);
+}
+
+function sellItem(item) {
+  money = money + item;
+  receiptPrice = receiptPrice - item;
+  receiptItems--;
+  let moneyString = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  moneyDisplay.innerHTML = '$' + parseInt(moneyString);
+}
+
  
  if (money <=0) {
   money = 0;

@@ -84,7 +84,7 @@ if (searchQuery.toLowerCase().includes('politic') || searchQuery.toLowerCase().i
         description: "The Banana News politics page includes politics news to keep you informed about what's going on in the political world."
     });
 } 
-if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')){
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana') || searchQuery.toLowerCase().includes('image') || searchQuery.toLowerCase().includes('combiner') || searchQuery.toLowerCase().includes('quad') || searchQuery.toLowerCase().includes('selector') || searchQuery.toLowerCase().includes('share') || searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().includes('money') || searchQuery.toLowerCase().includes('elon') || searchQuery.toLowerCase().includes('musk')){
     results.push({
         text: 'Fun',
         link: 'games.html',
@@ -111,6 +111,13 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
         link: 'https://albertkemp.github.io/quadselector/',
         description: 'A timed game where you have to select as many quadrilaterals as possible.'
     });
+}
+if (searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().includes('elon') || searchQuery.toLowerCase().includes('musk') || searchQuery.toLowerCase().includes('money')) {
+    results.push({
+        text: "Spend Elon Musk's money",
+        link: 'elonmoney.html',
+        description: "A game where you spend Elon Musk's money on many expensive items."
+    })
 }
 
 if (results.length > 0) {

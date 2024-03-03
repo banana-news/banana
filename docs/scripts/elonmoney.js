@@ -43,6 +43,9 @@ https://banana-news.github.io/reports/share_this_page.html
  */
 const moneyDisplay = document.getElementById('moneyDisplay');
 let money = 213000000000;
+const receiptPrice = 0;
+const receiptItems = 0;
+const receiptDiv = document.getElementById('receiptDiv');
 
 const bigMac = 5;
 const pizza = 15;
@@ -66,13 +69,21 @@ const sheratonGrand = 100000000;
 
 function buyItem(item) {
     money= money-item;
+    receiptPrice = receiptPrice+item;
+    receiptItems++;
 }
 function sellItem(item) {
     money = money+item;
+    receiptPrice=receiptPrice-item;
+    receiptItems--;
 }
 
 moneyDisplay.innerHTML = money;
 
 if (money <=0) {
  money = 0;
+}
+
+function showReceipt() {
+  receiptDiv.innerHTML = '<p><b>Your Receipt:</b><br>Items: ' + receiptItems + '<br><br>Total: ' + receiptPrice + '</p>';
 }

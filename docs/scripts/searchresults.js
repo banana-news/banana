@@ -123,6 +123,7 @@ if (searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().inc
 
 if (results.length > 0) {
     results.forEach(result => {
+        
         var link = document.createElement('a');
         link.textContent = result.text;
         link.href = result.link;
@@ -135,7 +136,7 @@ if (results.length > 0) {
         searchResultsDiv.appendChild(link);
         searchResultsDiv.appendChild(paragraph);
         searchResultsDiv.appendChild(hr);
-        loadingMessage.styleText = 'display:none;';
+        document.getElementById('loadingMessage').style.display = "none";
     });
 } else {
     var noresults = document.createElement('p');

@@ -49,7 +49,7 @@ const elondiv = document.getElementById('elonmoney');
       window.location.href='imagecombiner.html';
   });
   elondiv.addEventListener("click", function(){
-    window.location.href='elonmoney.html';
+      window.location.href= 'elonmoney.html';
   });
   quadselectordiv.addEventListener("click", function(){
       window.location.href='https://albertkemp.github.io/quadselector/';

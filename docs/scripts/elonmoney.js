@@ -41,7 +41,8 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
-let price = 213000000000;
+const moneyDisplay = document.getElementById('moneyDisplay');
+let money = 213000000000;
 
 const bigMac = 5;
 const pizza = 15;
@@ -64,8 +65,14 @@ const sheratonGrand = 100000000;
 //etc
 
 function buyItem(item) {
-    price= price-item;
+    money= money-item;
 }
 function sellItem(item) {
-    price = price+item;
+    money = money+item;
+}
+
+moneyDisplay.innerHTML = money;
+
+if (money <=0) {
+ money = 0;
 }

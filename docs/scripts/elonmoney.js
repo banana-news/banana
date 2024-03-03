@@ -90,6 +90,6 @@ function sellItem(item) {
  }
  
  function showReceipt() {
-   receiptDiv.innerHTML = '<p><b>Your Receipt:</b><br>Items: ' + receiptItems + '<br><br>Total: $' + receiptPrice + '</p>';
+   receiptDiv.innerHTML = '<p><b>Your Receipt:</b><br>Items: ' + receiptItems + '<br><br>Total: $' + receiptPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '</p>';
  }
  

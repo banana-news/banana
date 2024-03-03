@@ -45,6 +45,7 @@ https://banana-news.github.io/reports/share_this_page.html
 var queryString = window.location.search;
 var searchParams = new URLSearchParams(queryString);
 var searchQuery = searchParams.get("q");
+const loadingMessage = document.getElementById('loadingMessage');
 
 document.title = searchQuery + " - Search Results";
 
@@ -134,6 +135,7 @@ if (results.length > 0) {
         searchResultsDiv.appendChild(link);
         searchResultsDiv.appendChild(paragraph);
         searchResultsDiv.appendChild(hr);
+        loadingMessage.styleText = 'display:none;';
     });
 } else {
     var noresults = document.createElement('p');

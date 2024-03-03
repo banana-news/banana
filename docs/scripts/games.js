@@ -42,10 +42,14 @@ https://banana-news.github.io/reports/share_this_page.html
 
  */
 const imagecombinerdiv = document.getElementById('imagecombiner');
+const elondiv = document.getElementById('elonmoney');
   const quadselectordiv = document.getElementById('quadselector');
   const sharesitediv = document.getElementById('sharethispage');
   imagecombinerdiv.addEventListener("click", function(){
       window.location.href='imagecombiner.html';
+  });
+  elondiv.addEventListener("click", function(){
+    window.location.href='elonmoney.html';
   });
   quadselectordiv.addEventListener("click", function(){
       window.location.href='https://albertkemp.github.io/quadselector/'

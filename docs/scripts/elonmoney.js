@@ -71,13 +71,13 @@ https://banana-news.github.io/reports/share_this_page.html
      money= money-item;
      receiptPrice = receiptPrice+item;
      receiptItems++;
-     moneyDisplay.innerHTML = money;
+     moneyDisplay.innerHTML = '$'+money;
  }
  function sellItem(item) {
      money = money+item;
      receiptPrice=receiptPrice-item;
      receiptItems--;
-     moneyDisplay.innerHTML = money;
+     moneyDisplay.innerHTML = '$'+money;
  }
  
  if (money <=0) {

@@ -96,7 +96,7 @@ function eraseLine() {
 function drawing_line(color, x_start, y_start, x_end, y_end, board){
 	board.beginPath();
 	board.strokeStyle = color;
-	board.lineWidth = 3;
+	//board.lineWidth = 3;
 	board.moveTo(x_start,y_start);
 	board.lineTo(x_end,y_end);
 	board.stroke(); 

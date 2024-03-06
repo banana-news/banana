@@ -55,6 +55,12 @@ const cokeUrl = 'https://1000logos.net/wp-content/uploads/2021/05/Coca-Cola-logo
 const appleUrl = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg';
 const facebookUrl = 'https://www.facebook.com/images/fb_icon_325x325.png';
 
+
+function revealImage(image, url, button) {
+	image.src = url;
+	
+}
+
  var canvases = document.getElementsByClassName("drawPlace");
         var colorLine = "#9ACD32";
         var key = {C: 67};

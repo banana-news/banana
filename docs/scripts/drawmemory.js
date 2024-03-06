@@ -43,6 +43,7 @@ drawing_line("#FF6347", x-1, y, x, y, paper);
 
 function changeColor(newColor, newWidth) {
     colorLine = newColor;
+    board.lineWidth = 3;
 }
 function eraseLine() {
     colorLine = '#ffffff';

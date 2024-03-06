@@ -1,4 +1,4 @@
-//Max and Sinan, please ask me (albert) before editing or deleting this:
+//Max and Sinan, please ask Albert before editing or deleting this:
 /*
 []
  []

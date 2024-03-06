@@ -65,7 +65,7 @@ function drawLine(eventvs02) {
 		document.getElementById("drawPlace").style.cursor = "crosshair";
 		var xM = eventvs02.offsetX;
 		var yM = eventvs02.offsetY;
-		drawing_line(colorLine, x, y, xM, yM, paper);
+		drawing_line(colorLine, x, y, xM, yM, board.lineWidth, paper);
 		x = xM;
 		y = yM;
 	}
@@ -82,7 +82,7 @@ function clearCanvas(whenPressKey) {
 	}
 }
 
-drawing_line("#FF6347", x-1, y, x, y, paper);
+drawing_line("#FF6347", x-1, y, x, y, board.lineWidth, paper);
 
 function changeColor(newColor, newWidth) {
     colorLine = newColor;
@@ -93,10 +93,10 @@ function eraseLine() {
     board.lineWidth = 25;
 }
 
-function drawing_line(color, x_start, y_start, x_end, y_end, board){
+function drawing_line(color, x_start, y_start, x_end, y_end, width, board){
 	board.beginPath();
 	board.strokeStyle = color;
-	//board.lineWidth = 3;
+	board.lineWidth = width;
 	board.moveTo(x_start,y_start);
 	board.lineTo(x_end,y_end);
 	board.stroke(); 

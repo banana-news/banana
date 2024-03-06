@@ -3,8 +3,23 @@
 	<head>
 	    <title>Drawing with the Mouse</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="games.html" class="active">Fun</a>
+            <a href="tech.html">Tech Reviews</a>
+            <a href="politics.html">Politics</a>
+            <a href="news.html">News</a>
+            <button onclick="window.location.href='search.html'" class="searchbutton"><span class="material-symbols-outlined">
+              search
+              </span></button>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <br><br><br>
 		<h1>Drawing with the mouse</h1>
 		<p>Move the mouse and click to draw.<br />Press "C" to clear canvas</p>
 		<canvas width="300" height="300" id="drawPlace" style="border:1px solid #eee"></canvas>
@@ -16,6 +31,7 @@
         <button onclick="changeColor('#ffffff')"><span class="material-symbols-outlined">
             ink_eraser
             </span></button>
+            <script src="scripts/main.js"></script>
 		<script src="scripts/drawmemory.js"></script>
 	</body>
 </html>

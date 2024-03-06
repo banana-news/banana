@@ -41,8 +41,12 @@ function clearCanvas(whenPressKey) {
 
 drawing_line("#FF6347", x-1, y, x, y, paper);
 
-function changeColor(newColor) {
+function changeColor(newColor, newWidth) {
     colorLine = newColor;
+}
+function eraseLine() {
+    colorLine = '#ffffff';
+    board.lineWidth = 25;
 }
 
 function drawing_line(color, x_start, y_start, x_end, y_end, board){

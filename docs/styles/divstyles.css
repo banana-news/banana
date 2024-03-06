@@ -40,12 +40,12 @@ https://banana-news.github.io/reports/share_this_page.html
 */
 .options div{
     border-radius: 10px;
-    padding: 50px;
+    padding: 35px;
     background-color: #FFE135;
     border: 2.5px solid grey;
     color:black;
     transition: 0.5s ease-in-out;
-    width: 40%;
+    width: auto;
     height: auto;
     float: left;
 }

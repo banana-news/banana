@@ -41,57 +41,65 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
- var square = document.getElementById("drawPlace");
- var paper = square.getContext("2d");
- var pressedMouse = false; 
- var x;
- var y;
- var colorLine ="#9ACD32";
- var key = {C: 67};
- 
- document.addEventListener("mousedown", startDrawing);
- document.addEventListener("mousemove", drawLine);
- document.addEventListener("mouseup", stopDrawing);
- document.addEventListener("keydown", clearCanvas);
- 
- function startDrawing(eventvs01){
-	 pressedMouse = true;
-	 x = eventvs01.offsetX;
-	 y = eventvs01.offsetY;
- }
- 
- function drawLine(eventvs02) {
-	 if (pressedMouse) {
-		 document.getElementById("drawPlace").style.cursor = "crosshair";
-		 var xM = eventvs02.offsetX;
-		 var yM = eventvs02.offsetY;
-		 drawing_line(colorLine, x, y, xM, yM, paper);
-		 x = xM;
-		 y = yM;
-	 }
- }
- 
- function stopDrawing(eventvs03) {
-	 pressedMouse = false;
-	 document.getElementById("drawPlace").style.cursor = "default";
- }
- 
- function clearCanvas(whenPressKey) {
-	 if (whenPressKey.keyCode == key.C) {
-		 paper.clearRect(0, 0, square.width, square.height);
-	 }
- }
- 
- drawing_line("#FF6347", x-1, y, x, y, paper);
- function changeColor(newColor){
-	 colorLine = newColor;
- }
- function drawing_line(color, x_start, y_start, x_end, y_end, board){
-	 board.beginPath();
-	 board.strokeStyle = color;
-	 board.lineWidth = 2;
-	 board.moveTo(x_start,y_start);
-	 board.lineTo(x_end,y_end);
-	 board.stroke(); 
-	 board.closePath();
- }
+ var canvases = document.getElementsByClassName("drawPlace");
+        var colorLine = "#9ACD32";
+        var key = {C: 67};
+
+        for (let i = 0; i < canvases.length; i++) {
+            let canvas = canvases[i];
+            let paper = canvas.getContext("2d");
+            let pressedMouse = false;
+            let x, y;
+
+            canvas.addEventListener("mousedown", function(event) { startDrawing(event, canvas, paper); });
+            canvas.addEventListener("mousemove", function(event) { drawLine(event, canvas, paper); });
+            canvas.addEventListener("mouseup", function(event) { stopDrawing(event, canvas); });
+        }
+
+        document.addEventListener("keydown", clearCanvas);
+
+        function startDrawing(event, canvas, paper) {
+            pressedMouse = true;
+            x = event.offsetX;
+            y = event.offsetY;
+            drawing_line(colorLine, x-1, y, x, y, paper);
+        }
+
+        function drawLine(event, canvas, paper) {
+            if (pressedMouse) {
+                canvas.style.cursor = "crosshair";
+                var xM = event.offsetX;
+                var yM = event.offsetY;
+                drawing_line(colorLine, x, y, xM, yM, paper);
+                x = xM;
+                y = yM;
+            }
+        }
+
+        function stopDrawing(event, canvas) {
+            pressedMouse = false;
+            canvas.style.cursor = "default";
+        }
+
+        function clearCanvas(event) {
+            if (event.keyCode == key.C) {
+                for (let i = 0; i < canvases.length; i++) {
+                    let paper = canvases[i].getContext("2d");
+                    paper.clearRect(0, 0, canvases[i].width, canvases[i].height);
+                }
+            }
+        }
+
+        function changeColor(newColor) {
+            colorLine = newColor;
+        }
+
+        function drawing_line(color, x_start, y_start, x_end, y_end, paper) {
+            paper.beginPath();
+            paper.strokeStyle = color;
+            paper.lineWidth = 2;
+            paper.moveTo(x_start, y_start);
+            paper.lineTo(x_end, y_end);
+            paper.stroke();
+            paper.closePath();
+        }

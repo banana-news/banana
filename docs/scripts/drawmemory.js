@@ -84,19 +84,14 @@ function clearCanvas(whenPressKey) {
 
 drawing_line("#FF6347", x-1, y, x, y, board.lineWidth, paper);
 
-function changeColor(newColor, newWidth) {
+function changeColor(newColor) {
     colorLine = newColor;
-    board.lineWidth = 3;
-}
-function eraseLine() {
-    colorLine = '#ffffff';
-    board.lineWidth = 25;
 }
 
-function drawing_line(color, x_start, y_start, x_end, y_end, width, board){
+function drawing_line(color, x_start, y_start, x_end, y_end, board){
 	board.beginPath();
 	board.strokeStyle = color;
-	board.lineWidth = width;
+	board.lineWidth = 3;
 	board.moveTo(x_start,y_start);
 	board.lineTo(x_end,y_end);
 	board.stroke(); 

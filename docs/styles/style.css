@@ -187,3 +187,11 @@ footer {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
 }
+.tomatonews{
+  padding: 20px;
+  background-image: linear-gradient(#ff6347, #008000);
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  top: 100px;
+  left: 40%;
+}

@@ -120,7 +120,13 @@ if (searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().inc
         description: "A game where you spend Elon Musk's money on many expensive items."
     })
 }
-if (searchQuery.toLowerCase().includes('hi') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana'))
+if (searchQuery.toLowerCase().includes('hi') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+    results.push({
+        text: 'Hi',
+        link: 'hi.html',
+        description: 'A html page saying "hi"'
+    });
+}
 
 if (results.length > 0) {
     results.forEach(result => {

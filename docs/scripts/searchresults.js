@@ -113,13 +113,14 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
         description: 'A timed game where you have to select as many quadrilaterals as possible.'
     });
 }
-if (searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().includes('elon') || searchQuery.toLowerCase().includes('musk') || searchQuery.toLowerCase().includes('money')) {
+if (searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().includes('elon') || searchQuery.toLowerCase().includes('musk') || searchQuery.toLowerCase().includes('money') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: "Spend Elon Musk's money",
         link: 'elonmoney.html',
         description: "A game where you spend Elon Musk's money on many expensive items."
     })
 }
+if (searchQuery.toLowerCase().includes('hi') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana'))
 
 if (results.length > 0) {
     results.forEach(result => {

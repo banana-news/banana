@@ -61,9 +61,9 @@ https://banana-news.github.io/reports/share_this_page.html
   politicsdiv.addEventListener("click", function(){
       window.location.href= 'politics.html';
   });
-
-  function closeItem(toBeClosed) {
-    toBeClosed.style.display='none';
+const tomatoNewsDiv = document.getElementById('tomatonews');
+  function closeItem() {
+    tomatoNewsDiv.style.display='none';
   }
 
   

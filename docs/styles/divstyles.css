@@ -45,8 +45,8 @@ https://banana-news.github.io/reports/share_this_page.html
     border: 2.5px solid grey;
     color:black;
     transition: 0.5s ease-in-out;
-    width: auto;
-    height: auto;
+    height:auto;
+    width: 40%;
     float: left;
 }
 .options div:hover{

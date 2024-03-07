@@ -120,7 +120,7 @@ function revealImage(image, url, button) {
         function drawing_line(color, x_start, y_start, x_end, y_end, paper) {
             paper.beginPath();
             paper.strokeStyle = color;
-            paper.lineWidth = 2;
+            paper.lineWidth = 3;
             paper.moveTo(x_start, y_start);
             paper.lineTo(x_end, y_end);
             paper.stroke();

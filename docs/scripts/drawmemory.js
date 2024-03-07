@@ -49,11 +49,11 @@ const appleImg = document.getElementById('apple');
 const facebookImg = document.getElementById('facebook');
 
 //urls
-const googleUrl = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
-const microsoftUrl = 'https://www.microsoft.com/favicon.ico?v2';
-const cokeUrl = 'https://1000logos.net/wp-content/uploads/2021/05/Coca-Cola-logo.png';
-const appleUrl = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg';
-const facebookUrl = 'https://www.facebook.com/images/fb_icon_325x325.png';
+const googleUrl = 'images/google.png';
+const microsoftUrl = 'images/microsoft.png';
+const cokeUrl = 'images/coke.png';
+const appleUrl = 'images/apple.svg';
+const facebookUrl = 'images/facebooknew.png';
 
 function revealImage(image, url, button) {
 	image.src = url;

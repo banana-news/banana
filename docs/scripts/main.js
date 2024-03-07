@@ -62,4 +62,8 @@ https://banana-news.github.io/reports/share_this_page.html
       window.location.href= 'politics.html';
   });
 
+  function closeItem(toBeClosed) {
+    toBeClosed.style.display='none';
+  }
+
   

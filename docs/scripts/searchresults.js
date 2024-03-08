@@ -127,6 +127,13 @@ if (searchQuery.toLowerCase().includes('hi') || searchQuery.toLowerCase().includ
         description: 'A html page saying "hi"'
     });
 }
+if (searchQuery.toLowerCase().includes('cow') || searchQuery.toLowerCase().includes('calc') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+    results.push({
+        text: 'Calculator',
+        link: 'cow.html',
+        description: 'A JavaScript calculator made by Sinan which supports division, multiplication, addition and subtraction.'
+    });
+}
 
 if (results.length > 0) {
     results.forEach(result => {

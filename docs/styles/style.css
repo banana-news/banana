@@ -164,7 +164,7 @@ tr:nth-child(even){
   background-color: #919191;
  }
  td{padding:20px;}
- th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:20px;border: 1px solid black;}
+ th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:20px;border: 1px solid #000000;}
  /*I know what you're thinking. Just don't.*/
 
  .searchbutton {

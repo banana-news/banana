@@ -113,7 +113,7 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
         description: 'A timed game where you have to select as many quadrilaterals as possible.'
     });
 }
-if (searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().includes('elon') || searchQuery.toLowerCase().includes('musk') || searchQuery.toLowerCase().includes('money') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('spend') || searchQuery.toLowerCase().includes('elon') || searchQuery.toLowerCase().includes('musk') || searchQuery.toLowerCase().includes('money') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: "Spend Elon Musk's money",
         link: 'elonmoney.html',
@@ -127,14 +127,20 @@ if (searchQuery.toLowerCase().includes('hi') || searchQuery.toLowerCase().includ
         description: 'A html page saying "hi"'
     });
 }
-if (searchQuery.toLowerCase().includes('cow') || searchQuery.toLowerCase().includes('calc') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('cow') || searchQuery.toLowerCase().includes('calc') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: 'Calculator',
         link: 'cow.html',
         description: 'A JavaScript calculator made by Sinan which supports division, multiplication, addition and subtraction.'
     });
 }
-
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('square') || searchQuery.toLowerCase().includes('shoot')) {
+    results.push({
+        text:'Square shooter',
+        link:'Me.html',
+        description: 'A game with a goal of shooting 100 times in 20 seconds.'
+    });
+}
 if (results.length > 0) {
     results.forEach(result => {
         

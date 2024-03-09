@@ -62,6 +62,6 @@ const elondiv = document.getElementById('elonmoney');
   drawmemorydiv.addEventListener("click", function(){
     window.location.href='drawmemory.html';
   });
-  cowcalcdiv.addEventListener("click", function*() {
+  cowcalcdiv.addEventListener("click", function () {
     window.location.href = 'cow.html';
   });

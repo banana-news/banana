@@ -59,7 +59,6 @@ var results = [];
 
 function tiltPage() {
     document.body.style.rotate = '2deg';
-    searchResultsDiv.innerHTML = '<h2>Askew</h2><p>Not in a straight or level position</p>';
     loadingMessage.style.display='none';
 }
 

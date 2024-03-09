@@ -47,6 +47,7 @@ const elondiv = document.getElementById('elonmoney');
   const sharesitediv = document.getElementById('sharethispage');
   const drawmemorydiv = document.getElementById('drawmemory');
   const cowcalcdiv = document.getElementById('cowcalc');
+  const squareshootdiv = document.getElementById('squareshooter');
   imagecombinerdiv.addEventListener("click", function(){
       window.location.href='imagecombiner.html';
   });
@@ -64,4 +65,7 @@ const elondiv = document.getElementById('elonmoney');
   });
   cowcalcdiv.addEventListener("click", function () {
     window.location.href = 'cow.html';
+  });
+  squareshootdiv.addEventListener("click", function() {
+    window.location.href='Me.html';
   });

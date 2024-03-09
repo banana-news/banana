@@ -61,6 +61,8 @@ function tiltPage() {
     document.body.style.rotate = '2deg';
     document.body.style.top = '20px';
     document.body.style.position='absolute';
+    searchResultsDiv.innerHTML = '<h2>Askew</h2><p>Not in a straight or level position</p>';
+    loadingMessage.style.display='none';
 }
 
 if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().includes('index') || searchQuery.toLowerCase().includes('main') || searchQuery.toLowerCase().includes('banana') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every')) {

@@ -143,6 +143,15 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
 }
 if (results.length > 0) {
     if (results.length==1) {
+        var link  =document.createElement('a');
+        link.textContent = result.text;
+        link.href=result.link;
+        var paragraph = document.createElement('p');
+        paragraph.innerHTML = result.description;
+        searchResultsDiv.appendChild(link);
+        searchResultsDiv.appendChild(paragraph);
+        document.getElementById('loadingMessage').style.display="none";
+    } else{
         results.forEach(result => {
         
             var link = document.createElement('a');
@@ -159,15 +168,7 @@ if (results.length > 0) {
             searchResultsDiv.appendChild(hr);
             document.getElementById('loadingMessage').style.display = "none";
         });
-    } else{
-        var link  =document.createElement('a');
-        link.textContent = result.text;
-        link.href=result.link;
-        var paragraph = document.createElement('p');
-        paragraph.innerHTML = result.description;
-        searchResultsDiv.appendChild(link);
-        searchResultsDiv.appendChild(paragraph);
-        document.getElementById('loadingMessage').style.display="none";
+        
     }
     
 } else {

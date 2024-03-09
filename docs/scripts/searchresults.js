@@ -157,6 +157,7 @@ if (results.length > 0) {
     noresults.innerHTML = 'No results found.';
     searchResultsDiv.appendChild(noresults);
     header.textContent = '';
+    document.getElementById('loadingMessage').style.display = "none";
 }
 
 

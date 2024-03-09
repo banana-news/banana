@@ -70,7 +70,7 @@
             for (const bullet of bullets) {
                 const bulletY = parseInt(bullet.style.top);
                 if (bulletY > 0) {
-                    bullet.style.top = bulletY - 20 + "px";
+                    bullet.style.top = bulletY - 30 + "px";
                 } else {
                     document.body.removeChild(bullet);
                     bullets.splice(bullets.indexOf(bullet), 1);

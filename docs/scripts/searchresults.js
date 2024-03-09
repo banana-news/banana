@@ -127,7 +127,7 @@ if (searchQuery.toLowerCase().includes('hi') || searchQuery.toLowerCase().includ
         description: 'A html page saying "hi"'
     });
 }
-if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('cow') || searchQuery.toLowerCase().includes('calc') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana') || searchQuery.includes('stuff')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('cow') || searchQuery.toLowerCase().includes('cattle') || searchQuery.toLowerCase().includes('calc') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana') || searchQuery.includes('stuff')) {
     results.push({
         text: 'Calculator',
         link: 'cow.html',

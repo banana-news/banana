@@ -127,14 +127,14 @@ if (searchQuery.toLowerCase().includes('hi') || searchQuery.toLowerCase().includ
         description: 'A html page saying "hi"'
     });
 }
-if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('cow') || searchQuery.toLowerCase().includes('calc') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('cow') || searchQuery.toLowerCase().includes('calc') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana') || searchQuery.includes('stuff')) {
     results.push({
         text: 'Calculator',
         link: 'cow.html',
         description: 'A JavaScript calculator made by Sinan which supports division, multiplication, addition and subtraction.'
     });
 }
-if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('square') || searchQuery.toLowerCase().includes('shoot')) {
+if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('square') || searchQuery.toLowerCase().includes('shoot') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana') || searchQuery.includes('stuff')) {
     results.push({
         text:'Square shooter',
         link:'Me.html',

@@ -58,7 +58,7 @@ var searchResultsDiv = document.getElementById("searchResults");
 var results = [];
 
 function tiltPage() {
-    document.body.style.rotate = '1deg';
+    document.body.style.rotate = '2deg';
     loadingMessage.style.display='none';
 }
 

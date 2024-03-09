@@ -57,6 +57,10 @@ var searchResultsDiv = document.getElementById("searchResults");
 
 var results = [];
 
+function tiltPage() {
+    document.body.style.rotate = '4deg';
+}
+
 if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().includes('index') || searchQuery.toLowerCase().includes('main') || searchQuery.toLowerCase().includes('banana') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every')) {
     results.push({
         text: 'Home',
@@ -140,6 +144,9 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
         link:'Me.html',
         description: 'A game with a goal of shooting 100 times in 20 seconds.'
     });
+}
+if (searchQuery.toLowerCase().includes('askew') || searchQuery.toLowerCase().includes('tilt') || searchQuery.toLowerCase().includes('rotate')) {
+    tiltPage();
 }
 if (results.length > 0) {
     if (results.length==1) {

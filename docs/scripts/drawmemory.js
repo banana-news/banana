@@ -61,7 +61,7 @@ function revealImage(image, url, button) {
 }
 
  var canvases = document.getElementsByClassName("drawPlace");
-        var colorLine = "#9ACD32";
+        var colorLine = "#000000";
         var key = {C: 67};
 
         for (let i = 0; i < canvases.length; i++) {

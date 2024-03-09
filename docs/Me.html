@@ -23,13 +23,13 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background-color: blue;
+            background-color: #0000ff;
         }
         .bullet {
             position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: red;
+            width: 5px;
+            height: 7px;
+            background-color: #000000;
         }
     </style>
 </head>
@@ -50,9 +50,9 @@
         function movePlayer(event) {
             const key = event.key;
             if (key === "ArrowLeft") {
-                playerX -= 10;
+                playerX -= 15;
             } else if (key === "ArrowRight") {
-                playerX += 10;
+                playerX += 15;
             }
             player.style.left = playerX + "px";
         }
@@ -70,7 +70,7 @@
             for (const bullet of bullets) {
                 const bulletY = parseInt(bullet.style.top);
                 if (bulletY > 0) {
-                    bullet.style.top = bulletY - 5 + "px";
+                    bullet.style.top = bulletY - 20 + "px";
                 } else {
                     document.body.removeChild(bullet);
                     bullets.splice(bullets.indexOf(bullet), 1);

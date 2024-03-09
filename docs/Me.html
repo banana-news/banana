@@ -1,1 +1,79 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #player {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+        .bullet {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="player"></div>
+    <script>
+        const player = document.getElementById("player");
+        let playerX = 200;
+        let playerY = 400;
+        player.style.left = playerX + "px";
+        player.style.top = playerY + "px";
+
+        const bullets = [];
+
+        function movePlayer(event) {
+            const key = event.key;
+            if (key === "ArrowLeft") {
+                playerX -= 10;
+            } else if (key === "ArrowRight") {
+                playerX += 10;
+            }
+            player.style.left = playerX + "px";
+        }
+
+        function shootBullet() {
+            const bullet = document.createElement("div");
+            bullet.className = "bullet";
+            bullet.style.left = playerX + 20 + "px";
+            bullet.style.top = playerY + "px";
+            document.body.appendChild(bullet);
+            bullets.push(bullet);
+        }
+
+        function moveBullets() {
+            for (const bullet of bullets) {
+                const bulletY = parseInt(bullet.style.top);
+                if (bulletY > 0) {
+                    bullet.style.top = bulletY - 5 + "px";
+                } else {
+                    document.body.removeChild(bullet);
+                    bullets.splice(bullets.indexOf(bullet), 1);
+                }
+            }
+        }
+
+        document.addEventListener("keydown", movePlayer);
+        document.addEventListener("keydown", (event) => {
+            if (event.key === " ") {
+                shootBullet();
+            }
+        });
+
+        setInterval(moveBullets, 50);
+    </script>
+</body>
+</html>

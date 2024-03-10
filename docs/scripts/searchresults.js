@@ -61,16 +61,10 @@ var results = [];
 function tiltPage() {
     document.body.style.rotate = '2deg';
     loadingMessage.style.display='none';
-    setTimeout(function(){
-        alert('hee hee hee')
-    }, 5000);
 }
 function barrelRoll() {
     document.body.style.animation = 'mymove 5s';
     loadingMessage.style.display='none';
-    setTimeout(function(){
-        alert('hee hee hee');
-    }, 3500);
 }
 
 if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().includes('index') || searchQuery.toLowerCase().includes('main') || searchQuery.toLowerCase().includes('banana') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every')) {
@@ -188,8 +182,6 @@ if (results.length > 0) {
     header.textContent = '';
     loadingMessage.style.display='none';
 }
-
-
 /*else {
     var noresults = document.createElement('p');
     noresults.innerHTML = 'No results found.';

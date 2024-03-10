@@ -55,7 +55,6 @@ https://banana-news.github.io/reports/share_this_page.html
     float: left;
 }
 .options-div:hover{
-    opacity: 70%;
     cursor: pointer;
     background-color: #d3d3d3;
 }

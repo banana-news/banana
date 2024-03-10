@@ -57,9 +57,20 @@ var searchResultsDiv = document.getElementById("searchResults");
 
 var results = [];
 
+//I'm just being a tiny bit cheeky
 function tiltPage() {
     document.body.style.rotate = '2deg';
     loadingMessage.style.display='none';
+    setTimeout(function(){
+        alert('hee hee hee')
+    }, 750);
+}
+function barrelRoll() {
+    document.body.style.animation = 'mymove 5s';
+    loadingMessage.style.display='none';
+    setTimeout(function(){
+        alert('hee hee hee');
+    }, 3500);
 }
 
 if (searchQuery.toLowerCase().includes('home') || searchQuery.toLowerCase().includes('index') || searchQuery.toLowerCase().includes('main') || searchQuery.toLowerCase().includes('banana') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every')) {
@@ -149,6 +160,9 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
 if (searchQuery.toLowerCase().includes('askew') || searchQuery.toLowerCase().includes('tilt') || searchQuery.toLowerCase().includes('rotate')) {
     tiltPage();
 }
+if (searchQuery.toLowerCase().includes('barrel') && searchQuery.toLowerCase().includes('roll')) {
+    barrelRoll();
+}
 if (results.length > 0) {
         results.forEach(result => {
         
@@ -164,7 +178,7 @@ if (results.length > 0) {
             searchResultsDiv.appendChild(link);
             searchResultsDiv.appendChild(paragraph);
             searchResultsDiv.appendChild(hr);
-            document.getElementById('loadingMessage').style.display = "none";
+            loadingMessage.style.display='none';
         });
         
     } else {
@@ -172,7 +186,7 @@ if (results.length > 0) {
     noresults.innerHTML = 'No results found.';
     searchResultsDiv.appendChild(noresults);
     header.textContent = '';
-    document.getElementById('loadingMessage').style.display = "none";
+    loadingMessage.style.display='none';
 }
 
 

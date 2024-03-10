@@ -197,3 +197,6 @@ footer {
   left: 40%;
   width: 400px;
 }
+@keyframes mymove {
+  100% {transform: rotate(360deg);}
+}

@@ -63,7 +63,7 @@ function tiltPage() {
     loadingMessage.style.display='none';
     setTimeout(function(){
         alert('hee hee hee')
-    }, 750);
+    }, 5000);
 }
 function barrelRoll() {
     document.body.style.animation = 'mymove 5s';

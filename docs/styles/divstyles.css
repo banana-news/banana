@@ -57,6 +57,7 @@ https://banana-news.github.io/reports/share_this_page.html
 .options-div:hover{
     opacity: 70%;
     cursor: pointer;
+    background-color: #d3d3d3;
 }
 .zoom-image{
   transition: transform .2s ease-in-out;

@@ -41,8 +41,6 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
 */
-img{border-radius: 10%;background-color: #000000;}
-img:hover{opacity: 70%;}
 button {
     font-size: 20px;
     border-radius: 5px;

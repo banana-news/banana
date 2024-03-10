@@ -48,6 +48,18 @@ https://banana-news.github.io/reports/share_this_page.html
     text-decoration: none;
     transition: 0.5s ease-in-out;
 }
+.newsdiv button{
+    background-color: #6868fd;
+    color: #ffffff;
+    width: 80%;
+    font-size: 17px;
+    padding: 10px;
+    margin: auto;
+}
+.newsdiv button:hover{
+    background-color: #d3d3d3;
+    cursor: pointer;
+}
 .newsdiv:hover{
  opacity: 0.7;
  cursor: pointer;

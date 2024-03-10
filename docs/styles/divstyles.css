@@ -40,6 +40,7 @@ https://banana-news.github.io/reports/share_this_page.html
 */
 .img-container{
   overflow: hidden;
+  border-radius: 10%;
 }
 .options-div{
     border-radius: 10px;

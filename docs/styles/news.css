@@ -45,6 +45,7 @@ https://banana-news.github.io/reports/share_this_page.html
     overflow: auto;
     clear: both;
     display: block;
+    text-decoration: none;
 }
 
 .newsdiv img {

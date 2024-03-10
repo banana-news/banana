@@ -45,8 +45,8 @@ https://banana-news.github.io/reports/share_this_page.html
     border-radius: 10px;
     padding: 35px;
     background-color: #FFE135;
-    border: 2.5px solid grey;
-    color:black;
+    border: 2.5px solid #808080;
+    color:#000000;
     transition: 0.5s ease-in-out;
     height:auto;
     width: 40%;
@@ -54,7 +54,7 @@ https://banana-news.github.io/reports/share_this_page.html
     float: left;
 }
 .options-div:hover{
-    background-color: rgb(150, 150, 150);
+    opacity: 70%;
     cursor: pointer;
 }
 .zoom-image{

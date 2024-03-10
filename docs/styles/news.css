@@ -1,0 +1,12 @@
+.newsdiv{
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    color:#000000;
+}
+.newsdiv img{float:left; height:225px;border-radius: 7px;}
+.newsdiv h2, p{float:left;}
+.newsdiv h2:hover, p:hover{color:#ff0000;text-decoration: underline;opacity: 70%;}
+body{
+    color: #000000;
+}

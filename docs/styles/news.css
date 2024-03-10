@@ -6,7 +6,15 @@
 }
 .newsdiv img{float:left; height:225px;border-radius: 7px;}
 .newsdiv h2, p{float:left;}
+.newsdiv h2{font-family: 'Lato',sans-serif;font-size:27.5px;}
+.newsdiv p{font-family: 'Open Sans', sans-serif;font-size:17.5px;}
 .newsdiv h2:hover, p:hover{color:#ff0000;text-decoration: underline;opacity: 70%;}
 body{
     color: #000000;
+}
+.news-h1{
+font-size: 75px;
+color: #000000;
+background-color: #d3d3d3;
+padding: 20px;
 }

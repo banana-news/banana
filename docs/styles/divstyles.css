@@ -60,7 +60,7 @@ https://banana-news.github.io/reports/share_this_page.html
 .zoom-image{
   transition: transform .2s ease-in-out;
 }
-.zoom-image:hover{
+.options-div:hover .zoom-image{
   transform: scale(1.075);
 }
 .options{

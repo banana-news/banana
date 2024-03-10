@@ -41,7 +41,7 @@ https://banana-news.github.io/reports/share_this_page.html
 .img-container{
   overflow: hidden;
 }
-.options div{
+.options-div{
     border-radius: 10px;
     padding: 35px;
     background-color: #FFE135;
@@ -53,14 +53,14 @@ https://banana-news.github.io/reports/share_this_page.html
     height:500px;
     float: left;
 }
-.options div:hover{
+.options-div:hover{
     background-color: rgb(150, 150, 150);
     cursor: pointer;
 }
-.options img{
+.zoom-image{
   transition: transform .2s ease-in-out;
 }
-.img-container:hover .options img{
+.img-container:hover .zoom-image{
   transform: scale(1.075);
 }
 .options{

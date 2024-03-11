@@ -51,6 +51,10 @@ https://banana-news.github.io/reports/share_this_page.html
   padding: 20px;
   color: #ffffff;
 }
+.tomatoMessage a{
+  color:#ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
 button {
     font-size: 20px;
     border-radius: 5px;

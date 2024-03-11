@@ -41,6 +41,11 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
 */
+.background{
+  padding: 175px;
+  width: 100%;
+  text-align: center;
+}
 button {
     font-size: 20px;
     border-radius: 5px;

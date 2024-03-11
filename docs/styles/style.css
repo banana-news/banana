@@ -150,10 +150,24 @@ body {
 } 
 
 @media (max-width:768px){
+  .background{
+    padding: 107.5px;
+    width: 100%;
+    text-align: center;
+  }
+  .tomatoMessage{
+    background-image: linear-gradient(#008000,#ff6347);
+    padding: 30px;
+    color: #ffffff;
+  }
+  .tomatoMessage a{
+    color:#ffffff;
+    -webkit-text-fill-color: #ffffff;
+  }
   button {
-    font-size: 40px;
-    border-radius: 10px;
-    padding: 14px;
+    font-size: 30px;
+    border-radius: 7.5px;
+    padding: 10.5px;
     background-color: #008000;
     font-family: 'Open Sans', sans-serif;
     border:none;
@@ -162,23 +176,23 @@ body {
   }
   h1{
     font-family: 'IBM Plex Serif', serif;
-    font-size: 200px;
+    font-size: 150px;
     text-align: center;
   }
   h2{
     font-family: 'Lato', sans-serif;
-    font-size: 70px;
+    font-size: 52.5px;
     text-align: center;
   }
   p{
     font-family: 'Open Sans', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
   }
 h3{
 
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   text-decoration-line: underline;
   text-align: center;
 }
@@ -195,37 +209,37 @@ h3{
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 50px 54px;
+  padding: 30px 33px;
   text-decoration: none;
-  font-size: 50px;
+  font-size: 37.5px;
   font-family:'Open Sans', sans-serif;
 }
 /*PLEASE don't change table styling (below) it will mess it up*/
 tr:nth-child(even){
   background-color: #919191;
  }
- td{padding:40px;}
- th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:40px;border: 2px solid #000000;}
+ td{padding:30px;}
+ th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:30px;border: 1.5px solid #000000;}
  /*I know what you're thinking. Just don't.*/
 
  .searchbutton {
-  height: 124px;
-  border-radius: 40px;
+  height: 93px;
+  border-radius: 30px;
   background-color: #008000;
-  border: 2px solid #000000;
+  border: 1.5px solid #000000;
   color: #ffffff;
-  width: 400px;
-  font-size: 60px;
-  height: 140px;
+  width: 300px;
+  font-size: 45px;
+  height: 105px;
 }
 .searchbutton:hover {
   background-color: grey;
   color: black;
   cursor: pointer;
-  font-size: 48px;
+  font-size: 36px;
 }
 footer {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Open Sans', sans-serif;
 }
 }

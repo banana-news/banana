@@ -46,6 +46,11 @@ https://banana-news.github.io/reports/share_this_page.html
   width: 100%;
   text-align: center;
 }
+.tomatoMessage{
+  background-image: linear-gradient(#008000,#ff6347);
+  padding: 20px;
+  color: #ffffff;
+}
 button {
     font-size: 20px;
     border-radius: 5px;

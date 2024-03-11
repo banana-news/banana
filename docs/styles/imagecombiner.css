@@ -74,3 +74,23 @@ select {
     opacity: 0.5;
     left: 0;
   }
+  @media (max-width:768px) {
+    select {
+      width: 300px;
+      font-size: 30px;
+      padding: 22.5px;
+      border-radius: 7.5px;
+      background-color: #ffffff;
+      border: none;
+    }
+    select:hover{
+      cursor: pointer;
+      background-color: #808080;
+    }
+    .image-container {
+      width: 600px;
+      height: 600px;
+      position: relative;
+      background-color: #ffffff;
+    }
+  }

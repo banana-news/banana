@@ -157,7 +157,7 @@ if (searchQuery.toLowerCase().includes('askew') || searchQuery.toLowerCase().inc
 if (searchQuery.toLowerCase().includes('barrel') && searchQuery.toLowerCase().includes('roll')) {
     barrelRoll();
 }
-if (searcgQuery.toLowerCase().includes('banana') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every')) {
+if (searchQuery.toLowerCase().includes('banana') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every')) {
     results.push({
         text: 'Banana',
         link:'Bananam.html',

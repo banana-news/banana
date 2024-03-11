@@ -51,10 +51,12 @@ https://banana-news.github.io/reports/share_this_page.html
 .newsdiv button{
     background-color: #6868fd;
     color: #ffffff;
-    width: 80%;
+    width: 100px;
     font-size: 17px;
     padding: 10px;
     margin: auto;
+    float: left;
+    height: 50px;
 }
 .newsdiv button:hover{
     background-color: #d3d3d3;

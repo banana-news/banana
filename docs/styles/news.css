@@ -59,7 +59,7 @@ https://banana-news.github.io/reports/share_this_page.html
     height: 50px;
 }
 .newsdiv button:hover{
-    background-color: #d3d3d3;
+    background-color: #808080;
     cursor: pointer;
 }
 .newsdiv:hover{

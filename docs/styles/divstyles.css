@@ -67,3 +67,19 @@ https://banana-news.github.io/reports/share_this_page.html
 .options{
     padding: 20px;
 }
+@media (max-width:768px) {
+  .options-div{
+      border-radius: 15px;
+      padding: 52.5px;
+      background-color: #FFE135;
+      border: 3.75px solid #808080;
+      color:#000000;
+      height:auto;
+      width: 85%;
+      height:750px;
+      float: left;
+  }
+  .options{
+      padding: 30px;
+  }
+}

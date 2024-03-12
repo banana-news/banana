@@ -58,6 +58,8 @@
  
         -->
         <!--Max, don't remove the banana again-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
   <style>
     .buy{
@@ -81,6 +83,18 @@
       position: fixed;
       top: 64px;
       left:0;
+    }
+    @media (max-width:768px) {
+    #moneyDisplayDiv{
+      padding:15px;
+      text-align: center;
+      background-image:linear-gradient(#32cd32, #30ba8f);
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 96px;
+      left:0;
+    }
     }
   </style>
   <link rel="shortcut icon" href="images/banananewslogo.png">

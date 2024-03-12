@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Square shooter</title>
     <link rel="shortcut icon" href="images/banananewslogo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -30,6 +31,25 @@
             width: 5px;
             height: 7px;
             background-color: #000000;
+        }
+        @media (max-width:768px) {
+            #canvas{
+            background-color: #ffffff;
+            height: 1050px;
+            width: 1500px;
+        }
+        #player {
+            position: absolute;
+            width: 75px;
+            height: 75px;
+            background-color: #0000ff;
+        }
+        .bullet {
+            position: absolute;
+            width: 7.5px;
+            height: 10.5px;
+            background-color: #000000;
+        }
         }
     </style>
 </head>

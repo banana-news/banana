@@ -178,14 +178,9 @@ body {
     color:#ffffff;
     width: auto+20px;
   }
-  h1{
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 150px;
-    text-align: center;
-  }
   h2{
     font-family: 'Lato', sans-serif;
-    font-size: 52.5px;
+    font-size: 40px;
     text-align: center;
   }
   p{

@@ -150,6 +150,10 @@ body {
 } 
 
 @media (max-width:768px){
+  img{
+    width: 80%;
+    height: auto;
+  }
   .background{
     padding: 107.5px;
     width: 100%;
@@ -310,3 +314,4 @@ footer {
 @keyframes mymove {
   100% {transform: rotate(360deg);}
 }
+

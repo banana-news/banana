@@ -150,6 +150,10 @@ body {
 } 
 
 @media (max-width:768px){
+  h1 {
+    font-size: 100px;
+    max-width: 85%;
+  }
   img{
     width: 80%;
     height: auto;

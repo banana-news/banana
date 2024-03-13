@@ -62,6 +62,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
+      .plus{
+        float:left;height:134px;
+      }
         .calch1 {
             text-align: center;
             padding: 23px;
@@ -112,6 +115,9 @@
             margin: auto;
         }
         @media (max-width:768px) {
+          .plus{
+        float:left;height:201px;
+      }
           .calch1 {
             text-align: center;
             padding: 34.5px;
@@ -222,7 +228,7 @@
              <input type="button" value="=" onclick="calculate()">
             </div>
             
-           <input type="button" value="+" onclick="form1.answer.value += '+'" style="float:left;height:134px;">
+           <input type="button" value="+" onclick="form1.answer.value += '+'" class="plus">
         </form>
     </div>
     <script>

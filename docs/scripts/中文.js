@@ -1,4 +1,4 @@
-const gamesdiv = document.getElementById('games');
+
   const techdiv = document.getElementById('tech');
   const politicsdiv = document.getElementById('politics');
   const newsdiv = document.getElementById('news');
@@ -7,9 +7,6 @@ const gamesdiv = document.getElementById('games');
   });
   techdiv.addEventListener("click", function(){
       window.location.href = '中文4.html';
-  });
-  gamesdiv.addEventListener("click", function(){
-      window.location.href='中文2.html';
   });
   politicsdiv.addEventListener("click", function(){
       window.location.href= '中文5.html';

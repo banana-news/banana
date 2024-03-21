@@ -42,8 +42,8 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
-const hidden1  =document.getElementById('hidden1');
-const hidden2 = document.getElementById('hidden2');
+const hiddens = document.getElementsByClassName('hidden');
+
 function revealText(text, button) {
     text.style.display='block';
     button.style.display='none';

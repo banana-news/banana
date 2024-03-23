@@ -65,5 +65,19 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
   function closeItem() {
     tomatoNewsDiv.style.display='none';
   }
+  const searchinput = document.getElementsByClassName('searchinput')[0];
+const divToShow = document.getElementsByClassName('div-to-show')[0];
+function showSearch(){
+divToShow.style.display='block';
+divToShow.style.animation = 'slideDown 0.5s ease forwards';
+setTimeout(function(){
+	searchinput.focus();
+},500);
+
+}
+
+divToShow.addEventListener('mouseleave',function(){
+	divToShow.style.display='none';
+});
 
   

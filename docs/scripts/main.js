@@ -72,6 +72,13 @@ const divToShow = document.getElementsByClassName('div-to-show')[0];
 function showSearch(){
 divToShow.style.display='block';
 divToShow.style.animation = 'slideDown 0.5s ease forwards';
+document.querySelectorAll('body *').forEach(function(element) {
+  element.style.filter = 'blur(8px)';
+});
+
+divToShow.style.filter = 'none';
+document.getElementsByClassName('topnav')[0].style.filter = 'none';
+
 setTimeout(function(){
 	searchinput.focus();
 },500);
@@ -80,6 +87,9 @@ setTimeout(function(){
 
 divToShow.addEventListener('mouseleave',function(){
 	divToShow.style.animation='slideUp 0.5s ease forwards';
+  document.querySelectorAll('body *').forEach(function(element) {
+    element.style.filter = 'none';
+  });
 });
 
   

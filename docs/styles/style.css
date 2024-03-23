@@ -173,7 +173,7 @@ text-align:center;
     display:none;
   }
 }
-.div-to-show {
+#div-to-show {
   filter: none;
   display:none;
     height:0px;
@@ -186,7 +186,7 @@ text-align:center;
     overflow:hidden;
     z-index:1000;
   }
-  .div-to-show:hover{cursor:pointer;}
+  #div-to-show:hover{cursor:pointer;}
   #searchbar{
   color:#ffffff;
   font-size:25px;

@@ -69,16 +69,17 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
 //document.addEventListener('DOMContentLoaded', function(){
 
   const searchinput = document.getElementById('searchbar');
-  const divToShow = document.getElementsByClassName('div-to-show')[0];
+  //const divToShow = document.getElementsByClassName('div-to-show')[0];
+  const divToShow = document.getElementById('div-to-show');
 
   /**/ 
   function showSearch(){
     const container = document.getElementById('container');
   divToShow.style.display='block';
   divToShow.style.animation = 'slideDown 0.5s ease forwards';
-  document.addEventListener('DOMContentLoaded', function(){
+  //document.addEventListener('DOMContentLoaded', function(){
     container.style.filter='blur(10px);';
-  });
+  //});
   
   /*
   divToShow.style.filter = 'none';

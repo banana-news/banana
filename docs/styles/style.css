@@ -187,7 +187,9 @@ text-align:center;
   text-align: left;
   }
   .stripped{
-  background-color:#555555;
+    /*Dont change the '#00000000' the amount of zeros is there to make it transparent*/
+  background-color:#00000000;
+  /**/
   border:none;
   padding:3px;
   position:absolute;
@@ -196,7 +198,7 @@ text-align:center;
   transition:0.25s ease-in-out;
   }
   .stripped:hover{
-  color:#ffffff;cursor:pointer;background: #555555;}
+  color:#ffffff;cursor:pointer;background: #00000000;}
 .topnav .icon {
   display: none;
 } 

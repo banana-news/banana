@@ -70,15 +70,16 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
 
   const searchinput = document.getElementById('searchbar');
   const divToShow = document.getElementsByClassName('div-to-show')[0];
+
+  /**/ 
   function showSearch(){
+    const container = document.getElementById('container');
   divToShow.style.display='block';
   divToShow.style.animation = 'slideDown 0.5s ease forwards';
-  document.querySelectorAll('body *').forEach(function(element) {
-    element.style.filter = 'blur(8px)';
-  });
-  
+  container.style.filter='blur(10px);';
+  /*
   divToShow.style.filter = 'none';
-  document.getElementsByClassName('topnav')[0].style.filter = 'none';
+  document.getElementsByClassName('topnav')[0].style.filter = 'none';*/
   
   setTimeout(function(){
     searchinput.focus();
@@ -88,9 +89,8 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
   
   divToShow.addEventListener('mouseleave',function(){
     divToShow.style.animation='slideUp 0.5s ease forwards';
-    document.querySelectorAll('body *').forEach(function(element) {
-      element.style.filter = 'none';
-    });
+    const container = document.getElementById('container');
+    container.style.filter='none';
   });
     
 //});

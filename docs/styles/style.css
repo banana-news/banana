@@ -127,6 +127,7 @@ opacity:97.5%;
 top:0px;
 left: 0;
 z-index:1000;
+filter: none;
 }
 .topnav a {
   position:relative;
@@ -173,6 +174,7 @@ text-align:center;
   }
 }
 .div-to-show {
+  filter: none;
   display:none;
     height:0px;
     background-color: #696969;
@@ -316,6 +318,9 @@ tr:nth-child(even){
 footer {
   font-size: 30px;
   font-family: 'Open Sans', sans-serif;
+  position: relative;
+  bottom: 5px;
+  left: 5px;
 }
 }
 
@@ -372,6 +377,9 @@ tr:nth-child(even){
 footer {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
+  position: relative;
+  bottom: 5px;
+  left: 5px;
 }
 .tomatonews{
   padding: 20px;

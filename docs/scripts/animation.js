@@ -1,5 +1,4 @@
 //Max and Sinan, Please ask Albert before editing or deleting this code
-//This is the main javascript script for all the sites - so it will control simple code like search results or key clicks. (The games will have their own scripts)
 /*
 []
  []
@@ -29,7 +28,6 @@
 If you're the sort of person who looks at the source code of webpages, try our challenge:
 
 https://banana-news.github.io/reports/share_this_page.html
-
 */
 /*
   _____________________________________________________________________________________________________________________
@@ -43,28 +41,35 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
+//document.addEventListener('DOMContentLoaded', function(){
 
-  //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
-  const gamesdiv = document.getElementById('games');
-  const techdiv = document.getElementById('tech');
-  const politicsdiv = document.getElementById('politics');
-  const newsdiv = document.getElementById('news');
-  newsdiv.addEventListener("click", function(){
-      window.location.href = 'news.html';
-  });
-  techdiv.addEventListener("click", function(){
-      window.location.href = 'tech.html';
-  });
-  gamesdiv.addEventListener("click", function(){
-      window.location.href='games.html';
-  });
-  politicsdiv.addEventListener("click", function(){
-      window.location.href= 'politics.html';
-  });
-const tomatoNewsDiv = document.getElementById('tomatonews');
-  function closeItem() {
-    tomatoNewsDiv.style.display='none';
-  }
+const searchinput = document.getElementById('searchbar');
+//const divToShow = document.getElementsByClassName('div-to-show')[0];
+const divToShow = document.getElementById('div-to-show');
 
+/**/ 
+function showSearch(){
+  const container = document.getElementById('container');
+divToShow.style.display='block';
+divToShow.style.animation = 'slideDown 0.5s ease forwards';
+//document.addEventListener('DOMContentLoaded', function(){
+  container.style.filter='blur(10px);';
+//});
 
- 
+/*
+divToShow.style.filter = 'none';
+document.getElementsByClassName('topnav')[0].style.filter = 'none';*/
+
+setTimeout(function(){
+  searchinput.focus();
+},500);
+
+}
+
+divToShow.addEventListener('mouseleave',function(){
+  divToShow.style.animation='slideUp 0.5s ease forwards';
+  const container = document.getElementById('container');
+  container.style.filter='none';
+});
+  
+//});

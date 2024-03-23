@@ -154,8 +154,22 @@ text-align:center;
   to {
   max-height:200px;
   visibility:visible;
-    height: 200px; /* Adjust as needed */
+    height: 200px; 
     display:block;
+  }
+}
+@keyframes slideUp{
+  from{
+    max-height:200px;
+  visibility:visible;
+    height: 200px; 
+    display:block;
+  }
+  to{
+    max-height:0;
+  visibility:hidden;
+    height: 0;
+    display:none;
   }
 }
 .div-to-show {

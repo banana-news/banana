@@ -66,7 +66,7 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
     tomatoNewsDiv.style.display='none';
   }
 
-  
+
   const searchinput = document.getElementById('searchbar');
 const divToShow = document.getElementsByClassName('div-to-show')[0];
 function showSearch(){
@@ -79,7 +79,7 @@ setTimeout(function(){
 }
 
 divToShow.addEventListener('mouseleave',function(){
-	divToShow.style.display='none';
+	divToShow.style.animation='slideUp 0.5s ease forwards';
 });
 
   

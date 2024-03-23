@@ -169,6 +169,7 @@ text-align:center;
     padding:20px;
     overflow:hidden;
   }
+  .div-to-show:hover{cursor:pointer;}
   #searchbar{
   color:#ffffff;
   font-size:25px;

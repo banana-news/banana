@@ -76,7 +76,10 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
     const container = document.getElementById('container');
   divToShow.style.display='block';
   divToShow.style.animation = 'slideDown 0.5s ease forwards';
-  container.style.filter='blur(10px);';
+  document.addEventListener('DOMContentLoaded', function(){
+    container.style.filter='blur(10px);';
+  });
+  
   /*
   divToShow.style.filter = 'none';
   document.getElementsByClassName('topnav')[0].style.filter = 'none';*/

@@ -126,7 +126,7 @@ height:50px;
 opacity:97.5%;
 top:0px;
 left: 0;
-z-index:1;
+z-index:1000;
 }
 .topnav a {
   position:relative;
@@ -182,6 +182,7 @@ text-align:center;
     left:0;
     padding:20px;
     overflow:hidden;
+    z-index:1000;
   }
   .div-to-show:hover{cursor:pointer;}
   #searchbar{

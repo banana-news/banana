@@ -73,14 +73,20 @@ setTimeout(function(){
 //
 let isMouseOverDiv1 = false;
 let isMouseOverDiv2 = false;
-
+/*
 const div1 = divToShow;
 const div2 = document.getElementsByClassName('topnav')[0];
+*/
 
-div1.addEventListener('mouseenter', () => {
+
+//Declaring variables
+const topnav = document.getElementsByClassName('topnav')[0];
+//
+//
+divToShow.addEventListener('mouseenter', () => {
   isMouseOverDiv1 = true;
 });
-div1.addEventListener('mouseleave', () => {
+divToShow.addEventListener('mouseleave', () => {
   isMouseOverDiv1 = false;
   if (!isMouseOverDiv2) {
     // Mouse has left both divs
@@ -90,10 +96,10 @@ div1.addEventListener('mouseleave', () => {
 //
 //
 //
-div2.addEventListener('mouseenter', () => {
+topnav.addEventListener('mouseenter', () => {
   isMouseOverDiv2 = true;
 });
-div2.addEventListener('mouseleave', () => {
+topnav.addEventListener('mouseleave', () => {
   isMouseOverDiv2 = false;
   if (!isMouseOverDiv1) {
     // Mouse has left both divs

@@ -46,10 +46,11 @@ https://banana-news.github.io/reports/share_this_page.html
 const searchinput = document.getElementById('searchbar');
 //const divToShow = document.getElementsByClassName('div-to-show')[0];
 const divToShow = document.getElementById('div-to-show');
+const container = document.getElementById('container');
 
 /**/ 
 function showSearch(){
-  const container = document.getElementById('container');
+  
 divToShow.style.display='block';
 divToShow.style.animation = 'slideDown 0.5s ease forwards';
 //document.addEventListener('DOMContentLoaded', function(){
@@ -66,10 +67,55 @@ setTimeout(function(){
 
 }
 
-divToShow.addEventListener('mouseleave',function(){
-  divToShow.style.animation='slideUp 0.5s ease forwards';
-  const container = document.getElementById('container');
-  container.style.filter='none';
+//
+//
+//
+//
+let isMouseOverDiv1 = false;
+let isMouseOverDiv2 = false;
+
+const div1 = divToShow;
+const div2 = document.getElementsByClassName('topnav')[0];
+
+div1.addEventListener('mouseenter', () => {
+  isMouseOverDiv1 = true;
 });
+div1.addEventListener('mouseleave', () => {
+  isMouseOverDiv1 = false;
+  if (!isMouseOverDiv2) {
+    // Mouse has left both divs
+    divUp();
+  }
+});
+//
+//
+//
+div2.addEventListener('mouseenter', () => {
+  isMouseOverDiv2 = true;
+});
+div2.addEventListener('mouseleave', () => {
+  isMouseOverDiv2 = false;
+  if (!isMouseOverDiv1) {
+    // Mouse has left both divs
+    divUp();
+  }
+});
+//
+//
+//
+//
+function divUp() {
+    console.log('mouse has left both elements.');
+    //
+    divToShow.style.animation='slideUp 0.5s ease forwards';
+    container.style.filter='none';
+}
+
+
+
+
+/*divToShow.addEventListener('mouseleave',function(){
+  
+});*/
   
 //});

@@ -173,7 +173,7 @@ text-align:center;
   }
 }
 .div-to-show {
-  visibility:hidden;
+  display:none;
     height:0px;
     background-color: #696969;
     width:100%;

@@ -147,29 +147,27 @@ const div2 = document.getElementsByClassName('topnav')[0];
 const topnav = document.getElementsByClassName('topnav')[0];
 //
 //
-divToShow.addEventListener('mouseenter', () => {
-  isMouseOverDiv1 = true;
-});
-divToShow.addEventListener('mouseleave', () => {
-  isMouseOverDiv1 = false;
-  if (!isMouseOverDiv2) {
-    // Mouse has left both divs
-    divUp();
-  }
-});
-//
-//
-//
 topnav.addEventListener('mouseenter', () => {
-  isMouseOverDiv2 = true;
-});
-topnav.addEventListener('mouseleave', () => {
-  isMouseOverDiv2 = false;
-  if (!isMouseOverDiv1) {
-    // Mouse has left both divs
-    divUp();
+    isMouseOverDiv1 = true;
+  });
+  topnav.addEventListener('mouseleave', () => {
+    isMouseOverDiv1 = false;
+    checkBothDivs();
+  });
+  
+  divToShow.addEventListener('mouseenter', () => {
+    isMouseOverDiv2 = true;
+  });
+  divToShow.addEventListener('mouseleave', () => {
+    isMouseOverDiv2 = false;
+    checkBothDivs();
+  });
+  
+  function checkBothDivs() {
+    if (!isMouseOverDiv1 && !isMouseOverDiv2) {
+      divUp();
+    }
   }
-});
 //
 //
 //

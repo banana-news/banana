@@ -65,6 +65,8 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
   function closeItem() {
     tomatoNewsDiv.style.display='none';
   }
+
+  
   const searchinput = document.getElementById('searchbar');
 const divToShow = document.getElementsByClassName('div-to-show')[0];
 function showSearch(){

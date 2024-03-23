@@ -180,7 +180,7 @@ text-align:center;
   .quick{list-style:none;color:#f5f5f5;
   font-family:'Open Sans',sans-serif;width:100%;padding-left:5px;}
   .quick:hover{color:#ffffff;cursor:pointer;background-color:#808080}
-  a{text-decoration:none}
+  .not-und{text-decoration:none}
   .label{
   font-family:'Open Sans',sans-serif;
   color:#d3d3d3;

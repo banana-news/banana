@@ -183,6 +183,7 @@ text-align:center;
   .label{
   font-family:'Open Sans',sans-serif;
   color:#d3d3d3;
+  text-align: left;
   }
   .stripped{
   background-color:#555555;
@@ -194,7 +195,7 @@ text-align:center;
   transition:0.25s ease-in-out;
   }
   .stripped:hover{
-  color:#ffffff;cursor:pointer;}
+  color:#ffffff;cursor:pointer;background: #555555;}
 .topnav .icon {
   display: none;
 } 

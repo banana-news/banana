@@ -55,6 +55,7 @@ https://banana-news.github.io/reports/share_this_page.html
     width: 350px;
     font-size: 17px;
     padding: 10px;
+    display: block;
     margin: auto;
     float: left;
     height: 50px;
@@ -131,6 +132,7 @@ body {
         width: 525px;
         font-size: 25.5px;
         padding: 30px;
+        display: block;
         margin: auto;
         float: left;
         height: 75px;

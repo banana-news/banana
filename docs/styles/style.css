@@ -346,6 +346,7 @@ footer {
   }
 } 
 .options div img {
+  display: block;
   margin: auto;
 }
 

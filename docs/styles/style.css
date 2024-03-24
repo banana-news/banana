@@ -75,6 +75,17 @@ button {
     font-family: 'IBM Plex Serif', serif;
     font-size: 100px;
     text-align: center;
+    
+  }
+  .bheading{
+    background-image: linear-gradient(to right,#f8ab5e 0,#f36961 20%,#a176c8 40%,#759beb 60%,#65beb3 80%,#70db96 100%);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    color:transparent;
+  }
+  .stripe{
+    background-color: #ffffff;
   }
   h2{
     font-family: 'Lato', sans-serif;

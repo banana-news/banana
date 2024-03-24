@@ -113,11 +113,6 @@ h3{
 }
 body {
   background-color: #FFE135;
-  width: 70%;
-  margin: auto;
-}
-html{
-  background-color: #808080;
 }
 
 
@@ -224,6 +219,7 @@ text-align:center;
   font-family:'Open Sans',sans-serif;width:100%;padding-left:5px;}
   .quick:hover{color:#ffffff;cursor:pointer;background-color:#808080}
   .not-und{text-decoration:none}
+  .not-und:hover{text-decoration: none;}
   .label{
   font-family:'Open Sans',sans-serif;
   color:#d3d3d3;

@@ -92,6 +92,7 @@ button {
   }
   .stripe{
     background-color: #ffffff;
+    width: 100%;
   }
   h2{
     font-family: 'Lato', sans-serif;

@@ -113,6 +113,11 @@ h3{
 }
 body {
   background-color: #FFE135;
+  width: 70%;
+  margin: auto;
+}
+html{
+  background-color: #808080;
 }
 
 

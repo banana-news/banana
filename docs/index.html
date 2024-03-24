@@ -70,7 +70,9 @@
         <title>Home - Banana News</title>
     </head>
     <body>
-        <div class="topnav" id="myTopnav">
+      <div id="top-container" style="height:250px;width:100%;">
+
+         <div class="topnav" id="myTopnav">
             <a href="index.html" >Home</a>
             <a href="games.html">Fun</a>
             <a href="tech.html">Tech Reviews</a>
@@ -92,6 +94,8 @@
             <a  class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a>
             </ul>
           </div>
+      </div>
+       
         <br><br><br>
         <div id="container">
            <p style="color:red;"><b>Hello Banana News users,</b><br>We are sorry to inform you that there are some problems with the site. We are working to fix the issues, and they should be done pretty soon. Thanks for your cooperation.</p>
@@ -170,30 +174,12 @@ const div2 = document.getElementsByClassName('topnav')[0];
 
 
 //Declaring variables
-const topnav = document.getElementsByClassName('topnav')[0];
+//const topnav = document.getElementsByClassName('topnav')[0];
 //
 //
-topnav.addEventListener('mouseenter', () => {
-    isMouseOverDiv1 = true;
-  });
-  topnav.addEventListener('mouseleave', () => {
-    isMouseOverDiv1 = false;
-    checkBothDivs();
-  });
-  
-  divToShow.addEventListener('mouseenter', () => {
-    isMouseOverDiv2 = true;
-  });
-  divToShow.addEventListener('mouseleave', () => {
-    isMouseOverDiv2 = false;
-    checkBothDivs();
-  });
-  
-  function checkBothDivs() {
-    if (!isMouseOverDiv1 && !isMouseOverDiv2) {
-      divUp();
-    }
-  }
+const topContainer = document.getElementById('top-container');
+
+topContainer.addEventListener('mouseleave', divUp);
 //
 //
 //

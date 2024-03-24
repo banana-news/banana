@@ -148,30 +148,12 @@ const div2 = document.getElementsByClassName('topnav')[0];
 
 
 //Declaring variables
-const topnav = document.getElementsByClassName('topnav')[0];
+//const topnav = document.getElementsByClassName('topnav')[0];
 //
 //
-topnav.addEventListener('mouseenter', () => {
-    isMouseOverDiv1 = true;
-  });
-  topnav.addEventListener('mouseleave', () => {
-    isMouseOverDiv1 = false;
-    checkBothDivs();
-  });
-  
-  divToShow.addEventListener('mouseenter', () => {
-    isMouseOverDiv2 = true;
-  });
-  divToShow.addEventListener('mouseleave', () => {
-    isMouseOverDiv2 = false;
-    checkBothDivs();
-  });
-  
-  function checkBothDivs() {
-    if (!isMouseOverDiv1 && !isMouseOverDiv2) {
-      divUp();
-    }
-  }
+const topContainer = document.getElementById('top-container');
+
+topContainer.addEventListener('mouseleave', divUp);
 //
 //
 //

@@ -56,6 +56,12 @@ https://banana-news.github.io/reports/share_this_page.html
   color:#ffffff;
   -webkit-text-fill-color: #ffffff;
 }*/
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
 button {
     font-size: 20px;
     border-radius: 5px;

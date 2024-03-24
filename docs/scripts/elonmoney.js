@@ -88,8 +88,10 @@ function sellItem(item) {
  if (money <=0) {
   money = 0;
  }
+ document.addEventListener('DOMContentLoaded', function(){
+  receiptDiv.innerHTML = '<h2><b>Your Receipt:</b></h2><br><p><b>Items</b>: ' + receiptItems + '<br><br><b>Total:&nbsp;</b> $' + receiptPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '</p>';
+ });
  
- function showReceipt() {
-   receiptDiv.innerHTML = '<p><b>Your Receipt:</b><br>Items: ' + receiptItems + '<br><br>Total: $' + receiptPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '</p>';
- }
+   
+ 
  

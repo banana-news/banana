@@ -144,28 +144,29 @@
 
   </script>
 <script>//Max and Sinan, please ask Albert before editing or deleting any of this code.
-//document.addEventListener('DOMContentLoaded', function(){
-
+///
 const searchinput = document.getElementById('searchbar');
-//const divToShow = document.getElementsByClassName('div-to-show')[0];
 const divToShow = document.getElementById('div-to-show');
 const container = document.getElementById('container');
 const topnav = document.getElementById('myTopnav');
-
-/**/ 
+//
+//
+//
+//
+//
+const topnavLinks = document.querySelectorAll('.topnav a');
+//
+//
 function showSearch(){
   
 divToShow.style.display='block';
 divToShow.style.animation = 'slideDown 0.5s ease forwards';
-//document.addEventListener('DOMContentLoaded', function(){
+
   container.style.filter='blur(10px);';
-//});
 
-/*
-divToShow.style.filter = 'none';
-document.getElementsByClassName('topnav')[0].style.filter = 'none';*/
 
-const topnavLinks = document.querySelectorAll('.topnav a');
+
+
 
 setTimeout(function(){
   searchinput.focus();
@@ -178,20 +179,7 @@ topnav.style.backgroundColor='#444444';
 
 }
 
-//
-//
-//
-//
-let isMouseOverDiv1 = false;
-let isMouseOverDiv2 = false;
-/*
-const div1 = divToShow;
-const div2 = document.getElementsByClassName('topnav')[0];
-*/
 
-
-//Declaring variables
-//const topnav = document.getElementsByClassName('topnav')[0];
 //
 //
 const topContainer = document.getElementById('top-container');
@@ -202,24 +190,16 @@ topContainer.addEventListener('mouseleave', divUp);
 //
 //
 function divUp() {
-    console.log('mouse has left both elements.');
-    //
-    divToShow.style.animation='slideUp 0.5s ease forwards';
-    container.style.filter='none';
-    topnav.style.backgroundColor='#555555';
-    topnavLinks.forEach(link=>{
-      link.style.backgroundColor='#555555';
-    });
-}
-
-
-
-
-/*divToShow.addEventListener('mouseleave',function(){
-  
-});*/
-  
-//});</script></body>
+  console.log('mouse has left both elements.');
+  //
+  topnav.style.backgroundColor = '#555555';
+  topnavLinks.forEach(link => {
+      link.style.backgroundColor = '#555555';
+  });
+  //
+  divToShow.style.animation = 'slideUp 0.5s ease forwards';
+  container.style.filter = 'none';
+}</script></body>
 
 </html>
 

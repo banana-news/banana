@@ -67,11 +67,12 @@ const topnavLinks = document.querySelectorAll('.topnav a');
 
 setTimeout(function(){
   searchinput.focus();
-  topnav.style.backgroundColor='#444444';
+},500);
+
+topnav.style.backgroundColor='#444444';
   topnavLinks.forEach(link=>{
     link.style.backgroundColor='#444444';
   });
-},500);
 
 }
 
@@ -105,7 +106,7 @@ function divUp() {
     container.style.filter='none';
     topnav.style.backgroundColor='#555555';
     topnavLinks.forEach(link=>{
-      link.style.backgroundColor='#444444';
+      link.style.backgroundColor='#555555';
     });
 }
 

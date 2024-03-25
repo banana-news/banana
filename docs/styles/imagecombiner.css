@@ -48,7 +48,7 @@ select {
   }
   select:hover{
     cursor: pointer;
-    background-color: grey;
+    background-color: #d3d3d3;
   }
   .image-container {
     width: 400px;

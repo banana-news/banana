@@ -47,12 +47,7 @@ https://banana-news.github.io/reports/share_this_page.html
   //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
 
   //
-  const images = document.getElementsByTagName('img');
-  images.forEach(image => function() {
-    image.addEventListener('click', function(){
-      window.location.href=image.src;
-    });
-  });
+ 
 
 
  

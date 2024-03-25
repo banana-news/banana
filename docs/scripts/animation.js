@@ -63,10 +63,14 @@ divToShow.style.animation = 'slideDown 0.5s ease forwards';
 divToShow.style.filter = 'none';
 document.getElementsByClassName('topnav')[0].style.filter = 'none';*/
 
+const topnavLinks = document.querySelectorAll('.topnav a');
+
 setTimeout(function(){
   searchinput.focus();
   topnav.style.backgroundColor='#444444';
-  topnav.children.style.backgroundColor='#444444';
+  topnavLinks.forEach(link=>{
+    link.style.backgroundColor='#444444';
+  });
 },500);
 
 }
@@ -100,7 +104,9 @@ function divUp() {
     divToShow.style.animation='slideUp 0.5s ease forwards';
     container.style.filter='none';
     topnav.style.backgroundColor='#555555';
-    topnav.children.style.backgroundColor='#555555';
+    topnavLinks.forEach(link=>{
+      link.style.backgroundColor='#444444';
+    });
 }
 
 

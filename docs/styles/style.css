@@ -257,7 +257,7 @@ border-radius:2px}
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
-    right: 0;
+    right: 30px;
     top: 0;
   }
   .topnav.responsive a {

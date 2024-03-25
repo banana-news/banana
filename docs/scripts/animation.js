@@ -47,6 +47,7 @@ const searchinput = document.getElementById('searchbar');
 //const divToShow = document.getElementsByClassName('div-to-show')[0];
 const divToShow = document.getElementById('div-to-show');
 const container = document.getElementById('container');
+const topnav = document.getElementById('myTopnav');
 
 /**/ 
 function showSearch(){
@@ -63,6 +64,7 @@ document.getElementsByClassName('topnav')[0].style.filter = 'none';*/
 
 setTimeout(function(){
   searchinput.focus();
+  topnav.style.backgroundColor='#444444';
 },500);
 
 }

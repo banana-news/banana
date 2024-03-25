@@ -66,6 +66,7 @@ document.getElementsByClassName('topnav')[0].style.filter = 'none';*/
 setTimeout(function(){
   searchinput.focus();
   topnav.style.backgroundColor='#444444';
+  topnav.children.style.backgroundColor='#444444';
 },500);
 
 }
@@ -98,6 +99,8 @@ function divUp() {
     //
     divToShow.style.animation='slideUp 0.5s ease forwards';
     container.style.filter='none';
+    topnav.style.backgroundColor='#555555';
+    topnav.children.style.backgroundColor='#555555';
 }
 
 

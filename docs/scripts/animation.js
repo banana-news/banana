@@ -56,6 +56,10 @@ const topnavLinks = document.querySelectorAll('.topnav a');
 //
 //
 function showSearch(){
+  topnav.style.backgroundColor='#444444';
+  topnavLinks.forEach(link=>{
+    link.style.backgroundColor='#444444';
+  });
   
 divToShow.style.display='block';
 divToShow.style.animation = 'slideDown 0.5s ease forwards';
@@ -70,10 +74,7 @@ setTimeout(function(){
   searchinput.focus();
 },500);
 
-topnav.style.backgroundColor='#444444';
-  topnavLinks.forEach(link=>{
-    link.style.backgroundColor='#444444';
-  });
+
 
 }
 

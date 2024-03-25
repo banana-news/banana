@@ -112,7 +112,7 @@ h3{
   text-align: center;
 }
 body {
-  background-color: #FFE135;
+  background-color: #ffe135;
 }
 
 
@@ -244,111 +244,6 @@ border-radius:2px}
   display: none;
 } 
 
-@media (max-width:768px){
-  h1 {
-    font-size: 100px;
-    max-width: 85%;
-  }
-  img{
-    width: 80%;
-    height: auto;
-  }
-  img:hover{
-    cursor:pointer;
-  }
-  .background{
-    padding: 107.5px;
-    width: 100%;
-    text-align: center;
-  }
-  /*
-  .tomatoMessage{
-    background-image: linear-gradient(#008000,#ff6347);
-    padding: 30px;
-    color: #ffffff;
-  }
-  .tomatoMessage a{
-    color:#ffffff;
-    -webkit-text-fill-color: #ffffff;
-  }*/
-  button {
-    font-size: 30px;
-    border-radius: 7.5px;
-    padding: 10.5px;
-    background-color: #008000;
-    font-family: 'Open Sans', sans-serif;
-    border:none;
-    color:#ffffff;
-    width: auto+20px;
-  }
-  h2{
-    font-family: 'Lato', sans-serif;
-    font-size: 40px;
-    text-align: center;
-  }
-  p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
-    text-align: center;
-  }
-h3{
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  text-decoration-line: underline;
-  text-align: center;
-}
-/*
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 25px 28px;
-  text-decoration: none;
-  font-size: 37.5px;
-  font-family:'Open Sans', sans-serif;
-}*/
-/*PLEASE don't change table styling (below) it will mess it up*/
-tr:nth-child(even){
-  background-color: #919191;
- }
- td{padding:30px;}
- th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:30px;border: 1.5px solid #000000;}
- /*I know what you're thinking. Just don't.*/
-
- .searchbutton {
-  height: 93px;
-  border-radius: 30px;
-  background-color: #008000;
-  border: 1.5px solid #000000;
-  color: #ffffff;
-  width: 300px;
-  font-size: 45px;
-  height: 105px;
-}
-.searchbutton:hover {
-  background-color: grey;
-  color: black;
-  cursor: pointer;
-  font-size: 36px;
-}
-footer {
-  font-size: 30px;
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-  bottom: 5px;
-  left: 5px;
-}
-}
 
  @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
@@ -420,4 +315,5 @@ footer {
 @keyframes mymove {
   100% {transform: rotate(360deg);}
 }
+@media(max-width:768px){p{font-size:24px;}}
 

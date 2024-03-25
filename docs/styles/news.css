@@ -124,7 +124,7 @@ body {
         display: block;
         text-decoration: none;
         transition: 0.5s ease-in-out;
-        width: 100%;
+        width: 80%;
     }
     .newsdiv button{
         background-color: #6868fd;

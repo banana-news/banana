@@ -113,7 +113,8 @@
         
        
         
-        <h2>Hello and welcome to Banana News. We will have the latest news reports and fun games available to you at any time!</h2>
+        <h2>ABOUT</h2>
+        <p>Banana News is a website providing games, tech, news and more to the internet!</p>
         <div class="options">
             <a href="games.html"><div class="options-div"><img class="zoom-image" src="images/trumple.png" width="250px" alt="Donald Trump combined with an apple (An image from our game, Image Combiner)."><h2>Fun</h2><br><p>We offer multiple games such as Image Combiner, QuadSelector and other fun like Share this page</p></div></a>
             <a href="tech.html"><div  class="options-div"><img class="zoom-image" src="images/oneplus 12r.png" width="250px" alt="The OnePlus 12r"><h2>Tech Reviews</h2><br><p>We offer tech reviews, reviewing all the latest tech and helping you decide just which device suits you.</p></div></a>
@@ -139,12 +140,14 @@
            
 
         </script>
-    <script>//document.addEventListener('DOMContentLoaded', function(){
+    <script>//Max and Sinan, please ask Albert before editing or deleting any of this code.
+//document.addEventListener('DOMContentLoaded', function(){
 
 const searchinput = document.getElementById('searchbar');
 //const divToShow = document.getElementsByClassName('div-to-show')[0];
 const divToShow = document.getElementById('div-to-show');
 const container = document.getElementById('container');
+const topnav = document.getElementById('myTopnav');
 
 /**/ 
 function showSearch(){
@@ -161,6 +164,7 @@ document.getElementsByClassName('topnav')[0].style.filter = 'none';*/
 
 setTimeout(function(){
   searchinput.focus();
+  topnav.style.backgroundColor='#444444';
 },500);
 
 }

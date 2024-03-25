@@ -41,6 +41,7 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
+//Max and Sinan, please ask Albert before editing or deleting any of this code.
 //document.addEventListener('DOMContentLoaded', function(){
 
 const searchinput = document.getElementById('searchbar');

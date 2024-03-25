@@ -315,5 +315,5 @@ footer {
 @keyframes mymove {
   100% {transform: rotate(360deg);}
 }
-@media(max-width:768px){p{font-size:24px;}}
+@media(max-width:768px){p{font-size:18px;}}
 

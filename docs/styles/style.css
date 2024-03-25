@@ -216,7 +216,8 @@ text-align:center;
   outline:none;
   }
   .quick{list-style:none;color:#f5f5f5;
-  font-family:'Open Sans',sans-serif;width:100%;padding-left:5px;}
+  font-family:'Open Sans',sans-serif;width:100%;padding-left:5px;
+font-size:16px;}
   .quick:hover{color:#ffffff;cursor:pointer;background-color:#808080}
   .not-und{text-decoration:none}
   .not-und:hover{text-decoration: none;}

@@ -66,5 +66,13 @@ const tomatoNewsDiv = document.getElementById('tomatonews');
     tomatoNewsDiv.style.display='none';
   }
 
+  //
+  const images = document.getElementsByTagName('img');
+  images.forEach(image => function() {
+    image.addEventListener('click', function(){
+      window.location.href=image.src;
+    });
+  });
+
 
  

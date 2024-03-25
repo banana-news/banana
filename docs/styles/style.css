@@ -251,6 +251,9 @@ text-align:center;
     width: 80%;
     height: auto;
   }
+  img:hover{
+    cursor:pointer;
+  }
   .background{
     padding: 107.5px;
     width: 100%;

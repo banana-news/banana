@@ -58,6 +58,10 @@ https://banana-news.github.io/reports/share_this_page.html
     cursor: pointer;
     background-color: #d3d3d3;
 }
+.options{
+  background-color: #00000000;
+  margin: 20px;
+}
 @media (max-width:768px) {
   .options-div{
       border-radius: 15px;

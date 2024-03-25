@@ -45,26 +45,6 @@ https://banana-news.github.io/reports/share_this_page.html
  */
 
   //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
-  const gamesdiv = document.getElementById('games');
-  const techdiv = document.getElementById('tech');
-  const politicsdiv = document.getElementById('politics');
-  const newsdiv = document.getElementById('news');
-  newsdiv.addEventListener("click", function(){
-      window.location.href = 'news.html';
-  });
-  techdiv.addEventListener("click", function(){
-      window.location.href = 'tech.html';
-  });
-  gamesdiv.addEventListener("click", function(){
-      window.location.href='games.html';
-  });
-  politicsdiv.addEventListener("click", function(){
-      window.location.href= 'politics.html';
-  });
-const tomatoNewsDiv = document.getElementById('tomatonews');
-  function closeItem() {
-    tomatoNewsDiv.style.display='none';
-  }
 
   //
   const images = document.getElementsByTagName('img');

@@ -41,19 +41,39 @@ https://banana-news.github.io/reports/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
 */
-.background{
+.background {
   position: relative;
-        
-  padding: 75px;
-  width: 100%;
-  text-align: center;
+  background-size: cover;
+  height: 200px; /* Adjust as needed */
+  width: 300px; /* Adjust as needed */
 }
-.background h1{
+
+.background::before {
+  content: "";
   position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as desired */
+  z-index: -1;
+}
+
+.background img {
+filter:brightness(65%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Set the desired color for the heading */
+  /* Other styling for the heading (font-size, font-weight, etc.) */
 }
 /*
 .tomatoMessage{

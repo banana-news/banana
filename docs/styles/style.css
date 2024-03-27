@@ -72,6 +72,7 @@ filter:brightness(65%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: black;
   /* Other styling for the heading (font-size, font-weight, etc.) */
 }
 /*

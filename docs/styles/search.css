@@ -52,7 +52,7 @@ input:focus{outline:none;}
     height: 200px;
 }
 #results {
-    color: white;
+    color: #ffffff;
 } 
 input{
 padding: 20px;
@@ -67,16 +67,16 @@ border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
 .searchbutton {
     height: 62px;
     border-radius: 20px;
-    background-color: green;
-    border: 1px solid black;
-    color: white;
+    background-color: #008000;
+    border: 1px solid #000000;
+    color: #ffffff;
     width: 200px;
     font-size: 30px;
     height: 70px;
   }
   .searchbutton:hover {
-    background-color: grey;
-    color: black;
+    background-color: #808080;
+    color: #000000;
     cursor: pointer;
     font-size: 24px;
   }
@@ -86,7 +86,7 @@ border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
     height: auto;
 }
 #results {
-    color: white;
+    color: #ffffff;
 } 
 a {
     font-size: 24px;
@@ -130,8 +130,8 @@ a {
       height: 105px;
     }
     .searchbutton:hover {
-      background-color: grey;
-      color: black;
+      background-color: #808080;
+      color: #000000;
       cursor: pointer;
       font-size: 36px;
     }

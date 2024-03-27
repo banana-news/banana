@@ -72,7 +72,7 @@ filter:brightness(65%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: #000000;
   /* Other styling for the heading (font-size, font-weight, etc.) */
 }
 /*
@@ -95,7 +95,7 @@ button {
     font-size: 20px;
     border-radius: 5px;
     padding: 7px;
-    background-color: green;
+    background-color: #008000;
     transition: 0.5s ease-in-out;
     font-family: 'Open Sans', sans-serif;
     border:none;
@@ -312,16 +312,16 @@ tr:nth-child(even){
  .searchbutton {
   height: 62px;
   border-radius: 20px;
-  background-color: green;
-  border: 1px solid black;
-  color: white;
+  background-color: #008000;
+  border: 1px solid #000000;
+  color: #ffffff;
   width: 200px;
   font-size: 30px;
   height: 70px;
 }
 .searchbutton:hover {
-  background-color: grey;
-  color: black;
+  background-color: #808080;
+  color: #000000;
   cursor: pointer;
   font-size: 24px;
 }

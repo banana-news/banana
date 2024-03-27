@@ -56,6 +56,8 @@ const topnavLinks = document.querySelectorAll('.topnav a');
 //
 //
 function showSearch(){
+  container.style.filter='blur(10px);';
+  
   topnav.style.backgroundColor='#444444';
   topnavLinks.forEach(link=>{
     link.style.backgroundColor='#444444';
@@ -64,7 +66,7 @@ function showSearch(){
 divToShow.style.display='block';
 divToShow.style.animation = 'slideDown 0.5s ease forwards';
 
-  container.style.filter='blur(10px);';
+  
 
 
 

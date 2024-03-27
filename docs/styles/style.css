@@ -47,6 +47,14 @@ https://banana-news.github.io/reports/share_this_page.html
   height:600px;
   width: 100%;
 }
+.dark{
+  filter: brightness(65%);
+}
+
+.light{
+  filter: brightness(135%);
+}
+.white{color:white}.black{color:black}
 
 .background::before {
   content: "";
@@ -72,7 +80,6 @@ filter:brightness(65%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Set the desired color for the heading */
   /* Other styling for the heading (font-size, font-weight, etc.) */
 }
 /*

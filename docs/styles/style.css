@@ -309,22 +309,7 @@ tr:nth-child(even){
  th,td,table,tr{font-family: 'Open Sans', sans-serif;font-size:20px;border: 1px solid #000000;}
  /*I know what you're thinking. Just don't.*/
 
- .searchbutton {
-  height: 62px;
-  border-radius: 20px;
-  background-color: #008000;
-  border: 1px solid #000000;
-  color: #ffffff;
-  width: 200px;
-  font-size: 30px;
-  height: 70px;
-}
-.searchbutton:hover {
-  background-color: #808080;
-  color: #000000;
-  cursor: pointer;
-  font-size: 24px;
-}
+ 
 footer {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;

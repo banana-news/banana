@@ -47,14 +47,6 @@ https://banana-news.github.io/reports/share_this_page.html
   height:600px;
   width: 100%;
 }
-.dark{
-  filter: brightness(65%);
-}
-
-.light{
-  filter: brightness(135%);
-}
-.white{color:white}.black{color:black}
 
 .background::before {
   content: "";

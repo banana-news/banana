@@ -224,13 +224,13 @@ text-align:center;
   position:absolute;
   right:20px;
 }
-/*
+
 @media screen and (max-width:600px) {
   #searchButton{
-    position:relative;
+    top: 365px;
     left: 40px;
   }
-}*/
+}
 #div-to-show {
   filter: none;
   display:none;
@@ -291,9 +291,13 @@ border-radius:2px}
     float: right;
     display: block;
   }
+  #searchButton{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  #searchButton{display:block}
   .topnav.responsive {position: relative;
   height: 280px;}
   .topnav.responsive a.icon {

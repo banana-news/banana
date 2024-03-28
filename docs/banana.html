@@ -142,19 +142,15 @@ const topnav = document.getElementById('myTopnav');
 //
 //
 //
-const topnavLinks = document.querySelectorAll('.topnav a');
-//
-//
 function showSearch(){
+  container.style.filter='blur(10px);';
+  
   topnav.style.backgroundColor='#444444';
-  topnavLinks.forEach(link=>{
-    link.style.backgroundColor='#444444';
-  });
   
 divToShow.style.display='block';
 divToShow.style.animation = 'slideDown 0.5s ease forwards';
 
-  container.style.filter='blur(10px);';
+  
 
 
 
@@ -182,10 +178,6 @@ function divUp() {
   console.log('mouse has left both elements.');
   //
   topnav.style.backgroundColor = '#555555';
-  topnavLinks.forEach(link => {
-      link.style.backgroundColor = '#555555';
-  });
-  //
   divToShow.style.animation = 'slideUp 0.5s ease forwards';
   container.style.filter = 'none';
 }</script></body>

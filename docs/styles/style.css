@@ -220,6 +220,15 @@ text-align:center;
     display:none;
   }
 }
+#searchButton{
+  position:absolute;
+  right:20px;
+}
+@media screen and (max-width:600px) {
+  #searchButton{
+    position:relative;
+  }
+}
 #div-to-show {
   filter: none;
   display:none;
@@ -256,14 +265,14 @@ border-radius:2px}
   color:#d3d3d3;
   text-align: left;
   }
+  
   .stripped{
     /*Dont change the '#00000000' the amount of zeros is there to make it transparent*/
   background-color:#00000000;
   /**/
   border:none;
   padding:3px;
-  position:absolute;
-  right:20px;
+  
   color:#f5f5f5;
   transition:0.25s ease-in-out;
   }

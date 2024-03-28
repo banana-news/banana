@@ -227,7 +227,7 @@ text-align:center;
 @media screen and (max-width:600px) {
   #searchButton{
     position:relative;
-    left: 30px;
+    left: 40px;
   }
 }
 #div-to-show {

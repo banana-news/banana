@@ -228,8 +228,8 @@ text-align:center;
 @media screen and (max-width:600px) {
   #searchButton{
     top: 365px;
-    left: 50px;
-    right: auto;
+    right: 40px;
+    left: auto;
   }
 }
 #div-to-show {
@@ -291,9 +291,6 @@ border-radius:2px}
   .topnav a.icon {
     float: right;
     display: block;
-  }
-  #searchButton{
-    display: none;
   }
 }
 

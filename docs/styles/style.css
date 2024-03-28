@@ -190,7 +190,7 @@ font-family:'Open Sans', sans-serif;
 text-align:center;
 }
 .topnav a:hover {
-  color:#788285;
+  text-decoration: underline;
 }
 @keyframes slideDown {
   from {

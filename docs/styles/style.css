@@ -228,7 +228,7 @@ text-align:center;
 
 @media screen and (max-width:600px) {
   #searchButton{
-    top: 365px;
+    top: 265px;
     right: 40px;
     left: auto;
   }

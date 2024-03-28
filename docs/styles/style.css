@@ -283,7 +283,8 @@ border-radius:2px}
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: relative;
+  height: 300px;}
   .topnav.responsive a.icon {
     position: absolute;
     right: 30px;

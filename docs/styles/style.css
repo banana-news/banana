@@ -229,6 +229,7 @@ text-align:center;
   #searchButton{
     top: 365px;
     left: 40px;
+    right: auto;
   }
 }
 #div-to-show {

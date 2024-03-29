@@ -44,9 +44,8 @@ https://banana-news.github.io/reports/share_this_page.html
 .background {
   position: relative;
   background-size: cover;
-  padding:200px;
   width: 100%;
-  height: auto;
+  height: 500px;
 }
 
 .background::before {

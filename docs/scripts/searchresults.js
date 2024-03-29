@@ -173,12 +173,16 @@ if (results.length > 0) {
     
             var paragraph = document.createElement('p');
             paragraph.innerHTML = result.description;
+            
+            var resultDiv = document.createElement('div');
+            resultDiv.className='searchresult';
+
+    resultDiv.appendChild(link);
+    resultDiv.appendChild(paragraph);
     
-            var hr  = document.createElement('hr');
-    
-            searchResultsDiv.appendChild(link);
-            searchResultsDiv.appendChild(paragraph);
-            searchResultsDiv.appendChild(hr);
+            searchResultsDiv.appendChild(resultDiv);
+            searchResultsDiv.appendChild(document.createElement('br'));
+            //
             loadingMessage.style.display='none';
         });
         

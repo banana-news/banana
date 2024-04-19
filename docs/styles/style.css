@@ -191,6 +191,7 @@ text-align:center;
 }
 .topnav a:hover {
   color:#b6b5b5;
+  transition: 0.15s ease-in-out;
 }
 @keyframes slideDown {
   from {

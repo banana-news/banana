@@ -100,7 +100,7 @@ button {
     font-family: 'Open Sans', sans-serif;
     border:none;
     color:#ffffff;
-    width: auto+20px;
+    width: calc(auto + 50px);
   }
   button:hover{
     background-color: #969696;
@@ -315,7 +315,9 @@ border-radius:2px}
   margin: auto;
 }
 
-
+img{
+  border-radius: 20px;
+}
 /*PLEASE don't change table styling (below) it will mess it up*/
 tr:nth-child(even){
   background-color: #919191;

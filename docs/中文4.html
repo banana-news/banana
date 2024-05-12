@@ -1,1 +1,124 @@
 <!--politics-->
+<!DOCTYPE html>
+<html>
+  <head>
+    
+                
+     
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+<!--This is the politics page- DO NOT change anything on this page, Sinan and Albert-->
+<head><title>Politics - Banana News</title></head>
+<link rel="shortcut icon" href="images/banananewslogo.png">
+  </head>
+<body>
+    <div id="top-container"><div class="topnav" id="myTopnav">
+          
+        <a href="index.html">Home</a>
+        <a href="games.html">Fun</a>
+        <a href="tech.html">Tech</a>
+        <a href="politics.html" >Politics</a>
+        <a href="news.html">News</a>
+        <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars stripped"></i>
+        </a>
+      </div>
+      <div id="div-to-show">
+        <input placeholder="search banana-news.github.io" id="searchbar">
+        <p class="label">Quick links</p>
+        <ul>
+          <a class="not-und" href="index.html"><li class="quick">&rightarrow;&nbsp;Home</li></a>
+          <a class="not-und" href="games.html"><li class="quick">&rightarrow;&nbsp;Fun</li></a>
+          <a  class="not-und" href="tech.html"><li class="quick">&rightarrow;&nbsp;Tech</li></a>
+          <a  class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a>
+        </ul>
+      </div></div>
+     
+    <br><br><br> 
+    <div id="container">
+      
+      <div class="background">
+        <img src="images/cnflag.png" >
+        <h1 >POLITICS</h1>
+      </div>
+      <button onclick="window.location.href='spanish3.html'">Español</button>
+      <button onclick="window.location.href='中文4.html'">中文</button>
+<h2>Taiwan Province</h2>
+<p>Taiwan is a part of China. However, the DPP wants Taiwan to be independent. Splitting China like this is illegal in both the PRC and ROC's constitutions, so the DPP are essentially breaking the law.</p>
+<h2>Russia VS Ukraine</h2>
+<p>Russia invaded Ukraine because Ukraine threatened to join NATO. NATO does not want Ukraine to join, but pretended to let it join to anger Russia. Sure, Putin should not have been unise and rushed to invasion so quickly. It is true that, perhaps, Putin should have waited and tried to stop Ukraine from joining NATO by other means. Control your temper better next time, Putin.</p>
+<h2>Upcoming wars</h2>
+<p>An upcoming war between the mainland and Taiwan is certain, but that is all we can be sure of.</p>
+<footer>&copy; Banana News 2024.</footer>
+    </div>
+
+
+<!--Don't remove the line of code below-->
+<script src="scripts/topnav.js"></script>
+<!--<script src="scripts/topnav.js"></script>-->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/search.js">
+           
+
+        </script>
+<!---->
+<script>//Max and Sinan, please ask Albert before editing or deleting any of this code.
+///
+const searchinput = document.getElementById('searchbar');
+const divToShow = document.getElementById('div-to-show');
+const container = document.getElementById('container');
+const topnav = document.getElementById('myTopnav');
+//
+//
+//
+//
+//
+function showSearch(){
+  container.style.filter='blur(10px);';
+  
+  topnav.style.backgroundColor='#444444';
+  
+divToShow.style.display='block';
+divToShow.style.animation = 'slideDown 0.5s ease forwards';
+
+  
+
+
+
+
+
+setTimeout(function(){
+  searchinput.focus();
+},500);
+
+
+
+}
+
+
+//
+//
+const topContainer = document.getElementById('top-container');
+
+topContainer.addEventListener('mouseleave', divUp);
+//
+//
+//
+//
+function divUp() {
+  console.log('mouse has left both elements.');
+  //
+  topnav.style.backgroundColor = '#555555';
+  divToShow.style.animation = 'slideUp 0.5s ease forwards';
+  container.style.filter = 'none';
+}</script></body>
+
+
+</html>

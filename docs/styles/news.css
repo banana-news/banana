@@ -44,12 +44,9 @@ https://banana-news.github.io/banana/share_this_page.html
     padding: 15px;
     color: #000000;
     overflow: auto;
-    clear: both;
     display: block;
     text-decoration: none;
     transition: 0.5s ease-in-out;
-    
-    float:left;
     margin: 20px;
 }
 .news-container{

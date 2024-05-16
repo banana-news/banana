@@ -44,7 +44,7 @@ https://banana-news.github.io/banana/share_this_page.html
 }
 
 .newsdiv {
-    flex: 0 0 29%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 29% */
+    flex: 0 1 calc(33.33% - 20px); /* Flex-grow: 0, Flex-shrink: 1, Flex-basis: calculated width */
     background-color: #ffffff;
     border-radius: 15px;
     padding: 15px;
@@ -56,6 +56,7 @@ https://banana-news.github.io/banana/share_this_page.html
     margin: 10px; /* Margin for spacing between items */
     box-sizing: border-box; /* Ensure padding and border are included in width */
 }
+
 .newsdiv button{
     background-color: #6868fd;
     color: #ffffff;

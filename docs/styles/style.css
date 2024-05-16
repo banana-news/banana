@@ -142,10 +142,11 @@ h3{
 }
 body {
   background-color: #ffffff;
-  background-image: url("../images/bananabunch.webp");
-  background-size: 100px 100px;
+  background-image: url("../images/bananabunch.png");
+  background-size: 300px 300px;
   background-repeat: no-repeat;
   background-position: bottom right;
+  background-attachment: fixed;
 }
 
 

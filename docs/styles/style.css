@@ -141,7 +141,10 @@ h3{
   text-align: center;
 }
 body {
-  background-color: #ffffff;
+  background-image: url("../images/bananabunch.webp");
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 

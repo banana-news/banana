@@ -37,8 +37,14 @@ https://banana-news.github.io/banana/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
 */img{width:auto;}
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; /* Adjust margin to balance the overall layout */
+}
+
 .newsdiv {
-    flex:0 0 29%;
+    flex: 0 0 29%; /* Flex-grow: 0, Flex-shrink: 0, Flex-basis: 29% */
     background-color: #ffffff;
     border-radius: 15px;
     padding: 15px;
@@ -47,11 +53,8 @@ https://banana-news.github.io/banana/share_this_page.html
     display: block;
     text-decoration: none;
     transition: 0.5s ease-in-out;
-    margin: 20px;
-}
-.news-container{
-    display: flex;
-    flex-wrap: wrap;
+    margin: 10px; /* Margin for spacing between items */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 .newsdiv button{
     background-color: #6868fd;

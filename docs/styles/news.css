@@ -38,6 +38,7 @@ https://banana-news.github.io/banana/share_this_page.html
 
 */img{width:auto;}
 .newsdiv {
+    flex:1;
     background-color: #ffffff;
     border-radius: 15px;
     padding: 15px;
@@ -49,6 +50,9 @@ https://banana-news.github.io/banana/share_this_page.html
     transition: 0.5s ease-in-out;
     width: 45%;
     float:left;
+}
+.news-container{
+    display: flex;
 }
 .newsdiv button{
     background-color: #6868fd;

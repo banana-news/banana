@@ -43,6 +43,7 @@ https://banana-news.github.io/banana/share_this_page.html
   border-radius: 10%;
 }
 .options-div{
+  flex: 1;
     border-radius: 10px;
     padding: 35px;
     background-color: #FFE135;
@@ -52,7 +53,7 @@ https://banana-news.github.io/banana/share_this_page.html
     height:auto;
     width: 40%;
     height:500px;
-    float: left;
+    margin: 20px;
 }
 .options-div:hover{
     cursor: pointer;
@@ -60,7 +61,7 @@ https://banana-news.github.io/banana/share_this_page.html
 }
 .options{
   background-color: #00000000;
-  margin: 20px;
+  display:flex;
 }
 @media (max-width:768px) {
   .options-div{

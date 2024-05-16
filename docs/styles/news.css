@@ -48,6 +48,7 @@ https://banana-news.github.io/banana/share_this_page.html
     text-decoration: none;
     transition: 0.5s ease-in-out;
     width: 50%;
+    float:left;
 }
 .newsdiv button{
     background-color: #6868fd;

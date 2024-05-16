@@ -51,7 +51,7 @@ https://banana-news.github.io/banana/share_this_page.html
     color:#000000;
     transition: 0.5s ease-in-out;
     height:auto;
-    width: 40%;
+    width: 45%;
     height:500px;
     margin: 20px;
 }
@@ -62,6 +62,7 @@ https://banana-news.github.io/banana/share_this_page.html
 .options{
   background-color: #00000000;
   display:flex;
+  flex-wrap: wrap;
 }
 @media (max-width:768px) {
   .options-div{

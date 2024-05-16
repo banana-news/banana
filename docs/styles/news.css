@@ -54,6 +54,7 @@ https://banana-news.github.io/banana/share_this_page.html
 }
 .news-container{
     display: flex;
+    flex-wrap: wrap;
 }
 .newsdiv button{
     background-color: #6868fd;

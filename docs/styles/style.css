@@ -1,7 +1,14 @@
 /*This is the code for the styling of the webpage -  Albert don't change my dark gray hex colour. 
 Also Albert do not change my background colour- I specifically looked up 'banana yellow'. 
 Put all your styling that applies to everything under this comment. (if you have styling specific to one page, 
-create a <style></style> tag in the <head></head> and add it to your <style></style> tag.*/
+create a <style></style> tag in the <head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXXXX-X');
+  </script></head> and add it to your <style></style> tag.*/
 /*
 
   []

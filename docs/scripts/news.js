@@ -43,8 +43,13 @@ https://banana-news.github.io/banana/share_this_page.html
 
  */
 const hiddens = document.getElementsByClassName('hidden');
+let isReadMore = true;
 
 function revealText(text, button) {
-    text.style.display='block';
-    button.style.display='none';
+  if(isReadMore){text.style.display='block';
+  button.style.textContent='Read less';}else{
+    text.style.display='none';
+    button.style.textContent='Read more';
+  }
+    
 }

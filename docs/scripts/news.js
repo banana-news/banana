@@ -30,18 +30,7 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 
 */
-/*
-  _____________________________________________________________________________________________________________________
- |                                                                    _____                                            |
- |                                                                  /                                        |  |  |   |
- |    \        /    ____   |    __    ___    __   __    ____        |         o      __      __       __     |  |  |   |
- |     \  /\  /    /____\  |   /     /   \  /  \ /  \  /____\        \__      |   | /  \    /  \   | /  \    |  |  |   |
- |      \/  \/     \____   |   \__   \___/  |   |   |  \____   /        \     |   |/    |   \__/\  |/    |   o  o  o   |
- |                                                            /          |                                             |
- |                                                                 ______/                                             |
- |_____________________________________________________________________________________________________________________|
 
- */
  const hiddens = document.getElementsByClassName('hidden');
  let isReadMore = true;
 let newsContainer = document.getElementsByClassName('news-container')[0];

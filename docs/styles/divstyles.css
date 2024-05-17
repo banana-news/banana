@@ -42,22 +42,17 @@ https://banana-news.github.io/banana/share_this_page.html
   overflow: hidden;
   border-radius: 10%;
 }
-.options-div{
-  flex:1;
-  width:45%;
-    border-radius: 10px;
-    padding: 35px;
-    background-color: #FFE135;
-    border: 2.5px solid #808080;
-    color:#000000;
-    transition: 0.5s ease-in-out;
-    height:auto;
-    height:500px;
-    margin: 20px;
-}
-.options-div:hover{
-    cursor: pointer;
-    background-color: #d3d3d3;
+.options-div {
+  flex: 0 1 calc(45% - 40px); /* Flex-basis with margin compensation */
+  border-radius: 10px;
+  padding: 35px;
+  background-color: #FFE135;
+  border: 2.5px solid #808080;
+  color: #000000;
+  transition: 0.5s ease-in-out;
+  height: 500px; /* Fixed height */
+  margin: 20px; /* Margin for spacing */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 .options{
   background-color: #00000000;

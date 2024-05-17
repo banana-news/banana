@@ -35,16 +35,16 @@ https://banana-news.github.io/banana/share_this_page.html
   border-radius: 10%;
 }
 .options-div {
-  flex: 0 1 calc(45% - 40px); /* Flex-basis with margin compensation */
+ flex:1;
   border-radius: 10px;
   padding: 35px;
   background-color: #FFE135;
   border: 2.5px solid #808080;
   color: #000000;
   transition: 0.5s ease-in-out;
-  height: 500px; /* Fixed height */
-  margin: 20px; /* Margin for spacing */
-  box-sizing: border-box; /* Ensure padding and border are included in width */
+  min-height:500px;
+  width:45%;
+  margin: 20px;
 }
 .options{
   background-color: #00000000;

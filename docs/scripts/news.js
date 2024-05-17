@@ -47,9 +47,15 @@ let isReadMore = true;
 
 function revealText(text, button) {
   if(isReadMore){text.style.display='block';
-  button.style.textContent='Read less';}else{
+  button.style.textContent='Read less';
+button.onclick() = function(){text.style.display='none';}
+  }
+else{
     text.style.display='none';
     button.style.textContent='Read more';
+    button.onclick() = function(){
+      text.style.displa='block';
+    }
   }
     
 }

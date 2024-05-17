@@ -59,6 +59,7 @@ https://banana-news.github.io/banana/share_this_page.html
        revealText(text, button);
      };
    }
-   isReadMore = !isReadMore; // Toggle the state
+   isReadMore = !isReadMore;h
+   h
  }
  

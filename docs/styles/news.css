@@ -72,9 +72,6 @@ https://banana-news.github.io/banana/share_this_page.html
     background-color: #808080;
     cursor: pointer;
 }
-.newsdiv:hover{
- cursor: pointer;
-}
 
 .newsdiv img {
     float: left;

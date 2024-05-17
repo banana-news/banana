@@ -44,6 +44,17 @@ https://banana-news.github.io/banana/share_this_page.html
  */
  const hiddens = document.getElementsByClassName('hidden');
  let isReadMore = true;
+let newsContainer = document.getElementsByClassName('news-container')[0];
+let documentImages = newsContainer.getElementsByTagName('img');
+const modal = document.getElementsByClassName('modal')[0];
+for (let image of documentImages){
+  image.onclick= function(){
+    const img = document.createElement("img");
+    img.src=image.src;
+    img.width="100%";
+    modal.appendChild(img);
+  }
+}
  
  function revealText(text, button) {
    if (isReadMore) {
@@ -59,7 +70,6 @@ https://banana-news.github.io/banana/share_this_page.html
        revealText(text, button);
      };
    }
-   isReadMore = !isReadMore;h
-   h
+   isReadMore = !isReadMore;
  }
  

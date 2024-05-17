@@ -42,20 +42,23 @@ https://banana-news.github.io/banana/share_this_page.html
  |_____________________________________________________________________________________________________________________|
 
  */
-const hiddens = document.getElementsByClassName('hidden');
-let isReadMore = true;
-
-function revealText(text, button) {
-  if(isReadMore){text.style.display='block';
-  button.style.textContent='Read less';
-button.onclick() = function(){text.style.display='none';}
-  }
-else{
-    text.style.display='none';
-    button.style.textContent='Read more';
-    button.onclick() = function(){
-      text.style.displa='block';
-    }
-  }
-    
-}
+ const hiddens = document.getElementsByClassName('hidden');
+ let isReadMore = true;
+ 
+ function revealText(text, button) {
+   if (isReadMore) {
+     text.style.display = 'block';
+     button.textContent = 'Read less';
+     button.onclick = function() {
+       revealText(text, button);
+     };
+   } else {
+     text.style.display = 'none';
+     button.textContent = 'Read more';
+     button.onclick = function() {
+       revealText(text, button);
+     };
+   }
+   isReadMore = !isReadMore; // Toggle the state
+ }
+ 

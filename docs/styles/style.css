@@ -7,7 +7,7 @@ create a <style></style> tag in the <head><script async src="https://www.googlet
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-XXXXXXXXX-X');
+    gtag('config', 'G-HKCZYS11HC');
   </script></head> and add it to your <style></style> tag.*/
 /*
 

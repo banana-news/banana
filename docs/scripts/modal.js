@@ -33,11 +33,9 @@ https://banana-news.github.io/banana/share_this_page.html
 
 var modal = document.getElementById("myModal");
 
-var btn = document.getElementById("myBtn");
-
 var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+function openModal(){
   modal.style.display = "block";
 }
 

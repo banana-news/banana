@@ -42,6 +42,7 @@ for (let image of documentImages){
     img.src=image.src;
     img.width="100%";
     modalContentDiv.appendChild(img);
+    openModal();
   }
 }
  

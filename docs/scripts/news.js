@@ -36,10 +36,11 @@ https://banana-news.github.io/banana/share_this_page.html
 let newsContainer = document.getElementsByClassName('news-container')[0];
 let documentImages = newsContainer.getElementsByTagName('img');
 const modalContentDiv = document.getElementsByClassName('modal-content')[0];
+
 for (let image of documentImages){
   image.onclick= function(){
-    const img = document.getElementById('modalImage');
-    img.src=image.src;
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src=image.src;
     openModal();
   }
 }

@@ -103,7 +103,8 @@ Promise.all(otherPages.map((page, i) =>
             description.innerHTML = resultDescriptions[i]; // Use innerHTML to include potential HTML elements
             result.appendChild(link);
             result.appendChild(description);
-            document.body.appendChild(result);
+            var searchResults = document.getElementById('searchResults');
+            searchResults.appendChild(result);
         }
         loadingMessage.style.display = 'none';
     } else if (searchQuery.includes('barrel roll')) {

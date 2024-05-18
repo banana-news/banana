@@ -38,10 +38,8 @@ let documentImages = newsContainer.getElementsByTagName('img');
 const modalContentDiv = document.getElementsByClassName('modal-content')[0];
 for (let image of documentImages){
   image.onclick= function(){
-    const img = document.createElement("img");
+    const img = document.getElementById('modalImage');
     img.src=image.src;
-    img.width="100%";
-    modalContentDiv.appendChild(img);
     openModal();
   }
 }

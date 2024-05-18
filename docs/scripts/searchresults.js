@@ -176,8 +176,10 @@ if (results.length > 0) {
         });
         
     } else {
+        var loadingMessage = document.getElementById("loadingMessage");
     var noResults = document.getElementById("noResults");
     noResults.style.display='block';
+    loadingMessage.style.display='none';
 }
 /*else {
     var noresults = document.createElement('p');

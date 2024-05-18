@@ -44,7 +44,7 @@ https://banana-news.github.io/banana/share_this_page.html
     overflow: auto;
     display: block;
     text-decoration: none;
-    transition: 0.5s ease-in-out;
+    transition: 0.25s ease-in-out;
     margin: 10px; 
     box-sizing: border-box; 
 }
@@ -84,7 +84,7 @@ https://banana-news.github.io/banana/share_this_page.html
     height: 225px;
     border-radius: 7px;
     margin-right: 15px;
-    transition: 0.5s ease-in-out;
+    transition: 0.25s ease-in-out;
     vertical-align: top; 
 }
 
@@ -133,7 +133,7 @@ body {
         clear: both;
         display: block;
         text-decoration: none;
-        transition: 0.5s ease-in-out;
+        transition: 0.25s ease-in-out;
         width: 80%;
     }
     .newsdiv button{
@@ -161,7 +161,7 @@ body {
         height: 337.5px;
         border-radius: 10.5px;
         margin-right: 22.5px;
-        transition: 0.5s ease-in-out;
+        transition: 0.25s ease-in-out;
         vertical-align: top; 
     }
     

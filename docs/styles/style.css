@@ -1,17 +1,7 @@
 /*This is the code for the styling of the webpage -  Albert don't change my dark gray hex colour. 
 Also Albert do not change my background colour- I specifically looked up 'banana yellow'. 
 Put all your styling that applies to everything under this comment. (if you have styling specific to one page, 
-create a <style></style> tag in the <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKCZYS11HC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HKCZYS11HC');
-</script>
-</head> and add it to your <style></style> tag.*/
+create a <style></style> tag in the <head></head> and add it to your <style></style> tag.*/
 /*
 
   []
@@ -98,7 +88,7 @@ button {
     border-radius: 5px;
     padding: 7px;
     background-color: #008000;
-    transition: 0.5s ease-in-out;
+    transition: 0.25s ease-in-out;
     font-family: 'Open Sans', sans-serif;
     border:none;
     color:#ffffff;
@@ -158,7 +148,7 @@ body {
     border-right:none;
     border-left:none;
     border-bottom:3px solid rgb(0,0,0);
-    transition:0.5s ease-in-out;
+    transition:0.25s ease-in-out;
   }
   input:hover{
     border:3px solid #000000;
@@ -193,7 +183,7 @@ font-family:'Open Sans', sans-serif;
 text-align:center;
 }
 .topnav a:hover {
-  color:#b6b5b5;
+  color:#f0f0f0;
   transition: 0.15s ease-in-out;
 }
 @keyframes slideDown {

@@ -176,11 +176,8 @@ if (results.length > 0) {
         });
         
     } else {
-    var noresults = document.createElement('p');
-    noresults.innerHTML = 'No results found.';
-    searchResultsDiv.appendChild(noresults);
-    header.textContent = '';
-    loadingMessage.style.display='none';
+    var noResults = document.getElementById("noResults");
+    noResults.style.display='block';
 }
 /*else {
     var noresults = document.createElement('p');

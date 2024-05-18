@@ -36,7 +36,7 @@ https://banana-news.github.io/banana/share_this_page.html
 }
 
 .newsdiv {
-    flex: 0 1 calc(33.33% - 20px); /* Flex-grow: 0, Flex-shrink: 1, Flex-basis: calculated width */
+    flex: 0 1 calc(33.33% - 20px);
     background-color: #ffffff;
     border-radius: 15px;
     padding: 15px;
@@ -45,9 +45,23 @@ https://banana-news.github.io/banana/share_this_page.html
     display: block;
     text-decoration: none;
     transition: 0.5s ease-in-out;
-    margin: 10px; /* Margin for spacing between items */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    margin: 10px; 
+    box-sizing: border-box; 
 }
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .newsdiv {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+@media only screen and (max-width: 768px) {
+    .newsdiv {
+      flex: 0 1 calc(100% - 20px);
+    }
+  }
+  
 
 .newsdiv button{
     background-color: #6868fd;

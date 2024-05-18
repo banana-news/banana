@@ -120,6 +120,7 @@ Promise.all(otherPages.map((page, i) =>
     console.error('Error processing the search results:', error);
 });
 
+
 /*
 var queryString = window.location.search;
 var searchParams = new URLSearchParams(queryString);

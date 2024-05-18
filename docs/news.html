@@ -70,6 +70,11 @@
         <link rel="shortcut icon" href="images/banananewslogo.png">
        
         </a>
+        <style>
+          #clickmessage{border-radius:10px;background-color:white;padding:20px;position:fixed;top:0;right:0;}
+          #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
+          #closeButton:hover{background-color: grey;}
+        </style>
     </head>
     <body>
         <!--Welcome to the news page, the page with the latest news about tech, ict, geography, politics and more!!!-->
@@ -114,7 +119,10 @@
         <img id="modalImage" height="100%" src="images/kirin.jpg">
       </div>
     </div>
-    
+    <div id="clickmessage">
+      <p>Click on an image to enlarge</p>
+      <button id="closebutton">OK</button>
+    </div>
     <h2>Latest news:</h2>
     <div class="news-container">
       <div class="newsdiv"><img src="images/kirin.jpg"><h2>Kirin 9000S - An amazing innovation</h2> <br><p>The Kirin 9000S is purely using Chinese technology. However, it performs poorly, at least compared to the Snapdragon 8 Gen 3. At least it's 5G ... </p><button onclick="revealText(hiddens[0], this)">Read more</button><br><p style="display: none;" class="hidden">, and this is a true great leap forward in Chinese technology, because it signifies that China is starting to be able to make its own chips, and the Kirin 9100, rumored to come out in Q3 2024, is rumored to have much better performance.</p></div>     
@@ -212,6 +220,12 @@ Even since the first flight was in 2020, it commonly takes 5-7 years before the 
         <script src="scripts/search.js">
         </script>
         <script src="scripts/modal.js"></script>
+        <script>var closeButton = document.getElementById("closeButton");
+        var clickMessage = document.getElementById("clickmessage");
+        closeButton.addEventListener("click", function(){
+          clickMessage.style.display='none';
+        });
+        </script>
    <!---->
    <!---->
             <!---->

@@ -35,13 +35,13 @@ https://banana-news.github.io/banana/share_this_page.html
  let isReadMore = true;
 let newsContainer = document.getElementsByClassName('news-container')[0];
 let documentImages = newsContainer.getElementsByTagName('img');
-const modal = document.getElementsByClassName('modal')[0];
+const modalContentDiv = document.getElementsByClassName('modal-content')[0];
 for (let image of documentImages){
   image.onclick= function(){
     const img = document.createElement("img");
     img.src=image.src;
     img.width="100%";
-    modal.appendChild(img);
+    modalContentDiv.appendChild(img);
   }
 }
  

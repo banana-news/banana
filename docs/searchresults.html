@@ -185,5 +185,37 @@ function divUp() {
   topnav.style.backgroundColor = '#555555';
   divToShow.style.animation = 'slideUp 0.5s ease forwards';
   container.style.filter = 'none';
-}</script></body>
+}</script><script> function animateMarks() {
+            var mark1 = document.getElementById('mark1');
+            var mark2 = document.getElementById('mark2');
+            var mark3 = document.getElementById('mark3');
+            var mark4 = document.getElementById('mark4');
+            var mark5 = document.getElementById('mark5');
+
+            mark1.style.display = "none";
+            mark2.style.display = "none";
+            mark3.style.display = "none";
+            mark4.style.display = "none";
+            mark5.style.display = "none";
+            
+            setTimeout(function() {
+                mark1.style.display = "block";
+            }, 250);
+            setTimeout(function() {
+                mark2.style.display = "block";
+            }, 500);
+            setTimeout(function() {
+                mark3.style.display = "block";
+            }, 750);
+            setTimeout(function() {
+                mark4.style.display = "block";
+            }, 1000);
+            setTimeout(function() {
+                mark5.style.display = "block";
+            }, 1250);
+
+            setTimeout(animateMarks, 2000);  // Repeat the animation every 2 seconds
+        }
+
+        animateMarks();</script></body>
 </html>

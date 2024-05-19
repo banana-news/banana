@@ -222,7 +222,6 @@ text-align:center;
 
 @media screen and (max-width:600px) {
   #searchButton{
-    top: 265px;
     right: 40px;
   }
 }
@@ -286,6 +285,12 @@ border-radius:2px}
     float: right;
     display: block;
   }
+}
+@media (max-width:768px){
+  h1{font-size: 75px;}
+  p{font-size:18px;}
+  h2{font-size:25px;}
+
 }
 
 @media screen and (max-width: 600px) {

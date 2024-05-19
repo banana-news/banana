@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Readme</title>
   <style>
      h1{font-family:'Work Sans', sans-serif;}
             p{font-family:'Open Sans', sans-serif;}

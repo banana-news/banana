@@ -37,7 +37,7 @@ const loadingMessage = document.getElementById('loadingMessage');
 document.title = searchQuery + " - Search Results";
 
 var header = document.getElementById("header");
-header.textContent = "Search Results for \"" + searchQuery + "\"";
+header.innerHTML = 'Search Results for "' + searchQuery + '"<br>搜索: "'+ searchQuery + '" 的结果';
 
 var searchResultsDiv = document.getElementById("searchResults");
 

@@ -104,7 +104,7 @@
               </div>
             </div>
             <div id="clickmessage">
-              <p>现在照片放大不在</p>
+              <p>现在，照片放大和读更多和少不在因为有一些问题</p>
               <button id="closebutton">好</button>
             </div>
             <div class="newsdiv">
@@ -125,7 +125,6 @@
               <div style="display: none;" class="hidden">
                 <p> Qantas挑的Airbus的A350-1000因为它可以飞很远还有可以放很多人在里面。 虽然更小的A350-900ulr可以飞更远， A350-1000比它大还可以放更多人在里面</p> 
                 <p>在2020年，Qantas用它们新买的Boeing 787 Dreamliner 从伦敦飞到悉尼。它19小时19分钟没停。它们不要用787飞它们的真的航班因为飞那么远它们只可以带很少的人。</p>
-              <p><strong>Albert Kemp写了这个新闻文章</strong></p>
         </div>
             </div>
             <div class="newsdiv">
@@ -136,8 +135,7 @@
         <div class="hidden" style="display:none;"> 
         <p style="text-align: center;font-size:10px;">左面： 一片照片里面有新的空军一号要像什么。Donald Trump 要一个深蓝，红和白色的飞机但是Joe Biden来的以后它改变颜色了。美国的新空军一号要很像现在用的飞机。</p>
         <p>Donald Trump离开以后，改变了因为他们改变他的主意因为他们说了 ”用深蓝色需要改变因为不安全。Joe Biden也不要改变现在的颜色因从1960年都一样。</p>
-        <p><b>Albert Kemp写了这个新闻文章</b></p>
-            </div>
+        </div>
           </div>
           <br>
           <div class="newsdiv">
@@ -151,8 +149,12 @@
         <p>
         虽然第一个起飞在2020年，飞机平时用5-7年制作和试飞机。
         </p>
-        <p><b>Albert Kemp写了这个新闻文章</b></p>
         </div>
+        </div>
+        <div class="newsdiv">
+          <figure class="image image_resized" style="width:27.2%;"><img style="aspect-ratio:1245/1200;" src="https://content.presspage.com/uploads/2431/e964f1e9-0391-436e-8cc8-91b706489966/1920_ealiveryreplacement2350.jpg?10000" width="1245" height="1200"></figure>
+<h2>Emirates要买65 A350飞机</h2>
+<p>Emirates说了他们要买65 A350-900飞机。10个在Dubai的航展起飞了。我们在等那个飞机进去Emirates的机队。</p>
         </div>
    <div class="newsdiv">
     <img src="images/auflag.svg">
@@ -185,6 +187,13 @@
         <script src="scripts/中文search.js">
            
 
+        </script>
+        <script>
+          var closeButton = document.getElementById("closebutton");
+        var clickMessage = document.getElementById("clickmessage");
+        closeButton.addEventListener("click", function(){
+          clickMessage.style.display='none';
+        });
         </script>
         <script>var modal = document.getElementById("myModal");
 

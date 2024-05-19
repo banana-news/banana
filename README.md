@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Readme</title>
-  <style>
-     h1{font-family:'Work Sans', sans-serif;}
+
+  ```
+<style>
+h1{font-family:'Work Sans', sans-serif;}
             p{font-family:'Open Sans', sans-serif;}
             body{
                 background-color:#ffe135;
@@ -49,14 +47,12 @@
                 bottom:150px;
                 right:150px;
             }
-  </style>
-</head>
-<body>
-  <div id='banana'><div id='first'></div>
+</style>
+<div id='banana'><div id='first'></div>
     <div id='second'></div>
     <div id='third'></div>
     <div id='fourth'></div></div>
-  
+  ```
   # Banana News
 News website including news, games, politics and tech reviews
 
@@ -74,7 +70,6 @@ You should try testing the search bar and tell me if there are any errors
 1. HTML: 58%
 2. JS: 30%
 3. CSS: 12%
-</body>
-</html>
+
 
 

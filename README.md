@@ -11,3 +11,8 @@ You should try testing the search bar and tell me if there are any errors
 (I also added a no results found and loading animation for the search results page)
 
 
+## I don't know why the page isn't showing language percentages but here is an approximation:
+1. HTML: 58%
+2. JS: 30%
+3. CSS: 12%
+

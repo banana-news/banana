@@ -1,5 +1,6 @@
 
-  ![finallogo](https://github.com/banana-news/banana/assets/91766342/17ce8758-5682-4bef-90aa-45eb3bbae42d)
+  ![finallogoactual](https://github.com/banana-news/banana/assets/91766342/0892b7f9-68f3-409a-985d-62d6318c099c)
+
   # Banana News
 News website including news, games, politics and tech reviews
 

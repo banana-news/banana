@@ -1,5 +1,4 @@
-
-  ![finallogoactual](https://github.com/banana-news/banana/assets/91766342/0892b7f9-68f3-409a-985d-62d6318c099c)
+<img src="https://github.com/banana-news/banana/assets/91766342/0892b7f9-68f3-409a-985d-62d6318c099c" height="100" width="100">
 
   # Banana News
 News website including news, games, politics and tech reviews

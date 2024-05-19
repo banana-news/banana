@@ -111,7 +111,10 @@ Promise.all(otherPages.map((page, i) =>
         barrelRoll();
     } else if (searchQuery.includes('askew')) {
         tiltPage();
-    } else {
+    }else if (searchQuery==''){
+        alert('Please enter a search term');
+    }
+     else {
         var noResults = document.getElementById("noResults");
         noResults.style.display = 'block';
         loadingMessage.style.display = 'none';

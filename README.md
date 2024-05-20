@@ -18,5 +18,6 @@ You should try testing the search bar and tell me if there are any errors
 2. JS: 30%
 3. CSS: 12%
 
-
+## Views:
+very approximately at least over 300 views to our website since it was put up. There has been 21 views to the site yesterday and we are now getting an accurate view count starting from 18 may.
 

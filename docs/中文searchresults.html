@@ -176,7 +176,203 @@
     width:300px;
     z-index:10;
     margin:auto;
-}</style>
+}#newfirst {
+            background-color: #ffe135;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border: 7px solid black;
+            border-radius: 40%;
+            z-index:100;
+        }
+        #newsecond {
+            border-right: 5px solid black;
+            border-radius: 40%;
+            background-color: #ffffff;
+            height: 200px;
+            width: 140px;
+            z-index: 200;
+            position: absolute;
+        }
+        #newthird {
+            background-color: #ffffff;
+            height: 220px;
+            width: 132px;
+            position: absolute;
+            border-top-right-radius: 40%;
+            border-bottom-right-radius: 40%;
+            z-index: 300;
+        }
+        #newfourth {
+            height: 60px;
+            width: 15px;
+            position: absolute;
+            background-color: black;
+            top: -30px;
+            left: 100px;
+            transform: rotate(-50deg);
+            z-index: 400;
+        }
+        #newbanana {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            transform:rotate(0deg);
+        }
+        #newfifth {
+            background-color: black;
+            z-index: 200;
+            position: absolute;
+            top: 300px;
+            left: 160px;
+            width: 40px;
+            height: 40px;
+        }
+        #newmouth {
+            background-color: black;
+            position: absolute;
+            z-index: 800;
+            height: 10px;
+            width: 40px;
+            top: 120px;
+            left: 150px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        #neweye1 {
+            background-color: black;
+            position: absolute;
+            z-index: 800;
+            height: 10px;
+            width: 10px;
+            top: 100px;
+            left: 150px;
+        }
+        #neweye2 {
+            background-color: black;
+            position: absolute;
+            z-index: 800;
+            height: 10px;
+            width: 10px;
+            top: 100px;
+            left: 180px;
+        }
+            
+            #animationbox{
+                position:absolute;
+                top:65px;
+                left:90px;
+                
+            }
+            
+           #ground{
+               position:absolute;
+               top:280px;
+               width:200px;
+               height:5px;
+               left:100px;
+               background-color:black;
+           } 
+           .foot{
+               position:absolute;
+               right:0;
+               bottom:0;
+               background-color:black;
+               height:13px;
+               width:100%;
+               z-index:50;
+           }
+           .leg{
+               position:absolute;
+               right:0;
+               bottom:0;
+               height:100%;
+               width:13px;
+               background-color:black;
+               z-index:50;
+               
+           }
+           #leg1{
+               position:absolute;
+               width:30px;
+               height:90px;
+               background-color:#00000000;
+               bottom:-260px;
+               left:120px;
+               z-index:50;
+               animation: walk2 1s infinite;
+           }
+           #leg2{
+               position:absolute;
+               width:30px;
+               height:90px;
+               background-color:#00000000;
+               bottom:-260px;
+               left:150px;
+               z-index:50;
+               animation: walk 1s infinite;
+           }
+           @keyframes slide {
+    0% {
+        
+        visibility: visible;
+        left: 100px;
+    }
+    50% {
+        
+        visibility: hidden;
+        left: 280px;
+    }
+    100% {
+        
+        visibility: hidden;
+        left: 300px;
+    }
+}
+
+           @keyframes walk{
+               0%{
+                   transform:rotate(0deg);
+               }
+               25%{
+                   transform:rotate(-50deg);
+               }
+               50%{
+                   transform:rotate(0deg);
+               }
+               75%{
+                   transform:rotate(50deg);
+               }
+               100%{
+                   transform:rotate(0deg);
+               }
+           }
+           @keyframes walk2{
+               0%{
+                   transform:rotate(0deg);
+               }
+               25%{
+                   transform:rotate(50deg);
+               }
+               50%{
+                   transform:rotate(0deg);
+               }
+               75%{
+                   transform:rotate(-50deg);
+               }
+               100%{
+                   transform:rotate(0deg);
+               }
+           }
+           #rock{
+               position:absolute;
+               top:275px;
+               width:20px;
+               height:10px;
+               left:100px;
+               background-color:black;
+               animation:slide 1s infinite;
+           }</style>
         <link rel="stylesheet" href="styles/search.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="styles/modal.css">
@@ -216,7 +412,29 @@
         <br>
         <div id="searchResults">
           <div id="loadingMessage">
-          <img src="https://media.tenor.com/K3j9pwWlME0AAAAj/fire-flame.gif" height="150px">
+            <div id="animationbox">
+                <div id='newbanana'>
+                        <div id='newfirst'></div>
+                        <div id='newsecond'></div>
+                        <div id='newthird'></div>
+                        <div id='newfourth'></div>
+                        <div id='newmouth'></div>
+                        <div id='neweye1'></div>
+                        <div id='eye2'></div>
+                        <div id='leg1'>
+                            <div class='foot'></div>
+                            <div class='leg'></div>
+                        </div>
+                        <div id='leg2'>
+                            <div class='foot'></div>
+                            <div class='leg'></div>
+                        </div>
+                    </div>
+                    <div id="ground">
+                        
+                    </div>
+                    <div id="rock"></div>
+            </div>
           <p>
             我们在努力检查这个网站。给我们一些秒钟。。。
           </p>

@@ -19,5 +19,5 @@ You should try testing the search bar and tell me if there are any errors
 3. CSS: 12%
 
 ## Views:
-very approximately at least over 300 views to our website since it was put up. There has been 21 views to the site yesterday and we are now getting an accurate view count starting from 18 may.
+very approximately at least over 300 views to our website since it was put up. There has been 21 views to the site yesterday (I know that sounds like a lot for one day but that's just me checking the website when I was working on it and in reality there have been many days with 0 views) and we are now getting an accurate view count starting from 18 may.
 

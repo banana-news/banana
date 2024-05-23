@@ -1,4 +1,4 @@
-/*Max and Sinan, please ask Albert before editing or deleting this code.*/
+/* and , please ask  before editing or deleting this code.*/
 /*
 []
  []
@@ -108,7 +108,7 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
 if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('quad') || searchQuery.toLowerCase().includes('selector') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: 'QuadSelector',
-        link: 'https://albertkemp.github.io/quadselector/',
+        link: 'https://kemp.github.io/quadselector/',
         description: 'A timed game where you have to select as many quadrilaterals as possible.'
     });
 }
@@ -130,7 +130,7 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
     results.push({
         text: 'Calculator',
         link: 'cow.html',
-        description: 'A JavaScript calculator made by Sinan which supports division, multiplication, addition and subtraction.'
+        description: 'A JavaScript calculator made by  which supports division, multiplication, addition and subtraction.'
     });
 }
 if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('square') || searchQuery.toLowerCase().includes('shoot') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana') || searchQuery.includes('stuff')) {

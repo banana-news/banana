@@ -1,4 +1,4 @@
-//Max and Sinan, Please ask Albert before editing or deleting this code
+// and , Please ask  before editing or deleting this code
 /*
 []
  []
@@ -44,7 +44,7 @@ const elondiv = document.getElementById('elonmoney');
       window.location.href= 'elonmoney.html';
   });
   quadselectordiv.addEventListener("click", function(){
-      window.location.href='https://albertkemp.github.io/quadselector/';
+      window.location.href='https://kemp.github.io/quadselector/';
   });
   sharesitediv.addEventListener("click", function(){
       window.location.href="share_this_page.html";

@@ -1,4 +1,4 @@
-//Max and Sinan, Please ask Albert before editing or deleting this code
+// and , Please ask  before editing or deleting this code
 //This is the main javascript script for all the sites - so it will control simple code like search results or key clicks. (The games will have their own scripts)
 /*
 []
@@ -33,7 +33,7 @@ https://banana-news.github.io/banana/share_this_page.html
 */
 
 
-  //Note to collaborators: Please don't delete any part of the scripts unless you've consulted Albert.
+  //Note to collaborators: Please don't delete any part of the scripts unless you've consulted .
 
   //
  

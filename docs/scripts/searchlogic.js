@@ -1,4 +1,4 @@
-/*Max and Sinan, please ask Albert before editing or deleting this code.*/
+/* and , please ask  before editing or deleting this code.*/
 /*
 []
  []
@@ -43,7 +43,7 @@ var searchResultsDiv = document.getElementById("searchResults");
 
 var otherPages = ['banana2.html', 'Bananam.html', 'cow.html', 'drawmemory.html', 'elonmoney.html', 'games.html', 'hi.html', 'imagecombiner.html', 'index.html', 'Me.html', 'news.html', 'politics.html', 'share_this_page.html', 'tech.html', 'banana.html', 'spanish1.html', 'banana.html', 'banana.html', 'banana.html', '中文1.html', '中文3.html', '中文4.html', '中文5.html', '中文6.html', '中文7.html', '中文8.html', '中文9.html'];
 var pageNames = ['Tower defence sim', 'Why I like bananas', 'Calculator', 'Draw logos from memory', "Spend Elon Musk's money", 'Fun', 'Hi', 'Image Combiner', 'Home', 'Square shooter', 'News', 'Politics', 'Share this site', 'Tech', 'Inicio', 'News (español)', 'Fun (español)', 'Tech (español', 'Politics (español)', '主页', '新闻', '政治', '手机，平板电脑，和电脑', '计算器'];
-var pageDescriptions = ['A tower defence sim made by Sinan', 'Why Sinan likes bananas', 'A JavaScript calculator made by Sinan', 'A game where you have to draw logos from memory', "A game where you spend Elon Musk's money", "The fun page on Banana News", 'A game where you can combine people with food', "The banana news homepage", "A square shooting game", "All the latest news", "Political articles on various topics", "A site sharing game", "Inicio - español", 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述'];
+var pageDescriptions = ['A tower defence sim made by ', 'Why  likes bananas', 'A JavaScript calculator made by ', 'A game where you have to draw logos from memory', "A game where you spend Elon Musk's money", "The fun page on Banana News", 'A game where you can combine people with food', "The banana news homepage", "A square shooting game", "All the latest news", "Political articles on various topics", "A site sharing game", "Inicio - español", 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述'];
 
 var resultHeadings = [];
 var resultDescriptions = [];
@@ -63,7 +63,7 @@ function getHighlightedText(text, query) {
     var index = text.toLowerCase().indexOf(query.toLowerCase());
     if (index === -1) return null;
 
-    var start = Math.max(0, index - 20);
+    var start = Math.(0, index - 20);
     var end = Math.min(text.length, index + query.length + 20);
 
     var before = text.slice(start, index);

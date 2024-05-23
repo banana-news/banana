@@ -1,4 +1,4 @@
-//Max and Sinan, Please ask Albert before editing or deleting this code
+// and , Please ask  before editing or deleting this code
 /*
 []
  []
@@ -30,7 +30,7 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 */
 
-//Max and Sinan, please ask Albert before editing or deleting any of this code.
+// and , please ask  before editing or deleting any of this code.
 ///
 const searchinput = document.getElementById('searchbar');
 const divToShow = document.getElementById('div-to-show');

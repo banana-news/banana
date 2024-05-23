@@ -1,4 +1,4 @@
-//Max and Sinan, Please ask Albert before editing or deleting this code
+// and , Please ask  before editing or deleting this code
 /*
 []
  []
@@ -39,7 +39,7 @@ const fruitImage = document.getElementById("fruit-image");
 /*
 const billgates = 'https://github.com/banana-news/reports/blob/main/docs/images/billgates.png';
 const elonmusk = 'https://github.com/banana-news/reports/blob/main/docs/images/elon.png';
-const alberteinstein = 'https://github.com/banana-news/reports/blob/main/docs/images/einstein.png';
+const einstein = 'https://github.com/banana-news/reports/blob/main/docs/images/einstein.png';
 const joebiden = 'https://github.com/banana-news/reports/blob/main/docs/images/joebiden.png';
 const donaldtrump = 'https://github.com/banana-news/reports/blob/main/docs/images/trump.png';*/
 

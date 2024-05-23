@@ -1,5 +1,5 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-//Please ask Albert before editing OR deleting this:
+//Please ask  before editing OR deleting this:
 /*
 []
  []

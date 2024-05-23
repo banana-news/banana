@@ -1,5 +1,5 @@
-/*This is the code for the styling of the webpage -  Albert don't change my dark gray hex colour. 
-Also Albert do not change my background colour- I specifically looked up 'banana yellow'. 
+/*This is the code for the styling of the webpage -   don't change my dark gray hex colour. 
+Also  do not change my background colour- I specifically looked up 'banana yellow'. 
 Put all your styling that applies to everything under this comment. (if you have styling specific to one page, 
 create a <style></style> tag in the <head></head> and add it to your <style></style> tag.*/
 /*
@@ -188,13 +188,13 @@ text-align:center;
 }
 @keyframes slideDown {
   from {
-  max-height:0;
+  -height:0;
   visibility:hidden;
     height: 0;
     display:none;
   }
   to {
-  max-height:200px;
+  -height:200px;
   visibility:visible;
     height: 200px; 
     display:block;
@@ -202,13 +202,13 @@ text-align:center;
 }
 @keyframes slideUp{
   from{
-    max-height:200px;
+    -height:200px;
   visibility:visible;
     height: 200px; 
     display:block;
   }
   to{
-    max-height:0;
+    -height:0;
   visibility:hidden;
     height: 0;
     display:none;
@@ -220,7 +220,7 @@ text-align:center;
   right:20px;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (-width:600px) {
   #searchButton{
     right: 40px;
   }
@@ -279,21 +279,21 @@ border-radius:2px}
 } 
 
 
- @media screen and (max-width: 600px) {
+ @media screen and (-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
-@media (max-width:768px){
+@media (-width:768px){
   h1{font-size: 75px;}
   p{font-size:18px;}
   h2{font-size:25px;}
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (-width: 600px) {
   #searchButton{display:block}
   .topnav.responsive {position: relative;
   height: 280px;}
@@ -344,5 +344,5 @@ footer {
 @keyframes mymove {
   100% {transform: rotate(360deg);}
 }
-@media(max-width:768px){p{font-size:18px;}}
+@media(-width:768px){p{font-size:18px;}}
 

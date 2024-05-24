@@ -188,13 +188,13 @@ text-align:center;
 }
 @keyframes slideDown {
   from {
-  -height:0;
+ max-height:0;
   visibility:hidden;
     height: 0;
     display:none;
   }
   to {
-  -height:200px;
+ max-height:200px;
   visibility:visible;
     height: 200px; 
     display:block;
@@ -202,13 +202,13 @@ text-align:center;
 }
 @keyframes slideUp{
   from{
-    -height:200px;
+   max-height:200px;
   visibility:visible;
     height: 200px; 
     display:block;
   }
   to{
-    -height:0;
+   max-height:0;
   visibility:hidden;
     height: 0;
     display:none;

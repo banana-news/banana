@@ -108,7 +108,7 @@ if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().incl
 if (searchQuery.toLowerCase().includes('game') || searchQuery.toLowerCase().includes('fun') || searchQuery.toLowerCase().includes('quad') || searchQuery.toLowerCase().includes('selector') || searchQuery.toLowerCase().includes('stuff') || searchQuery.toLowerCase().includes('all') || searchQuery.toLowerCase().includes('page') || searchQuery.toLowerCase().includes('every') || searchQuery.toLowerCase().includes('banana')) {
     results.push({
         text: 'QuadSelector',
-        link: 'https://kemp.github.io/quadselector/',
+        link: 'https://albertkemp.github.io/quadselector/',
         description: 'A timed game where you have to select as many quadrilaterals as possible.'
     });
 }

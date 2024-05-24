@@ -50,7 +50,7 @@ https://banana-news.github.io/banana/share_this_page.html
 .options{
   background-color: #00000000;
 }
-@media (-width:768px) {
+@media (max-width:768px) {
   .options-div{
       border-radius: 15px;
       padding: 52.5px;

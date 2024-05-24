@@ -83,7 +83,7 @@ border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
 a {
     font-size: 24px;
 }
-@media(-width:768px) {
+@media(max-width:768px) {
   input{
     padding: 30px;
   border-radius: 30px;

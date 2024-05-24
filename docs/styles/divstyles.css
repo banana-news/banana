@@ -46,6 +46,10 @@ https://banana-news.github.io/banana/share_this_page.html
   width:40%;
   margin: 20px;
 }
+.options-div a{
+  text-decoration: none;
+  color:black;
+}
 .options-div:hover{background-color: #d3d3d3;cursor: pointer;}
 .options{
   background-color: #00000000;

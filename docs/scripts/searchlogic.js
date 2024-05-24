@@ -63,7 +63,7 @@ function getHighlightedText(text, query) {
     var index = text.toLowerCase().indexOf(query.toLowerCase());
     if (index === -1) return null;
 
-    var start = Math.(0, index - 20);
+    var start = Math.max(0, index - 20);
     var end = Math.min(text.length, index + query.length + 20);
 
     var before = text.slice(start, index);

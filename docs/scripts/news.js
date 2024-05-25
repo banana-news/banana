@@ -48,13 +48,13 @@ for (let image of documentImages){
  function revealText(text, button) {
    if (isReadMore) {
      text.style.display = 'block';
-     button.textContent = 'Read less';
+     button.textContent = 'READ LESS';
      button.onclick = function() {
        revealText(text, button);
      };
    } else {
      text.style.display = 'none';
-     button.textContent = 'Read more';
+     button.textContent = 'READ MORE';
      button.onclick = function() {
        revealText(text, button);
      };

@@ -70,7 +70,10 @@
         <!---->
         <link rel="shortcut icon" href="images/logosvg.svg"><link rel="icon" href="images/logosvg.svg">
         <title>Potato clicker - Banana News</title>
-        <style>.locked {             opacity: 50%;             background-color: grey;  } .unlocked {  background-color: white; color: black; }#awards{background-color:white;}</style>
+        <style>
+          img{transition: transform 0.3s ease;}
+        img:hover{cursor:pointer;transform: scale(1.1);}
+        .locked {             opacity: 50%;             background-color: grey;font-family: 'Open Sans', sans-serif;  padding:10px;} .unlocked { padding:10px; background-color: white; color: black; font-family: 'Open Sans', sans-serif;}#awards{background-color:white;font-family: 'Open Sans', sans-serif;}</style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     </head>
     <body>
@@ -118,8 +121,8 @@
             <div id="awards">
                 <div class='locked' id="cookie"><span id="locked1">🔒</span>Chocolate chip cookie (100 potatoes)</div>
                 <div class='locked' id="crocpet"><span id="locked2">🔒</span>Pet crocodile (250 potatoes)</div>
-                <div class='locked' id="tenthousand"><span id="locked3">🔒</span>$10000 (500 potatoes)</div>
-                <div class='locked' id="million"><span id="locked4">🔒</span>$1000000 (1000 potatoes)</div>
+                <div class='locked' id="tenthousand"><span id="locked3">🔒</span>House (500 potatoes)</div>
+                <div class='locked' id="million"><span id="locked4">🔒</span>Private A380 (1000 potatoes)</div>
             </div>
         
         </div>

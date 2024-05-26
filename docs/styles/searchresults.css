@@ -37,8 +37,7 @@ https://banana-news.github.io/banana/share_this_page.html
     background-color: #ffffff;
   }
   @media(max-width:768px){
-    .searchresult{width:100%}
-    #searchResults{background-color:#d9d9d9}
+    .searchresult{width:100%;border-bottom:2px solid grey;}
   }
   .toilet-bowl{
       border:4px solid black;

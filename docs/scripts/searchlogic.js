@@ -41,9 +41,8 @@ header.textContent = searchQuery;
 
 var searchResultsDiv = document.getElementById("searchResults");
 
-var otherPages = ['banana2.html', 'Bananam.html', 'cow.html', 'drawmemory.html', 'elonmoney.html', 'games.html', 'hi.html', 'imagecombiner.html', 'index.html', 'Me.html', 'news.html', 'politics.html', 'share_this_page.html', 'bananajump.html', 'tech.html', 'banana.html', 'spanish1.html', 'banana.html', 'banana.html', 'banana.html', '中文1.html', '中文3.html', '中文4.html', '中文5.html', '中文6.html', '中文7.html', '中文8.html', '中文9.html'];
-var pageNames = ['Tower defence sim', 'Why I like bananas', 'Calculator', 'Draw logos from memory', "Spend Elon Musk's money", 'Fun', 'Hi', 'Image Combiner', 'Home', 'Square shooter', 'News', 'Politics', 'Share this site', 'Banana jump', 'Tech', 'Inicio', '主页', '新闻', '政治', '手机，平板电脑，和电脑', '计算器'];
-//var pageDescriptions = ['A tower defence sim made by ', 'Why  likes bananas', 'A JavaScript calculator made by ', 'A game where you have to draw logos from memory', "A game where you spend Elon Musk's money", "The fun page on Banana News", 'A game where you can combine people with food', "The banana news homepage", "A square shooting game", "All the latest news", "Political articles on various topics", "A site sharing game", "Inicio - español", 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', 'Esta página no tiene descripción.', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述', '这个网页没有描述'];
+var otherPages = ['banana2.html', 'Bananam.html', 'cow.html', 'drawmemory.html', 'elonmoney.html', 'games.html', 'hi.html', 'imagecombiner.html', 'index.html', 'Me.html', 'news.html', 'politics.html', 'share_this_page.html', 'potatoclicker.html', 'bananajump.html', 'tech.html', 'banana.html', 'spanish1.html', 'banana.html', 'banana.html', 'banana.html', '中文1.html', '中文3.html', '中文4.html', '中文5.html', '中文6.html'];
+var pageNames = ['Tower defence sim', 'Why I like bananas', 'Calculator', 'Draw logos from memory', "Spend Elon Musk's money", 'Fun', 'Hi', 'Image Combiner', 'Home', 'Square shooter', 'News', 'Politics', 'Share this site', 'Potato clicker', 'Banana jump', 'Tech', 'Inicio', '主页', '新闻', '政治', '手机，平板电脑，和电脑', '计算器'];
 
 var resultHeadings = [];
 var resultDescriptions = [];
@@ -79,7 +78,7 @@ Promise.all(otherPages.map((page, i) =>
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
-            const textContent = doc.body.textContent; // or doc.documentElement.textContent
+            const textContent = doc.body.textContent; 
             if (textContent.includes(searchQuery)) {
                 resultHeadings.push(pageNames[i]);
                 var highlightedDescription = getHighlightedText(textContent, searchQuery) || pageDescriptions[i];
@@ -98,9 +97,9 @@ Promise.all(otherPages.map((page, i) =>
             result.className = 'searchresult';
             var link = document.createElement('a');
             link.href = resultLinks[i];
-            link.innerHTML = resultHeadings[i]; // Use innerHTML to include potential HTML elements
+            link.innerHTML = resultHeadings[i];
             var description = document.createElement('p');
-            description.innerHTML = resultDescriptions[i]; // Use innerHTML to include potential HTML elements
+            description.innerHTML = resultDescriptions[i]; 
             result.appendChild(link);
             result.appendChild(description);
             var searchResults = document.getElementById('searchResults');
@@ -153,7 +152,7 @@ function animateMarks() {
         mark5.style.display = "block";
     }, 1250);
 
-    setTimeout(animateMarks, 2000);  // Repeat the animation every 2 seconds
+    setTimeout(animateMarks, 2000); 
 }
 
 animateMarks();

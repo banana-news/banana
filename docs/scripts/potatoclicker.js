@@ -35,7 +35,7 @@ var numClicks = 0;
 var imageWidth=100;
         $("#potato").on("click", function(){
             numClicks++;
-            if (numCilcks==1){
+            if (numClicks==1){
                 $("#results").text(numClicks + "potato");
             }else{
             $("#results").text(numClicks + " potatoes");

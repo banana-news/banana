@@ -36,6 +36,12 @@ https://banana-news.github.io/banana/share_this_page.html
   //Note to collaborators: Please don't delete any part of the scripts unless you've consulted .
 
   //
+  var optionsDivs = document.getElementsByClassName("options-div");
+  for (let optionsDiv of optionsDivs) {
+    optionsDiv.addEventListener("click", function(){
+      window.location.href=optionsDiv.getAttribute('title');
+    });
+  }
  
 
 

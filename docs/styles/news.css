@@ -31,6 +31,8 @@ https://banana-news.github.io/banana/share_this_page.html
 */
 .news-container h2{
     display:block;
+    text-align: center;
+    background-color: white;
 }
 img{width:auto;}
 

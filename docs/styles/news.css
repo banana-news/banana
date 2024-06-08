@@ -28,7 +28,11 @@ https://banana-news.github.io/banana/share_this_page.html
 
 
 
-*/img{width:auto;}
+*/
+.news-container h2{
+    display:block;
+}
+img{width:auto;}
 
 .news-container {
     display: flex;

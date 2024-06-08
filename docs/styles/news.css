@@ -29,6 +29,9 @@ https://banana-news.github.io/banana/share_this_page.html
 
 
 */img{width:auto;}
+.featuredarticle{
+    width: 80%;
+}
 .news-container {
     display: flex;
     flex-wrap: wrap;

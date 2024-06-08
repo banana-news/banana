@@ -29,9 +29,7 @@ https://banana-news.github.io/banana/share_this_page.html
 
 
 */img{width:auto;}
-.featuredarticle{
-    width: 80%;
-}
+
 .news-container {
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +48,9 @@ https://banana-news.github.io/banana/share_this_page.html
     transition: 0.25s ease-in-out;
     margin: 10px; 
     box-sizing: border-box; 
+}
+.featuredarticle{
+    width: 80%;
 }
 @media only screen 
   and (min-width: 1024px) 
@@ -104,7 +105,7 @@ https://banana-news.github.io/banana/share_this_page.html
 }
 
 .newsdiv p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 17.5px;
 }
 

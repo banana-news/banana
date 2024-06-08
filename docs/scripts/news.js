@@ -30,7 +30,6 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 
 */
-
 document.addEventListener('DOMContentLoaded', (event) => {
   // Modal
   var modal = document.getElementById("myModal");
@@ -69,11 +68,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
       var index = button.getAttribute('data-index');
       var hiddenContent = document.querySelector('.hidden[data-index="' + index + '"]');
       if (hiddenContent) {
-        hiddenContent.style.display = hiddenContent.style.display === 'none' || hiddenContent.style.display === '' ? 'block' : 'none';
+        if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+          hiddenContent.style.display = 'block';
+          button.textContent = 'READ LESS';
+        } else {
+          hiddenContent.style.display = 'none';
+          button.textContent = 'READ MORE';
+        }
       }
     });
   });
 });
+
 
 
  

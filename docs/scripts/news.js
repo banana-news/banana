@@ -31,62 +31,49 @@ https://banana-news.github.io/banana/share_this_page.html
 
 */
 
-document.addEventListener('DOMContentLoaded', () => {
-  const newsContainer = document.querySelector('.news-container');
-  const newsDivs = Array.from(newsContainer.children).reverse(); // Reverse the order to put the newest first
-
-  newsContainer.innerHTML = ''; // Clear the container
-
-  // Re-append the newsDivs in the reversed order
-  newsDivs.forEach((newsDiv, index) => {
-      // Update data-index attributes to ensure they remain correct
-      const button = newsDiv.querySelector('button[data-index]');
-      const hidden = newsDiv.querySelector('.hidden');
-      button.setAttribute('data-index', index);
-      hidden.setAttribute('data-index', index);
-
-      newsContainer.appendChild(newsDiv);
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Modal
+  var modal = document.getElementById("myModal");
+  var images = document.querySelectorAll(".newsdiv img");
+  var modalImg = document.getElementById("modalImage");
+  var span = document.getElementsByClassName("close")[0];
+  
+  images.forEach((image) => {
+    image.addEventListener('click', function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
   });
 
-  const hiddens = document.getElementsByClassName('hidden');
-  let isReadMore = true;
-
-  function revealText(text, button) {
-      if (isReadMore) {
-          text.style.display = 'block';
-          button.textContent = 'READ LESS';
-          button.onclick = function() {
-              revealText(text, button);
-          };
-      } else {
-          text.style.display = 'none';
-          button.textContent = 'READ MORE';
-          button.onclick = function() {
-              revealText(text, button);
-          };
-      }
-      isReadMore = !isReadMore;
+  span.onclick = function() {
+    modal.style.display = "none";
   }
 
-  const buttons = document.querySelectorAll('button[data-index]');
+  // Click message
+  var clickMessage = document.getElementById("clickmessage");
+  var closeButton = document.getElementById("closebutton"); // Corrected id
+
+  if (closeButton) {
+    closeButton.addEventListener('click', function() {
+      clickMessage.style.display = "none";
+    });
+  } else {
+    console.error('Button with id "closebutton" not found.');
+  }
+
+  // Read more functionality
+  var buttons = document.querySelectorAll(".newsdiv button");
+  
   buttons.forEach(button => {
-      button.addEventListener('click', function() {
-          const index = this.getAttribute('data-index');
-          revealText(hiddens[index], this);
-      });
-  });
-
-  // Image click modal functionality remains the same
-  let documentImages = newsContainer.getElementsByTagName('img');
-  const modalContentDiv = document.getElementsByClassName('modal-content')[0];
-
-  for (let image of documentImages) {
-      image.onclick = function() {
-          const modalImage = document.getElementById('modalImage');
-          modalImage.src = image.src;
-          openModal();
+    button.addEventListener('click', () => {
+      var index = button.getAttribute('data-index');
+      var hiddenContent = document.querySelector('.hidden[data-index="' + index + '"]');
+      if (hiddenContent) {
+        hiddenContent.style.display = hiddenContent.style.display === 'none' || hiddenContent.style.display === '' ? 'block' : 'none';
       }
-  }
+    });
+  });
 });
+
 
  

@@ -29,32 +29,16 @@ https://banana-news.github.io/banana/share_this_page.html
 
 
 */
+/img{width:auto;}
+.featuredarticle{
+    width: 80%;
+}
 .news-container {
-    margin: -10px; /* Adjust margin to balance the overall layout */
-}
-
-/* Ensure h2 elements are block level */
-.news-container h2 {
-    display: block;
-    text-align: center;
-    background-color: white;
-}
-
-/* Flex properties applied to a new container for the newsdivs */
-.news-items {
     display: flex;
     flex-wrap: wrap;
-    margin: -10px;
+    margin: -10px; /* Adjust margin to balance the overall layout */
 }
-
-img {
-    width: auto;
-}
-
-.hidden {
-    display: none;
-}
-
+.hidden{display:none;}
 .newsdiv {
     flex: 0 1 calc(33.33% - 20px);
     background-color: #ffffff;
@@ -65,27 +49,25 @@ img {
     display: block;
     text-decoration: none;
     transition: 0.25s ease-in-out;
-    margin: 10px;
-    box-sizing: border-box;
+    margin: 10px; 
+    box-sizing: border-box; 
 }
-
-.featuredarticle {
-    width: 80%;
+@media only screen 
+  and (min-width: 1024px) 
+  and (-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .newsdiv {
+    flex: 0 1 calc(50% - 20px);
+  }
 }
-
-@media only screen and (min-width: 1024px) and (-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    .newsdiv {
-        flex: 0 1 calc(50% - 20px);
-    }
-}
-
 @media only screen and (max-width: 768px) {
     .newsdiv {
-        flex: 0 1 calc(100% - 20px);
+      flex: 0 1 calc(100% - 20px);
     }
-}
+  }
+  
 
-.newsdiv button {
+.newsdiv button{
     background-color: #6868fd;
     color: #ffffff;
     width: 350px;
@@ -96,8 +78,7 @@ img {
     float: left;
     height: 50px;
 }
-
-.newsdiv button:hover {
+.newsdiv button:hover{
     background-color: #808080;
     cursor: pointer;
 }
@@ -108,17 +89,14 @@ img {
     border-radius: 7px;
     margin-right: 15px;
     transition: 0.25s ease-in-out;
-    vertical-align: top;
+    vertical-align: top; 
 }
 
-.newsdiv img:hover {
-    opacity: 70%;
-    cursor: pointer;
-}
+.newsdiv img:hover{opacity: 70%;cursor: pointer;}
 
 .newsdiv h2,
 .newsdiv p {
-    margin: 0;
+    margin: 0; 
 }
 
 .newsdiv h2 {
@@ -127,9 +105,16 @@ img {
 }
 
 .newsdiv p {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 17.5px;
 }
+
+/*.newsdiv h2:hover,
+.newsdiv p:hover {
+    color: #ff0000;
+    text-decoration: underline;
+    opacity: 0.7;
+}*/
 
 body {
     color: #000000;
@@ -140,10 +125,9 @@ body {
     color: #000000;
     background-color: #d3d3d3;
     padding: 20px;
-    text-align: center;
+    text-align: center; 
 }
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .newsdiv {
         background-color: #ffffff;
         border-radius: 22.5px;
@@ -153,11 +137,9 @@ body {
         clear: both;
         display: block;
         text-decoration: none;
-        transition: 0.25s ease-in-out;
         width: 80%;
     }
-
-    .newsdiv button {
+    .newsdiv button{
         background-color: #6868fd;
         color: #ffffff;
         width: 525px;
@@ -168,63 +150,33 @@ body {
         float: left;
         height: 75px;
     }
-
-    .newsdiv button:hover {
+    .newsdiv button:hover{
         background-color: #808080;
         cursor: pointer;
     }
-
-    .newsdiv:hover {
-        background-color: #e2dede;
-        cursor: pointer;
-    }
-
+    
     .newsdiv img {
         float: left;
         height: 337.5px;
         border-radius: 10.5px;
         margin-right: 22.5px;
         transition: 0.25s ease-in-out;
-        vertical-align: top;
+        vertical-align: top; 
     }
-
-    .newsdiv img:hover {
-        opacity: 70%;
-        cursor: pointer;
-    }
-
-    .newsdiv h2,
-    .newsdiv p {
-        margin: 0;
-    }
-
-    .newsdiv h2 {
-        font-family: 'Lato', sans-serif;
-        font-size: 41.25px;
-    }
-
-    .newsdiv p {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 26.25px;
-    }
-
-    .newsdiv h2:hover,
-    .newsdiv p:hover {
-        color: #ff0000;
-        text-decoration: underline;
-        opacity: 0.7;
-    }
-
+    
+    .newsdiv img:hover{opacity: 70%;cursor: pointer;}
+   
+    
     body {
         color: #000000;
     }
-
+    
     .news-h1 {
         font-size: 112.5px;
         color: #000000;
         background-color: #d3d3d3;
         padding: 30px;
-        text-align: center;
+        text-align: center; 
     }
 }
 

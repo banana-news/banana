@@ -29,7 +29,7 @@ https://banana-news.github.io/banana/share_this_page.html
 
 
 */
-/img{width:auto;}
+img{width:auto;}
 .featuredarticle{
     width: 80%;
 }
@@ -115,6 +115,11 @@ https://banana-news.github.io/banana/share_this_page.html
     text-decoration: underline;
     opacity: 0.7;
 }*/
+.news-container h2{
+    text-align: center;
+    background-color: white;
+    width: 100%;
+}
 
 body {
     color: #000000;

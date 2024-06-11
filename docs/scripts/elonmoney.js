@@ -32,6 +32,7 @@ https://banana-news.github.io/banana/share_this_page.html
 
  const moneyDisplay = document.getElementById('moneyDisplay');
  let money = 213000000000;
+ const maxMoney = 213000000000;
  let receiptPrice = 0;
  let receiptItems = 0;
  const receiptDiv = document.getElementById('receiptDiv');
@@ -54,24 +55,29 @@ https://banana-news.github.io/banana/share_this_page.html
  const sheratonGrand = 100000000;
  
  
+ 
  //etc
  
  function buyItem(item) {
+  if(money-item>=0){
   money = money - item;
   receiptPrice = receiptPrice + item;
   receiptItems++;
   let moneyString = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   moneyDisplay.innerHTML = '$' + moneyString;
-  showReceipt();
+  showReceipt(); 
+  }
 }
 
 function sellItem(item) {
+  if(money+item<=maxMoney){
   money = money + item;
   receiptPrice = receiptPrice - item;
   receiptItems--;
   let moneyString = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   moneyDisplay.innerHTML = '$' + moneyString;
   showReceipt();
+  }
 }
 
 

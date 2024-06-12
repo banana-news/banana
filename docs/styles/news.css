@@ -115,7 +115,7 @@ img{width:auto;}
     text-decoration: underline;
     opacity: 0.7;
 }*/
- h2{
+ .news-container h2{
     text-align: center;
     background-color: white;
     width: 100%;

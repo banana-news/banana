@@ -90,7 +90,7 @@ img{width:auto;}
     margin-right: 15px;
     transition: 0.25s ease-in-out;
     vertical-align: top; 
-}
+
 
 .newsdiv img:hover{opacity: 70%;cursor: pointer;}
 
@@ -185,3 +185,4 @@ body {
     }
 }
 
+}

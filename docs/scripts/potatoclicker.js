@@ -43,21 +43,15 @@ var perSec = document.getElementById("persec");
 function addOne(){
     numClicks++;
 }
-plusOne.addEventListener("click", function(){
-    if (numClicks>=plusOnePrice){
-        numClicks+=2;   
-        //plusOne=true;
-    }
-});
-perSec.addEventListener("click", function(){
-    if (numClicks>=perSecPrice){
-        setInterval(addOne, 1000);
-        //perSec=true;
-    }
-});
+
         $("#potato").on("click", function(){
             if (!plusOn){
             addOne();
+            } else if (plusOn){
+                numClicks+=2;
+            } 
+            if (secOn){
+                setInterval(addOne, 1000);
             }
             if (numClicks==1){
                 $("#results").text(numClicks + " banana");
@@ -67,10 +61,14 @@ perSec.addEventListener("click", function(){
             if (numClicks>=plusOnePrice){
                 plusOn=true;
                 plusOnePrice+=100;
+                plusOne.removeClass("locked").addClass("unlocked");
+                $("#locked5").css("display", "none");
             }
             if (numClicks>=plusSecPrice){
                 secOn=true;
                 plusSecPrice+=100;
+                perSec.removeClass("locked").addClass("unlocked");
+                $("#locked6").css("display", "none");
             }
             if (numClicks >= 100) {
                 if (!$("#cookie").hasClass("unlocked")) {

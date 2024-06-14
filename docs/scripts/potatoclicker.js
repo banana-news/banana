@@ -37,20 +37,34 @@ var plusSecPrice=200;
 var numClicks = 0;
 var imageWidth=100;
 
+
+var addingOn=false;
+var secondsOn=false;
+
 var plusOne = document.getElementById("+1");
 var perSec = document.getElementById("persec");
 
 function addOne(){
     numClicks++;
 }
+plusOne.on("click", function(){
+    if(plusOn){
+        addingOn=true;
+    }
+});
+perSec.on("click", function(){
+    if(perSec){
+        secondsOn=true;
+    }
+})
 
         $("#potato").on("click", function(){
-            if (!plusOn){
+            if (!addingOn){
             addOne();
-            } else if (plusOn){
+            } else if (addingOn){
                 numClicks+=2;
             } 
-            if (secOn){
+            if (secondsOn){
                 setInterval(addOne, 1000);
             }
             if (numClicks==1){

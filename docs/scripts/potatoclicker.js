@@ -57,13 +57,15 @@ function updateDisplay() {
 
     if (numClicks >= plusOnePrice) {
         plusOn = true;
-        plusOne.removeClass("locked").addClass("unlocked");
+        plusOne.classList.remove("locked");
+        plusOne.classList.add("unlocked");
         $("#locked5").css("display", "none");
     }
 
     if (numClicks >= plusSecPrice) {
         secOn = true;
-        perSec.removeClass("locked").addClass("unlocked");
+        perSec.classList.remove("locked");
+        perSec.classList.add("unlocked");
         $("#locked6").css("display", "none");
     }
 }
@@ -152,3 +154,4 @@ $("#potato").on("click", function () {
     }
     updateDisplay();
 });
+

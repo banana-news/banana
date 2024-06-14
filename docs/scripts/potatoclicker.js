@@ -30,40 +30,57 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 
 */
-var plusOn=false;
-var secOn=false;
-var plusOnePrice=150;
-var plusSecPrice=200;
+var plusOn = false;
+var secOn = false;
+var plusOnePrice = 150;
+var plusSecPrice = 200;
 var numClicks = 0;
-var imageWidth=100;
+var imageWidth = 100;
 
-
-var addingOn=false;
-var secondsOn=false;
+var addingOn = false;
+var secondsOn = false;
 
 var plusOne = document.getElementById("+1");
 var perSec = document.getElementById("persec");
+var intervalId; // To keep track of the interval
 
-function addOne(){
+function addOne() {
     numClicks++;
+    updateDisplay();
 }
-plusOne.on("click", function(){
-    if(plusOn){
-        addingOn=true;
+
+function updateDisplay() {
+    // Update the display of clicks
+    var text = numClicks === 1 ? " banana" : " bananas";
+    $("#results").text(numClicks + text);
+}
+
+plusOne.addEventListener("click", function() {
+    if (plusOn) {
+        addingOn = true;
+        numClicks -= plusOnePrice;
+        updateDisplay();
     }
 });
-perSec.on("click", function(){
-    if(perSec){
-        secondsOn=true;
-    }
-})
 
-        $("#potato").on("click", function(){
-            if (!addingOn){
-            addOne();
-            } else if (addingOn){
-                numClicks+=2;
-            } 
+perSec.addEventListener("click", function() {
+    if (secOn) {
+        secondsOn = true;
+        numClicks -= plusSecPrice;
+        updateDisplay();
+    }
+});
+
+$("#potato").on("click", function() {
+    if (!addingOn) {
+        addOne();
+    } else if (addingOn) {
+        numClicks += 2;
+        updateDisplay();
+    }
+    if (secondsOn && !intervalId) {
+        intervalId = setInterval(addOne, 1000);
+    }
             if (secondsOn){
                 setInterval(addOne, 1000);
             }

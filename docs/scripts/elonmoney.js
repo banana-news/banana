@@ -54,13 +54,14 @@ https://banana-news.github.io/banana/share_this_page.html
  const unitedAirlines = 30000000000;
  const sheratonGrand = 100000000;
  
- 
+ let itemsOwned = [];
  
  //etc
  
  function buyItem(item) {
   if(money-item>=0){
   money = money - item;
+  itemsOwned.push(item);
   receiptPrice = receiptPrice + item;
   receiptItems++;
   let moneyString = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -70,6 +71,7 @@ https://banana-news.github.io/banana/share_this_page.html
 }
 
 function sellItem(item) {
+  if(itemsOwned.includes(item)){
   if(money+item<=maxMoney){
   money = money + item;
   receiptPrice = receiptPrice - item;
@@ -78,6 +80,7 @@ function sellItem(item) {
   moneyDisplay.innerHTML = '$' + moneyString;
   showReceipt();
   }
+}
 }
 
 

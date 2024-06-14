@@ -30,58 +30,101 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 
 */
-
+var plusOn=false;
+var secOn=false;
+var plusOnePrice=150;
+var plusSecPrice=200;
 var numClicks = 0;
 var imageWidth=100;
+
+var plusOne = document.getElementById("+1");
+var perSec = document.getElementById("persec");
+
+function addOne(){
+    numClicks++;
+}
+plusOne.addEventListener("click", function(){
+    if (numClicks>=plusOnePrice){
+        numClicks+=2;   
+        //plusOne=true;
+    }
+});
+perSec.addEventListener("click", function(){
+    if (numClicks>=perSecPrice){
+        setInterval(addOne, 1000);
+        //perSec=true;
+    }
+});
         $("#potato").on("click", function(){
-            numClicks++;
+            if (!plusOn){
+            addOne();
+            }
             if (numClicks==1){
-                $("#results").text(numClicks + "potato");
+                $("#results").text(numClicks + " banana");
             }else{
-            $("#results").text(numClicks + " potatoes");
+            $("#results").text(numClicks + " bananas");
+            }
+            if (numClicks>=plusOnePrice){
+                plusOn=true;
+                plusOnePrice+=100;
+            }
+            if (numClicks>=plusSecPrice){
+                secOn=true;
+                plusSecPrice+=100;
             }
             if (numClicks >= 100) {
                 if (!$("#cookie").hasClass("unlocked")) {
-                    alert("You unlocked a chocolate chip cookie!");
+                    alert("You unlocked a slice of banana bread!");
                     $("#locked1").css("display", "none");
                     $("#cookie").removeClass("locked").addClass("unlocked");
                     var image = $("<img>");
                     image.attr("width", imageWidth);
-                    image.attr("src", "https://assets.bonappetit.com/photos/5ca534485e96521ff23b382b/1:1/w_2700,h_2700,c_limit/chocolate-chip-cookie.jpg");
+                    image.attr("src", "https://static01.nyt.com/images/2023/09/28/multimedia/LH-banana-bread-hkbj/LH-banana-bread-hkbj-square640.jpg");
                     image.appendTo("#cookie");
                 }
             }
             if (numClicks >= 250) {
                 if (!$("#crocpet").hasClass("unlocked")) {
-                    alert("You unlocked a pet crocodile!");
+                    alert("You unlocked golden banana!");
                     $("#locked2").css("display", "none");
                     $("#crocpet").removeClass("locked").addClass("unlocked");
                     var image = $("<img>");
                     image.attr("width", imageWidth);
-                    image.attr("src", "https://cdn.britannica.com/84/198884-050-A37B8971/crocodile-Nile-swath-one-sub-Saharan-Africa-Madagascar.jpg");
-                    image.appendTo("#cookie");
+                    image.attr("src", "https://media.artsper.com/artwork/2181373_1_m.jpg");
+                    image.appendTo("#crocpet");
                 }
             }
             if (numClicks >= 500) {
                 if (!$("#tenthousand").hasClass("unlocked")) {
-                    alert("You unlocked a house!");
+                    alert("You unlocked a banana mansion!");
                     $("#locked3").css("display", "none");
                     $("#tenthousand").removeClass("locked").addClass("unlocked");
                     var image = $("<img>");
                     image.attr("width", imageWidth);
-                    image.attr("src", "https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg");
-                    image.appendTo("#cookie");
+                    image.attr("src", "https://www.indystar.com/gcdn/-mm-/b6a26d09f539fc72865ff52237a993d8e3491d6c/c=0-30-800-482/local/-/media/Indianapolis/NG/2013/10/21/banana-house.jpg?width=800&height=450&fit=crop&format=pjpg&auto=webp");
+                    image.appendTo("#tenthousand");
                 }
             }
             if (numClicks >= 1000) {
                 if (!$("#million").hasClass("unlocked")) {
-                    alert("You unlocked a private A380!");
+                    alert("You unlocked a banana themed A380!");
                     $("#locked4").css("display", "none");
                     $("#million").removeClass("locked").addClass("unlocked");
                     var image = $("<img>");
                     image.attr("width", imageWidth);
-                    image.attr("src", "https://upload.wikimedia.org/wikipedia/commons/0/09/A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg");
-                    image.appendTo("#cookie");
+                    image.attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Bn6zipYS5UIHZnXOi_KqVb1TT8raL3zhMQ&s");
+                    image.appendTo("#million");
+                }
+            }
+            if (numClicks>=1500){
+                if (!$("#bananas").hasClass("unlocked")){
+                    alert("You unlocked 1000000 bananas!")
+                    $("#locked7").css("display", "none");
+                    $("#bananas").removeClass("locked").addClass("unlocked");
+                    var image = $("<img>");
+                    image.attr("width", imageWidth);
+                    image.attr("src", "https://images.newscientist.com/wp-content/uploads/2019/01/31134057/gettyimages-86304874.jpg?crop=4:3,smart&width=1200&height=900&upscale=true")
+                    image.appendTo("#bananas");
                 }
             }
         });

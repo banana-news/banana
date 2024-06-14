@@ -73,7 +73,11 @@
         <style>#results{font-family: 'Open Sans', sans-serif;}
           img{transition: transform 0.3s ease;}
         img:hover{cursor:pointer;transform: scale(1.1);}
-        .locked {             opacity: 50%;             background-color: grey;font-family: 'Open Sans', sans-serif;  padding:10px;} .unlocked { padding:10px; background-color: white; color: black; font-family: 'Open Sans', sans-serif;}#awards{background-color:white;font-family: 'Open Sans', sans-serif;}</style>
+        .locked {             opacity: 50%;             background-color: grey;font-family: 'Open Sans', sans-serif;  padding:25px; border-radius:20px; flex: 0 1 calc(33.33% - 20px);} .unlocked { padding:25px; border-radius:20px; flex: 0 1 calc(33.33% - 20px);background-color: white; color: black; font-family: 'Open Sans', sans-serif;}#awards{background-color:white;font-family: 'Open Sans', sans-serif;}
+        
+        #awards,#upgrades{display: flex;
+    flex-wrap: wrap;
+    margin: -10px; }</style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     </head>
     <body>
@@ -115,14 +119,20 @@
            <!---->
 
             <!--stuff here ⬇️-->
-            <h2>POTATO CLICKER</h2>
-            <img id="potato" src="https://www.alimentarium.org/sites/default/files/media/image/2017-02/AL027-01_pomme_de_terre_0_0.jpg" width="300" alt="A potato" title="Click it!">
+            <h2><s>POTATO</s>BANANA CLICKER</h2>
+            <img id="potato" src="images/bananabunch.jpg" width="300" alt="A banana" title="Click it!">
             <div id="results"></div>
+            <h2>Upgrades:</h2>
+            <div id="upgrades">
+              <div class="locked" id="+1"><span id="locked5">🔒</span>+1 banana per click</div>
+              <div class="locked" id="persec"><span id="locked6">🔒</span>+1 banana per second</div>
+            <h2>Awards:</h2>
             <div id="awards">
-                <div class='locked' id="cookie"><span id="locked1">🔒</span>Chocolate chip cookie (100 potatoes)</div>
-                <div class='locked' id="crocpet"><span id="locked2">🔒</span>Pet crocodile (250 potatoes)</div>
-                <div class='locked' id="tenthousand"><span id="locked3">🔒</span>House (500 potatoes)</div>
-                <div class='locked' id="million"><span id="locked4">🔒</span>Private A380 (1000 potatoes)</div>
+                <div class='locked' id="cookie"><span id="locked1">🔒</span>Banana bread (100)</div>
+                <div class='locked' id="crocpet"><span id="locked2">🔒</span>Golden banana (250)</div>
+                <div class='locked' id="tenthousand"><span id="locked3">🔒</span>Banana mansion (500)</div>
+                <div class='locked' id="million"><span id="locked4">🔒</span>Banana themed private A380 (1000)</div>
+                <div class="locked" id="bananas"><span id="locked7">🔒</span>1000000 bananas! (1500)</div>
             </div>
         
         </div>

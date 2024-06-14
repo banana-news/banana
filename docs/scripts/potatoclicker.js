@@ -74,7 +74,8 @@ plusOne.addEventListener("click", function () {
     if (plusOn && numClicks >= plusOnePrice) {
         addingOn = true;
         numClicks -= plusOnePrice;
-        plusOnePrice += 100;  // Increment price for the next upgrade
+        plusOnePrice += 100; 
+        $("#clickPrice").innerHTML=plusOnePrice;
         updateDisplay();
     }
 });
@@ -83,7 +84,8 @@ perSec.addEventListener("click", function () {
     if (secOn && numClicks >= plusSecPrice) {
         secondsOn = true;
         numClicks -= plusSecPrice;
-        plusSecPrice += 100;  // Increment price for the next upgrade
+        plusSecPrice += 100;
+        $("#secPrice").innerHTML=plusSecPrice;
         setInterval(addOne, 1000);
         updateDisplay();
     }

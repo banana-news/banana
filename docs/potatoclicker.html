@@ -75,10 +75,11 @@
         img:hover{cursor:pointer;}
         .locked {             opacity: 75%;             background-color: grey;font-family: 'Open Sans', sans-serif;  padding:25px; border-radius:20px; flex: 0 1 calc(33.33% - 20px);border:2px solid black;} .unlocked {border:2px solid black; padding:25px; border-radius:20px; flex: 0 1 calc(33.33% - 20px);background-color: #ffe135; color: black; font-family: 'Open Sans', sans-serif;}
         
-        #awards,#upgrades{display: flex;
+        #upgrades, #awards{display: flex;
     flex-wrap: wrap;
-    margin: -10px;background: #00000000; width: 100%; position: absolute; bottom: 0; }#potato:active{width:320px;height:320px;}#potato{position:absolute}
-      </style>
+    margin: -10px;background: #00000000; width: 100%; }#potato:active{width:320px;height:320px;}#potato{position:absolute}
+      #container{
+        position:absolute;bottom:0;}</style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     </head>
     <body>
@@ -122,7 +123,7 @@
             <!--stuff here ⬇️-->
             <h2>BANANA CLICKER</h2>
             <img id="potato" src="images/bananabunch.jpg" width="300" alt="A banana" title="Click it!">
-            <br><br><br>
+            <div id="container">
             <div id="results"></div>
             <h2>Upgrades:</h2>
             <div id="upgrades">
@@ -136,7 +137,7 @@
                 <div class='locked' id="million"><span id="locked4">🔒</span>Banana themed private A380 (1000)</div>
                 <div class="locked" id="bananas"><span id="locked7">🔒</span>1000000 bananas! (1500)</div>
             </div>
-        
+        </div>
         </div>
        
         <!--Welcome to the Banana News official homepage! Replace this comment with your code to go in the body tag.-->

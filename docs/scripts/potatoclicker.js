@@ -75,7 +75,7 @@ plusOne.addEventListener("click", function () {
         addingOn = true;
         numClicks -= plusOnePrice;
         plusOnePrice += 100; 
-        $("#clickPrice").innerHTML=plusOnePrice;
+        plusOne.innerHTML='+1 banana per click ('+plusOnePrice+')';
         updateDisplay();
     }
 });
@@ -85,7 +85,7 @@ perSec.addEventListener("click", function () {
         secondsOn = true;
         numClicks -= plusSecPrice;
         plusSecPrice += 100;
-        $("#secPrice").innerHTML=plusSecPrice;
+        perSec.innerHTML='+1 banana per second ('+perSecPrice+')';
         setInterval(addOne, 1000);
         updateDisplay();
     }

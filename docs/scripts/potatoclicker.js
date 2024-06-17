@@ -76,6 +76,7 @@ plusOne.addEventListener("click", function () {
         numClicks -= plusOnePrice;
         plusOnePrice += 100; 
         plusOne.innerHTML='+1 banana per click ('+plusOnePrice+')';
+        plusOne.removeClass('unlocked').addClass('locked');
         updateDisplay();
     }
 });
@@ -86,6 +87,7 @@ perSec.addEventListener("click", function () {
         numClicks -= plusSecPrice;
         plusSecPrice += 100;
         perSec.innerHTML='+1 banana per second ('+perSecPrice+')';
+        perSec.removeClass('unlocked').addClass('locked');
         setInterval(addOne, 1000);
         updateDisplay();
     }

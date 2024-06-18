@@ -80,7 +80,9 @@
         #upgrades, #awards{display: flex;
     flex-wrap: wrap;
     margin: 10px;background: #00000000; width: 100%; }#potato:active{width:280px;height:280px;}#potato{position:absolute;}
-      #containerthingy{
+    .title
+  {width: 100%;text-align:center;background-color: #ffffff;} 
+    #containerthingy{
 
         position:absolute;top:350px;}</style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
@@ -128,11 +130,11 @@
             <img id="potato" src="images/bananabunch.jpg" width="260" alt="A banana" title="Click it!">
             <div id="containerthingy">
             <div id="results"></div>
-            <h2>Upgrades:</h2>
+            <h2 class="title">Upgrades:</h2>
             <div id="upgrades">
               <div class="locked" id="+1"><span id="locked5">🔒</span>+1 banana per click (150)</div>
               <div class="locked" id="persec"><span id="locked6">🔒</span>+1 banana per second (200)</div>
-            <h2>Awards:</h2>
+            <h2 class="title">Awards:</h2>
             <div id="awards">
                 <div class='locked' id="cookie"><span id="locked1">🔒</span>Banana bread (100)</div>
                 <div class='locked' id="crocpet"><span id="locked2">🔒</span>Golden banana (250)</div>

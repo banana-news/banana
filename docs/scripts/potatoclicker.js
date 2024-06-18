@@ -79,6 +79,7 @@ plusOne.addEventListener("click", function () {
         if (numClicks<plusOnePrice){
         plusOne.classList.remove("unlocked");
         plusOne.classList.add("locked");
+        $("#locked5").css("display", "block");
         }
         updateDisplay();
     }
@@ -94,6 +95,7 @@ perSec.addEventListener("click", function () {
         if (numClicks<perSecPrice){
         perSec.classList.remove("unlocked");
         perSec.classList.add("locked");
+        $("#locked6").css("display", "block");
         
         }
         updateDisplay();

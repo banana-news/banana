@@ -43,6 +43,9 @@ var secondsOn = false;
 var plusOne = document.getElementById("+1");
 var perSec = document.getElementById("persec");
 
+var newPerClick = 1;
+var newPerSec=1;
+
 function addOne() {
     numClicks++;
     updateDisplay();
@@ -80,6 +83,7 @@ plusOne.addEventListener("click", function () {
         plusOne.classList.remove("unlocked");
         plusOne.classList.add("locked");
         $("#locked5").css("display", "block");
+        newPerClick++;
         }
         updateDisplay();
     }
@@ -88,7 +92,7 @@ plusOne.addEventListener("click", function () {
 perSec.addEventListener("click", function () {
     if (secOn && numClicks >= plusSecPrice) {
         secondsOn = true;
-        setInterval(addOne, 1000);
+        setInterval(addOne, newPerSec*1000);
         numClicks -= plusSecPrice;
         plusSecPrice += 100;
         perSec.innerHTML='+1 banana per second ('+perSecPrice+')';
@@ -96,6 +100,7 @@ perSec.addEventListener("click", function () {
         perSec.classList.remove("unlocked");
         perSec.classList.add("locked");
         $("#locked6").css("display", "block");
+        newPerSec++;
         
         }
         updateDisplay();
@@ -106,7 +111,7 @@ $("#potato").on("click", function () {
     if (!addingOn) {
         addOne();
     } else {
-        numClicks += 2;
+        numClicks += newPerClick;
         updateDisplay();
     }
 

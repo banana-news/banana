@@ -76,8 +76,10 @@ plusOne.addEventListener("click", function () {
         numClicks -= plusOnePrice;
         plusOnePrice += 100; 
         plusOne.innerHTML='+1 banana per click ('+plusOnePrice+')';
+        if (numClicks<plusOnePrice){
         plusOne.classList.remove("unlocked");
         plusOne.classList.add("locked");
+        }
         updateDisplay();
     }
 });
@@ -85,12 +87,15 @@ plusOne.addEventListener("click", function () {
 perSec.addEventListener("click", function () {
     if (secOn && numClicks >= plusSecPrice) {
         secondsOn = true;
+        setInterval(addOne, 1000);
         numClicks -= plusSecPrice;
         plusSecPrice += 100;
         perSec.innerHTML='+1 banana per second ('+perSecPrice+')';
+        if (numClicks<perSecPrice){
         perSec.classList.remove("unlocked");
         perSec.classList.add("locked");
-        setInterval(addOne, 1000);
+        
+        }
         updateDisplay();
     }
 });

@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html>
     <head>
+<title>Banana news</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKCZYS11HC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-HKCZYS11HC');
+</script>
+<link rel="shortcut icon" href="images/logosvg.svg"><link rel="icon" href="images/logosvg.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/imagecombiner.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-     <h1>Banana news</h1> <p>
-      1.  Gardening Guru Monty Don Sows Lawn After Years of Resistance: Monty Don, the renowned gardening expert, has finally given in to having a lawn at his Longmeadow home in Herefordshire. His three grandchildren can now play freely without worrying about damaging plants1.
-       2. Five Gardening Jobs Before the End of June: To ensure a flourishing garden, consider deadheading tulips, preventing them from wasting energy on seed production. Also, explore compact forms of large shrubs for small gardens2.
-       3. Award-Winning Writing Career from Passion for Gardening: Michael Marquet, a 60-year-old gardener, has turned his love for gardening into an award-winning writing career. He tends to garden plots at Christchurch Hospital and other sites, sharing his expertise with others3.</p>   </body>
+        <div class="topnav" id="myTopnav">
+          
+            <a href="index.html" >Home</a><a href="news.html">News</a>
+            <a href="games.html">Fun</a>
+            <a href="tech.html">Tech</a>
+            <a href="politics.html">Politics</a>
+            
+            
+              <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars stripped"></i>
+            </a>
+          </div>
+          <div id="div-to-show">
+            <input placeholder="search banana-news.github.io" id="searchbar">
+            <p class="label">Quick links</p>
+            <ul>
+            <a class="not-und" href="index.html"><li class="quick">&rightarrow;&nbsp;Home</li></a><a  class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a>
+            <a class="not-und" href="games.html"><li class="quick">&rightarrow;&nbsp;Fun</li></a>
+            <a  class="not-und" href="tech.html"><li class="quick">&rightarrow;&nbsp;Tech</li></a>
+            </ul>
+          </div></div>
+      </div>
+       
+        <br><br><br>
+     <h1>Banana news</h1> 
+     <ol>
+        <li>Gardening Guru Monty Don Sows Lawn After Years of Resistance: Monty Don, the renowned gardening expert, has finally given in to having a lawn at his Longmeadow home in Herefordshire. His three grandchildren can now play freely without worrying about damaging plants.</li>
+     <li>Five Gardening Jobs Before the End of June: To ensure a flourishing garden, consider deadheading tulips, preventing them from wasting energy on seed production. Also, explore compact forms of large shrubs for small gardens</li>
+     <li>Award-Winning Writing Career from Passion for Gardening: Michael Marquet, a 60-year-old gardener, has turned his love for gardening into an award-winning writing career. He tends to garden plots at Christchurch Hospital and other sites, sharing his expertise with others.</li>
+     </ol>
+     <script>// and , please ask  before editing or deleting any of this code.
+        ///
+        const searchinput = document.getElementById('searchbar');
+        const divToShow = document.getElementById('div-to-show');
+        const container = document.getElementById('container');
+        const topnav = document.getElementById('myTopnav');
+        //
+        //
+        //
+        //
+        //
+        function showSearch(){
+          container.style.filter='blur(10px);';
+          
+          topnav.style.backgroundColor='#444444';
+          
+        divToShow.style.display='block';
+        divToShow.style.animation = 'slideDown 0.5s ease forwards';
+        
+          
+        
+        
+        
+        
+        
+        setTimeout(function(){
+          searchinput.focus();
+        },500);
+        
+        
+        
+        }
+        
+        
+        //
+        //
+        const topContainer = document.getElementById('top-container');
+        
+        topContainer.addEventListener('mouseleave', divUp);
+        //
+        //
+        //
+        //
+        function divUp() {
+          console.log('mouse has left both elements.');
+          //
+          topnav.style.backgroundColor = '#555555';
+          divToShow.style.animation = 'slideUp 0.5s ease forwards';
+          container.style.filter = 'none';
+        }</script>
+  </body>
 </html>

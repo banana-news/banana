@@ -160,7 +160,7 @@ body {
   */
 .topnav {
   position:fixed;
-background-color:#413f3f;
+background-color:#363434;
 width:100%;
 height:50px;
 opacity:97.5%;
@@ -183,7 +183,7 @@ font-family:'Open Sans', sans-serif;
 text-align:center;
 }
 .topnav a:hover {
-  color:#f0f0f0;
+  color:#8f8e8e;
   transition: 0.15s ease-in-out;
 }
 @keyframes slideDown {

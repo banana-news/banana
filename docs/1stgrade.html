@@ -22,6 +22,8 @@
               #clickmessage{border-radius:10px;background-color:white;padding:20px;position:fixed;top:0;right:0;z-index:2000;}
               #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
               #closeButton:hover{background-color: grey;}
+              .checkbutton{background-color: blue;}
+              .skipbutton{background-color: #00000000;border:none;text-decoration: underline;color: grey;padding: 0;}
             </style>
 
     </head>
@@ -43,10 +45,15 @@
 <h1>Grade one maths</h1><br>
 <div class="newsdiv">
 <h2>Lesson one: Number Lines</h2>
+<h3>Entrance ticket:</h3>
+<img src="https://cdn1.byjus.com/wp-content/uploads/2021/02/Operations-Of-Integers-On-Number-Line-1.png" width="150">
+<p><b>What is shown on this number line?</b></p>
+<input type="radio" id="q1o1" name="q1"><label>0</label>
+<input type="radio" id="q1o2" name="q1"><label>-1</label>
+<input type="radio" id="q1o3" name="q1"><label>1</label>
+<button onclick="checkQ1Answer()" class="checkbutton">Check</button><button onclick="skipQ1Answer()" class="skipbutton">Skip</button>
 
-
-
-
+<p><b>What is shown on this number line?</b></p>
 </div>
 
 

@@ -73,6 +73,8 @@ https://banana-news.github.io/banana/share_this_page.html
 function sellItem(item) {
   if(itemsOwned.includes(item)){
   if(money+item<=maxMoney){
+  let index=itemsOwned.indexOf(item);
+  itemsOwned.splice(index,1);
   money = money + item;
   receiptPrice = receiptPrice - item;
   receiptItems--;

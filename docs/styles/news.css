@@ -33,6 +33,7 @@ img{width:auto;}
 .featuredarticle{
     width: 80%;
 }
+h2{width:100%;}
 .news-container {
     display: flex;
     flex-wrap: wrap;

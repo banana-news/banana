@@ -76,7 +76,6 @@ function sellItem(item) {
   let index=itemsOwned.indexOf(item);
   itemsOwned.splice(index,1);
   money = money + item;
-  receiptPrice = receiptPrice - item;
   receiptItems--;
   let moneyString = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   moneyDisplay.innerHTML = '$' + moneyString;

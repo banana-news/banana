@@ -32,8 +32,10 @@ https://banana-news.github.io/banana/share_this_page.html
 */
 var plusOn = false;
 var secOn = false;
+var reOn = false;
 var plusOnePrice = 150;
 var plusSecPrice = 200;
+var rebirthPrice=1000;
 var numClicks = 0;
 var imageWidth = 100;
 
@@ -42,12 +44,15 @@ var secondsOn = false;
 
 var plusOne = document.getElementById("+1");
 var perSec = document.getElementById("persec");
+var rebirth = document.getElementById("rebirth");
 
 var newPerClick = 1;
 var newPerSec=1;
 
+var bananasPerClick=1;
+
 function addOne() {
-    numClicks++;
+    numClicks+=bananasPerClick;
     updateDisplay();
 }
 
@@ -104,6 +109,21 @@ perSec.addEventListener("click", function () {
         
         }
         updateDisplay();
+    }
+});
+rebirth.addEventListener("click", function(){
+    if(reOn && numClicks>=rebirthPrice){
+        rebirthOn = true;
+        bananasPerClick+=5;
+        numClicks-=rebirthPrice;
+        rebirthPrice*=2;
+        rebirth.innerHTML='Rebirth ('+rebirthPrice+')';
+        if(numClicks<rebirthPrice){
+            rebirth.classList.remove("unlocked");
+            rebirth.classList.add("locked");
+            $("#locked7").css("display", "block");
+            
+        }
     }
 });
 

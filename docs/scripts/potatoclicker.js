@@ -43,6 +43,7 @@ var addingOn = false;
 var secondsOn = false;
 
 var plusOne = document.getElementById("+1");
+
 var perSec = document.getElementById("persec");
 var rebirth = document.getElementById("rebirth");
 

@@ -33,11 +33,11 @@ img{width:auto;}
 .featuredarticle{
     width: 80%;
 }
-h2{width:100%;}
+h2{width:100%;background-color: #ffffff;}
 .news-container {
     display: flex;
     flex-wrap: wrap;
-    margin: -10px; /* Adjust margin to balance the overall layout */
+    margin: -10px;
 }
 .hidden{display:none;}
 .newsdiv {

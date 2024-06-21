@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+   
 
         <head>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -23,6 +23,9 @@
               #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
               #closeButton:hover{background-color: grey;}
             </style>
+
+    </head>
+                <body>
                 <div id="top-container"><div class="topnav" id="myTopnav">
                   
                     <a href="index.html">Home</a>
@@ -37,12 +40,72 @@
                       <i class="fa fa-bars stripped"></i>
                     </a>
                   </div>
+                  <script src="scripts/main.js"></script>
+                  <!---->
+                  <!--Don't remove the line of code below-->
+              <script src="scripts/topnav.js"></script>
+              <!---->
+              <script src="scripts/search.js"></script>
 
+<script src="scripts/news.js"></script>
 
-
-
+<script csrc="scripts/modal.js"></script>
+              <script>// and , please ask  before editing or deleting any of this code.
+                ///
+                const searchinput = document.getElementById('searchbar');
+                const divToShow = document.getElementById('div-to-show');
+                const container = document.getElementById('container');
+                const topnav = document.getElementById('myTopnav');
+                //
+                //
+                //
+                //
+                //
+                function showSearch(){
+                  container.style.filter='blur(10px);';
                   
-    </head>
+                  topnav.style.backgroundColor='#444444';
+                  
+                divToShow.style.display='block';
+                divToShow.style.animation = 'slideDown 0.5s ease forwards';
+                
+                  
+                
+                
+                
+                
+                
+                setTimeout(function(){
+                  searchinput.focus();
+                },500);
+                
+                
+                
+                }
+                
+                
+                //
+                //
+                const topContainer = document.getElementById('top-container');
+                
+                topContainer.addEventListener('mouseleave', divUp);
+                //
+                //
+                //
+                //
+                function divUp() {
+                  console.log('mouse has left both elements.');
+                  //
+                  topnav.style.backgroundColor = '#555555';
+                  divToShow.style.animation = 'slideUp 0.5s ease forwards';
+                  container.style.filter = 'none';
+                }</script>
+            
+
+                </body>
+
+
+
 
 
 

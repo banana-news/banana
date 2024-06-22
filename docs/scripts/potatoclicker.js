@@ -79,7 +79,7 @@ function updateDisplay() {
     }
 }
 
-plusOne.addEventListener("click", function () {
+plusOne.addEventListener("click", function() {
     if (plusOn && numClicks >= plusOnePrice) {
         addingOn = true;
         numClicks -= plusOnePrice;
@@ -101,7 +101,7 @@ perSec.addEventListener("click", function () {
         setInterval(addOne, newPerSec*1000);
         numClicks -= plusSecPrice;
         plusSecPrice += 100;
-        perSec.innerHTML='+1 banana per second ('+perSecPrice+')';
+        perSec.innerHTML='+1 banana per second ('+plusSecPrice+')';
         if (numClicks<perSecPrice){
         perSec.classList.remove("unlocked");
         perSec.classList.add("locked");
@@ -128,7 +128,7 @@ rebirth.addEventListener("click", function(){
     }
 });
 
-$("#potato").on("click", function () {
+$("#potato").on("click", function() {
     if (!addingOn) {
         addOne();
     } else {

@@ -41,7 +41,7 @@ var imageWidth = 100;
 
 var addingOn = false;
 var secondsOn = false;
-
+var rebirthOn = false;
 var plusOne = document.getElementById("+1");
 
 var perSec = document.getElementById("persec");

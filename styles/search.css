@@ -1,0 +1,153 @@
+/*
+
+  []
+  []]]
+  []]]]
+  []]]]]]
+   []]]]]]]
+     []]]]]]]]]
+       ]]]]]]]
+|
+|__    ___      ___    ___       ___    ___          ___     ____              ___
+|  \  /   |  | /   \  /   |   | /   \  /   |      | /   \   /____\  |  |   |  (___
+|__/  \__/ \ |/    |  \__/ \  |/    |  \__/ \     |/    |   \____   \__/\__/   ___)
+
+  _____________________________________________________________________________________________________________________________
+ |                                                                                                                             |
+ |   __                                                                            |                        __                 | 
+ |  |  \   __   _   _  |  __            |     _      _ __   __   __|         __    |/     _   _            /__ o   _  __  |    |
+ |  |__/  /__\ / \ | \ | /__\   |  |  | |__  / \   |/ /__\ /  | /  |   | |  (__    |\  | / \ / \ |  |  |   |   | |/  (__ _|__  |
+ |  |     \__  \_/ |_/ | \__    \_/ \_/ |  | \_/   |  \__  \_/ \\_/|   \_/\  __)   | \ |/  | \_/ \_/ \_/   |   | |    __) |_/  |
+ |                 |                                                                                                           |
+ |_____________________________________________________________________________________________________________________________|
+
+
+If you're the sort of person who looks at the source code of webpages, try our challenge:
+
+https://banana-news.github.io/reports/share_this_page.html
+
+  _____________________________________________________________________________________________________________________
+ |                                                                    _____                                            |
+ |   \          /                                                   /                                        |  |  |   |
+ |    \        /    ____   |    __    ___    __   __    ____        |         o      __      __       __     |  |  |   |
+ |     \  /\  /    /____\  |   /     /   \  /  \ /  \  /____\        \__      |   | /  \    /  \   | /  \    |  |  |   |
+ |      \/  \/     \____   |   \__   \___/  |   |   |  \____   /        \     |   |/    |   \__/\  |/    |   o  o  o   |
+ |                                                            /          |                                             |
+ |                                                                  ____/                                              |
+ |_____________________________________________________________________________________________________________________|
+
+*/
+            input{
+  padding: 20px;
+border-radius: 20px;
+height: 30px; 
+width: 350px;
+cursor: text;
+border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
+}
+input:focus{outline:none;}
+#searchResults {
+    background-color: rgb(208, 208, 208);
+    padding: 20px;
+    height: 200px;
+}
+#results {
+    color: white;
+} 
+input{
+padding: 20px;
+border-radius: 20px;
+height: auto; 
+width: auto;
+cursor: text;
+background-color: rgb(255, 255, 255);
+border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
+}
+
+.searchbutton {
+    height: 62px;
+    border-radius: 20px;
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+    width: 200px;
+    font-size: 30px;
+    height: 70px;
+  }
+  .searchbutton:hover {
+    background-color: grey;
+    color: black;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  #searchResults {
+    background-color: #ffffff;
+    padding: 20px;
+    height: auto;
+}
+#results {
+    color: white;
+} 
+a {
+    font-size: 24px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+}
+@media(max-width:768px) {
+  input{
+    padding: 30px;
+  border-radius: 30px;
+  height: 45px; 
+  width: 525px;
+  cursor: text;
+  border-color: #181818 #363636 #3b3b3b #000000;
+  }
+  input:focus{outline:none;}
+  #searchResults {
+      background-color: #d0d0d0;
+      padding: 30px;
+      height: 300px;
+  }
+  #results {
+      color: #ffffff;
+  } 
+  input{
+  padding: 30px;
+  border-radius: 30px;
+  height: auto; 
+  width: auto;
+  cursor: text;
+  background-color: rgb(255, 255, 255);
+  border-color: #181818 rgb(54, 54, 54) rgb(59, 59, 59) rgb(0, 0, 0);
+  }
+  
+  .searchbutton {
+      height: 93px;
+      border-radius: 30px;
+      background-color: #008000;
+      border: 1px solid #000000;
+      color: #ffffff;
+      width: 300px;
+      font-size: 45px;
+      height: 105px;
+    }
+    .searchbutton:hover {
+      background-color: grey;
+      color: black;
+      cursor: pointer;
+      font-size: 36px;
+    }
+    #searchResults {
+      background-color: #ffffff;
+      padding: 30px;
+      height: auto;
+  }
+  #results {
+      color: #ffffff;
+  } 
+  a {
+      font-size: 36px;
+  }
+}

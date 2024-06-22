@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
         label.style.left = `${(i / totalTicks) * 100}%`;
         label.textContent = value;
 
+        console.log(`Tick ${i}: value=${value}, left=${(i / totalTicks) * 100}%`);
+
         numberLine.appendChild(tick);
         numberLine.appendChild(label);
     }
 });
+

@@ -24,6 +24,15 @@
               #closeButton:hover{background-color: grey;}
               .checkbutton{background-color: blue;}
               .skipbutton{background-color: #00000000;border:none;text-decoration: underline;color: grey;padding: 0;}
+              .progressbar{border-radius:50%;width:100%;height:40px; background-color: grey;overflow: hidden;}
+              .q1progress, .q2progress, .q3progress{border-right: 2px solid black;background-color: grey;width: 33%;float:left;position: relative;}
+              .test-notification{position: fixed;bottom: 20px;right: 20px;padding: 15px;font-size: 50px;color: white;font-family: 'Open Sans', sans-serif;display: none;}
+              @keyframes show-notification{
+                0%{display:none;visibility: hidden;}
+                1%{display:block;visibility: visible;}
+                99%{display:block;visibility: visible;}
+                100%{display:none;visibility: hidden;}
+              }
             </style>
 
     </head>
@@ -45,6 +54,11 @@
 <h1>Grade one maths</h1><br>
 <div class="newsdiv">
 <h2>Lesson one: Number Lines</h2>
+<div class="progressbar">
+  <div class="q1progress"></div>
+  <div class="q2progress"></div>
+  <div class="q3progress"></div>
+</div>
 <h3>Entrance ticket:</h3>
 <img src="https://cdn1.byjus.com/wp-content/uploads/2021/02/Operations-Of-Integers-On-Number-Line-1.png" width="150">
 <p><b>What is shown on this number line?</b></p>
@@ -58,8 +72,13 @@
 <input type="radio" id="q2o2" name="q2"><label>0</label>
 <input type="radio" id="q2o3" name="q2"><label>-2</label>
 </div>
-<button onclick="checkQ1Answer()" class="checkbutton">Check</button><button onclick="skipAnswer()" class="skipbutton">Skip</button>
-<br><img src=""
+<button onclick="checkQ2Answer()" class="checkbutton">Check</button><button onclick="skipAnswer()" class="skipbutton">Skip</button>
+<br><img src="images/numberline3.png" width="150">
+<p><b>What is the missing value on this number line?</b></p>
+<input type="radio" id="q3o1" name="q3"><label>5</label>
+<input type="radio" id="q3o2" name="q3"><label>-10</label>
+<input type="radio" id="q3o3" name="q3"><label>-5</label>
+<button onclick="checkQ3Answer()" class="checkbutton">Check</button><button onclick="skipAnswer()" class="skipbutton">Skip</button>
                   <script src="scripts/main.js"></script>
                   <!---->
                   <!--Don't remove the line of code below-->

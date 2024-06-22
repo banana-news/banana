@@ -69,6 +69,11 @@ function updateDisplay() {
         plusOne.classList.remove("locked");
         plusOne.classList.add("unlocked");
         $("#locked5").css("display", "none");
+    }else if (numClicks<plusOnePrice){
+        plusOn = false;
+        plusOne.classList.remove("unlocked");
+        plusOne.classList.add("locked");
+        $("#locked5").css("display", "block");
     }
 
     if (numClicks >= plusSecPrice) {
@@ -76,6 +81,11 @@ function updateDisplay() {
         perSec.classList.remove("locked");
         perSec.classList.add("unlocked");
         $("#locked6").css("display", "none");
+    } else if (numClicks<plusSecPrice){
+        secOn =false;
+        perSec.classList.remove("unlocked");
+        perSec.classList.add("locked");
+        $("#locked5").css("display", "block");
     }
 }
 

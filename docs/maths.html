@@ -9,7 +9,6 @@
     <!--please don't remove the line of code below:-->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/news.css">
-    <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/divstyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!---->
@@ -24,20 +23,37 @@
     </style>
     </head>
         <body>
-        <div id="top-container"><div class="topnav" id="myTopnav">
+          <div id="top-container">
+
+            <div class="topnav" id="myTopnav">
+             
+             <a href="index.html">Home</a>
+             <a href="news.html" >News</a><a href="games.html">Fun</a>
+             <a href="tech.html">Tech</a>
+             <a href="politics.html">Politics</a>
+             <a href="maths.html">Maths</a>
+               
+               
+                 <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
+                 </button>
+               
+               
+               <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars stripped"></i>
+               </a>
+             </div>
+             <div id="div-to-show">
+               <input placeholder="search banana-news.github.io" id="searchbar">
+               <p class="label">Quick links</p>
+               <ul>
+               <a class="not-und" href="index.html"><li class="quick">&rightarrow;&nbsp;Home</li></a><a  class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a>
+               <a class="not-und" href="games.html"><li class="quick">&rightarrow;&nbsp;Fun</li></a>
+               <a  class="not-und" href="tech.html"><li class="quick">&rightarrow;&nbsp;Tech</li></a>
+               </ul>
+             </div></div>
+         </div>
           
-            <a href="index.html">Home</a>
-            <a href="news.html" >News</a><a href="games.html">Fun</a>
-            <a href="tech.html">Tech</a>
-            <a href="politics.html">Politics</a>
-            <a href="maths.html">Maths</a>
-            
-            <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars stripped"></i>
-            </a>
-          </div>
+           
           <div class="background">
             
             <img src="https://www.open.edu.au/-/media/blog/2023/03-march/careers-in-maths.jpg?h=477&iar=0&w=715&rev=47f96a32d6b4449993d9b33e5d8e7f05&hash=3607886828F85C66407623C78AC15EB9">

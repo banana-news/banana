@@ -109,7 +109,7 @@ h2{width:100%;background-color: #ffffff;}
     font-family: 'Work Sans', sans-serif;
     font-size: 17.5px;
 }
-
+p{font-family: 'Work Sans', sans-serif;}
 /*.newsdiv h2:hover,
 .newsdiv p:hover {
     color: #ff0000;

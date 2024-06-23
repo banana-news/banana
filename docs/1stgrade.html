@@ -123,6 +123,56 @@
         <p class="answer">Answers are 41 for Q1, 33 for Q2 and 56 for the third question.</p>
         <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
     </div>
+    <script>// and , please ask  before editing or deleting any of this code.
+        ///
+        const searchinput = document.getElementById('searchbar');
+        const divToShow = document.getElementById('div-to-show');
+        const container = document.getElementById('container');
+        const topnav = document.getElementById('myTopnav');
+        //
+        //
+        //
+        //
+        //
+        function showSearch(){
+          container.style.filter='blur(10px);';
+          
+          topnav.style.backgroundColor='#444444';
+          
+        divToShow.style.display='block';
+        divToShow.style.animation = 'slideDown 0.5s ease forwards';
+        
+          
+        
+        
+        
+        
+        
+        setTimeout(function(){
+          searchinput.focus();
+        },500);
+        
+        
+        
+        }
+        
+        
+        //
+        //
+        const topContainer = document.getElementById('top-container');
+        
+        topContainer.addEventListener('mouseleave', divUp);
+        //
+        //
+        //
+        //
+        function divUp() {
+          console.log('mouse has left both elements.');
+          //
+          topnav.style.backgroundColor = '#555555';
+          divToShow.style.animation = 'slideUp 0.5s ease forwards';
+          container.style.filter = 'none';
+        }</script>
     
     <!--Do not un-comment below-->
 <!--<div class="progressbar">

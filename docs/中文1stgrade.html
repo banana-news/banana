@@ -1,0 +1,212 @@
+<html lang="zh">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKCZYS11HC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKCZYS11HC');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="shortcut icon" href="images/logosvg.svg">
+    <link rel="icon" href="images/logosvg.svg">
+    <title>一年级数学 - 香蕉新闻</title>
+    <style>
+        #clickmessage{border-radius:10px;background-color:white;padding:20px;position:fixed;top:0;right:0;z-index:2000;}
+              #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
+              #closeButton:hover{background-color: grey;}
+            
+    #number-line {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-top: 2px solid black;
+    }
+    .tick {
+        position: absolute;
+        height: 20px;
+        border-left: 2px solid black;
+        bottom: 0;
+    }
+    .label {
+        position: absolute;
+        bottom: -20px;
+        transform: translateX(-50%);
+        color: black;
+    }
+    p {
+
+font-style: normal;
+
+
+    }
+
+              .checkbutton{background-color: blue;}
+              .skipbutton{background-color: #00000000;border:none;text-decoration: underline;color: grey;padding: 0;}
+              .progressbar{border-radius:50%;width:100%;height:40px; background-color: grey;overflow: hidden;}
+              .q1progress, .q2progress, .q3progress{border-right: 2px solid black;background-color: grey;width: 33%;float:left;position: relative;}
+              .test-notification{position: fixed;bottom: 20px;right: 20px;padding: 15px;font-size: 50px;color: white;font-family: 'Open Sans', sans-serif;display: none;}
+              @keyframes show-notification{
+                0%{display:none;visibility: hidden;}
+                1%{display:block;visibility: visible;}
+                99%{display:block;visibility: visible;}
+                100%{display:none;visibility: hidden;}
+              }
+.answer{display:none;}
+    </style>
+</head>
+<body>
+    <div id="top-container">
+
+        <div class="topnav" id="myTopnav">
+         
+         <a href="index.html">首页</a>
+         <a href="news.html">新闻</a><a href="games.html">趣味</a>
+         <a href="tech.html">科技</a>
+         <a href="politics.html">政治</a>
+         <a href="maths.html">数学</a>
+           
+           
+             <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
+             </button>
+           
+           
+           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+             <i class="fa fa-bars stripped"></i>
+           </a>
+         </div>
+         <div id="div-to-show">
+           <input placeholder="搜索香蕉新闻" id="searchbar">
+         </div></div>
+     </div>
+     <div id="container">
+    <h1>一年级数学</h1>
+    
+    <br>
+    <div class="newsdiv">
+        <h2>第一课：数轴</h2>
+        <br>
+        <div id="number-line"></div>
+        <br>
+        <p>这是一个数轴。它从 -10 到 10。注意，当我们向右移动时，每次越过一个间隙，我们的数字都会增大一。如果我们向左移动，情况正好相反。</p>
+        <p>现在让我们试试一些练习题。10 比 3 大多少？</p>
+        <h2 class="answer">大了 7，因为你必须从 3 走过七个间隙才能到达 10，这时你在向右走！</h2>
+        <button class="reveal-button" onclick="revealAnswer(this)">显示答案</button>
+        <br>
+        <p>5 比 8 小多少？</p>
+        <h2 class="answer">小了 3，因为你必须从 8 走过 3 个间隙才能到达 5，这时你在向左走！</h2>
+        <button class="reveal-button" onclick="revealAnswer(this)">显示答案</button>
+        <p>我们做的问题是找到数字之间的差异，这也称为减法。让我们开始做一些稍微不同的问题！</p>
+        <p>如果你从 3 开始，然后向右走 4 个间隙，你会到达哪个数字？</p>
+        <h2 class="answer">你会到达 7！</h2>
+        <button class="reveal-button" onclick="revealAnswer(this)">显示答案</button>
+        <br>
+        <p>我们刚才做的是找两个值的和！这也叫做加法。</p>
+    </div>
+    <br><br><br><br><br>
+    <div class="newsdiv">
+        <h2>理解加法和减法</h2>
+        <h3 style="font-style: normal;">还记得我们怎么做数轴的吗？这是对这些知识的扩展！</h3>
+        <p>现在我们将以正常方式写加法和减法。例如，从 3 开始，向右走 4 个间隙到达 7 写作 3+4=7。找到 10 和 3 的差值得到 7 写作 10-3=7。差值就是一个数字与另一个数字相比大多少或小多少。例如：3 比 1 大多少？可以写作：3-1 是多少？你也可以这样理解：减法就像从第一个数字开始，向左走一定数量的间隙。这个数量就是第二个数字。你得到的数字就是等号右边的第三个数字。但是，如果第一个数字<i>小于</i>第二个数字，那么我们必须使用负号。例如，3-10=-7。负号其实就是一条小线。看到那些 0 左边的数字了吗？那些是负数。例如，-7 意味着比 0 少 7 的数字。</p>
+        <h3>现在让我们做一些练习吧！3+6 是多少？2+3 是多少？这有一个难题！-3-4 是多少？</h3>
+        <p class="answer">答案是：9，5 和 -7！</p>
+        <button class="reveal-button" onclick="revealAnswer(this)">显示答案</button>
+    </div>
+    <br><br><br><br><br>
+    <div class="newsdiv">
+        <h2>理解更大的数字</h2>
+        <h3>我们现在该理解一些更大的数字啦！首先，让我们理解十位数。我们将十写作 '10'。在一个有两个数字的数字中，第一个数字表示数字中有多少个十，第二个表示有多少个一。在一个一位数的数字中，只有一个数字表示有多少个一。</h3>
+    </div>
+    <br><br><br><br><br>
+    <div class="newsdiv">
+        <h2>两位数加减一位数（不进位）</h2>
+        <h3>现在我们理解了更大的数字，让我们用它们来进行简单的加减法！</h3>
+        <p>首先解释 55-5。当我们减去一个两位数与一个一位数而不进位时，我们减去表示有多少个一的数字（个位数）。这是我们的新个位数，我们保留原来表示有多少个十的数字（十位数）。所以，55-5=50。现在解释 55+4。当我们用两位数加一个一位数而不进位时，你做同样的事情，但你加上个位数而不是减去它们。所以，55+4=59。<br>这里有一些练习题。45-4 是多少？36-3 是多少？53+3 是多少？</p>
+        <p class="answer">答案是：第一题 41，第二题 33，第三题 56。</p>
+        <button class="reveal-button" onclick="revealAnswer(this)">显示答案</button>
+    </div>
+    </div>
+    <script>// 请在编辑或删除任何代码之前询问。
+        ///
+        const searchinput = document.getElementById('searchbar');
+        const divToShow = document.getElementById('div-to-show');
+        const container = document.getElementById('container');
+        const topnav = document.getElementById('myTopnav');
+        //
+        //
+        //
+        //
+        //
+        function showSearch(){
+          container.style.filter='blur(10px);';
+          
+          topnav.style.backgroundColor='#444444';
+          
+        divToShow.style.display='block';
+        divToShow.style.animation = 'slideDown 0.5s ease forwards';
+        
+          
+        
+        
+        
+        
+        
+        setTimeout(function(){
+          searchinput.focus();
+        },500);
+        
+        
+        
+        }
+        
+        
+        //
+        //
+        const topContainer = document.getElementById('top-container');
+        
+        topContainer.addEventListener('mouseleave', divUp);
+        //
+        //
+        //
+        //
+        function divUp() {
+          console.log('mouse has left both elements.');
+          //
+          topnav.style.backgroundColor = '#555555';
+          divToShow.style.animation = 'slideUp 0.5s ease forwards';
+          container.style.filter = 'none';
+        }</script>
+    
+   
+    <script>
+        function revealAnswer(button) {
+            var answer = button.previousElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                button.textContent = "隐藏答案";
+            } else {
+                answer.style.display = "none";
+                button.textContent = "显示答案";
+            }
+        }
+    </script>
+    <script src="numberline.js"></script>
+    
+    <script src="scripts/topnav.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/numberline.js"></script>
+    
+   <!-- <script src="scripts/maths.js"></script>-->
+</body>
+</html>

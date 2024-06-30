@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKCZYS11HC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKCZYS11HC');
+</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--请不要删除以下代码行：-->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/divstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---->
+    <title>数学 - 香蕉新闻</title>
+    <link rel="shortcut icon" href="images/logosvg.svg"><link rel="icon" href="images/logosvg.svg">
+   
+    </a>
+    <style>
+      #clickmessage{border-radius:10px;background-color:white;padding:20px;position:fixed;top:0;right:0;z-index:2000;}
+      #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
+      #closeButton:hover{background-color: grey;}
+    </style>
+    </head>
+    <body>
+      <div id="top-container">
+
+        <div class="topnav" id="myTopnav">
+         
+            <a href="中文1.html">主页</a>
+            <a href="中文6.html">计算器</a>
+            <a href="中文5.html">手机，平板电脑，和电脑</a>
+            <a href="中文4.html">政治</a>
+            <a href="中文3.html">新闻</a>
+            <a href="中文maths.html">数学</a>
+           
+           
+             <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
+             </button>
+           
+           
+           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+             <i class="fa fa-bars stripped"></i>
+           </a>
+        </div>
+        <div id="div-to-show">
+          <input placeholder="搜索香蕉新闻" id="searchbar">
+        </div>
+      </div>
+      <div id="container">
+        <div class="background">
+          <img src="https://www.open.edu.au/-/media/blog/2023/03-march/careers-in-maths.jpg?h=477&iar=0&w=715&rev=47f96a32d6b4449993d9b33e5d8e7f05&hash=3607886828F85C66407623C78AC15EB9">
+          <h1>Test page for blur</h1>
+        </div>
+        <button onclick="window.location.href='maths.html'">English</button>
+        <h2>NOT AN OFFICIAL BANANA NEWS PAGE.</h2>
+        <p>Want to go back to our homepage?</p>
+        <button onclick="window.location.href='index.html'">Back to homepage</button>
+        <div class="options">
+            <div class="options-div" title="中文1stgrade.html">
+                <img class="zoom-image" src="images/lvl1 gromo-torture.png" >
+                <h2>一年级数学</h2>
+                <p>在这个网页里面，我们会教您的小朋友澳大利亚标准的一年级数学。</p>
+            </div>
+        </div>
+
+        <!--请不要删除这行代码：-->
+        <script src="scripts/main.js"></script>
+        <!---->
+        <!--请不要删除以下代码行-->
+        <script src="scripts/topnav.js"></script>
+        <!---->
+        <script src="scripts/search.js"></script>
+        <script>
+          const searchinput = document.getElementById('searchbar');
+          const divToShow = document.getElementById('div-to-show');
+          const container = document.getElementById('container');
+          const topnav = document.getElementById('myTopnav');
+
+          function showSearch(){
+            container.style.filter = 'blur(10px)';
+            topnav.style.backgroundColor = '#444444';
+            divToShow.style.display = 'block';
+            divToShow.style.animation = 'slideDown 0.5s ease forwards';
+            setTimeout(function(){
+              searchinput.focus();
+            }, 500);
+          }
+
+          const topContainer = document.getElementById('top-container');
+          topContainer.addEventListener('mouseleave', divUp);
+
+          function divUp() {
+            console.log('mouse has left both elements.');
+            topnav.style.backgroundColor = '#555555';
+            divToShow.style.animation = 'slideUp 0.5s ease forwards';
+            container.style.filter = 'none';
+          }
+        </script>
+
+      </div>
+      <script src="scripts/中文search.js"></script>
+      <script src="scripts/news.js"></script>
+      <script src="scripts/modal.js"></script>
+    </body>
+</html>

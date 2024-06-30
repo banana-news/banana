@@ -44,7 +44,7 @@ searchbar.addEventListener("keypress", function(event){
 function search() {
     var searchbar = document.getElementById("searchbar").value;
     if (searchbar == "") {
-        alert("Please enter a search term");
+        alert("请输入一个搜索词");
     } else {
         window.location.href = "中文searchresults.html?q=" + encodeURIComponent(searchbar);
     }

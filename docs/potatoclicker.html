@@ -145,74 +145,44 @@
                 <div class="locked" id="bananas"><span id="locked7">🔒</span>1000000 bananas! (1500)</div>
             </div>
         </div>
-        </div>
-       
-        <!--Welcome to the Banana News official homepage! Replace this comment with your code to go in the body tag.-->
-        <!--Also, note to collaboraters, make sure you add your files and folders into the the <docs> folder.-->
-            <!---->
-            <!---->
-            <!---->
-            <!---->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-            <script src="scripts/potatoclicker.js"></script>
-            <!--Pls don't remove this line of code:-->
-            <script src="scripts/main.js"></script>
-            <!---->
-            <!--Don't remove the line of code below-->
-        <script src="scripts/topnav.js"></script>
-        <!---->
-        <script src="scripts/search.js">
-           
+        <footer>&copy; Banana News 2024</footer>
+     <!--请不要删除这行代码：-->
+     <script src="scripts/main.js"></script>
+     <!---->
+     <!--请不要删除以下代码行-->
+     <script src="scripts/topnav.js"></script>
+     <!---->
+     <script src="scripts/search.js"></script>
+     <script>
+       const searchinput = document.getElementById('searchbar');
+       const divToShow = document.getElementById('div-to-show');
+       const container = document.getElementById('container');
+       const topnav = document.getElementById('myTopnav');
 
-        </script>
-    <script>// and , please ask  before editing or deleting any of this code.
-///
-const searchinput = document.getElementById('searchbar');
-const divToShow = document.getElementById('div-to-show');
-const container = document.getElementById('container');
-const topnav = document.getElementById('myTopnav');
-//
-//
-//
-//
-//
-function showSearch(){
-  container.style.filter='blur(10px);';
-  
-  topnav.style.backgroundColor='#444444';
-  
-divToShow.style.display='block';
-divToShow.style.animation = 'slideDown 0.5s ease forwards';
+       function showSearch(){
+         container.style.filter = 'blur(10px)';
+         topnav.style.backgroundColor = '#444444';
+         divToShow.style.display = 'block';
+         divToShow.style.animation = 'slideDown 0.5s ease forwards';
+         setTimeout(function(){
+           searchinput.focus();
+         }, 500);
+       }
 
-  
+       const topContainer = document.getElementById('top-container');
+       topContainer.addEventListener('mouseleave', divUp);
 
+       function divUp() {
+         console.log('mouse has left both elements.');
+         topnav.style.backgroundColor = '#555555';
+         divToShow.style.animation = 'slideUp 0.5s ease forwards';
+         container.style.filter = 'none';
+       }
+     </script>
 
-
-
-
-setTimeout(function(){
-  searchinput.focus();
-},500);
-
-
-
-}
-
-
-//
-//
-const topContainer = document.getElementById('top-container');
-
-topContainer.addEventListener('mouseleave', divUp);
-//
-//
-//
-//
-function divUp() {
-  console.log('mouse has left both elements.');
-  //
-  topnav.style.backgroundColor = '#555555';
-  divToShow.style.animation = 'slideUp 0.5s ease forwards';
-  container.style.filter = 'none';
-}</script></body>
+   </div>
+   <script src="scripts/中文search.js"></script>
+   <script src="scripts/news.js"></script>
+   <script src="scripts/modal.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="scripts/potatoclicker.js"></script></body>
 </html>

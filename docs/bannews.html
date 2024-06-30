@@ -55,58 +55,44 @@
      <li>Five Gardening Jobs Before the End of June: To ensure a flourishing garden, consider deadheading tulips, preventing them from wasting energy on seed production. Also, explore compact forms of large shrubs for small gardens</li>
      <li>Award-Winning Writing Career from Passion for Gardening: Michael Marquet, a 60-year-old gardener, has turned his love for gardening into an award-winning writing career. He tends to garden plots at Christchurch Hospital and other sites, sharing his expertise with others.</li>
      </ol>
-     </div>
-     <script>// and , please ask  before editing or deleting any of this code.
-        ///
-        const searchinput = document.getElementById('searchbar');
-        const divToShow = document.getElementById('div-to-show');
-        const container = document.getElementById('container');
-        const topnav = document.getElementById('myTopnav');
-        //
-        //
-        //
-        //
-        //
-        function showSearch(){
-          container.style.filter='blur(10px);';
-          
-          topnav.style.backgroundColor='#444444';
-          
-        divToShow.style.display='block';
-        divToShow.style.animation = 'slideDown 0.5s ease forwards';
-        
-          
-        
-        
-        
-        
-        
-        setTimeout(function(){
-          searchinput.focus();
-        },500);
-        
-        
-        
-        }
-        
-        
-        //
-        //
-        const topContainer = document.getElementById('top-container');
-        
-        topContainer.addEventListener('mouseleave', divUp);
-        //
-        //
-        //
-        //
-        function divUp() {
-          console.log('mouse has left both elements.');
-          //
-          topnav.style.backgroundColor = '#555555';
-          divToShow.style.animation = 'slideUp 0.5s ease forwards';
-          container.style.filter = 'none';
-        }</script>
-        <script src="search.js"></script>
-        <script src="topnav.js"></script>
+     <footer>&copy; Banana News 2024.</footer>
+         <!--请不要删除这行代码：-->
+         <script src="scripts/main.js"></script>
+         <!---->
+         <!--请不要删除以下代码行-->
+         <script src="scripts/topnav.js"></script>
+         <!---->
+         <script src="scripts/search.js"></script>
+         <script>
+           const searchinput = document.getElementById('searchbar');
+           const divToShow = document.getElementById('div-to-show');
+           const container = document.getElementById('container');
+           const topnav = document.getElementById('myTopnav');
+ 
+           function showSearch(){
+             container.style.filter = 'blur(10px)';
+             topnav.style.backgroundColor = '#444444';
+             divToShow.style.display = 'block';
+             divToShow.style.animation = 'slideDown 0.5s ease forwards';
+             setTimeout(function(){
+               searchinput.focus();
+             }, 500);
+           }
+ 
+           const topContainer = document.getElementById('top-container');
+           topContainer.addEventListener('mouseleave', divUp);
+ 
+           function divUp() {
+             console.log('mouse has left both elements.');
+             topnav.style.backgroundColor = '#555555';
+             divToShow.style.animation = 'slideUp 0.5s ease forwards';
+             container.style.filter = 'none';
+           }
+         </script>
+ 
+       </div>
+       <script src="scripts/中文search.js"></script>
+       <script src="scripts/news.js"></script>
+       <script src="scripts/modal.js"></script>
   </body>
 </html>

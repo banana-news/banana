@@ -122,70 +122,45 @@
         <p>Una guerra civil entre Taiwán y la China continental es inminente, pero eso es todo lo que sabemos hasta ahora.</p>
       </div>
       </div>
-<footer>&copy; Banana News 2024.</footer>
+      <footer>&copy; Noticias del plátano 2024</footer>
+      <!--请不要删除这行代码：-->
+      <script src="scripts/main.js"></script>
+      <!---->
+      <!--请不要删除以下代码行-->
+      <script src="scripts/topnav.js"></script>
+      <!---->
+      <script src="scripts/search.js"></script>
+      <script>
+        const searchinput = document.getElementById('searchbar');
+        const divToShow = document.getElementById('div-to-show');
+        const container = document.getElementById('container');
+        const topnav = document.getElementById('myTopnav');
+ 
+        function showSearch(){
+          container.style.filter = 'blur(10px)';
+          topnav.style.backgroundColor = '#444444';
+          divToShow.style.display = 'block';
+          divToShow.style.animation = 'slideDown 0.5s ease forwards';
+          setTimeout(function(){
+            searchinput.focus();
+          }, 500);
+        }
+ 
+        const topContainer = document.getElementById('top-container');
+        topContainer.addEventListener('mouseleave', divUp);
+ 
+        function divUp() {
+          console.log('mouse has left both elements.');
+          topnav.style.backgroundColor = '#555555';
+          divToShow.style.animation = 'slideUp 0.5s ease forwards';
+          container.style.filter = 'none';
+        }
+      </script>
+ 
     </div>
-
-   
-<!--No quites la línea de código a continuación-->
-<script src="scripts/topnav.js"></script>
-<script src="scripts/news.js"></script>
-<!--<script src="scripts/topnav.js"></script>-->
-        <script src="scripts/main.js"></script>
-        <script src="scripts/search.js">
-           
-
-        </script>
-<!---->
-<script>// y , por favor pregunta antes de editar o eliminar cualquiera de este código.
-///
-const searchinput = document.getElementById('searchbar');
-const divToShow = document.getElementById('div-to-show');
-const container = document.getElementById('container');
-const topnav = document.getElementById('myTopnav');
-//
-//
-//
-//
-//
-function showSearch(){
-  container.style.filter='blur(10px);';
-  
-  topnav.style.backgroundColor='#444444';
-  
-divToShow.style.display='block';
-divToShow.style.animation = 'slideDown 0.5s ease forwards';
-
-  
-
-
-
-
-
-setTimeout(function(){
-  searchinput.focus();
-},500);
-
-
-
-}
-
-
-//
-//
-const topContainer = document.getElementById('top-container');
-
-topContainer.addEventListener('mouseleave', divUp);
-//
-//
-//
-//
-function divUp() {
-  console.log('el ratón ha salido de ambos elementos.');
-  //
-  topnav.style.backgroundColor = '#555555';
-  divToShow.style.animation = 'slideUp 0.5s ease forwards';
-  container.style.filter = 'none';
-}</script></body>
+    <script src="scripts/中文search.js"></script>
+    <script src="scripts/news.js"></script>
+    <script src="scripts/modal.js"></script></body>
 
 
 </html>

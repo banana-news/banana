@@ -138,60 +138,46 @@ font-style: normal;
         <p class="answer">答案是：第一题 41，第二题 33，第三题 56。</p>
         <button class="reveal-button" onclick="revealAnswer(this)">显示答案</button>
     </div>
-    </div>
-    <script>// 请在编辑或删除任何代码之前询问。
-        ///
-        const searchinput = document.getElementById('searchbar');
-        const divToShow = document.getElementById('div-to-show');
-        const container = document.getElementById('container');
-        const topnav = document.getElementById('myTopnav');
-        //
-        //
-        //
-        //
-        //
-        function showSearch(){
-          container.style.filter='blur(10px);';
-          
-          topnav.style.backgroundColor='#444444';
-          
-        divToShow.style.display='block';
-        divToShow.style.animation = 'slideDown 0.5s ease forwards';
-        
-          
-        
-        
-        
-        
-        
-        setTimeout(function(){
-          searchinput.focus();
-        },500);
-        
-        
-        
-        }
-        
-        
-        //
-        //
-        const topContainer = document.getElementById('top-container');
-        
-        topContainer.addEventListener('mouseleave', divUp);
-        //
-        //
-        //
-        //
-        function divUp() {
-          console.log('mouse has left both elements.');
-          //
-          topnav.style.backgroundColor = '#555555';
-          divToShow.style.animation = 'slideUp 0.5s ease forwards';
-          container.style.filter = 'none';
-        }</script>
-    
-   
-    <script>
+    <footer>&copy; 香蕉新闻 2024。</footer>
+     <!--请不要删除这行代码：-->
+     <script src="scripts/main.js"></script>
+     <!---->
+     <!--请不要删除以下代码行-->
+     <script src="scripts/topnav.js"></script>
+     <!---->
+     <script src="scripts/search.js"></script>
+     <script>
+       const searchinput = document.getElementById('searchbar');
+       const divToShow = document.getElementById('div-to-show');
+       const container = document.getElementById('container');
+       const topnav = document.getElementById('myTopnav');
+
+       function showSearch(){
+         container.style.filter = 'blur(10px)';
+         topnav.style.backgroundColor = '#444444';
+         divToShow.style.display = 'block';
+         divToShow.style.animation = 'slideDown 0.5s ease forwards';
+         setTimeout(function(){
+           searchinput.focus();
+         }, 500);
+       }
+
+       const topContainer = document.getElementById('top-container');
+       topContainer.addEventListener('mouseleave', divUp);
+
+       function divUp() {
+         console.log('mouse has left both elements.');
+         topnav.style.backgroundColor = '#555555';
+         divToShow.style.animation = 'slideUp 0.5s ease forwards';
+         container.style.filter = 'none';
+       }
+     </script>
+
+   </div>
+   <script src="scripts/中文search.js"></script>
+   <script src="scripts/news.js"></script>
+   <script src="scripts/modal.js"></script>
+<script>
         function revealAnswer(button) {
             var answer = button.previousElementSibling;
             if (answer.style.display === "none" || answer.style.display === "") {
@@ -202,13 +188,5 @@ font-style: normal;
                 button.textContent = "显示答案";
             }
         }
-    </script>
-    <script src="numberline.js"></script>
-    
-    <script src="scripts/topnav.js"></script>
-    <script src="scripts/中文search.js"></script>
-    <script src="scripts/numberline.js"></script>
-    
-   <!-- <script src="scripts/maths.js"></script>-->
-</body>
+    </script></body>
 </html>

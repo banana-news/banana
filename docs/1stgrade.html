@@ -176,7 +176,18 @@ font-style: normal;
       divToShow.style.animation = 'slideUp 0.5s ease forwards';
       container.style.filter = 'none';
     }
-  </script>
+  </script> <script>
+        function revealAnswer(button) {
+            var answer = button.previousElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                button.textContent = "Hide Answer";
+            } else {
+                answer.style.display = "none";
+                button.textContent = "Reveal Answer";
+            }
+        }
+    </script>
 
 </div>
 <script src="scripts/news.js"></script>

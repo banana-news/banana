@@ -1,4 +1,3 @@
-# Banana news contributor, please check your outlook email
 <img src="https://banana-news.github.io/banana/images/logosvg.svg" height="100" width="100" style="float:left;">
 
 # Banana News

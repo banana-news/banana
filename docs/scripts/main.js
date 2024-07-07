@@ -42,6 +42,12 @@ https://banana-news.github.io/banana/share_this_page.html
       window.location.href=optionsDiv.getAttribute('title');
     });
   }
+  var newTabDivs = document.getElementsByClassName("newtab-div");
+  for(let newTabDiv of newTabDivs) {
+    newTabDiv.addEventListener("click", function(){
+      window.open(newTabDiv.getAttribute('title'), '_blank');
+    });
+  }
  
 
 

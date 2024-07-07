@@ -43,7 +43,7 @@ https://banana-news.github.io/banana/share_this_page.html
   padding: 20px;
 }
 
-.options-div {
+.options-div, .newtab-div {
   border-radius: 10px;
   padding: 35px;
   background-color: #FFE135;
@@ -57,17 +57,17 @@ https://banana-news.github.io/banana/share_this_page.html
   cursor: pointer;
 }
 
-.options-div a {
+.options-div, .newtab-div a {
   text-decoration: none;
   color: #000000;
 }
 
-.options-div:hover {
+.options-div:hover, .newtab-div:hover {
   background-color: #d3d3d3;
 }
 
 @media (max-width: 768px) {
-  .options-div {
+  .options-div, .newtab-div{
       border-radius: 15px;
       padding: 52.5px;
       background-color: #FFE135;

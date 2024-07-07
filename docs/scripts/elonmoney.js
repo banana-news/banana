@@ -66,7 +66,7 @@ https://banana-news.github.io/banana/share_this_page.html
   receiptItems++;
   let moneyString = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   moneyDisplay.innerHTML = '$' + moneyString;
-  showReceipt(); 
+  showReceipt();
   }
 }
 

@@ -30,34 +30,56 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 
 */
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Modal
+  var modal = document.getElementById("myModal");
+  var images = document.querySelectorAll(".newsdiv img");
+  var modalImg = document.getElementById("modalImage");
+  var span = document.getElementsByClassName("close")[0];
+  
+  images.forEach((image) => {
+    image.addEventListener('click', function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
+  });
 
-const hiddens = document.getElementsByClassName('hidden');
-let isReadMore = true;
-let newsContainer = document.getElementsByClassName('news-container')[0];
-let documentImages = newsContainer.getElementsByTagName('img');
-const modalContentDiv = document.getElementsByClassName('modal-content')[0];
-
-for (let image of documentImages){
- image.onclick= function(){
-   const modalImage = document.getElementById('modalImage');
-   modalImage.src=image.src;
-   openModal();
- }
-}
-
-function revealText(text, button) {
-  if (isReadMore) {
-    text.style.display = 'block';
-    button.textContent = '读更少';
-    button.onclick = function() {
-      revealText(text, button);
-    };
-  } else {
-    text.style.display = 'none';
-    button.textContent = '读更多';
-    button.onclick = function() {
-      revealText(text, button);
-    };
+  span.onclick = function() {
+    modal.style.display = "none";
   }
-  isReadMore = !isReadMore;
-}
+
+  // Click message
+  var clickMessage = document.getElementById("clickmessage");
+  var closeButton = document.getElementById("closebutton"); // Corrected id
+
+  if (closeButton) {
+    closeButton.addEventListener('click', function() {
+      clickMessage.style.display = "none";
+    });
+  } else {
+    console.error('Button with id "closebutton" not found.');
+  }
+
+  // Read more functionality
+  var buttons = document.querySelectorAll(".newsdiv button");
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      var index = button.getAttribute('data-index');
+      var hiddenContent = document.querySelector('.hidden[data-index="' + index + '"]');
+      if (hiddenContent) {
+        if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+          hiddenContent.style.display = 'block';
+          button.textContent = '读更少';
+        } else {
+          hiddenContent.style.display = 'none';
+          button.textContent = '读更多';
+        }
+      }
+    });
+  });
+});
+
+
+
+ 

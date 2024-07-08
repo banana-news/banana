@@ -92,7 +92,7 @@ h2{width:100%;background-color: #ffffff;}
     transition: 0.25s ease-in-out;
     vertical-align: top; 
 
-
+}
 .newsdiv img:hover{opacity: 70%;cursor: pointer;}
 
 .newsdiv h2,
@@ -186,4 +186,3 @@ body {
     }
 }
 
-}

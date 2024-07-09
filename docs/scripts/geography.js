@@ -76,7 +76,7 @@ function checkAnswer() {
       resultElement.innerText = "Correct!";
       resultElement.style.color = "green";
   } else {
-      resultElement.innerText = `Wrong! The correct answer is ${capitals[currentQuestionIndex].capital}.`;
+      resultElement.innerText = `Wrong! The correct answer is ${capitals[currentQuestionIndex].capital}`;
       resultElement.style.color = "red";
   }
 }

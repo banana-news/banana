@@ -33,6 +33,7 @@ const capitals = [
   { country: "China", capital: "Beijing" },
   { country: "India", capital: "New Delhi" },
   { country: "United States", capital: "Washington, D.C." },
+  { country: "United States", capital: "Washington"}
   { country: "Germany", capital: "Berlin" },
   { country: "Australia", capital: "Canberra" },
   { country: "France", capital: "Paris" },

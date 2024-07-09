@@ -65,6 +65,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!---->
         <title>Geography - Banana News</title>
+        <style>
+          .body {
+              margin: 0;
+              padding: 0;
+          }
+          .container {
+              margin: 50px auto;
+              max-width: 600px;
+          }
+          .question {
+              font-size: 1.5em;
+              margin-bottom: 20px;
+          }
+          .answer {
+              font-size: 1.2em;
+              margin-bottom: 20px;
+              width: 80%;
+              padding: 10px;
+          }
+          
+      </style>
         <link rel="shortcut icon" href="images/logosvg.svg"><link rel="icon" href="images/logosvg.svg">
        
         </a>
@@ -84,8 +105,12 @@
               <a href="news.html" >News</a><a href="games.html">Fun</a>
               <a href="tech.html">Tech</a>
               <a href="politics.html">Politics</a>
+<<<<<<< HEAD
+              <a href="maths.html">Maths</a><a href="geography.html">Geography</a>
+=======
               <a href="maths.html">Maths</a>
               
+>>>>>>> 82b4e3e2bcb0703225bc5b2b2961828e7663f188
                 
                 <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
                 </button>
@@ -108,35 +133,9 @@
                     <img src="images/map.png">
                     <h1>GEOGRAPHY</h1>
                   </div>
-                  <!DOCTYPE html>
-                  <html lang="en">
-                  <head>
-                      <meta charset="UTF-8">
-                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                      <title>World Capitals Test</title>
-                      <style>
-                          .body {
-                              margin: 0;
-                              padding: 0;
-                          }
-                          .container {
-                              margin: 50px auto;
-                              max-width: 600px;
-                          }
-                          .question {
-                              font-size: 1.5em;
-                              margin-bottom: 20px;
-                          }
-                          .answer {
-                              font-size: 1.2em;
-                              margin-bottom: 20px;
-                              width: 80%;
-                              padding: 10px;
-                          }
-                          
-                      </style>
-                  </head>
-                  <body>
+                
+                      
+                  
                       <div class="container">
                           <h2>World Capitals Test</h2>
                           <div id="quiz">
@@ -149,71 +148,6 @@
                               <div id="result"></div>
                           </div>
                       </div>
-                  
-                      <script>
-                          const capitals = [
-                              { country: "China", capital: "Beijing" },
-                              { country: "India", capital: "New Delhi" },
-                              { country: "United States", capital: "Washington, D.C." },
-                              { country: "Germany", capital: "Berlin" },
-                              { country: "Australia", capital: "Canberra" },
-                              { country: "France", capital: "Paris" },
-                              { country: "Brazil", capital: "Brasilia" },
-                              { country: "Canada", capital: "Ottawa" },
-                              { country: "Russia", capital: "Moscow" },
-                              { country: "Japan", capital: "Tokyo" },
-                              { country: "South Korea", capital: "Seoul" },
-                              { country: "United Kingdom", capital: "London" },
-                              { country: "Italy", capital: "Rome" },
-                              { country: "Mexico", capital: "Mexico City" },
-                              { country: "Argentina", capital: "Buenos Aires" },
-                              { country: "South Africa", capital: "Pretoria" },
-                              { country: "Egypt", capital: "Cairo" },
-                              { country: "Turkey", capital: "Ankara" },
-                              { country: "Saudi Arabia", capital: "Riyadh" },
-                              { country: "Indonesia", capital: "Jakarta" },
-                              { country: "Nigeria", capital: "Abuja" },
-                              { country: "Spain", capital: "Madrid" },
-                              { country: "Sweden", capital: "Stockholm" },
-                              { country: "Norway", capital: "Oslo" },
-                              { country: "Netherlands", capital: "Amsterdam" },
-                              { country: "Switzerland", capital: "Bern" },
-                              { country: "Greece", capital: "Athens" },
-                              { country: "Chile", capital: "Santiago" },
-                              { country: "Colombia", capital: "Bogotá" },
-                              { country: "Malaysia", capital: "Kuala Lumpur" },
-                          ];
-                  
-                          let currentQuestionIndex = 0;
-                  
-                          function displayQuestion() {
-                              const questionElement = document.getElementById("question");
-                              questionElement.innerText = `What is the capital of ${capitals[currentQuestionIndex].country}?`;
-                          }
-                  
-                          function checkAnswer() {
-                              const answerElement = document.getElementById("answer");
-                              const resultElement = document.getElementById("result");
-                              if (answerElement.value.trim().toLowerCase() === capitals[currentQuestionIndex].capital.toLowerCase()) {
-                                  resultElement.innerText = "Correct!";
-                                  resultElement.style.color = "green";
-                              } else {
-                                  resultElement.innerText = `Wrong! The correct answer is ${capitals[currentQuestionIndex].capital}.`;
-                                  resultElement.style.color = "red";
-                              }
-                          }
-                  
-                          function nextQuestion() {
-                              currentQuestionIndex = (currentQuestionIndex + 1) % capitals.length;
-                              displayQuestion();
-                              document.getElementById("answer").value = "";
-                              document.getElementById("result").innerText = "";
-                          }
-                  
-                          displayQuestion();
-                      </script>
-                  </body>
-                  </html>
                   
                   
             </div>

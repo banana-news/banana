@@ -57,7 +57,7 @@ const capitals = [
   { country: "Switzerland", capital: "Bern" },
   { country: "Greece", capital: "Athens" },
   { country: "Chile", capital: "Santiago" },
-  { country: "Colombia", capital: "Bogotá" },
+  { country: "Colombia", capital: "Bogota" },
   { country: "Malaysia", capital: "Kuala Lumpur" },
 ];
 

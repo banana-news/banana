@@ -75,7 +75,7 @@ function checkAnswer() {
   if (answerElement.value.trim().toLowerCase() === capitals[currentQuestionIndex].capital.toLowerCase()) {
       resultElement.innerText = "Correct!";
       resultElement.style.color = "green";
-      capitals.splice(index, currentQuestionIndex);
+      //capitals.splice(index, currentQuestionIndex);
   } else {
       resultElement.innerText = `Wrong! The correct answer is ${capitals[currentQuestionIndex].capital}.`;
       resultElement.style.color = "red";

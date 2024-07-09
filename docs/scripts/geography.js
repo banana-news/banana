@@ -32,11 +32,9 @@ https://banana-news.github.io/banana/share_this_page.html
 const capitals = [
   { country: "China", capital: "Beijing" },
   { country: "India", capital: "New Delhi" },
-  { country: "India", capital: "Delhi" },
   { country: "United States", capital: "Washington, D.C." },
   { country: "United States", capital: "Washington"}
-  { country: "Germany", capital: "Berlin" },
-  { country: "Australia", capital: "Canberra" },
+    { country: "Australia", capital: "Canberra" },
   { country: "France", capital: "Paris" },
   { country: "Brazil", capital: "Brasilia" },
   { country: "Canada", capital: "Ottawa" },

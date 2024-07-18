@@ -62,6 +62,7 @@ const capitals = [
 ];
 
 let currentQuestionIndex = 0;
+let score = 0;
 
 function displayQuestion() {
   const questionElement = document.getElementById("question");
@@ -71,9 +72,11 @@ function displayQuestion() {
 function checkAnswer() {
   const answerElement = document.getElementById("answer");
   const resultElement = document.getElementById("result");
+  capitals.splice(currentQuestionIndex, 1);
   if (answerElement.value.trim().toLowerCase() === capitals[currentQuestionIndex].capital.toLowerCase()) {
       resultElement.innerText = "Correct!";
       resultElement.style.color = "green";
+      score++;
       //capitals.splice(index, currentQuestionIndex);
   } else {
       resultElement.innerText = `Wrong! The correct answer is ${capitals[currentQuestionIndex].capital}.`;
@@ -82,10 +85,17 @@ function checkAnswer() {
 }
 
 function nextQuestion() {
+  if(capitals.length>0){
   currentQuestionIndex = (currentQuestionIndex + 1) % capitals.length;
   displayQuestion();
   document.getElementById("answer").value = "";
   document.getElementById("result").innerText = "";
+  }else{
+
+    ///To max: If you want to change what happens when you completed the quiz, put anything you want inside this else statement
+    alert("You've completed the quiz! Your score is "+score+"/29");
+    ///
+  }
 }
 
 displayQuestion();

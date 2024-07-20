@@ -285,6 +285,7 @@ border-radius:2px}
   .topnav a.icon {
     float: right;
     display: block;
+    margin:5px;
   }
 }
 @media (max-width:768px){
@@ -297,7 +298,7 @@ border-radius:2px}
 @media screen and (max-width: 600px) {
   #searchButton{display:block}
   .topnav.responsive {position: relative;
-  height: 280px;}
+  height: 300px;}
   .topnav.responsive a.icon {
     position: absolute;
     right: 30px;

@@ -30,12 +30,25 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 
 */
-document.addEventListener('DOMContentLoaded', (event) => {
-  // Modal
-  var modal = document.getElementById("myModal");
+var modal = document.getElementById("myModal");
   var images = document.querySelectorAll(".newsdiv img");
   var modalImg = document.getElementById("modalImage");
   var span = document.getElementsByClassName("close")[0];
+function updateModalImage(index) {
+  if (index >= 0 && index < images.length) {
+    modalImg.src = images[index].src;
+    currentIndex = index; // Update the global index
+  }
+}
+function imageLeft(){
+  updateModalImage(currentIndex - 1);
+}function imageRight(){
+  updateModalImage(currentIndex + 1);
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+  
+  // Modal
+  
   /*
   images.forEach((image, index) => { // Include the index in the forEach callback
       image.addEventListener('click', function(){
@@ -60,12 +73,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   */
   let currentIndex = 0; // Global variable to keep track of the current image index
   
-  function updateModalImage(index) {
-    if (index >= 0 && index < images.length) {
-      modalImg.src = images[index].src;
-      currentIndex = index; // Update the global index
-    }
-  }
+  
   
   images.forEach((image, index) => {
     image.addEventListener('click', function() {
@@ -73,11 +81,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       updateModalImage(index); // Update modal image to the clicked one
     });
   });
-  function imageLeft(){
-    updateModalImage(currentIndex - 1);
-  }function imageRight(){
-    updateModalImage(currentIndex + 1);
-  }
+  
   document.onkeydown = (e) => {
     e = e || window.event;
     if (e.keyCode === 37) { // Left arrow key

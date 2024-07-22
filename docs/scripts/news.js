@@ -41,8 +41,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     image.addEventListener('click', function(){
       modal.style.display = "block";
       modalImg.src = this.src;
+      document.onkeydown = (e) => {
+        e = e || window.event;
+       if (e.keyCode === 37) {
+          modalImg.src=images[images.indexOf(image)-1].src;
+        } else if (e.keyCode === 39) {
+          modalImg.src=images[images.indexOf(image)+1].src;
+        }
+      }
     });
   });
+  
 
   span.onclick = function() {
     modal.style.display = "none";

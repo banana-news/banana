@@ -36,21 +36,56 @@ document.addEventListener('DOMContentLoaded', (event) => {
   var images = document.querySelectorAll(".newsdiv img");
   var modalImg = document.getElementById("modalImage");
   var span = document.getElementsByClassName("close")[0];
-  
-  images.forEach((image) => {
-    image.addEventListener('click', function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      document.onkeydown = (e) => {
-        e = e || window.event;
-       if (e.keyCode === 37) {
-          modalImg.src=images[images.indexOf(image)-1].src;
-        } else if (e.keyCode === 39) {
-          modalImg.src=images[images.indexOf(image)+1].src;
+  /*
+  images.forEach((image, index) => { // Include the index in the forEach callback
+      image.addEventListener('click', function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        document.onkeydown = (e) => {
+          e = e || window.event;
+          if (e.keyCode === 37) { // Left arrow key
+            const prevIndex = index - 1;
+            if (prevIndex >= 0) { // Check if the previous index exists
+              modalImg.src = images[prevIndex].src;
+            }
+          } else if (e.keyCode === 39) { // Right arrow key
+            const nextIndex = index + 1;
+            if (nextIndex < images.length) { // Check if the next index exists
+              modalImg.src = images[nextIndex].src;
+            }
+          }
         }
-      }
+      });
+  });
+  */
+  let currentIndex = 0; // Global variable to keep track of the current image index
+  
+  function updateModalImage(index) {
+    if (index >= 0 && index < images.length) {
+      modalImg.src = images[index].src;
+      currentIndex = index; // Update the global index
+    }
+  }
+  
+  images.forEach((image, index) => {
+    image.addEventListener('click', function() {
+      modal.style.display = "block";
+      updateModalImage(index); // Update modal image to the clicked one
     });
   });
+  function imageLeft(){
+    updateModalImage(currentIndex - 1);
+  }function imageRight(){
+    updateModalImage(currentIndex + 1);
+  }
+  document.onkeydown = (e) => {
+    e = e || window.event;
+    if (e.keyCode === 37) { // Left arrow key
+       imageLeft();
+    } else if (e.keyCode === 39) { // Right arrow key
+       imageRight();
+    }
+  };
   
 
   span.onclick = function() {

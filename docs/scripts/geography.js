@@ -70,13 +70,14 @@ function displayQuestion() {
 }
 
 function checkAnswer() {
+  capitals.splice(currentQuestionIndex, 1);
   const answerElement = document.getElementById("answer");
   const resultElement = document.getElementById("result");
   if (answerElement.value.trim().toLowerCase() === capitals[currentQuestionIndex].capital.toLowerCase()) {
       resultElement.innerText = "Correct!";
       resultElement.style.color = "green";
       score++;
-      capitals.splice(currentQuestionIndex, 1);
+      
       //capitals.splice(index, currentQuestionIndex);
   } else {
       resultElement.innerText = `Wrong! The correct answer is ${capitals[currentQuestionIndex].capital}.`;

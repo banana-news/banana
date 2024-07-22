@@ -30,19 +30,67 @@ If you're the sort of person who looks at the source code of webpages, try our c
 https://banana-news.github.io/banana/share_this_page.html
 
 */
-document.addEventListener('DOMContentLoaded', (event) => {
-  // Modal
-  var modal = document.getElementById("myModal");
+var modal = document.getElementById("myModal");
   var images = document.querySelectorAll(".newsdiv img");
   var modalImg = document.getElementById("modalImage");
   var span = document.getElementsByClassName("close")[0];
+function updateModalImage(index) {
+  if (index >= 0 && index < images.length) {
+    modalImg.src = images[index].src;
+    currentIndex = index; // Update the global index
+  }
+}
+function imageLeft(){
+  updateModalImage(currentIndex - 1);
+}function imageRight(){
+  updateModalImage(currentIndex + 1);
+}
+document.addEventListener('DOMContentLoaded', (event) => {
   
-  images.forEach((image) => {
-    image.addEventListener('click', function(){
+  // Modal
+  
+  /*
+  images.forEach((image, index) => { // Include the index in the forEach callback
+      image.addEventListener('click', function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        document.onkeydown = (e) => {
+          e = e || window.event;
+          if (e.keyCode === 37) { // Left arrow key
+            const prevIndex = index - 1;
+            if (prevIndex >= 0) { // Check if the previous index exists
+              modalImg.src = images[prevIndex].src;
+            }
+          } else if (e.keyCode === 39) { // Right arrow key
+            const nextIndex = index + 1;
+            if (nextIndex < images.length) { // Check if the next index exists
+              modalImg.src = images[nextIndex].src;
+            }
+          }
+        }
+      });
+  });
+  */
+  let currentIndex = 0; // Global variable to keep track of the current image index
+  
+  
+  
+  images.forEach((image, index) => {
+    image.addEventListener('click', function() {
       modal.style.display = "block";
-      modalImg.src = this.src;
+      updateModalImage(index); // Update modal image to the clicked one
     });
   });
+  
+  document.onkeydown = (e) => {
+    e = e || window.event;
+    if (e.keyCode === 37) { // Left arrow key
+       imageLeft();
+    } else if (e.keyCode === 39) { // Right arrow key
+       imageRight();
+    }
+  };
+  
 
   span.onclick = function() {
     modal.style.display = "none";

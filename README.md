@@ -12,7 +12,6 @@ News website including news, games, politics and tech reviews
 You should try testing the search bar and tell me if there are any errors
 (I also added a no results found and loading animation for the search results page)
 
-
 ## I don't know why the page isn't showing language percentages but here is an approximation:
 1. HTML: 58%
 2. JS: 30%
@@ -21,4 +20,5 @@ You should try testing the search bar and tell me if there are any errors
 ## Views:
 As of 23 Jul 2024, there have been 4.5K views to the repository from 14 countries since May 18, 2024.
 
+<img width="318" alt="Screenshot 2024-07-23 at 13 04 34" src="https://github.com/user-attachments/assets/213236ea-4be9-48c9-971e-62e120acf472">
 

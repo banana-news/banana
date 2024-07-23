@@ -19,6 +19,6 @@ You should try testing the search bar and tell me if there are any errors
 3. CSS: 12%
 
 ## Views:
-There have been over 2000 views from 10 countries since I started tracking so at least 3000 views to the site since when it was put up on Feb 17.
+As of 23 Jul 2024, there have been 4.5K views to the repository from 14 countries since May 18, 2024.
 
 

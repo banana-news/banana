@@ -87,7 +87,7 @@ function checkAnswer() {
 
 function nextQuestion() {
   if(capitals.length>0){
-  currentQuestionIndex = (currentQuestionIndex) % capitals.length;
+  currentQuestionIndex = (currentQuestionIndex + 1) % capitals.length;
   displayQuestion();
   document.getElementById("answer").value = "";
   document.getElementById("result").innerText = "";

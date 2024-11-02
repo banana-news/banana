@@ -3,7 +3,6 @@ var contentInput = document.querySelectorAll("#contentInput");
 var titleInput = document.querySelectorAll("#titleInput");
 var contentValue = contentInput.value;
 var titleValue = titleInput.value;
-var documentNumber = filesNumber+1;
 
 compileButton.addEventListener("click", function(){
     var opened = window.open("");

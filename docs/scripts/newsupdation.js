@@ -3,7 +3,8 @@ var contentInput = document.querySelectorAll("#contentInput");
 var titleInput = document.querySelectorAll("#titleInput");
 var contentValue = contentInput.value;
 var titleValue = titleInput.value;
-var filesNumber = Files.Count("newsDocuments");
+var files = "newsDocuments";
+var filesNumber = files.Count("newsDocuments");
 var documentNumber = filesNumber+1;
 
 compileButton.addEventListener("click", function(){

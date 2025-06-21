@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界首都挑战</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="styles/divstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>游戏电脑CPU排行榜 - 香蕉新闻</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(0, 15, 30, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            padding: 30px;
+            position: relative;
+        }
+
+        /* 顶部导航栏样式 */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
+        
+        .topnav a:hover {
+            background-color: #555;
+            color: white;
+        }
+        
+        .topnav .icon {
+            display: none;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .globe-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0d2eb;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .game-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .info-card {
+            text-align: center;
+            min-width: 150px;
+            padding: 15px;
+            border-radius: 12px;
+            background: rgba(0, 40, 85, 0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #ffb997;
+        }
+
+        .info-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f67e7d;
+        }
+
+        .game-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .question-container {
+            width: 100%;
+            text-align: center;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .question-text {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #e0f7fa;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .flag-container {
+            width: 200px;
+            height: 120px;
+            margin: 0 auto 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .flag {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .answer-container {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        #answer {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        #answer:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(102, 175, 233, 0.6);
+        }
+
+        #answer::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #0a192f;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .next-btn {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #0a192f;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .result-container {
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .correct {
+            background: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+            border: 2px solid rgba(46, 204, 113, 0.5);
+        }
+
+        .incorrect {
+            background: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+            border: 2px solid rgba(231, 76, 60, 0.5);
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            margin: 30px 0 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            border-radius: 6px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0d2eb;
+            font-size: 0.9rem;
+        }
+
+        .difficulty {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0 25px;
+            flex-wrap: wrap;
+        }
+
+        .difficulty-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0f7fa;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .difficulty-btn.active {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #0a192f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .question-text {
+                font-size: 1.5rem;
+            }
+            
+            .info-card {
+                min-width: 120px;
+                padding: 12px;
+            }
+            
+            .btn {
+                min-width: 160px;
+                padding: 12px 25px;
+            }
+            
+            .flag-container {
+                width: 160px;
+                height: 100px;
+            }
+            
+            .globe-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .topnav a {
+                font-size: 15px;
+                padding: 10px 12px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 中文导航栏 -->
+    <div class="topnav" id="myTopnav">
+        <a href="中文1.html">主页</a>
+        <a href="中文10.html">游戏</a>
+        <a href="中文6.html">计算器</a>
+        <a href="中文5.html">手机，平板电脑，和电脑</a>
+        <a href="中文4.html">政治</a>
+        <a href="中文3.html">新闻</a>
+        <a href="中文maths.html">数学</a>
+          <a href="中文12.html">地理</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="title-container">
+                <!-- 地球图标 -->
+                <svg class="globe-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#4facfe" stroke="#00f2fe" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#00f2fe" stroke-width="1" stroke-dasharray="5,5"/>
+                    <path d="M10 50 H90 M50 10 V90" stroke="#00f2fe" stroke-width="1" stroke-dasharray="5,5"/>
+                    <circle cx="30" cy="35" r="8" fill="#00f2fe"/>
+                    <circle cx="70" cy="65" r="8" fill="#00f2fe"/>
+                    <path d="M50,10 A40,40 0 1,0 50,90 A40,40 0 1,0 50,10 Z" fill="none" stroke="#00f2fe" stroke-width="1"/>
+                </svg>
+                <h1>世界首都挑战</h1>
+            </div>
+            <p class="subtitle">测试你对195个联合国认可国家及其首都的了解！</p>
+            
+            <div class="difficulty">
+                <button class="difficulty-btn active" data-level="all">所有国家</button>
+                <button class="difficulty-btn" data-level="easy">初级</button>
+                <button class="difficulty-btn" data-level="medium">中级</button>
+                <button class="difficulty-btn" data-level="hard">专家</button>
+            </div>
+        </header>
+        
+        <div class="game-info">
+            <div class="info-card">
+                <h3>得分</h3>
+                <div class="value" id="score">0</div>
+            </div>
+            <div class="info-card">
+                <h3>问题</h3>
+                <div class="value"><span id="question-count">1</span>/<span id="total-questions">10</span></div>
+            </div>
+            <div class="info-card">
+                <h3>连胜</h3>
+                <div class="value" id="streak">0</div>
+            </div>
+            <div class="info-card">
+                <h3>时间</h3>
+                <div class="value" id="timer">30秒</div>
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <div class="game-area">
+            <div class="question-container">
+                <div class="question-text" id="question">加载问题中...</div>
+                <div class="flag-container">
+                    <div class="flag" id="flag"></div>
+                </div>
+                
+                <div class="answer-container">
+                    <input type="text" id="answer" placeholder="输入首都名称..." autocomplete="off">
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn submit-btn" id="submit-btn">
+                    <i class="fas fa-paper-plane"></i> 提交答案
+                </button>
+                <button class="btn next-btn" id="next-btn" disabled>
+                    <i class="fas fa-arrow-right"></i> 下一题
+                </button>
+            </div>
+            
+            <div class="result-container" id="result"></div>
+        </div>
+        
+        <footer>
+            <p>世界地理挑战</p>
+            <p>195个联合国认可国家 | 用心制作 <i class="fas fa-heart" style="color:#ff6b6b;"></i></p>
+        </footer>
+    </div>
+
+    <script>
+        // 国家数据（包含中文名称）
+        const allCountries = [
+            { name: "阿富汗", capital: "喀布尔", flag: "af", level: "medium" },
+            { name: "阿尔巴尼亚", capital: "地拉那", flag: "al", level: "easy" },
+            { name: "阿尔及利亚", capital: "阿尔及尔", flag: "dz", level: "medium" },
+            { name: "安道尔", capital: "安道尔城", flag: "ad", level: "hard" },
+            { name: "安哥拉", capital: "罗安达", flag: "ao", level: "medium" },
+            { name: "安提瓜和巴布达", capital: "圣约翰", flag: "ag", level: "hard" },
+            { name: "阿根廷", capital: "布宜诺斯艾利斯", flag: "ar", level: "easy" },
+            { name: "亚美尼亚", capital: "埃里温", flag: "am", level: "medium" },
+            { name: "澳大利亚", capital: "堪培拉", flag: "au", level: "easy" },
+            { name: "奥地利", capital: "维也纳", flag: "at", level: "easy" },
+            { name: "阿塞拜疆", capital: "巴库", flag: "az", level: "medium" },
+            { name: "巴哈马", capital: "拿骚", flag: "bs", level: "medium" },
+            { name: "巴林", capital: "麦纳麦", flag: "bh", level: "medium" },
+            { name: "孟加拉国", capital: "达卡", flag: "bd", level: "medium" },
+            { name: "巴巴多斯", capital: "布里奇顿", flag: "bb", level: "hard" },
+            { name: "白俄罗斯", capital: "明斯克", flag: "by", level: "medium" },
+            { name: "比利时", capital: "布鲁塞尔", flag: "be", level: "easy" },
+            { name: "伯利兹", capital: "贝尔莫潘", flag: "bz", level: "hard" },
+            { name: "贝宁", capital: "波多诺伏", flag: "bj", level: "hard" },
+            { name: "不丹", capital: "廷布", flag: "bt", level: "hard" },
+            { name: "玻利维亚", capital: "苏克雷", flag: "bo", level: "medium" },
+            { name: "波斯尼亚和黑塞哥维那", capital: "萨拉热窝", flag: "ba", level: "medium" },
+            { name: "博茨瓦纳", capital: "哈博罗内", flag: "bw", level: "medium" },
+            { name: "巴西", capital: "巴西利亚", flag: "br", level: "easy" },
+            { name: "文莱", capital: "斯里巴加湾市", flag: "bn", level: "hard" },
+            { name: "保加利亚", capital: "索非亚", flag: "bg", level: "easy" },
+            { name: "布基纳法索", capital: "瓦加杜古", flag: "bf", level: "hard" },
+            { name: "布隆迪", capital: "基特加", flag: "bi", level: "hard" },
+            { name: "佛得角", capital: "普拉亚", flag: "cv", level: "hard" },
+            { name: "柬埔寨", capital: "金边", flag: "kh", level: "medium" },
+            { name: "喀麦隆", capital: "雅温得", flag: "cm", level: "medium" },
+            { name: "加拿大", capital: "渥太华", flag: "ca", level: "easy" },
+            { name: "中非共和国", capital: "班吉", flag: "cf", level: "hard" },
+            { name: "乍得", capital: "恩贾梅纳", flag: "td", level: "hard" },
+            { name: "智利", capital: "圣地亚哥", flag: "cl", level: "easy" },
+            { name: "中国", capital: "北京", flag: "cn", level: "easy" },
+            { name: "哥伦比亚", capital: "波哥大", flag: "co", level: "easy" },
+            { name: "科摩罗", capital: "莫罗尼", flag: "km", level: "hard" },
+            { name: "刚果（布）", capital: "布拉柴维尔", flag: "cg", level: "hard" },
+            { name: "哥斯达黎加", capital: "圣何塞", flag: "cr", level: "medium" },
+            { name: "科特迪瓦", capital: "亚穆苏克罗", flag: "ci", level: "hard" },
+            { name: "克罗地亚", capital: "萨格勒布", flag: "hr", level: "medium" },
+            { name: "古巴", capital: "哈瓦那", flag: "cu", level: "easy" },
+            { name: "塞浦路斯", capital: "尼科西亚", flag: "cy", level: "medium" },
+            { name: "捷克", capital: "布拉格", flag: "cz", level: "easy" },
+            { name: "丹麦", capital: "哥本哈根", flag: "dk", level: "easy" },
+            { name: "吉布提", capital: "吉布提市", flag: "dj", level: "hard" },
+            { name: "多米尼克", capital: "罗索", flag: "dm", level: "hard" },
+            { name: "多米尼加", capital: "圣多明各", flag: "do", level: "medium" },
+            { name: "厄瓜多尔", capital: "基多", flag: "ec", level: "medium" },
+            { name: "埃及", capital: "开罗", flag: "eg", level: "easy" },
+            { name: "萨尔瓦多", capital: "圣萨尔瓦多", flag: "sv", level: "medium" },
+            { name: "赤道几内亚", capital: "马拉博", flag: "gq", level: "hard" },
+            { name: "厄立特里亚", capital: "阿斯马拉", flag: "er", level: "hard" },
+            { name: "爱沙尼亚", capital: "塔林", flag: "ee", level: "medium" },
+            { name: "斯威士兰", capital: "姆巴巴内", flag: "sz", level: "hard" },
+            { name: "埃塞俄比亚", capital: "亚的斯亚贝巴", flag: "et", level: "medium" },
+            { name: "斐济", capital: "苏瓦", flag: "fj", level: "medium" },
+            { name: "芬兰", capital: "赫尔辛基", flag: "fi", level: "easy" },
+            { name: "法国", capital: "巴黎", flag: "fr", level: "easy" },
+            { name: "加蓬", capital: "利伯维尔", flag: "ga", level: "hard" },
+            { name: "冈比亚", capital: "班珠尔", flag: "gm", level: "hard" },
+            { name: "格鲁吉亚", capital: "第比利斯", flag: "ge", level: "medium" },
+            { name: "德国", capital: "柏林", flag: "de", level: "easy" },
+            { name: "加纳", capital: "阿克拉", flag: "gh", level: "medium" },
+            { name: "希腊", capital: "雅典", flag: "gr", level: "easy" },
+            { name: "格林纳达", capital: "圣乔治", flag: "gd", level: "hard" },
+            { name: "危地马拉", capital: "危地马拉城", flag: "gt", level: "medium" },
+            { name: "几内亚", capital: "科纳克里", flag: "gn", level: "hard" },
+            { name: "几内亚比绍", capital: "比绍", flag: "gw", level: "hard" },
+            { name: "圭亚那", capital: "乔治敦", flag: "gy", level: "hard" },
+            { name: "海地", capital: "太子港", flag: "ht", level: "medium" },
+            { name: "洪都拉斯", capital: "特古西加尔巴", flag: "hn", level: "medium" },
+            { name: "匈牙利", capital: "布达佩斯", flag: "hu", level: "easy" },
+            { name: "冰岛", capital: "雷克雅未克", flag: "is", level: "easy" },
+            { name: "印度", capital: "新德里", flag: "in", level: "easy" },
+            { name: "印度尼西亚", capital: "雅加达", flag: "id", level: "medium" },
+            { name: "伊朗", capital: "德黑兰", flag: "ir", level: "medium" },
+            { name: "伊拉克", capital: "巴格达", flag: "iq", level: "medium" },
+            { name: "爱尔兰", capital: "都柏林", flag: "ie", level: "easy" },
+            { name: "以色列", capital: "耶路撒冷", flag: "il", level: "medium" },
+            { name: "意大利", capital: "罗马", flag: "it", level: "easy" },
+            { name: "牙买加", capital: "金斯敦", flag: "jm", level: "medium" },
+            { name: "日本", capital: "东京", flag: "jp", level: "easy" },
+            { name: "约旦", capital: "安曼", flag: "jo", level: "medium" },
+            { name: "哈萨克斯坦", capital: "努尔苏丹", flag: "kz", level: "medium" },
+            { name: "肯尼亚", capital: "内罗毕", flag: "ke", level: "medium" },
+            { name: "基里巴斯", capital: "塔拉瓦", flag: "ki", level: "hard" },
+            { name: "朝鲜", capital: "平壤", flag: "kp", level: "medium" },
+            { name: "韩国", capital: "首尔", flag: "kr", level: "easy" },
+            { name: "科索沃", capital: "普里什蒂纳", flag: "xk", level: "hard" },
+            { name: "科威特", capital: "科威特城", flag: "kw", level: "medium" },
+            { name: "吉尔吉斯斯坦", capital: "比什凯克", flag: "kg", level: "hard" },
+            { name: "老挝", capital: "万象", flag: "la", level: "medium" },
+            { name: "拉脱维亚", capital: "里加", flag: "lv", level: "medium" },
+            { name: "黎巴嫩", capital: "贝鲁特", flag: "lb", level: "medium" },
+            { name: "莱索托", capital: "马塞卢", flag: "ls", level: "hard" },
+            { name: "利比里亚", capital: "蒙罗维亚", flag: "lr", level: "hard" },
+            { name: "利比亚", capital: "的黎波里", flag: "ly", level: "medium" },
+            { name: "列支敦士登", capital: "瓦杜兹", flag: "li", level: "hard" },
+            { name: "立陶宛", capital: "维尔纽斯", flag: "lt", level: "medium" },
+            { name: "卢森堡", capital: "卢森堡市", flag: "lu", level: "medium" },
+            { name: "马达加斯加", capital: "塔那那利佛", flag: "mg", level: "medium" },
+            { name: "马拉维", capital: "利隆圭", flag: "mw", level: "hard" },
+            { name: "马来西亚", capital: "吉隆坡", flag: "my", level: "medium" },
+            { name: "马尔代夫", capital: "马累", flag: "mv", level: "hard" },
+            { name: "马里", capital: "巴马科", flag: "ml", level: "hard" },
+            { name: "马耳他", capital: "瓦莱塔", flag: "mt", level: "medium" },
+            { name: "马绍尔群岛", capital: "马朱罗", flag: "mh", level: "hard" },
+            { name: "毛里塔尼亚", capital: "努瓦克肖特", flag: "mr", level: "hard" },
+            { name: "毛里求斯", capital: "路易港", flag: "mu", level: "medium" },
+            { name: "墨西哥", capital: "墨西哥城", flag: "mx", level: "easy" },
+            { name: "密克罗尼西亚", capital: "帕利基尔", flag: "fm", level: "hard" },
+            { name: "摩尔多瓦", capital: "基希讷乌", flag: "md", level: "hard" },
+            { name: "摩纳哥", capital: "摩纳哥城", flag: "mc", level: "hard" },
+            { name: "蒙古", capital: "乌兰巴托", flag: "mn", level: "medium" },
+            { name: "黑山", capital: "波德戈里察", flag: "me", level: "hard" },
+            { name: "摩洛哥", capital: "拉巴特", flag: "ma", level: "medium" },
+            { name: "莫桑比克", capital: "马普托", flag: "mz", level: "hard" },
+            { name: "缅甸", capital: "内比都", flag: "mm", level: "medium" },
+            { name: "纳米比亚", capital: "温得和克", flag: "na", level: "medium" },
+            { name: "瑙鲁", capital: "亚伦", flag: "nr", level: "hard" },
+            { name: "尼泊尔", capital: "加德满都", flag: "np", level: "medium" },
+            { name: "荷兰", capital: "阿姆斯特丹", flag: "nl", level: "easy" },
+            { name: "新西兰", capital: "惠灵顿", flag: "nz", level: "medium" },
+            { name: "尼加拉瓜", capital: "马那瓜", flag: "ni", level: "medium" },
+            { name: "尼日尔", capital: "尼亚美", flag: "ne", level: "hard" },
+            { name: "尼日利亚", capital: "阿布贾", flag: "ng", level: "medium" },
+            { name: "北马其顿", capital: "斯科普里", flag: "mk", level: "hard" },
+            { name: "挪威", capital: "奥斯陆", flag: "no", level: "easy" },
+            { name: "阿曼", capital: "马斯喀特", flag: "om", level: "medium" },
+            { name: "巴基斯坦", capital: "伊斯兰堡", flag: "pk", level: "medium" },
+            { name: "帕劳", capital: "梅莱凯奥克", flag: "pw", level: "hard" },
+            { name: "巴拿马", capital: "巴拿马城", flag: "pa", level: "medium" },
+            { name: "巴布亚新几内亚", capital: "莫尔兹比港", flag: "pg", level: "medium" },
+            { name: "巴拉圭", capital: "亚松森", flag: "py", level: "medium" },
+            { name: "秘鲁", capital: "利马", flag: "pe", level: "easy" },
+            { name: "菲律宾", capital: "马尼拉", flag: "ph", level: "medium" },
+            { name: "波兰", capital: "华沙", flag: "pl", level: "easy" },
+            { name: "葡萄牙", capital: "里斯本", flag: "pt", level: "easy" },
+            { name: "卡塔尔", capital: "多哈", flag: "qa", level: "medium" },
+            { name: "罗马尼亚", capital: "布加勒斯特", flag: "ro", level: "easy" },
+            { name: "俄罗斯", capital: "莫斯科", flag: "ru", level: "easy" },
+            { name: "卢旺达", capital: "基加利", flag: "rw", level: "medium" },
+            { name: "圣基茨和尼维斯", capital: "巴斯特尔", flag: "kn", level: "hard" },
+            { name: "圣卢西亚", capital: "卡斯特里", flag: "lc", level: "hard" },
+            { name: "圣文森特和格林纳丁斯", capital: "金斯敦", flag: "vc", level: "hard" },
+            { name: "萨摩亚", capital: "阿皮亚", flag: "ws", level: "hard" },
+            { name: "圣马力诺", capital: "圣马力诺", flag: "sm", level: "hard" },
+            { name: "圣多美和普林西比", capital: "圣多美", flag: "st", level: "hard" },
+            { name: "沙特阿拉伯", capital: "利雅得", flag: "sa", level: "medium" },
+            { name: "塞内加尔", capital: "达喀尔", flag: "sn", level: "medium" },
+            { name: "塞尔维亚", capital: "贝尔格莱德", flag: "rs", level: "medium" },
+            { name: "塞舌尔", capital: "维多利亚", flag: "sc", level: "hard" },
+            { name: "塞拉利昂", capital: "弗里敦", flag: "sl", level: "hard" },
+            { name: "新加坡", capital: "新加坡市", flag: "sg", level: "easy" },
+            { name: "斯洛伐克", capital: "布拉迪斯拉发", flag: "sk", level: "medium" },
+            { name: "斯洛文尼亚", capital: "卢布尔雅那", flag: "si", level: "medium" },
+            { name: "所罗门群岛", capital: "霍尼亚拉", flag: "sb", level: "hard" },
+            { name: "索马里", capital: "摩加迪沙", flag: "so", level: "hard" },
+            { name: "南非", capital: "比勒陀利亚", flag: "za", level: "medium" },
+            { name: "南苏丹", capital: "朱巴", flag: "ss", level: "hard" },
+            { name: "西班牙", capital: "马德里", flag: "es", level: "easy" },
+            { name: "斯里兰卡", capital: "科伦坡", flag: "lk", level: "hard" },
+            { name: "苏丹", capital: "喀土穆", flag: "sd", level: "medium" },
+            { name: "苏里南", capital: "帕拉马里博", flag: "sr", level: "hard" },
+            { name: "瑞典", capital: "斯德哥尔摩", flag: "se", level: "easy" },
+            { name: "瑞士", capital: "伯尔尼", flag: "ch", level: "medium" },
+            { name: "叙利亚", capital: "大马士革", flag: "sy", level: "medium" },
+            { name: "台湾地区(中国的省份)", capital: "台北", flag: "tw", level: "medium" },
+            { name: "塔吉克斯坦", capital: "杜尚别", flag: "tj", level: "hard" },
+            { name: "坦桑尼亚", capital: "多多马", flag: "tz", level: "medium" },
+            { name: "泰国", capital: "曼谷", flag: "th", level: "easy" },
+            { name: "东帝汶", capital: "帝力", flag: "tl", level: "hard" },
+            { name: "多哥", capital: "洛美", flag: "tg", level: "hard" },
+            { name: "汤加", capital: "努库阿洛法", flag: "to", level: "hard" },
+            { name: "特立尼达和多巴哥", capital: "西班牙港", flag: "tt", level: "hard" },
+            { name: "突尼斯", capital: "突尼斯市", flag: "tn", level: "medium" },
+            { name: "土耳其", capital: "安卡拉", flag: "tr", level: "medium" },
+            { name: "土库曼斯坦", capital: "阿什哈巴德", flag: "tm", level: "hard" },
+            { name: "图瓦卢", capital: "富纳富提", flag: "tv", level: "hard" },
+            { name: "乌干达", capital: "坎帕拉", flag: "ug", level: "medium" },
+            { name: "乌克兰", capital: "基辅", flag: "ua", level: "medium" },
+            { name: "阿拉伯联合酋长国", capital: "阿布扎比", flag: "ae", level: "medium" },
+            { name: "英国", capital: "伦敦", flag: "gb", level: "easy" },
+            { name: "美国", capital: "华盛顿特区", flag: "us", level: "easy" },
+            { name: "乌拉圭", capital: "蒙得维的亚", flag: "uy", level: "medium" },
+            { name: "乌兹别克斯坦", capital: "塔什干", flag: "uz", level: "medium" },
+            { name: "瓦努阿图", capital: "维拉港", flag: "vu", level: "hard" },
+            { name: "梵蒂冈", capital: "梵蒂冈城", flag: "va", level: "hard" },
+            { name: "委内瑞拉", capital: "加拉加斯", flag: "ve", level: "medium" },
+            { name: "越南", capital: "河内", flag: "vn", level: "medium" },
+            { name: "也门", capital: "萨那", flag: "ye", level: "medium" },
+            { name: "赞比亚", capital: "卢萨卡", flag: "zm", level: "medium" },
+            { name: "津巴布韦", capital: "哈拉雷", flag: "zw", level: "medium" }
+        ];
+
+        // 游戏状态变量
+        let score = 0;
+        let currentQuestionIndex = 0;
+        let questions = [];
+        let streak = 0;
+        let timer;
+        let timeLeft = 30;
+        let currentLevel = "all";
+        const totalQuestions = 10;
+
+        // DOM元素
+        const questionEl = document.getElementById('question');
+        const answerEl = document.getElementById('answer');
+        const resultEl = document.getElementById('result');
+        const submitBtn = document.getElementById('submit-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const scoreEl = document.getElementById('score');
+        const questionCountEl = document.getElementById('question-count');
+        const totalQuestionsEl = document.getElementById('total-questions');
+        const streakEl = document.getElementById('streak');
+        const progressBar = document.getElementById('progress-bar');
+        const flagEl = document.getElementById('flag');
+        const timerEl = document.getElementById('timer');
+        const difficultyBtns = document.querySelectorAll('.difficulty-btn');
+
+        // 初始化游戏
+        function initGame() {
+            // 重置游戏状态
+            score = 0;
+            streak = 0;
+            currentQuestionIndex = 0;
+            timeLeft = 30;
+            clearInterval(timer);
+            
+            // 根据难度创建问题列表
+            let filteredCountries;
+            if (currentLevel === "all") {
+                filteredCountries = [...allCountries];
+            } else {
+                filteredCountries = allCountries.filter(country => country.level === currentLevel);
+            }
+            
+            questions = [...filteredCountries].sort(() => Math.random() - 0.5).slice(0, totalQuestions);
+            
+            // 更新UI
+            updateUI();
+            showQuestion();
+            startTimer();
+            
+            // 聚焦答案输入框
+            answerEl.focus();
+        }
+
+        // 显示当前问题
+        function showQuestion() {
+            const currentCountry = questions[currentQuestionIndex];
+            questionEl.textContent = `${currentCountry.name}的首都是什么？`;
+            
+            // 设置国旗
+            flagEl.style.backgroundImage = `url(https://flagcdn.com/240x180/${currentCountry.flag}.png)`;
+            
+            // 清空输入和结果
+            answerEl.value = '';
+            resultEl.textContent = '';
+            resultEl.className = '';
+            
+            // 重置按钮
+            submitBtn.disabled = false;
+            nextBtn.disabled = true;
+            
+            // 更新进度
+            progressBar.style.width = `${(currentQuestionIndex / totalQuestions) * 100}%`;
+            questionCountEl.textContent = currentQuestionIndex + 1;
+        }
+
+        // 启动当前问题的计时器
+        function startTimer() {
+            clearInterval(timer);
+            timeLeft = 30;
+            timerEl.textContent = `${timeLeft}秒`;
+            
+            timer = setInterval(() => {
+                timeLeft--;
+                timerEl.textContent = `${timeLeft}秒`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    resultEl.textContent = `时间到！首都是${questions[currentQuestionIndex].capital}`;
+                    resultEl.className = "incorrect";
+                    submitBtn.disabled = true;
+                    nextBtn.disabled = false;
+                    streak = 0;
+                    updateUI();
+                }
+            }, 1000);
+        }
+
+        // 检查用户答案
+        function checkAnswer() {
+            const userAnswer = answerEl.value.trim();
+            const correctAnswer = questions[currentQuestionIndex].capital;
+            
+            if (!userAnswer) {
+                resultEl.textContent = "请输入答案";
+                resultEl.className = "incorrect";
+                return;
+            }
+            
+            // 中文匹配（不区分大小写）
+            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                // 正确答案
+                score += 10;
+                streak++;
+                resultEl.textContent = `正确！${questions[currentQuestionIndex].name}的首都是${correctAnswer}`;
+                resultEl.className = "correct";
+            } else {
+                // 错误答案
+                streak = 0;
+                resultEl.textContent = `错误。首都是${correctAnswer}`;
+                resultEl.className = "incorrect";
+            }
+            
+            // 停止计时器
+            clearInterval(timer);
+            
+            // 更新UI
+            updateUI();
+            
+            // 启用下一题按钮，禁用提交按钮
+            submitBtn.disabled = true;
+            nextBtn.disabled = false;
+        }
+
+        // 进入下一题
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < totalQuestions) {
+                showQuestion();
+                startTimer();
+            } else {
+                // 游戏结束
+                showResults();
+            }
+        }
+
+        // 显示最终结果
+        function showResults() {
+            clearInterval(timer);
+            const percentage = Math.round((score / 100) * 100);
+            let message;
+            
+            if (percentage >= 90) message = "地理大师！🏆";
+            else if (percentage >= 70) message = "太棒了！🌍";
+            else if (percentage >= 50) message = "不错！👍";
+            else message = "继续加油！📚";
+            
+            questionEl.innerHTML = `游戏结束！<br>你的得分：${score}分（${percentage}%）<br>${message}`;
+            flagEl.style.backgroundImage = '';
+            
+            // 更新按钮
+            submitBtn.style.display = 'none';
+            nextBtn.textContent = '再玩一次';
+            nextBtn.onclick = initGame;
+            nextBtn.disabled = false;
+            
+            // 更新进度为100%
+            progressBar.style.width = '100%';
+        }
+
+        // 更新得分和连胜显示
+        function updateUI() {
+            scoreEl.textContent = score;
+            streakEl.textContent = streak;
+            totalQuestionsEl.textContent = totalQuestions;
+        }
+
+        // 设置难度级别
+        function setDifficulty(level) {
+            currentLevel = level;
+            difficultyBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.level === level);
+            });
+            initGame();
+        }
+
+        // 事件监听器
+        submitBtn.addEventListener('click', checkAnswer);
+        nextBtn.addEventListener('click', nextQuestion);
+        
+        answerEl.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                if (!submitBtn.disabled) {
+                    checkAnswer();
+                } else if (!nextBtn.disabled) {
+                    nextQuestion();
+                }
+            }
+        });
+        
+        difficultyBtns.forEach(btn => {
+            btn.addEventListener('click', () => setDifficulty(btn.dataset.level));
+        });
+
+        // 切换菜单响应式
+        function toggleMenu() {
+            const nav = document.getElementById("myTopnav");
+            nav.classList.toggle("responsive");
+        }
+
+        // 页面加载时初始化游戏
+        window.onload = initGame;
+    </script>
+</body>
+</html>

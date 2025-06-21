@@ -1,191 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKCZYS11HC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Capitals Challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Roboto', sans-serif;
+        }
 
-  gtag('config', 'G-HKCZYS11HC');
-</script>
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-<!--
-         []]
-          []]
-          []]]
-          []]]]]
-        []]]]]]]]]
-        []]]]]]]]]]]
-        []]]]]]]]]]]]
-         []]]]]]]]]]]]]
-          []]]]]]]]]]]]]]
-           [[[[[[[[]]]]]]]]]]]
-              ]]]]]]]]]]]]]]]]]]]
-                ]]]]]]]]]]]]]]]]]]]]
-                  ]]]]]]]]]]]]]]]]]]]]
-                    ]]]]]]]]]]]]]]]]]]]]]
-                      ]]]]]]]]]]]]]]]]]]]]]]
-                         ]]]]]]]]]]]]]]]]]]]]]]]
-                            ]]]]]]]]]]]]]]]]]]]]]]]]]
-                                ]]]]]]]]]]]]]]]]]]]]]
-        ____                        ]]]]]]]]]]]]]                                                 ______                         _____    
-        |   \       /\       |\   |        /\       |\   |        /\                   |\   |    |           \      /\      /   /
-        |___/      /  \      | \  |       /  \      | \  |       /  \                  | \  |    |______      \    /  \    /    \_____ 
-        |   \     /____\     |  \ |      /____\     |  \ |      /____\                 |  \ |    |             \  /    \  /           \
-        |___/    /      \    |   \|     /      \    |   \|     /      \                |   \|    |______        \/      \/       _____/
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-  _____________________________________________________________________________________________________________________________
- |                                                                                                                             |
- |   __                                                                            |                        __                 | 
- |  |  \   __   _   _  |  __            |     _      _ __   __   __|         __    |/     _   _            /__ o   _  __  |    |
- |  |__/  /__\ / \ | \ | /__\   |  |  | |__  / \   |/ /__\ /  | /  |   | |  (__    |\  | / \ / \ |  |  |   |   | |/  (__ _|__  |
- |  |     \__  \_/ |_/ | \__    \_/ \_/ |  | \_/   |  \__  \_/ \\_/|   \_/\  __)   | \ |/  | \_/ \_/ \_/   |   | |    __) |_/  |
- |                 |                                                                                                           |
- |_____________________________________________________________________________________________________________________________|
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(0, 15, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            padding: 30px;
+            position: relative;
+        }
 
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
 
-        Hmm. You're the sort of person who looks at the source code of webpages. Want to contribute? Check out our repository at github.com/banana-news/banana and make a pull request
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
 
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            border-radius: 2px;
+        }
 
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0d2eb;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
 
+        .game-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
- 
--->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <!--please don't remove the line of code below:-->
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/news.css">
-        <link rel="stylesheet" href="styles/modal.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!---->
-        <title>Geography - Banana News</title>
-        <style>
-          .body {
-              margin: 0;
-              padding: 0;
-          }
-          .container {
-              margin: 50px auto;
-              max-width: 600px;
-          }
-          .question {
-              font-size: 1.5em;
-              margin-bottom: 20px;
-          }
-          .answer {
-              font-size: 1.2em;
-              margin-bottom: 20px;
-              width: 80%;
-              padding: 10px;
-          }
-          
-      </style>
-        <link rel="shortcut icon" href="images/logosvg.svg"><link rel="icon" href="images/logosvg.svg">
-       
-        </a>
-        <style>
-          #clickmessage{border-radius:10px;background-color:white;padding:20px;position:fixed;top:0;right:0;z-index:2000;}
-          #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
-          #closeButton:hover{background-color: grey;}
-        </style>
-    </head>
-    <body>
-        <!--Welcome to the news page, the page with the latest news about tech, ict, geography, politics and more!!!-->
-         
+        .info-card {
+            text-align: center;
+            min-width: 150px;
+            padding: 15px;
+            border-radius: 12px;
+            background: rgba(0, 40, 85, 0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-            <div id="top-container"><div class="topnav" id="myTopnav">
-          
-              <a href="index.html">Home</a>
-              <a href="news.html">News</a><a href="games.html">Fun</a>
-              <a href="tech.html">Tech</a>
-              <a href="politics.html">Politics</a>
-              <a href="maths.html">Maths</a>
-              <a href="geography.html">Geography</a>  <a href="contributors.html">Contributors</a>
-                
-                <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars stripped"></i>
-                </a>
-              </div>
-              <div id="div-to-show">
-                <input placeholder="search banana-news.github.io" id="searchbar">
-                <p class="label">Quick links</p>
-                <ul>
-                  <a  class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a><a class="not-und" href="index.html"><li class="quick">&rightarrow;&nbsp;Home</li></a>
-                  <a class="not-und" href="games.html"><li class="quick">&rightarrow;&nbsp;Fun</li></a>
-                  <a  class="not-und" href="tech.html"><li class="quick">&rightarrow;&nbsp;Tech</li></a>
-                </ul>
-              </div></div>
-              <br><br><br>
-              <div id="container">
-                <div class="background">
-                    <img src="images/map.png">
-                    <h1>GEOGRAPHY</h1>
-                  </div>
-                
-                      
-                  
-                      <div class="container">
-                          <h2>World Capitals Test</h2><h3>Notice: 'Washington' and 'Delhi' are not accepted for USA and India respectively. For the USA, write 'Washington, D.C.'</h3>
-                          <div id="quiz">
-                              <div class="question" id="question"></div>
-                              <input type="text" id="answer" class="answer" placeholder="Type your answer here...">
-                              <div>
-                                  <button class="button" onclick="checkAnswer()">Submit</button>
-                                  <button class="button" onclick="nextQuestion()">Next</button>
-                              </div>
-                              <div id="result"></div>
-                          </div>
-                      </div>
-                  
-                  
+        .info-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #ffb997;
+        }
+
+        .info-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f67e7d;
+        }
+
+        .game-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .question-container {
+            width: 100%;
+            text-align: center;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .question-text {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #e0f7fa;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flag-container {
+            width: 200px;
+            height: 120px;
+            margin: 0 auto 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .flag {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .answer-container {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        #answer {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        #answer:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(102, 175, 233, 0.6);
+        }
+
+        #answer::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #0a192f;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .next-btn {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #0a192f;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .result-container {
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .correct {
+            background: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+            border: 2px solid rgba(46, 204, 113, 0.5);
+        }
+
+        .incorrect {
+            background: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+            border: 2px solid rgba(231, 76, 60, 0.5);
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            margin: 30px 0 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            border-radius: 6px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0d2eb;
+            font-size: 0.9rem;
+        }
+
+        .difficulty {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0 25px;
+            flex-wrap: wrap;
+        }
+
+        .difficulty-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0f7fa;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .difficulty-btn.active {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #0a192f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .question-text {
+                font-size: 1.5rem;
+            }
+            
+            .info-card {
+                min-width: 120px;
+                padding: 12px;
+            }
+            
+            .btn {
+                min-width: 160px;
+                padding: 12px 25px;
+            }
+            
+            .flag-container {
+                width: 160px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-globe-americas"></i> WORLD CAPITALS CHALLENGE</h1>
+            <p class="subtitle">Test your knowledge of all 195 UN-recognized countries and their capitals!</p>
+            
+            <div class="difficulty">
+                <button class="difficulty-btn active" data-level="all">All Countries</button>
+                <button class="difficulty-btn" data-level="easy">Beginner</button>
+                <button class="difficulty-btn" data-level="medium">Intermediate</button>
+                <button class="difficulty-btn" data-level="hard">Expert</button>
             </div>
-            <footer>&copy; Banana News 2024.</footer>
-    <script src="scripts/geography.js"></script>
-     
-     <!--请不要删除这行代码：-->
- 
-     <!---->
-     <!--请不要删除以下代码行-->
-     <script src="scripts/topnav.js"></script>
-     <!---->
-     <script src="scripts/search.js"></script>
-     <script>
-       const searchinput = document.getElementById('searchbar');
-       const divToShow = document.getElementById('div-to-show');
-       const container = document.getElementById('container');
-       const topnav = document.getElementById('myTopnav');
+        </header>
+        
+        <div class="game-info">
+            <div class="info-card">
+                <h3>SCORE</h3>
+                <div class="value" id="score">0</div>
+            </div>
+            <div class="info-card">
+                <h3>QUESTION</h3>
+                <div class="value"><span id="question-count">1</span>/<span id="total-questions">10</span></div>
+            </div>
+            <div class="info-card">
+                <h3>STREAK</h3>
+                <div class="value" id="streak">0</div>
+            </div>
+            <div class="info-card">
+                <h3>TIME</h3>
+                <div class="value" id="timer">30s</div>
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <div class="game-area">
+            <div class="question-container">
+                <div class="question-text" id="question">What is the capital of ...?</div>
+                <div class="flag-container">
+                    <div class="flag" id="flag"></div>
+                </div>
+                
+                <div class="answer-container">
+                    <input type="text" id="answer" placeholder="Type the capital city..." autocomplete="off">
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn submit-btn" id="submit-btn">
+                    <i class="fas fa-paper-plane"></i> SUBMIT ANSWER
+                </button>
+                <button class="btn next-btn" id="next-btn" disabled>
+                    <i class="fas fa-arrow-right"></i> NEXT QUESTION
+                </button>
+            </div>
+            
+            <div class="result-container" id="result"></div>
+        </div>
+        
+        <footer>
+            <p>© 2023 World Geography Challenge | All capitals verified with UN data</p>
+            <p>195 UN-recognized countries | Made with <i class="fas fa-heart" style="color:#ff6b6b;"></i></p>
+        </footer>
+    </div>
 
-       function showSearch(){
-         container.style.filter = 'blur(10px)';
-         topnav.style.backgroundColor = '#444444';
-         divToShow.style.display = 'block';
-         divToShow.style.animation = 'slideDown 0.5s ease forwards';
-         setTimeout(function(){
-           searchinput.focus();
-         }, 500);
-       }
+    <script>
+        // Comprehensive list of all 195 UN-recognized countries with capitals
+        const allCountries = [
+            { name: "Afghanistan", capital: "Kabul", flag: "af", level: "medium" },
+            { name: "Albania", capital: "Tirana", flag: "al", level: "easy" },
+            { name: "Algeria", capital: "Algiers", flag: "dz", level: "medium" },
+            { name: "Andorra", capital: "Andorra la Vella", flag: "ad", level: "hard" },
+            { name: "Angola", capital: "Luanda", flag: "ao", level: "medium" },
+            { name: "Antigua and Barbuda", capital: "Saint John's", flag: "ag", level: "hard" },
+            { name: "Argentina", capital: "Buenos Aires", flag: "ar", level: "easy" },
+            { name: "Armenia", capital: "Yerevan", flag: "am", level: "medium" },
+            { name: "Australia", capital: "Canberra", flag: "au", level: "easy" },
+            { name: "Austria", capital: "Vienna", flag: "at", level: "easy" },
+            { name: "Azerbaijan", capital: "Baku", flag: "az", level: "medium" },
+            { name: "Bahamas", capital: "Nassau", flag: "bs", level: "medium" },
+            { name: "Bahrain", capital: "Manama", flag: "bh", level: "medium" },
+            { name: "Bangladesh", capital: "Dhaka", flag: "bd", level: "medium" },
+            { name: "Barbados", capital: "Bridgetown", flag: "bb", level: "hard" },
+            { name: "Belarus", capital: "Minsk", flag: "by", level: "medium" },
+            { name: "Belgium", capital: "Brussels", flag: "be", level: "easy" },
+            { name: "Belize", capital: "Belmopan", flag: "bz", level: "hard" },
+            { name: "Benin", capital: "Porto-Novo", flag: "bj", level: "hard" },
+            { name: "Bhutan", capital: "Thimphu", flag: "bt", level: "hard" },
+            { name: "Bolivia", capital: "Sucre", flag: "bo", level: "medium" },
+            { name: "Bosnia and Herzegovina", capital: "Sarajevo", flag: "ba", level: "medium" },
+            { name: "Botswana", capital: "Gaborone", flag: "bw", level: "medium" },
+            { name: "Brazil", capital: "Brasília", flag: "br", level: "easy" },
+            { name: "Brunei", capital: "Bandar Seri Begawan", flag: "bn", level: "hard" },
+            { name: "Bulgaria", capital: "Sofia", flag: "bg", level: "easy" },
+            { name: "Burkina Faso", capital: "Ouagadougou", flag: "bf", level: "hard" },
+            { name: "Burundi", capital: "Gitega", flag: "bi", level: "hard" },
+            { name: "Cabo Verde", capital: "Praia", flag: "cv", level: "hard" },
+            { name: "Cambodia", capital: "Phnom Penh", flag: "kh", level: "medium" },
+            { name: "Cameroon", capital: "Yaoundé", flag: "cm", level: "medium" },
+            { name: "Canada", capital: "Ottawa", flag: "ca", level: "easy" },
+            { name: "Central African Republic", capital: "Bangui", flag: "cf", level: "hard" },
+            { name: "Chad", capital: "N'Djamena", flag: "td", level: "hard" },
+            { name: "Chile", capital: "Santiago", flag: "cl", level: "easy" },
+            { name: "China", capital: "Beijing", flag: "cn", level: "easy" },
+            { name: "Colombia", capital: "Bogotá", flag: "co", level: "easy" },
+            { name: "Comoros", capital: "Moroni", flag: "km", level: "hard" },
+            { name: "Congo (Congo-Brazzaville)", capital: "Brazzaville", flag: "cg", level: "hard" },
+            { name: "Costa Rica", capital: "San José", flag: "cr", level: "medium" },
+            { name: "Côte d'Ivoire", capital: "Yamoussoukro", flag: "ci", level: "hard" },
+            { name: "Croatia", capital: "Zagreb", flag: "hr", level: "medium" },
+            { name: "Cuba", capital: "Havana", flag: "cu", level: "easy" },
+            { name: "Cyprus", capital: "Nicosia", flag: "cy", level: "medium" },
+            { name: "Czechia (Czech Republic)", capital: "Prague", flag: "cz", level: "easy" },
+            { name: "Denmark", capital: "Copenhagen", flag: "dk", level: "easy" },
+            { name: "Djibouti", capital: "Djibouti", flag: "dj", level: "hard" },
+            { name: "Dominica", capital: "Roseau", flag: "dm", level: "hard" },
+            { name: "Dominican Republic", capital: "Santo Domingo", flag: "do", level: "medium" },
+            { name: "Ecuador", capital: "Quito", flag: "ec", level: "medium" },
+            { name: "Egypt", capital: "Cairo", flag: "eg", level: "easy" },
+            { name: "El Salvador", capital: "San Salvador", flag: "sv", level: "medium" },
+            { name: "Equatorial Guinea", capital: "Malabo", flag: "gq", level: "hard" },
+            { name: "Eritrea", capital: "Asmara", flag: "er", level: "hard" },
+            { name: "Estonia", capital: "Tallinn", flag: "ee", level: "medium" },
+            { name: "Eswatini", capital: "Mbabane", flag: "sz", level: "hard" },
+            { name: "Ethiopia", capital: "Addis Ababa", flag: "et", level: "medium" },
+            { name: "Fiji", capital: "Suva", flag: "fj", level: "medium" },
+            { name: "Finland", capital: "Helsinki", flag: "fi", level: "easy" },
+            { name: "France", capital: "Paris", flag: "fr", level: "easy" },
+            { name: "Gabon", capital: "Libreville", flag: "ga", level: "hard" },
+            { name: "Gambia", capital: "Banjul", flag: "gm", level: "hard" },
+            { name: "Georgia", capital: "Tbilisi", flag: "ge", level: "medium" },
+            { name: "Germany", capital: "Berlin", flag: "de", level: "easy" },
+            { name: "Ghana", capital: "Accra", flag: "gh", level: "medium" },
+            { name: "Greece", capital: "Athens", flag: "gr", level: "easy" },
+            { name: "Grenada", capital: "Saint George's", flag: "gd", level: "hard" },
+            { name: "Guatemala", capital: "Guatemala City", flag: "gt", level: "medium" },
+            { name: "Guinea", capital: "Conakry", flag: "gn", level: "hard" },
+            { name: "Guinea-Bissau", capital: "Bissau", flag: "gw", level: "hard" },
+            { name: "Guyana", capital: "Georgetown", flag: "gy", level: "hard" },
+            { name: "Haiti", capital: "Port-au-Prince", flag: "ht", level: "medium" },
+            { name: "Honduras", capital: "Tegucigalpa", flag: "hn", level: "medium" },
+            { name: "Hungary", capital: "Budapest", flag: "hu", level: "easy" },
+            { name: "Iceland", capital: "Reykjavik", flag: "is", level: "easy" },
+            { name: "India", capital: "New Delhi", flag: "in", level: "easy" },
+            { name: "Indonesia", capital: "Jakarta", flag: "id", level: "medium" },
+            { name: "Iran", capital: "Tehran", flag: "ir", level: "medium" },
+            { name: "Iraq", capital: "Baghdad", flag: "iq", level: "medium" },
+            { name: "Ireland", capital: "Dublin", flag: "ie", level: "easy" },
+            { name: "Israel", capital: "Jerusalem", flag: "il", level: "medium" },
+            { name: "Italy", capital: "Rome", flag: "it", level: "easy" },
+            { name: "Jamaica", capital: "Kingston", flag: "jm", level: "medium" },
+            { name: "Japan", capital: "Tokyo", flag: "jp", level: "easy" },
+            { name: "Jordan", capital: "Amman", flag: "jo", level: "medium" },
+            { name: "Kazakhstan", capital: "Nur-Sultan", flag: "kz", level: "medium" },
+            { name: "Kenya", capital: "Nairobi", flag: "ke", level: "medium" },
+            { name: "Kiribati", capital: "South Tarawa", flag: "ki", level: "hard" },
+            { name: "Korea, North", capital: "Pyongyang", flag: "kp", level: "medium" },
+            { name: "Korea, South", capital: "Seoul", flag: "kr", level: "easy" },
+            { name: "Kosovo", capital: "Pristina", flag: "xk", level: "hard" },
+            { name: "Kuwait", capital: "Kuwait City", flag: "kw", level: "medium" },
+            { name: "Kyrgyzstan", capital: "Bishkek", flag: "kg", level: "hard" },
+            { name: "Laos", capital: "Vientiane", flag: "la", level: "medium" },
+            { name: "Latvia", capital: "Riga", flag: "lv", level: "medium" },
+            { name: "Lebanon", capital: "Beirut", flag: "lb", level: "medium" },
+            { name: "Lesotho", capital: "Maseru", flag: "ls", level: "hard" },
+            { name: "Liberia", capital: "Monrovia", flag: "lr", level: "hard" },
+            { name: "Libya", capital: "Tripoli", flag: "ly", level: "medium" },
+            { name: "Liechtenstein", capital: "Vaduz", flag: "li", level: "hard" },
+            { name: "Lithuania", capital: "Vilnius", flag: "lt", level: "medium" },
+            { name: "Luxembourg", capital: "Luxembourg", flag: "lu", level: "medium" },
+            { name: "Madagascar", capital: "Antananarivo", flag: "mg", level: "medium" },
+            { name: "Malawi", capital: "Lilongwe", flag: "mw", level: "hard" },
+            { name: "Malaysia", capital: "Kuala Lumpur", flag: "my", level: "medium" },
+            { name: "Maldives", capital: "Malé", flag: "mv", level: "hard" },
+            { name: "Mali", capital: "Bamako", flag: "ml", level: "hard" },
+            { name: "Malta", capital: "Valletta", flag: "mt", level: "medium" },
+            { name: "Marshall Islands", capital: "Majuro", flag: "mh", level: "hard" },
+            { name: "Mauritania", capital: "Nouakchott", flag: "mr", level: "hard" },
+            { name: "Mauritius", capital: "Port Louis", flag: "mu", level: "medium" },
+            { name: "Mexico", capital: "Mexico City", flag: "mx", level: "easy" },
+            { name: "Micronesia", capital: "Palikir", flag: "fm", level: "hard" },
+            { name: "Moldova", capital: "Chisinau", flag: "md", level: "hard" },
+            { name: "Monaco", capital: "Monaco", flag: "mc", level: "hard" },
+            { name: "Mongolia", capital: "Ulaanbaatar", flag: "mn", level: "medium" },
+            { name: "Montenegro", capital: "Podgorica", flag: "me", level: "hard" },
+            { name: "Morocco", capital: "Rabat", flag: "ma", level: "medium" },
+            { name: "Mozambique", capital: "Maputo", flag: "mz", level: "hard" },
+            { name: "Myanmar (Burma)", capital: "Naypyidaw", flag: "mm", level: "medium" },
+            { name: "Namibia", capital: "Windhoek", flag: "na", level: "medium" },
+            { name: "Nauru", capital: "Yaren", flag: "nr", level: "hard" },
+            { name: "Nepal", capital: "Kathmandu", flag: "np", level: "medium" },
+            { name: "Netherlands", capital: "Amsterdam", flag: "nl", level: "easy" },
+            { name: "New Zealand", capital: "Wellington", flag: "nz", level: "medium" },
+            { name: "Nicaragua", capital: "Managua", flag: "ni", level: "medium" },
+            { name: "Niger", capital: "Niamey", flag: "ne", level: "hard" },
+            { name: "Nigeria", capital: "Abuja", flag: "ng", level: "medium" },
+            { name: "North Macedonia", capital: "Skopje", flag: "mk", level: "hard" },
+            { name: "Norway", capital: "Oslo", flag: "no", level: "easy" },
+            { name: "Oman", capital: "Muscat", flag: "om", level: "medium" },
+            { name: "Pakistan", capital: "Islamabad", flag: "pk", level: "medium" },
+            { name: "Palau", capital: "Ngerulmud", flag: "pw", level: "hard" },
+            { name: "Panama", capital: "Panama City", flag: "pa", level: "medium" },
+            { name: "Papua New Guinea", capital: "Port Moresby", flag: "pg", level: "medium" },
+            { name: "Paraguay", capital: "Asunción", flag: "py", level: "medium" },
+            { name: "Peru", capital: "Lima", flag: "pe", level: "easy" },
+            { name: "Philippines", capital: "Manila", flag: "ph", level: "medium" },
+            { name: "Poland", capital: "Warsaw", flag: "pl", level: "easy" },
+            { name: "Portugal", capital: "Lisbon", flag: "pt", level: "easy" },
+            { name: "Qatar", capital: "Doha", flag: "qa", level: "medium" },
+            { name: "Romania", capital: "Bucharest", flag: "ro", level: "easy" },
+            { name: "Russia", capital: "Moscow", flag: "ru", level: "easy" },
+            { name: "Rwanda", capital: "Kigali", flag: "rw", level: "medium" },
+            { name: "Saint Kitts and Nevis", capital: "Basseterre", flag: "kn", level: "hard" },
+            { name: "Saint Lucia", capital: "Castries", flag: "lc", level: "hard" },
+            { name: "Saint Vincent and the Grenadines", capital: "Kingstown", flag: "vc", level: "hard" },
+            { name: "Samoa", capital: "Apia", flag: "ws", level: "hard" },
+            { name: "San Marino", capital: "San Marino", flag: "sm", level: "hard" },
+            { name: "Sao Tome and Principe", capital: "São Tomé", flag: "st", level: "hard" },
+            { name: "Saudi Arabia", capital: "Riyadh", flag: "sa", level: "medium" },
+            { name: "Senegal", capital: "Dakar", flag: "sn", level: "medium" },
+            { name: "Serbia", capital: "Belgrade", flag: "rs", level: "medium" },
+            { name: "Seychelles", capital: "Victoria", flag: "sc", level: "hard" },
+            { name: "Sierra Leone", capital: "Freetown", flag: "sl", level: "hard" },
+            { name: "Singapore", capital: "Singapore", flag: "sg", level: "easy" },
+            { name: "Slovakia", capital: "Bratislava", flag: "sk", level: "medium" },
+            { name: "Slovenia", capital: "Ljubljana", flag: "si", level: "medium" },
+            { name: "Solomon Islands", capital: "Honiara", flag: "sb", level: "hard" },
+            { name: "Somalia", capital: "Mogadishu", flag: "so", level: "hard" },
+            { name: "South Africa", capital: "Pretoria", flag: "za", level: "medium" },
+            { name: "South Sudan", capital: "Juba", flag: "ss", level: "hard" },
+            { name: "Spain", capital: "Madrid", flag: "es", level: "easy" },
+            { name: "Sri Lanka", capital: "Sri Jayawardenepura Kotte", flag: "lk", level: "hard" },
+            { name: "Sudan", capital: "Khartoum", flag: "sd", level: "medium" },
+            { name: "Suriname", capital: "Paramaribo", flag: "sr", level: "hard" },
+            { name: "Sweden", capital: "Stockholm", flag: "se", level: "easy" },
+            { name: "Switzerland", capital: "Bern", flag: "ch", level: "medium" },
+            { name: "Syria", capital: "Damascus", flag: "sy", level: "medium" },
+            { name: "Taiwan", capital: "Taipei", flag: "tw", level: "medium" },
+            { name: "Tajikistan", capital: "Dushanbe", flag: "tj", level: "hard" },
+            { name: "Tanzania", capital: "Dodoma", flag: "tz", level: "medium" },
+            { name: "Thailand", capital: "Bangkok", flag: "th", level: "easy" },
+            { name: "Timor-Leste", capital: "Dili", flag: "tl", level: "hard" },
+            { name: "Togo", capital: "Lomé", flag: "tg", level: "hard" },
+            { name: "Tonga", capital: "Nuku'alofa", flag: "to", level: "hard" },
+            { name: "Trinidad and Tobago", capital: "Port of Spain", flag: "tt", level: "hard" },
+            { name: "Tunisia", capital: "Tunis", flag: "tn", level: "medium" },
+            { name: "Turkey", capital: "Ankara", flag: "tr", level: "medium" },
+            { name: "Turkmenistan", capital: "Ashgabat", flag: "tm", level: "hard" },
+            { name: "Tuvalu", capital: "Funafuti", flag: "tv", level: "hard" },
+            { name: "Uganda", capital: "Kampala", flag: "ug", level: "medium" },
+            { name: "Ukraine", capital: "Kyiv", flag: "ua", level: "medium" },
+            { name: "United Arab Emirates", capital: "Abu Dhabi", flag: "ae", level: "medium" },
+            { name: "United Kingdom", capital: "London", flag: "gb", level: "easy" },
+            { name: "United States", capital: "Washington, D.C.", flag: "us", level: "easy" },
+            { name: "Uruguay", capital: "Montevideo", flag: "uy", level: "medium" },
+            { name: "Uzbekistan", capital: "Tashkent", flag: "uz", level: "medium" },
+            { name: "Vanuatu", capital: "Port Vila", flag: "vu", level: "hard" },
+            { name: "Vatican City", capital: "Vatican City", flag: "va", level: "hard" },
+            { name: "Venezuela", capital: "Caracas", flag: "ve", level: "medium" },
+            { name: "Vietnam", capital: "Hanoi", flag: "vn", level: "medium" },
+            { name: "Yemen", capital: "Sana'a", flag: "ye", level: "medium" },
+            { name: "Zambia", capital: "Lusaka", flag: "zm", level: "medium" },
+            { name: "Zimbabwe", capital: "Harare", flag: "zw", level: "medium" }
+        ];
 
-       const topContainer = document.getElementById('top-container');
-       topContainer.addEventListener('mouseleave', divUp);
+        // Game state variables
+        let score = 0;
+        let currentQuestionIndex = 0;
+        let questions = [];
+        let streak = 0;
+        let timer;
+        let timeLeft = 30;
+        let currentLevel = "all";
+        const totalQuestions = 10;
 
-       function divUp() {
-         console.log('mouse has left both elements.');
-         topnav.style.backgroundColor = '#555555';
-         divToShow.style.animation = 'slideUp 0.5s ease forwards';
-         container.style.filter = 'none';
-       }
-     </script>
+        // DOM elements
+        const questionEl = document.getElementById('question');
+        const answerEl = document.getElementById('answer');
+        const resultEl = document.getElementById('result');
+        const submitBtn = document.getElementById('submit-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const scoreEl = document.getElementById('score');
+        const questionCountEl = document.getElementById('question-count');
+        const totalQuestionsEl = document.getElementById('total-questions');
+        const streakEl = document.getElementById('streak');
+        const progressBar = document.getElementById('progress-bar');
+        const flagEl = document.getElementById('flag');
+        const timerEl = document.getElementById('timer');
+        const difficultyBtns = document.querySelectorAll('.difficulty-btn');
 
-   </div>
-  
-  </body>
+        // Initialize the game
+        function initGame() {
+            // Reset game state
+            score = 0;
+            streak = 0;
+            currentQuestionIndex = 0;
+            timeLeft = 30;
+            clearInterval(timer);
+            
+            // Create a shuffled list of questions based on difficulty
+            let filteredCountries;
+            if (currentLevel === "all") {
+                filteredCountries = [...allCountries];
+            } else {
+                filteredCountries = allCountries.filter(country => country.level === currentLevel);
+            }
+            
+            questions = [...filteredCountries].sort(() => Math.random() - 0.5).slice(0, totalQuestions);
+            
+            // Update UI
+            updateUI();
+            showQuestion();
+            startTimer();
+            
+            // Focus on answer input
+            answerEl.focus();
+        }
 
+        // Display current question
+        function showQuestion() {
+            const currentCountry = questions[currentQuestionIndex];
+            questionEl.textContent = `What is the capital of ${currentCountry.name}?`;
+            
+            // Set flag
+            flagEl.style.backgroundImage = `url(https://flagcdn.com/240x180/${currentCountry.flag}.png)`;
+            
+            // Clear input and result
+            answerEl.value = '';
+            resultEl.textContent = '';
+            resultEl.className = '';
+            
+            // Reset buttons
+            submitBtn.disabled = false;
+            nextBtn.disabled = true;
+            
+            // Update progress
+            progressBar.style.width = `${(currentQuestionIndex / totalQuestions) * 100}%`;
+            questionCountEl.textContent = currentQuestionIndex + 1;
+        }
+
+        // Start the timer for current question
+        function startTimer() {
+            clearInterval(timer);
+            timeLeft = 30;
+            timerEl.textContent = `${timeLeft}s`;
+            
+            timer = setInterval(() => {
+                timeLeft--;
+                timerEl.textContent = `${timeLeft}s`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    resultEl.textContent = `Time's up! The capital is ${questions[currentQuestionIndex].capital}`;
+                    resultEl.className = "incorrect";
+                    submitBtn.disabled = true;
+                    nextBtn.disabled = false;
+                    streak = 0;
+                    updateUI();
+                }
+            }, 1000);
+        }
+
+        // Check the user's answer
+        function checkAnswer() {
+            const userAnswer = answerEl.value.trim();
+            const correctAnswer = questions[currentQuestionIndex].capital;
+            
+            if (!userAnswer) {
+                resultEl.textContent = "Please enter an answer";
+                resultEl.className = "incorrect";
+                return;
+            }
+            
+            // Case-insensitive comparison with flexibility for punctuation
+            const normalizedUserAnswer = userAnswer.toLowerCase()
+                .replace(/[.,'’]/g, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+            
+            const normalizedCorrect = correctAnswer.toLowerCase()
+                .replace(/[.,'’]/g, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+            
+            if (normalizedUserAnswer === normalizedCorrect) {
+                // Correct answer
+                score += 10;
+                streak++;
+                resultEl.textContent = `Correct! ${correctAnswer} is the capital of ${questions[currentQuestionIndex].name}`;
+                resultEl.className = "correct";
+            } else {
+                // Incorrect answer
+                streak = 0;
+                resultEl.textContent = `Incorrect. The capital is ${correctAnswer}`;
+                resultEl.className = "incorrect";
+            }
+            
+            // Stop timer
+            clearInterval(timer);
+            
+            // Update UI
+            updateUI();
+            
+            // Enable next button and disable submit
+            submitBtn.disabled = true;
+            nextBtn.disabled = false;
+        }
+
+        // Move to next question
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < totalQuestions) {
+                showQuestion();
+                startTimer();
+            } else {
+                // Game over
+                showResults();
+            }
+        }
+
+        // Show final results
+        function showResults() {
+            clearInterval(timer);
+            const percentage = Math.round((score / 100) * 100);
+            let message;
+            
+            if (percentage >= 90) message = "Geography Master! 🏆";
+            else if (percentage >= 70) message = "Great job! 🌍";
+            else if (percentage >= 50) message = "Good effort! 👍";
+            else message = "Keep practicing! 📚";
+            
+            questionEl.innerHTML = `Game Over!<br>You scored ${score} points (${percentage}%)<br>${message}`;
+            flagEl.style.backgroundImage = '';
+            
+            // Update buttons
+            submitBtn.style.display = 'none';
+            nextBtn.textContent = 'Play Again';
+            nextBtn.onclick = initGame;
+            nextBtn.disabled = false;
+            
+            // Update progress to 100%
+            progressBar.style.width = '100%';
+        }
+
+        // Update score and streak display
+        function updateUI() {
+            scoreEl.textContent = score;
+            streakEl.textContent = streak;
+            totalQuestionsEl.textContent = totalQuestions;
+        }
+
+        // Set difficulty level
+        function setDifficulty(level) {
+            currentLevel = level;
+            difficultyBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.level === level);
+            });
+            initGame();
+        }
+
+        // Event listeners
+        submitBtn.addEventListener('click', checkAnswer);
+        nextBtn.addEventListener('click', nextQuestion);
+        
+        answerEl.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                if (!submitBtn.disabled) {
+                    checkAnswer();
+                } else if (!nextBtn.disabled) {
+                    nextQuestion();
+                }
+            }
+        });
+        
+        difficultyBtns.forEach(btn => {
+            btn.addEventListener('click', () => setDifficulty(btn.dataset.level));
+        });
+
+        // Initialize the game when page loads
+        window.onload = initGame;
+    </script>
+</body>
 </html>

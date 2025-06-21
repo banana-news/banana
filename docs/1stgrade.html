@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-HKCZYS11HC');
 </script>
     <meta charset="UTF-8">
@@ -22,170 +21,491 @@
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="shortcut icon" href="images/logosvg.svg">
     <link rel="icon" href="images/logosvg.svg">
-    <title>First grade maths - Banana News</title>
+    <title>First Grade Maths - Banana News</title>
     <style>
+        /* Core styles from original page */
         #clickmessage{border-radius:10px;background-color:white;padding:20px;position:fixed;top:0;right:0;z-index:2000;}
-              #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
-              #closeButton:hover{background-color: grey;}
-            
-    #number-line {
-        position: relative;
-        width: 100%;
-        height: 50px;
-        border-top: 2px solid black;
-    }
-    .tick {
-        position: absolute;
-        height: 20px;
-        border-left: 2px solid black;
-        bottom: 0;
-    }
-    .label {
-        position: absolute;
-        bottom: -20px;
-        transform: translateX(-50%);
-        color: black;
-    }
-    p {
-
-font-style: normal;
-
-
-    }
-
-              .checkbutton{background-color: blue;}
-              .skipbutton{background-color: #00000000;border:none;text-decoration: underline;color: grey;padding: 0;}
-              .progressbar{border-radius:50%;width:100%;height:40px; background-color: grey;overflow: hidden;}
-              .q1progress, .q2progress, .q3progress{border-right: 2px solid black;background-color: grey;width: 33%;float:left;position: relative;}
-              .test-notification{position: fixed;bottom: 20px;right: 20px;padding: 15px;font-size: 50px;color: white;font-family: 'Open Sans', sans-serif;display: none;}
-              @keyframes show-notification{
-                0%{display:none;visibility: hidden;}
-                1%{display:block;visibility: visible;}
-                99%{display:block;visibility: visible;}
-                100%{display:none;visibility: hidden;}
-              }
-.answer{display:none;}
+        #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
+        #closeButton:hover{background-color: grey;}
+        .answer{display:none;}
+        .checkbutton{background-color: blue;}
+        .skipbutton{background-color: #00000000;border:none;text-decoration: underline;color: grey;padding: 0;}
+        .progressbar{border-radius:50%;width:100%;height:40px; background-color: grey;overflow: hidden;}
+        .q1progress, .q2progress, .q3progress{border-right: 2px solid black;background-color: grey;width: 33%;float:left;position: relative;}
+        .test-notification{position: fixed;bottom: 20px;right: 20px;padding: 15px;font-size: 50px;color: white;font-family: 'Open Sans', sans-serif;display: none;}
+        @keyframes show-notification{
+            0%{display:none;visibility: hidden;}
+            1%{display:block;visibility: visible;}
+            99%{display:block;visibility: visible;}
+            100%{display:none;visibility: hidden;}
+        }
+        
+        /* New styles for 1st grade content */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .topnav {
+            background-color: #4a86e8;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: #3d70c0;
+        }
+        .topnav .icon {
+            display: none;
+        }
+        #container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e67e22;
+            text-align: center;
+            font-family: 'Comfortaa', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+        h3 {
+            color: #2c3e50;
+            font-family: 'Lato', sans-serif;
+        }
+        .newsdiv {
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid #3498db;
+        }
+        .math-concept {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .practice-box {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .practice-question {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+        }
+        .reveal-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .reveal-button:hover {
+            background-color: #2980b9;
+        }
+        .interactive-area {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .counter-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 15px;
+        }
+        .counter-value {
+            font-size: 24px;
+            font-weight: bold;
+            min-width: 50px;
+            text-align: center;
+        }
+        .fraction-viz {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .fraction-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #f1c40f;
+            position: relative;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+        .fraction-part {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 50%, 100% 50%, 100% 0%, 0% 0%, 0% 100%, 100% 100%);
+            background-color: #e67e22;
+            transform-origin: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-family: 'Roboto', sans-serif;
+            border-top: 1px solid #ecf0f1;
+        }
+        
+        /* Number line styling */
+        #number-line {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-top: 2px solid #3498db;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .tick {
+            position: absolute;
+            height: 20px;
+            border-left: 2px solid #3498db;
+            bottom: 0;
+        }
+        .label {
+            position: absolute;
+            bottom: -20px;
+            transform: translateX(-50%);
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            #container {
+                padding: 15px;
+                margin: 10px;
+            }
+            .newsdiv {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* New interactive elements */
+        .number-block {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .skip-counting {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .ball-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .ball {
+            width: 30px;
+            height: 30px;
+            background-color: #e67e22;
+            border-radius: 50%;
+            margin: 5px;
+            display: inline-block;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            font-size: 32px;
+            margin-right: 15px;
+            color: #3498db;
+        }
     </style>
 </head>
 <body>
     <div id="top-container">
-
         <div class="topnav" id="myTopnav">
-         
-         <a href="index.html">Home</a>
-         <a href="news.html" >News</a><a href="games.html">Fun</a>
-         <a href="tech.html">Tech</a>
-         <a href="politics.html">Politics</a>
-         <a href="maths.html">Maths</a>
-         <a href="geography.html">Geography</a>  <a href="contributors.html">Contributors</a>
-           
-           
-             <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i>
-             </button>
-           
-           
-           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-             <i class="fa fa-bars stripped"></i>
-           </a>
-         </div>
-         <div id="div-to-show">
-           <input placeholder="search banana-news.github.io" id="searchbar">
-           <p class="label">Quick links</p>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="games.html">Fun</a>
+            <a href="tech.html">Tech</a>
+            <a href="politics.html">Politics</a>
+            <a href="maths.html">Maths</a>
+            <a href="geography.html">Geography</a>
+            <a href="contributors.html">Contributors</a>
+            <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars stripped"></i>
+            </a>
+        </div>
+        <div id="div-to-show">
+            <input placeholder="search banana-news.github.io" id="searchbar">
+            <p class="label">Quick links</p>
             <ul>
-            <a class="not-und" href="index.html"><li class="quick">&rightarrow;&nbsp;Home</li></a><a  class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a>
-            <a class="not-und" href="games.html"><li class="quick">&rightarrow;&nbsp;Fun</li></a>
-            <a  class="not-und" href="tech.html"><li class="quick">&rightarrow;&nbsp;Tech</li></a>
+                <a class="not-und" href="index.html"><li class="quick">&rightarrow;&nbsp;Home</li></a>
+                <a class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a>
+                <a class="not-und" href="games.html"><li class="quick">&rightarrow;&nbsp;Fun</li></a>
+                <a class="not-und" href="tech.html"><li class="quick">&rightarrow;&nbsp;Tech</li></a>
             </ul>
-         </div></div>
-     </div>
-     <div id="container">
-   <br> <h1>First grade maths</h1>
-    <br><button onclick="window.location.href='中文1stgrade.html'">中文</button><br>
-    <div class="newsdiv">
-        <h2>Lesson one: Number Lines</h2>
-        <br>
-        <div id="number-line"></div>
-        <br>
-        <p>This is a number line. It goes from -10 to 10. Notice that when we are going to the right, every time we go over a gap, our number gets bigger by one. The opposite is true when we are going to the left.</p>
-        <p>Now let's try out some practice questions. How much bigger is 10 compared to 3?</p>
-        <h2 class="answer">It's 7 bigger, because you have to go over seven gaps from 3 to get to 10 while going to the right!</h2>
-        <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
-        <br>
-        <p>How much smaller is 5 compared to 8?</p>
-        <h2 class="answer">It's 3 smaller, because you have to go over 3 gaps from 8 to get to 5 while going to the left!</h2>
-        <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
-        <p>The questions we did were about finding the difference between numbers, which is also called subtraction. Let's start doing some slightly different questions!</p>
-        <p>If you start at 3, and you go over 4 gaps while going to the right, what number do you get to?</p>
-        <h2 class="answer">You get to 7!</h2>
-        <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
-        <br>
-        <p>What we just did there is finding two values combined together! This is also called addition.</p>
+        </div>
     </div>
-    <br><br><br><br><br>
-    <div class="newsdiv">
-        <h2>Understanding addition and subtraction</h2>
-        <h3 style="font-style: normal;">Remember how we did our number lines? This is an extension of that knowledge!</h3>
-        <p>We will write addition and subtraction the normal way now. For instance, starting at 3 and going over 4 gaps while going to the right and getting 7 is written as 3+4=7. Finding the difference of 10 and 3 and getting 7 is written as 10-3=7. The difference is just how much bigger or smaller a number is compared to another number. For example: How much bigger is 3 than 1? Can be written as: What is 3-1? You can also understand it like this: Subtraction is like starting with the 1st number and going a certain amount of gaps to the left. That amount is the second number. And what you get is the third number, the number which is to the right of the two-line symbol, the equals sign. But if the first number is <i>smaller</i> than the second one, then we would have to use the negative sign. For instance, 3-10=-7. The negative sign is really just a little line. See those numbers to the left of 0? Those are negative numbers. -7, for instance, means the number that is 7 less than 0.</p>
-        <h3>Let's do some practice now! What is 3+6? What is 2+3? Here's a hard one! What's -3-4?</h3>
-        <p class="answer">The answers are: 9, 5, and -7!</p>
-        <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+    
+    <div id="container">
+        <h1>First Grade Mathematics</h1>
+        <p style="text-align: center; font-style: italic; color: #7f8c8d;">Building a strong foundation in math skills</p>
+        <button onclick="window.location.href='中文1stgrade.html'" style="margin: 0 auto; display: block; background-color: #e67e22; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">中文</button>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">➗</div>
+                <h2>Lesson one: Number Lines</h2>
+            </div>
+            <div id="number-line"></div>
+            <p>This is a number line. It goes from -10 to 10. Notice that when we are going to the right, every time we go over a gap, our number gets bigger by one. The opposite is true when we are going to the left.</p>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>How much bigger is 10 compared to 3?</p>
+                    <p class="answer">It's 7 bigger, because you have to go over seven gaps from 3 to get to 10 while going to the right!</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>How much smaller is 5 compared to 8?</p>
+                    <p class="answer">It's 3 smaller, because you have to go over 3 gaps from 8 to get to 5 while going to the left!</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>If you start at 3, and you go over 4 gaps while going to the right, what number do you get to?</p>
+                    <p class="answer">You get to 7!</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+            
+            <p>The questions we did were about finding the difference between numbers, which is also called subtraction. What we just did there is finding two values combined together! This is also called addition.</p>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">➕</div>
+                <h2>Understanding Addition and Subtraction</h2>
+            </div>
+            <div class="math-concept">
+                <h3>Building on Number Lines</h3>
+                <p>We will write addition and subtraction the normal way now. For instance, starting at 3 and going over 4 gaps while going to the right and getting 7 is written as 3+4=7. Finding the difference of 10 and 3 and getting 7 is written as 10-3=7.</p>
+                <p>The difference is just how much bigger or smaller a number is compared to another number. For example: How much bigger is 3 than 1? Can be written as: What is 3-1? You can also understand it like this: Subtraction is like starting with the 1st number and going a certain amount of gaps to the left.</p>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Practice Now!</h3>
+                <div class="counter">
+                    <button class="counter-btn" onclick="changeValue(-1)">-</button>
+                    <div class="counter-value" id="counterValue">0</div>
+                    <button class="counter-btn" onclick="changeValue(1)">+</button>
+                </div>
+                <p>Try these calculations: 3+6, 2+3, -3-4</p>
+            </div>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>What is 3+6? What is 2+3? What's -3-4?</p>
+                    <p class="answer">The answers are: 9, 5, and -7!</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">🔢</div>
+                <h2>Understanding Bigger Numbers</h2>
+            </div>
+            <div class="math-concept">
+                <h3>Place Value Concepts</h3>
+                <p>Let's understand some bigger numbers! First of all, let's understand the tens digit. We write ten as '10'. In a number with 2 numbers, the first number represents how many tens there are in the number, and the second represents how many ones there are. In a one-digit number there is only the digit that represents how many ones there are.</p>
+            </div>
+            
+            <div class="skip-counting">
+                <div class="number-block">10</div>
+                <div class="number-block">20</div>
+                <div class="number-block">30</div>
+                <div class="number-block">40</div>
+                <div class="number-block">50</div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">➖</div>
+                <h2>Addition and Subtraction with 2-Digit Numbers</h2>
+            </div>
+            <div class="math-concept">
+                <h3>No Carrying Needed</h3>
+                <p>Now that we understand bigger numbers, let's use them to do simple addition and subtraction!</p>
+                <p>Let's first explain 55-5. When we are subtracting a two-digit number by a single-digit number without carrying, we subtract the digits that represent how many ones there are. That is our new ones digit, and we keep our old digit that represents how many tens there are in a number. So, 55-5=50.</p>
+                <p>Now, let's explain 55+4. You do the same thing with adding a 2-digit number with a single-digit number without carrying but you add the ones digits instead of subtracting them. So, 55+4=59.</p>
+            </div>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>What's 45-4?</p>
+                    <p class="answer">41</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>What's 36-3?</p>
+                    <p class="answer">33</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>What's 53+3?</p>
+                    <p class="answer">56</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">↗️</div>
+                <h2>Skip Counting on Number Lines</h2>
+            </div>
+            <div class="math-concept">
+                <h3>Patterns in Numbers</h3>
+                <p>Skip counting is... you guessed it! Skipping numbers on a number line. For instance, counting by twos is skipping one number every time you count. For example, instead of counting 1,2,3... you would count 2,4,6... because you would skip the '1' on your first count!</p>
+            </div>
+            
+            <div class="skip-counting">
+                <div class="number-block">2</div>
+                <div class="number-block">4</div>
+                <div class="number-block">6</div>
+                <div class="number-block">8</div>
+                <div class="number-block">10</div>
+            </div>
+            
+            <p>Counting by threes is like counting 3,6,9... because you skip two numbers every time you count. Now, can you guess how we count by 4? 5? 10?</p>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">½</div>
+                <h2>Halves</h2>
+            </div>
+            <p>Halving something is splitting something into 2 equal parts.</p>
+            
+            <div class="fraction-viz">
+                <div>
+                    <div class="fraction-circle" id="halfCircle">
+                        <div class="fraction-part" style="transform: rotate(180deg);"></div>
+                    </div>
+                    <p>One Half (½)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">👫</div>
+                <h2>Sharing and Grouping</h2>
+            </div>
+            <p>Imagine this: You have 12 colorful balls, and you want to put them into bags. Each group should have 3 balls. Let’s see how many groups we can make! Do this at home. Once you are done, you will also see that 4 bags of 3 balls gets 12 balls in total! Each bag can be represented by a 'group'. So, 4 groups of 3 is 12.</p>
+            
+            <div class="ball-group">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <span style="margin: 0 10px;">+</span>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <span style="margin: 0 10px;">+</span>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <span style="margin: 0 10px;">+</span>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <span style="margin: 0 10px;">= 12</span>
+            </div>
+        </div>
+
+        <footer>&copy; Banana News 2024.</footer>
     </div>
-    <br><br><br><br><br>
-    <div class="newsdiv">
-        <h2>Understanding bigger numbers</h2>
-        <h3>Let's understand some bigger numbers! First of all, let's understand the tens digit. We write ten as '10'. In a number with 2 numbers, the first number represents how many tens there are in the number, and the second represents how many ones there are. In a one-digit number there is only the digit that represents how many ones there are.</h3>
-    </div>
-    <br><br><br><br><br>
-    <div class="newsdiv">
-        <h2>Addition and subtraction with 2-digit numbers plus single-digit numbers (no carrying)</h2>
-        <h3>Now that we understand bigger numbers, let's use them to do simple addition and subtraction!</h3>
-        <p>Let's first explain 55-5. When we are subtracting a two-digit number by a single-digit number without carrying [we will learn that later], we subtract the digits that represent how many ones there are [the ones digits]. That is our new ones digit, and we keep our old digit that represents how many tens there are in a number [the tens digit]. So, 55-5=50. Now, let's explain 55+4. You do the same thing with <i>adding</i> a 2-digit number with a single-digit number without carrying but you add the ones digits instead of subtracting them. So, 55+4=59.<br>Here are some practice questions. What's 45-4? What's 36-3? What's 53+3?</p>
-        <p class="answer">Answers are 41 for Q1, 33 for Q2 and 56 for the third question.</p>
-        <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
-    </div><br><br><br><br><br>
-    <div class="newsdiv">
-      <h2>Skip counting on number lines</h2>
-      <h3>Now that we understand addition and subtraction, let's do something a little different: Skip counting!</h3>
-
-      <p>Skip counting is... you guessed it! Skipping numbers on a number line. For instance, counting by twos is skipping one number every time you count. For example, instead of counting 1,2,3... you would count 2,4,6... because you would skip the '1' on your first count! Counting by threes is like counting 3,6,9... because you skip <i>two</i> numbers every time you count. Now, can you guess how we count by 4? 5? 10?</p>
-  </div><br><br><br><br><br>
-  <div class="newsdiv"><h2>Halves</h2><p>Halving something is splitting something into 2 equal parts.</p></div><br><br><br><br><br>
-  <div class="newsdiv"><h2>Sharing and grouping</h2><p>Imagine this: You have 12 colorful balls, and you want to put them into bags. Each group should have 3 balls. Let’s see how many groups we can make! Do this at home. Once you are done, you will also see that 4 bags of 3 balls gets 12 balls in total! Each bag can be represented by a 'group'. So, 4 groups of 3 is 12.</p></div>
-
-  <footer>&copy; Banana News 2024.</footer>
-  <!--请不要删除这行代码：-->
-  <script src="scripts/main.js"></script>
-  <!---->
-  <!--请不要删除以下代码行-->
-  <script src="scripts/topnav.js"></script>
-  <!---->
-  <script src="scripts/search.js"></script>
-  <script>
-    const searchinput = document.getElementById('searchbar');
-    const divToShow = document.getElementById('div-to-show');
-    const container = document.getElementById('container');
-    const topnav = document.getElementById('myTopnav');
-
-    function showSearch(){
-      container.style.filter = 'blur(10px)';
-      topnav.style.backgroundColor = '#444444';
-      divToShow.style.display = 'block';
-      divToShow.style.animation = 'slideDown 0.5s ease forwards';
-      setTimeout(function(){
-        searchinput.focus();
-      }, 500);
-    }
-
-    const topContainer = document.getElementById('top-container');
-    topContainer.addEventListener('mouseleave', divUp);
-
-    function divUp() {
-      console.log('mouse has left both elements.');
-      topnav.style.backgroundColor = '#555555';
-      divToShow.style.animation = 'slideUp 0.5s ease forwards';
-      container.style.filter = 'none';
-    }
-  </script> <script>
+    
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/topnav.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/news.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/numberline.js"></script>
+    
+    <script>
+        // Function to reveal/hide answers
         function revealAnswer(button) {
             var answer = button.previousElementSibling;
             if (answer.style.display === "none" || answer.style.display === "") {
@@ -196,10 +516,80 @@ font-style: normal;
                 button.textContent = "Reveal Answer";
             }
         }
-    </script>
+        
+        // Counter functionality for the interactive area
+        let counterValue = 0;
+        
+        function changeValue(change) {
+            counterValue += change;
+            if (counterValue < 0) counterValue = 0;
+            document.getElementById('counterValue').textContent = counterValue;
+        }
+        
+        // Function to create number line
+        function createNumberLine() {
+            const numberLine = document.getElementById('number-line');
+            numberLine.innerHTML = ''; // Clear any existing content
+            
+            const min = -10;
+            const max = 10;
+            const width = numberLine.offsetWidth;
+            const range = max - min;
+            const step = width / range;
+            
+            for (let i = min; i <= max; i++) {
+                const tick = document.createElement('div');
+                tick.className = 'tick';
+                const position = ((i - min) / range) * width;
+                tick.style.left = `${position}px`;
+                
+                if (i % 5 === 0 || i === min || i === max) {
+                    const label = document.createElement('div');
+                    label.className = 'label';
+                    label.textContent = i;
+                    label.style.left = `${position}px`;
+                    numberLine.appendChild(label);
+                    
+                    tick.style.height = '30px'; // Make major ticks taller
+                }
+                
+                numberLine.appendChild(tick);
+            }
+        }
+        
+        // Initialize when page loads
+        window.onload = function() {
+            createNumberLine();
+            // Add any other initialization code here
+        };
+        
+        // Search functionality
+        const searchinput = document.getElementById('searchbar');
+        const divToShow = document.getElementById('div-to-show');
+        const container = document.getElementById('container');
+        const topnav = document.getElementById('myTopnav');
 
-</div>
-<script src="scripts/news.js"></script>
+        function showSearch() {
+            container.style.filter = 'blur(10px)';
+            topnav.style.backgroundColor = '#444444';
+            divToShow.style.display = 'block';
+            divToShow.style.animation = 'slideDown 0.5s ease forwards';
+            setTimeout(function() {
+                searchinput.focus();
+            }, 500);
+        }
+
+        const topContainer = document.getElementById('top-container');
+        topContainer.addEventListener('mouseleave', divUp);
+
+        function divUp() {
+            console.log('mouse has left both elements.');
+            topnav.style.backgroundColor = '#555555';
+            divToShow.style.animation = 'slideUp 0.5s ease forwards';
+            container.style.filter = 'none';
+        }
+    </script>
+    <script src="scripts/news.js"></script>
 <script src="scripts/modal.js"></script>
 <script src="scripts/numberline.js"></script>
 </body>

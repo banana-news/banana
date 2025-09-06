@@ -62,9 +62,10 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/news.css">
         <link rel="stylesheet" href="styles/modal.css">
+        <link rel="stylesheet" href="styles/divstyles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!---->
-        <title>Javascript Tutorial - Banana News</title>
+        <title>Science - Banana News</title>
         <link rel="shortcut icon" href="images/logosvg.svg"><link rel="icon" href="images/logosvg.svg">
        
         </a>
@@ -109,12 +110,40 @@
             <br>
            
             <div class="background">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx1eCAFhnUrIUzs3dQTHLMr2LgyfqwPZ7Kfg&s">
-              <h1>Learn Javascript</h1>
+              <img src="https://caltechsites-prod.s3.amazonaws.com/scienceexchange/images/Quantum_Physics-HeaderImage-F.2e16d0ba.fill-933x525-c100.jpg">
+              <h1>SCIENCE</h1>
+              <p>Credit to caltech exchange for the image</p>
             </div>
             
-            <button onclick="window.location.href='中文3.html'">中文</button>
-            <button onclick="window.location.href='spanish2.html'">Español</button>
+<div class="options">
+    <div class="options-div" title="physics.html">
+        <img src="https://astro101.wwu.edu/101/light_spectrum.jpg" height="300" alt="Light waves">
+        <h2>Physics</h2>
+        <p>Learn about everything from matter to light waves!</p>
+        
+    </div>
+    <div class="options-div">
+        <img src="https://cdn.britannica.com/85/78585-050-DF72434D/cells-animal-plant-ways-nucleus-difference-organelles.jpg" height="300" alt="Cells">
+        <h2>Biology</h2>
+        <p>The study of life</p>
+        <p style="color:red">This course is WIP. Please check back later</p>
+    </div>
+    <div class="options-div">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Simple_Periodic_Table_Chart-blocks.svg/1200px-Simple_Periodic_Table_Chart-blocks.svg.png"height="300" alt="periodic table">
+        
+        <h2>Chemistry</h2>
+        <p>Learn about the periodic table!</p>
+        <p style="color:red">This course is WIP. Please check back later</p>
+    </div>
+    <div class="options-div">
+        <img src="https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs43017-019-0017-2/MediaObjects/43017_2019_17_Figa_HTML.png" height="300" alt="the earth">
+        <h2>Earth and Environmental sciences</h2>
+        <p>The earth</p>
+        <p style="color:red">This course is WIP. Please check back later</p>
+    </div>
+</div>
+
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -124,47 +153,47 @@
         
       </div>
     </div>
-<
-    
-     <footer>&copy; Banana News 2024.</footer>
-     <!--请不要删除这行代码：-->
-     <script src="scripts/main.js"></script>
-     <!---->
-     <!--请不要删除以下代码行-->
-     <script src="scripts/topnav.js"></script>
-     <!---->
-     <script src="scripts/search.js"></script>
-     <script>
-       const searchinput = document.getElementById('searchbar');
-       const divToShow = document.getElementById('div-to-show');
-       const container = document.getElementById('container');
-       const topnav = document.getElementById('myTopnav');
 
-       function showSearch(){
-         container.style.filter = 'blur(10px)';
-         topnav.style.backgroundColor = '#444444';
-         divToShow.style.display = 'block';
-         divToShow.style.animation = 'slideDown 0.5s ease forwards';
-         setTimeout(function(){
-           searchinput.focus();
-         }, 500);
-       }
+<!--Latest or chosen article goes under here-->
+<footer>Copyright (c) Banana News 2025</footer>
+<!--请不要删除这行代码：-->
+<script src="scripts/main.js"></script>
+<!---->
+<!--请不要删除以下代码行-->
+<script src="scripts/topnav.js"></script>
+<!---->
+<script src="scripts/search.js"></script>
+<script>
+  const searchinput = document.getElementById('searchbar');
+  const divToShow = document.getElementById('div-to-show');
+  const container = document.getElementById('container');
+  const topnav = document.getElementById('myTopnav');
 
-       const topContainer = document.getElementById('top-container');
-       topContainer.addEventListener('mouseleave', divUp);
+  function showSearch(){
+    container.style.filter = 'blur(10px)';
+    topnav.style.backgroundColor = '#444444';
+    divToShow.style.display = 'block';
+    divToShow.style.animation = 'slideDown 0.5s ease forwards';
+    setTimeout(function(){
+      searchinput.focus();
+    }, 500);
+  }
 
-       function divUp() {
-         console.log('mouse has left both elements.');
-         topnav.style.backgroundColor = '#555555';
-         divToShow.style.animation = 'slideUp 0.5s ease forwards';
-         container.style.filter = 'none';
-       }
-     </script>
+  const topContainer = document.getElementById('top-container');
+  topContainer.addEventListener('mouseleave', divUp);
 
-   </div>
-  
-   <script src="scripts/news.js"></script>
-   <script src="scripts/modal.js"></script>
+  function divUp() {
+    console.log('mouse has left both elements.');
+    topnav.style.backgroundColor = '#555555';
+    divToShow.style.animation = 'slideUp 0.5s ease forwards';
+    container.style.filter = 'none';
+  }
+</script>
+
+</div>
+
+<script src="scripts/news.js"></script>
+<script src="scripts/modal.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKCZYS11HC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HKCZYS11HC');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="shortcut icon" href="images/logosvg.svg">
+    <link rel="icon" href="images/logosvg.svg">
+    <title>Year 2 Maths - Banana News</title>
+    <style>
+        /* Core styles from original page */
+        #clickmessage{border-radius:10px;background-color:white;padding:20px;position:fixed;top:0;right:0;z-index:2000;}
+        #closeButton{background-color: blue;transition:0.25s ease-in-out;position:relative;right:0;bottom:0;}
+        #closeButton:hover{background-color: grey;}
+        .answer{display:none;}
+        .checkbutton{background-color: blue;}
+        .skipbutton{background-color: #00000000;border:none;text-decoration: underline;color: grey;padding: 0;}
+        .progressbar{border-radius:50%;width:100%;height:40px; background-color: grey;overflow: hidden;}
+        .q1progress, .q2progress, .q3progress{border-right: 2px solid black;background-color: grey;width: 33%;float:left;position: relative;}
+        .test-notification{position: fixed;bottom: 20px;right: 20px;padding: 15px;font-size: 50px;color: white;font-family: 'Open Sans', sans-serif;display: none;}
+        @keyframes show-notification{
+            0%{display:none;visibility: hidden;}
+            1%{display:block;visibility: visible;}
+            99%{display:block;visibility: visible;}
+            100%{display:none;visibility: hidden;}
+        }
+        
+        /* New styles for 1st grade content */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .topnav {
+            background-color: #4a86e8;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: #3d70c0;
+        }
+        .topnav .icon {
+            display: none;
+        }
+        #container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e67e22;
+            text-align: center;
+            font-family: 'Comfortaa', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+        h3 {
+            color: #2c3e50;
+            font-family: 'Lato', sans-serif;
+        }
+        .newsdiv {
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid #3498db;
+        }
+        .math-concept {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .practice-box {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .practice-question {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+        }
+        .reveal-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .reveal-button:hover {
+            background-color: #2980b9;
+        }
+        .interactive-area {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .counter-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 15px;
+        }
+        .counter-value {
+            font-size: 24px;
+            font-weight: bold;
+            min-width: 50px;
+            text-align: center;
+        }
+        .fraction-viz {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .fraction-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #f1c40f;
+            position: relative;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+        .fraction-part {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 50%, 100% 50%, 100% 0%, 0% 0%, 0% 100%, 100% 100%);
+            background-color: #e67e22;
+            transform-origin: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-family: 'Roboto', sans-serif;
+            border-top: 1px solid #ecf0f1;
+        }
+        
+        /* Number line styling */
+        #number-line {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-top: 2px solid #3498db;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .tick {
+            position: absolute;
+            height: 20px;
+            border-left: 2px solid #3498db;
+            bottom: 0;
+        }
+        .label {
+            position: absolute;
+            bottom: -20px;
+            transform: translateX(-50%);
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            #container {
+                padding: 15px;
+                margin: 10px;
+            }
+            .newsdiv {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* New interactive elements */
+        .number-block {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .skip-counting {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .ball-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .ball {
+            width: 30px;
+            height: 30px;
+            background-color: #e67e22;
+            border-radius: 50%;
+            margin: 5px;
+            display: inline-block;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            font-size: 32px;
+            margin-right: 15px;
+            color: #3498db;
+        }
+        
+        /* New styles for Year 2 content */
+        .money-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .coin {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #c0c0c0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .note {
+            width: 100px;
+            height: 50px;
+            background-color: #e6d785;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .shape {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 86.6px solid #3498db;
+            background-color: transparent !important;
+        }
+        
+        .rectangle {
+            background-color: #e67e22;
+        }
+        
+        .circle {
+            border-radius: 50%;
+            background-color: #2ecc71;
+        }
+        
+        .time-display {
+            font-size: 2rem;
+            font-weight: bold;
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="top-container">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="games.html">Fun</a>
+            <a href="tech.html">Tech</a>
+            <a href="politics.html">Politics</a>
+            <a href="maths.html">Maths</a>
+            <a href="geography.html">Geography</a>
+            <a href="contributors.html">Contributors</a>
+            <a href="science.html">Science</a>
+            <button onclick="showSearch()" id="searchButton" class="stripped"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars stripped"></i>
+            </a>
+        </div>
+        <div id="div-to-show">
+            <input placeholder="search banana-news.github.io" id="searchbar">
+            <p class="label">Quick links</p>
+            <ul>
+                <a class="not-und" href="index.html"><li class="quick">&rightarrow;&nbsp;Home</li></a>
+                <a class="not-und" href="news.html"><li class="quick">&rightarrow;&nbsp;News</li></a>
+                <a class="not-und" href="games.html"><li class="quick">&rightarrow;&nbsp;Fun</li></a>
+                <a class="not-und" href="tech.html"><li class="quick">&rightarrow;&nbsp;Tech</li></a>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="container">
+        <h1>Year 2 Mathematics</h1>
+
+        <button onclick="window.location.href='中文2ndgrade.html'" style="margin: 0 auto; display: block; background-color: #e67e22; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">中文</button>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">🔢</div>
+                <h2>Lesson 1: Numbers to 1000</h2>
+            </div>
+            <img src="images/place-value-chart.png" alt="Place value chart showing hundreds, tens, and ones">
+            <p>In Year 2, we work with numbers up to 1000. We learn about place value - how the position of a digit in a number determines its value. For example, in the number 347, the 3 represents 300 (hundreds), the 4 represents 40 (tens), and the 7 represents 7 (ones).</p>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>What is the value of the 5 in the number 257?</p>
+                    <p class="answer">The 5 is in the tens place, so it represents 50.</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>How would you write 'six hundred twenty-four' as a number?</p>
+                    <p class="answer">624</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>What number is 10 more than 388?</p>
+                    <p class="answer">398</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">➕➖</div>
+                <h2>Addition and Subtraction Strategies</h2>
+            </div>
+            <div class="math-concept">
+                <h3>Mental Strategies for Addition and Subtraction</h3>
+                <p>We learn different strategies to solve addition and subtraction problems mentally. These include counting on, counting back, using doubles, near doubles, and bridging to ten.</p>
+                <p>For example, to solve 17 + 9, we can think: 17 + 10 = 27, then subtract 1 to get 26. This is called making a friendly number.</p>
+            </div>
+            
+            <div class="interactive-area">
+                <h3>Practice Your Mental Maths!</h3>
+                <div class="counter">
+                    <button class="counter-btn" onclick="changeValue(-10)">-10</button>
+                    <button class="counter-btn" onclick="changeValue(-1)">-1</button>
+                    <div class="counter-value" id="counterValue">50</div>
+                    <button class="counter-btn" onclick="changeValue(1)">+1</button>
+                    <button class="counter-btn" onclick="changeValue(10)">+10</button>
+                </div>
+                <p>Try these calculations: 36 + 27, 53 - 18, 45 + 19</p>
+            </div>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>What is 36 + 27? Use the bridging strategy.</p>
+                    <p class="answer">36 + 20 = 56, then 56 + 7 = 63</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>What is 53 - 18? Use the counting back strategy.</p>
+                    <p class="answer">53 - 10 = 43, then 43 - 8 = 35</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">💰</div>
+                <h2>Australian Money</h2>
+            </div>
+            <div class="math-concept">
+                <h3>Recognising and Counting Money</h3>
+                <p>We learn to recognise all Australian coins and notes and count different combinations of money. We also solve simple problems involving money.</p>
+            </div>
+            
+            <div class="money-container">
+                <div class="coin">5c</div>
+                <div class="coin">10c</div>
+                <div class="coin">20c</div>
+                <div class="coin">50c</div>
+                <div class="coin">$1</div>
+                <div class="coin">$2</div>
+                <div class="note">$5</div>
+                <div class="note">$10</div>
+            </div>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>How much money is two $1 coins, three 20c coins, and one 50c coin?</p>
+                    <p class="answer">$2 + 60c + 50c = $3.10</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>If you have $5 and you buy something that costs $3.50, how much change will you get?</p>
+                    <p class="answer">$1.50</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">⏰</div>
+                <h2>Telling Time</h2>
+            </div>
+            <div class="math-concept">
+                <h3>Reading Analog and Digital Clocks</h3>
+                <p>We learn to tell time to the quarter hour and use language such as 'o'clock', 'half past', 'quarter past', and 'quarter to'. We also learn to read digital time.</p>
+            </div>
+            
+            <div class="interactive-area">
+                <div class="time-display" id="timeDisplay">10:30</div>
+                <p>What time is shown? How would you say this time?</p>
+            </div>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>If the clock shows 3:45, how would you say this time?</p>
+                    <p class="answer">Quarter to four</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>How would you write 'half past seven' in digital time?</p>
+                    <p class="answer">7:30</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h2>Data Collection and Graphs</h2>
+            </div>
+            <div class="math-concept">
+                <h3>Creating and Interpreting Simple Graphs</h3>
+                <p>We learn to gather data and create simple picture graphs and column graphs. We also learn to interpret information from graphs.</p>
+            </div>
+            
+            <img src="images/simple-column-graph.png" alt="Simple column graph showing favourite fruits">
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>Looking at the graph above, which fruit is most popular?</p>
+                    <p class="answer">Apples</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>How many more people like apples than bananas?</p>
+                    <p class="answer">2 more people</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">🔺◼️🔴</div>
+                <h2>2D and 3D Shapes</h2>
+            </div>
+            <p>We learn to identify, describe, and classify 2D shapes including triangles, quadrilaterals, pentagons, and hexagons. We also learn about 3D objects like cubes, spheres, cylinders, and cones.</p>
+            
+            <div class="shape-container">
+                <div class="shape triangle">Triangle</div>
+                <div class="shape rectangle">Rectangle</div>
+                <div class="shape circle">Circle</div>
+            </div>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>How many sides does a hexagon have?</p>
+                    <p class="answer">6 sides</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>What is the difference between a cube and a sphere?</p>
+                    <p class="answer">A cube has flat faces and straight edges, while a sphere is round with no edges or vertices.</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="newsdiv">
+            <div class="section-header">
+                <div class="section-icon">📏</div>
+                <h2>Measurement</h2>
+            </div>
+            <p>We learn to compare and order objects based on length, area, volume, capacity, and mass. We use informal units like paper clips, blocks, or cups to measure.</p>
+            
+            <div class="practice-box">
+                <h3>Practice Questions</h3>
+                <div class="practice-question">
+                    <p>If a pencil is 10 paper clips long, and a ruler is 15 paper clips long, which is longer?</p>
+                    <p class="answer">The ruler is longer.</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                <div class="practice-question">
+                    <p>If a container holds 5 cups of water, and another holds 3 cups, which has greater capacity?</p>
+                    <p class="answer">The container that holds 5 cups has greater capacity.</p>
+                    <button class="reveal-button" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>&copy; Banana News 2024.</footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/topnav.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/news.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/numberline.js"></script>
+    
+    <script>
+        // Function to reveal/hide answers
+        function revealAnswer(button) {
+            var answer = button.previousElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                button.textContent = "Hide Answer";
+            } else {
+                answer.style.display = "none";
+                button.textContent = "Reveal Answer";
+            }
+        }
+        
+        // Counter functionality for the interactive area
+        let counterValue = 50;
+        
+        function changeValue(change) {
+            counterValue += change;
+            if (counterValue < 0) counterValue = 0;
+            document.getElementById('counterValue').textContent = counterValue;
+        }
+        
+        // Function to create number line
+        function createNumberLine() {
+            const numberLine = document.getElementById('number-line');
+            numberLine.innerHTML = ''; // Clear any existing content
+            
+            const min = 0;
+            const max = 100;
+            const width = numberLine.offsetWidth;
+            const range = max - min;
+            const step = width / range;
+            
+            for (let i = min; i <= max; i++) {
+                const tick = document.createElement('div');
+                tick.className = 'tick';
+                const position = ((i - min) / range) * width;
+                tick.style.left = `${position}px`;
+                
+                if (i % 10 === 0 || i === min || i === max) {
+                    const label = document.createElement('div');
+                    label.className = 'label';
+                    label.textContent = i;
+                    label.style.left = `${position}px`;
+                    numberLine.appendChild(label);
+                    
+                    tick.style.height = '30px'; // Make major ticks taller
+                }
+                
+                numberLine.appendChild(tick);
+            }
+        }
+        
+        // Time display functionality
+        function updateTimeDisplay() {
+            const times = ['10:30', '3:45', '7:30', '12:15', '5:50'];
+            const display = document.getElementById('timeDisplay');
+            const randomTime = times[Math.floor(Math.random() * times.length)];
+            display.textContent = randomTime;
+        }
+        
+        // Initialize when page loads
+        window.onload = function() {
+            createNumberLine();
+            updateTimeDisplay();
+            // Add any other initialization code here
+        };
+        
+        // Search functionality
+        const searchinput = document.getElementById('searchbar');
+        const divToShow = document.getElementById('div-to-show');
+        const container = document.getElementById('container');
+        const topnav = document.getElementById('myTopnav');
+
+        function showSearch() {
+            container.style.filter = 'blur(10px)';
+            topnav.style.backgroundColor = '#444444';
+            divToShow.style.display = 'block';
+            divToShow.style.animation = 'slideDown 0.5s ease forwards';
+            setTimeout(function() {
+                searchinput.focus();
+            }, 500);
+        }
+
+        const topContainer = document.getElementById('top-container');
+        topContainer.addEventListener('mouseleave', divUp);
+
+        function divUp() {
+            console.log('mouse has left both elements.');
+            topnav.style.backgroundColor = '#555555';
+            divToShow.style.animation = 'slideUp 0.5s ease forwards';
+            container.style.filter = 'none';
+        }
+    </script>
+    <script src="scripts/news.js"></script>
+<script src="scripts/modal.js"></script>
+<script src="scripts/numberline.js"></script>
+</body>
+</html>

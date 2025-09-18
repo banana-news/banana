@@ -41,8 +41,8 @@ header.textContent = searchQuery;
 
 var searchResultsDiv = document.getElementById("searchResults");
 
-var otherPages = ['banana2.html', 'Bananam.html', 'cow.html', 'drawmemory.html', 'elonmoney.html', 'games.html', 'hi.html', 'imagecombiner.html', 'index.html', 'Me.html', 'news.html', 'politics.html', 'share_this_page.html', 'potatoclicker.html', 'bananajump.html', 'rabbitstew.html', 'tech.html', 'spanishhomepage.html', '中文1.html', '中文3.html', '中文4.html', '中文5.html', '中文6.html', 'bannews.html', 'maths.html', '1stgrade.html', '2ndgrade.html', 'geography.html', 'cpuforgamingpctierlist.html'];
-var pageNames = ['Tower defence sim', 'Why I like bananas', 'Calculator', 'Draw logos from memory', "Spend Elon Musk's money", 'Fun', 'Hi', 'Image Combiner', 'Home', 'Square shooter', 'News', 'Politics', 'Share this site', 'Potato clicker', 'Banana jump', 'Rabbit stew', 'Tech', 'Inicio', '主页', '新闻', '政治', '手机，平板电脑，和电脑', '计算器', 'Gardening news', 'Maths', 'Grade 1 maths', 'Grade 2 maths', 'Geography', 'CPU for Gaming rankings'];
+var otherPages = ['banana2.html', 'Bananam.html', 'cow.html', 'drawmemory.html', 'elonmoney.html', 'games.html', 'hi.html', 'imagecombiner.html', 'index.html', 'Me.html', 'news.html', 'politics.html', 'share_this_page.html', 'potatoclicker.html', 'bananajump.html', 'rabbitstew.html', 'tech.html', 'spanishhomepage.html', '中文1.html', '中文3.html', '中文4.html', '中文5.html', '中文6.html', 'bannews.html', 'maths.html', '1stgrade.html', '2ndgrade.html', 'geography.html', 'cpuforgamingpctierlist.html', '3-4maths.html', '5-6maths.html', '7-8maths.html', 'science.html', 'physics.html'];
+var pageNames = ['Tower defence sim', 'Why I like bananas', 'Calculator', 'Draw logos from memory', "Spend Elon Musk's money", 'Fun', 'Hi', 'Image Combiner', 'Home', 'Square shooter', 'News', 'Politics', 'Share this site', 'Potato clicker', 'Banana jump', 'Rabbit stew', 'Tech', 'Inicio', '主页', '新闻', '政治', '手机，平板电脑，和电脑', '计算器', 'Gardening news', 'Maths', 'Grade 1 maths', 'Grade 2 maths', 'Geography', 'CPU for Gaming rankings', 'Grade 3-4 maths', 'Grade 5-6 maths', 'Grade 7-8 maths', 'Science', 'Physics'];
 
 var resultHeadings = [];
 var resultDescriptions = [];

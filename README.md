@@ -1,11 +1,11 @@
 <img src="https://banana-news.github.io/banana/images/logosvg.svg" height="100" width="100" style="float:left;">
 
-# Banana News
+# Banana News has moved to [https://github.com/albertkemp/banana-news](https://github.com/albertkemp/banana-news)
+
 News website including news, games, politics and tech reviews
 
-
 ## 🎉Banana News has been updated. The new features:🎉
-- clicking on image to enlarge on news page (Update: 17 Nov, this is not a feature anymore, it never worked)
+- clicking on image to enlarge on news page
 - easy READ MORE integration
 - new search logic that filters through the text in pages to get a more accurate search.
 
